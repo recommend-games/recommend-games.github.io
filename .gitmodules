@@ -1,0 +1,3 @@
+[submodule "src"]
+	path = src
+	url = git@gitlab.com:recommend.games/blog.git
