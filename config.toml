@@ -19,6 +19,7 @@ pygmentsUseClasses = true
 pygmentCodeFences = true
 # disqusShortname = "XXX"
 googleAnalytics = "UA-128891980-1"
+enableRobotsTXT = true
 
 [Params]
   subtitle = "Board Game Analyses"
@@ -72,3 +73,6 @@ googleAnalytics = "UA-128891980-1"
     name = "Tags"
     url = "tags"
     weight = 3
+
+[sitemap]
+  changefreq = "weekly"
