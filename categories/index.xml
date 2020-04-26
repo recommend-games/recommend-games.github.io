@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Recommend.Games Blog</title>
-    <link>https://blog.recommend.games/categories/</link>
+    <link>https://recommend-games.github.io/categories/</link>
     <description>Recent content in Categories on Recommend.Games Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
     
-	<atom:link href="https://blog.recommend.games/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://recommend-games.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

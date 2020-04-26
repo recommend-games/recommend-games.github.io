@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recommend.Games Blog</title>
-    <link>https://blog.recommend.games/</link>
+    <link>https://recommend-games.github.io/</link>
     <description>Recent content on Recommend.Games Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
     <lastBuildDate>Sun, 26 Apr 2020 08:14:27 +0300</lastBuildDate>
     
-	<atom:link href="https://blog.recommend.games/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://recommend-games.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About me</title>
-      <link>https://blog.recommend.games/page/about/</link>
+      <link>https://recommend-games.github.io/page/about/</link>
       <pubDate>Sun, 26 Apr 2020 08:14:27 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://blog.recommend.games/page/about/</guid>
+      <guid>https://recommend-games.github.io/page/about/</guid>
       <description>Check out Recommend.Games to learn all bout me!</description>
     </item>
     
