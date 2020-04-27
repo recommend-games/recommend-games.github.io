@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recommend.Games Blog</title>
-    <link>https://recommend-games.github.io/</link>
-    <description>Recent content on Recommend.Games Blog</description>
+    <title>Posts on Recommend.Games Blog</title>
+    <link>https://recommend-games.github.io/posts/</link>
+    <description>Recent content in Posts on Recommend.Games Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Sun, 26 Apr 2020 08:14:27 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 09:18:14 +0300</lastBuildDate>
     
-	<atom:link href="https://recommend-games.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://recommend-games.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,15 +21,6 @@
       <description>This is the start of my new blog about analysing board games and related datasets.
 If you&amp;rsquo;re interested, I&amp;rsquo;d like to know what topics I should write about. Leave a comment below or head over to the BoardGameGeek guild with your suggestions.
 Hope to see you back here soon!</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>https://recommend-games.github.io/page/about/</link>
-      <pubDate>Sun, 26 Apr 2020 08:14:27 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/page/about/</guid>
-      <description>Check out Recommend.Games to learn all bout me!</description>
     </item>
     
   </channel>
