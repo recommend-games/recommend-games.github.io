@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Recommend.Games Blog</title>
+    <title>Posts on Data &amp; Games</title>
     <link>https://recommend-games.github.io/posts/</link>
-    <description>Recent content in Posts on Recommend.Games Blog</description>
+    <description>Recent content in Posts on Data &amp; Games</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Mon, 27 Apr 2020 09:18:14 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 07:43:11 +0300</lastBuildDate>
     
 	<atom:link href="https://recommend-games.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>And the Spiel des Jahres 2020 goes to…</title>
+      <link>https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to/</link>
+      <pubDate>Wed, 13 May 2020 07:43:11 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to/</guid>
+      <description>It&amp;rsquo;s that time of year again when the whole board game scene takes a deep look into their crystal balls: On Monday, May 18, the jury Spiel des Jahres will announce the nominees for the game of the year award in Germany. There&amp;rsquo;s a myriad of awards in tabletop gaming, but the red meeple is the one everbody is really after. Even international publishers often prioritise releasing their game in Germany before their home country just so it&amp;rsquo;d be eligible for Spiel des Jahres.</description>
+    </item>
     
     <item>
       <title>Coming soon!</title>

@@ -1,15 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Recommend.Games Blog</title>
+    <title>Tags on Data &amp; Games</title>
     <link>https://recommend-games.github.io/tags/</link>
-    <description>Recent content in Tags on Recommend.Games Blog</description>
+    <description>Recent content in Tags on Data &amp; Games</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
+    <lastBuildDate>Wed, 13 May 2020 07:43:11 +0300</lastBuildDate>
     
 	<atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Game of the Year</title>
+      <link>https://recommend-games.github.io/tags/game-of-the-year/</link>
+      <pubDate>Wed, 13 May 2020 07:43:11 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/game-of-the-year/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Germany</title>
+      <link>https://recommend-games.github.io/tags/germany/</link>
+      <pubDate>Wed, 13 May 2020 07:43:11 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/germany/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kennerspiel des Jahres</title>
+      <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</link>
+      <pubDate>Wed, 13 May 2020 07:43:11 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KSdJ</title>
+      <link>https://recommend-games.github.io/tags/ksdj/</link>
+      <pubDate>Wed, 13 May 2020 07:43:11 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/ksdj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SdJ</title>
+      <link>https://recommend-games.github.io/tags/sdj/</link>
+      <pubDate>Wed, 13 May 2020 07:43:11 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/sdj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spiel des Jahres</title>
+      <link>https://recommend-games.github.io/tags/spiel-des-jahres/</link>
+      <pubDate>Wed, 13 May 2020 07:43:11 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/spiel-des-jahres/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
