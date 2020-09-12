@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Wed, 22 Jul 2020 14:42:00 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2020 00:00:00 +0300</lastBuildDate>
     
 	<atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BGG</title>
+      <link>https://recommend-games.github.io/tags/bgg/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/bgg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BoardGameGeek</title>
+      <link>https://recommend-games.github.io/tags/boardgamegeek/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/boardgamegeek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ranking</title>
+      <link>https://recommend-games.github.io/tags/ranking/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/ranking/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cartographers</title>

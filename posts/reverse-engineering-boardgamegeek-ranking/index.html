@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Posts - Data &amp; Games</title>
+  <title>Reverse engineering the BoardGameGeek ranking - Data &amp; Games</title>
+  <meta name="description" content="I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb) for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (awful - defies game description) to \(10\) (outstanding - will always enjoy playing). These ratings are then used to rank games, with Gloomhaven occupying the top spot since December 2017.">
   <meta name="author" content="Recommend.Games"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -28,14 +29,64 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/recommend-games.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/recommend-games.github.io\/posts\/reverse-engineering-boardgamegeek-ranking\/",
+          "name": "Reverse engineering the board game geek ranking"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Markus Shepherd"
+  },
+  "headline": "Reverse engineering the BoardGameGeek ranking",
+  "description" : "I often describe BoardGameGeek (BGG) as \u0026ldquo;the Internet Movie Database (IMDb) for games\u0026rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \\(1\\) (awful - defies game description) to \\(10\\) (outstanding - will always enjoy playing). These ratings are then used to rank games, with Gloomhaven occupying the top spot since December 2017.",
+  "inLanguage" : "en",
+  "wordCount":  618 ,
+  "datePublished" : "2020-09-11T00:00:00",
+  "dateModified" : "2020-09-11T00:00:00",
+  "image" : "https:\/\/recommend-games.github.io\/logo.png",
+  "keywords" : [ "BoardGameGeek, BGG, ranking" ],
+  "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/reverse-engineering-boardgamegeek-ranking\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/recommend-games.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/recommend-games.github.io\/logo.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="Posts" />
+<meta property="og:title" content="Reverse engineering the BoardGameGeek ranking" />
+<meta property="og:description" content="I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb) for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (awful - defies game description) to \(10\) (outstanding - will always enjoy playing). These ratings are then used to rank games, with Gloomhaven occupying the top spot since December 2017.">
 <meta property="og:image" content="https://recommend-games.github.io/logo.png" />
-<meta property="og:url" content="https://recommend-games.github.io/posts/" />
+<meta property="og:url" content="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Data &amp; Games" />
 
-  <meta name="twitter:title" content="Posts" />
+  <meta name="twitter:title" content="Reverse engineering the BoardGameGeek ranking" />
+  <meta name="twitter:description" content="I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb) for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of …">
   <meta name="twitter:image" content="https://recommend-games.github.io/logo.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@recommend_games" />
@@ -202,40 +253,14 @@ if (!doNotTrack) {
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="posts-heading">
+            <div class="post-heading">
               
-                <h1>Posts</h1>
-              
-              
-                <hr class="small">
+                <h1>Reverse engineering the BoardGameGeek ranking</h1>
               
               
               
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-
-    
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
-        <div class="posts-list">
-          
-            <article class="post-preview">
-    <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">
-        <h2 class="post-title">Reverse engineering the BoardGameGeek ranking</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
+              
+                <span class="post-meta">
   
   
   <i class="fas fa-calendar"></i>&nbsp;Posted on September 11, 2020
@@ -255,305 +280,172 @@ if (!doNotTrack) {
 </span>
 
 
-    </p>
-    <div class="post-entry">
-        
-        I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb) for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (awful - defies game description) to \(10\) (outstanding - will always enjoy playing). These ratings are then used to rank games, with Gloomhaven occupying the top spot since December 2017.
-        <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://recommend-games.github.io//tags/boardgamegeek/">BoardGameGeek</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/bgg/">BGG</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/ranking/">ranking</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-4/">
-        <h2 class="post-title">And the Spiel des Jahres 2020 goes to… Part 4!</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on July 22, 2020
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;467&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Markus Shepherd
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        After months of waiting, we finally know what games won this year&rsquo;s Spiel des Jahres and Kennerspiel des Jahres! Without further ado, I&rsquo;ll present the winners along with a comment on how the predictions went.
-Spiel des Jahres 2020 Pictures Reading through the comments on the interweb most players seem surprised about the winner of the red meeple. Not me! It was on my list from the very beginning as probably the strongest contender.
-        <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-4/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://recommend-games.github.io//tags/sdj/">SdJ</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/spiel-des-jahres/">Spiel des Jahres</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/ksdj/">KSdJ</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/kennerspiel-des-jahres/">Kennerspiel des Jahres</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/game-of-the-year/">Game of the Year</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/germany/">Germany</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/my-city/">My City</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/nova-luna/">Nova Luna</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/pictures/">Pictures</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/cartographers/">Cartographers</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/the-crew/">The Crew</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/kings-dilemma/">King&#39;s Dilemma</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/daniela-st%C3%B6hr/">Daniela Stöhr</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/christian-st%C3%B6hr/">Christian Stöhr</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-3/">
-        <h2 class="post-title">And the Spiel des Jahres 2020 goes to… Part 3!</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on July 18, 2020
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;859&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Markus Shepherd
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        Spiel des Jahres and Kennerspiel des Jahres winners are due to be announced on Monday, July 20. I promised last time I&rsquo;d be back with more detailed analyses and predictions. So here we go!
-Out of hundreds of games published in 2019 and 2020, the jury selected a total of fifteen games they recommend, six of which they nominated for the two main awards. But who is the favourite? Who is the dark horse?
-        <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-3/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://recommend-games.github.io//tags/sdj/">SdJ</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/spiel-des-jahres/">Spiel des Jahres</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/ksdj/">KSdJ</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/kennerspiel-des-jahres/">Kennerspiel des Jahres</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/game-of-the-year/">Game of the Year</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/germany/">Germany</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/my-city/">My City</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/nova-luna/">Nova Luna</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/pictures/">Pictures</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/cartographers/">Cartographers</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/the-crew/">The Crew</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/kings-dilemma/">King&#39;s Dilemma</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-2/">
-        <h2 class="post-title">And the Spiel des Jahres 2020 goes to… Part 2!</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 21, 2020
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1180&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Markus Shepherd
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        With Spiel des Jahres and Kennerspiel des Jahres nominations out (setting aside the Kinderspiel again), it&rsquo;s time to look at the nominees and to check how I did in my predictions.
-Nominated for Spiel des Jahres As every year, the jury nominated three games for the main award, one of which will receive the red meeple in July. In addition to that, there are six games the jury recommends. Do these games match the criteria I stipulated last time?
-        <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-2/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://recommend-games.github.io//tags/sdj/">SdJ</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/spiel-des-jahres/">Spiel des Jahres</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/ksdj/">KSdJ</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/kennerspiel-des-jahres/">Kennerspiel des Jahres</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/game-of-the-year/">Game of the Year</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/germany/">Germany</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/my-city/">My City</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/nova-luna/">Nova Luna</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/pictures/">Pictures</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/cartographers/">Cartographers</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/the-crew/">The Crew</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/kings-dilemma/">King&#39;s Dilemma</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to/">
-        <h2 class="post-title">And the Spiel des Jahres 2020 goes to…</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 15, 2020
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;16&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;3343&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Markus Shepherd
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        For the impatient: If you don&rsquo;t care about the analysis of previous winners and all you&rsquo;re interested in are the candidates for this year&rsquo;s awards, jump straight to the list…
-It&rsquo;s that time of year again when the whole board game scene takes a deep look into their crystal balls: On Monday, May 18, the jury Spiel des Jahres will announce the nominees for the game of the year award in Germany.
-        <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://recommend-games.github.io//tags/sdj/">SdJ</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/spiel-des-jahres/">Spiel des Jahres</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/ksdj/">KSdJ</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/kennerspiel-des-jahres/">Kennerspiel des Jahres</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/game-of-the-year/">Game of the Year</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/germany/">Germany</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
+              
+            </div>
+          </div>
         </div>
-        
       </div>
     </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>I often describe <a href="https://boardgamegeek.com/">BoardGameGeek (BGG)</a> as &ldquo;the <a href="https://www.imdb.com/">Internet Movie Database (IMDb)</a> for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (<em>awful - defies game description</em>) to \(10\) (<em>outstanding - will always enjoy playing</em>). These ratings are then used to rank games, with <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> occupying the top spot since December 2017.</p>
+<p>While BGG founder Scott Alden admitted in a recent interview on the excellent <a href="https://fivegamesfordoomsday.com/2020/07/06/scott-alden/">Five Games For Doomsday</a> podcast that he doesn&rsquo;t care all that much about the rankings, gamers around the world certainly do. They would discuss heatedly any movement in the rankings, question why games X is up there while game Y is missing, and generally criticise the selection for either having <em>too many</em> or <em>not enough</em> recent releases.</p>
+<p>Reason enough for me to take a closer look at how the rankings work and some of the maths behind it.</p>
+<p>Generally speaking, we want to rank a game higher the better its score is. The first instinct would be to just sum up all the ratings users gave to that particular game, divide by the number of ratings, and rank games from highest to lowest. What I just described would be the <em>arithmetic mean</em> (or just <em>average</em> if you feel less fancy) of the ratings, which is simple and intuitive, but suffers from a sever defect: A game with a single rating of \(10\) would always sit on top of the ranking, well ahead of much beloved games with thousands of votes that couldn&rsquo;t possibly be all \(10\)s.</p>
+<p>The easiest fix is filtering out games with less than a certain number of ratings, say \(100\). That&rsquo;s a decent enough approach, and yields the following top 5 games at the time of writing:</p>
+<ol>
+<li><a href="https://recommend.games/#/game/261393" style="font-variant: small-caps;">Dungeon Universalis</a></li>
+<li><a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Gloomhaven: Jaws of the Lion</a></li>
+<li><a href="https://recommend.games/#/game/219217" style="font-variant: small-caps;">Arena: The Contest</a></li>
+<li><a href="https://recommend.games/#/game/240271" style="font-variant: small-caps;">Core Space</a></li>
+<li><a href="https://recommend.games/#/game/209877" style="font-variant: small-caps;">World At War 85: Storming the Gap</a></li>
+</ol>
+<p>Notably, those are all very recent games with relatively few ratings.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Some might consider this a feature, not a bug, but when your intention is to create a list of the best board games, you probably do want to give a nod to proven classics, and not just the latest hotness. How to balance out these ends of the spectrum is in the end a choice you have to make, and no matter what it is, People on the Internet™ will not like it.</p>
+<p>The way both IMDb and BGG chose to tackle this issue is by essentially not trusting the ratings – at least not too much. The method boils down to assigning a new item in the database (be it movie or game) a predefined average by default, and only gradually trusting the ratings&rsquo; average as thousands and thousands of users have cast their votes. More concretely the rankings are calculated by adding a number of dummy votes with a chosen average value, say \(5.5\), to each game&rsquo;s regular ratings. The result is that initially each game will have a score close to \(5.5\), but as more users rate the game, that score will move closer and closer to the conventional mean.</p>
+<p>BGG calls this their <strong>geek score</strong>. Mathematically speaking, it is a <em>Bayesian average</em>, and calculates as follows:</p>
+<p>\[ \textrm{geek score} = \frac{\textrm{number of ratings} \cdot \textrm{average rating} + \textrm{number of dummies} \cdot \textrm{dummy value}}{\textrm{number of ratings} + \textrm{number of dummies}} \]</p>
+<h1 id="todo-link-to-some-external-resources">TODO: link to some external resources:</h1>
+<ul>
+<li><a href="https://www.peterjezik.com/bgg/">https://www.peterjezik.com/bgg/</a></li>
+<li><a href="https://youtu.be/Y1t_0LhpDmU">https://youtu.be/Y1t_0LhpDmU</a></li>
+</ul>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Jaws of the Lion</a> is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> as the number 1. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://recommend-games.github.io//tags/boardgamegeek/">BoardGameGeek</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/bgg/">BGG</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/ranking/">ranking</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2frecommend-games.github.io%2fposts%2freverse-engineering-boardgamegeek-ranking%2f&amp;text=Reverse%20engineering%20the%20BoardGameGeek%20ranking&amp;via=recommend_games" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frecommend-games.github.io%2fposts%2freverse-engineering-boardgamegeek-ranking%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2freverse-engineering-boardgamegeek-ranking%2f&amp;title=Reverse%20engineering%20the%20BoardGameGeek%20ranking" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frecommend-games.github.io%2fposts%2freverse-engineering-boardgamegeek-ranking%2f&amp;title=Reverse%20engineering%20the%20BoardGameGeek%20ranking" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2freverse-engineering-boardgamegeek-ranking%2f&amp;title=Reverse%20engineering%20the%20BoardGameGeek%20ranking" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frecommend-games.github.io%2fposts%2freverse-engineering-boardgamegeek-ranking%2f&amp;description=Reverse%20engineering%20the%20BoardGameGeek%20ranking" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
   </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-4/" data-toggle="tooltip" data-placement="top" title="And the Spiel des Jahres 2020 goes to… Part 4!">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+          
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "recommend-games" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+          
+        
+        
+      
+
+    </div>
+  </div>
+</div>
 
       
 <footer>
@@ -620,7 +512,7 @@ It&rsquo;s that time of year again when the whole board game scene takes a deep 
               </li>
           
           <li>
-            <a href="https://recommend-games.github.io/posts/index.xml" title="RSS">
+            <a href="" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Wed, 22 Jul 2020 14:42:00 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2020 00:00:00 +0300</lastBuildDate>
     
 	<atom:link href="https://recommend-games.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reverse engineering the BoardGameGeek ranking</title>
+      <link>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/</guid>
+      <description>I often describe BoardGameGeek (BGG) as &amp;ldquo;the Internet Movie Database (IMDb) for games&amp;rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (awful - defies game description) to \(10\) (outstanding - will always enjoy playing). These ratings are then used to rank games, with Gloomhaven occupying the top spot since December 2017.</description>
+    </item>
     
     <item>
       <title>And the Spiel des Jahres 2020 goes to… Part 4!</title>
