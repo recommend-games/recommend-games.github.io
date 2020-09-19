@@ -59,7 +59,7 @@
   "headline": "Reverse engineering the BoardGameGeek ranking",
   "description" : "I often describe BoardGameGeek (BGG) as \u0026ldquo;the Internet Movie Database (IMDb) for games\u0026rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \\(1\\) (awful - defies game description) to \\(10\\) (outstanding - will always enjoy playing). These ratings are then used to rank games, with Gloomhaven occupying the top spot since December 2017.",
   "inLanguage" : "en",
-  "wordCount":  618 ,
+  "wordCount":  669 ,
   "datePublished" : "2020-09-11T00:00:00",
   "dateModified" : "2020-09-11T00:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -92,7 +92,7 @@
   <meta name="twitter:site" content="@recommend_games" />
   <meta name="twitter:creator" content="@recommend_games" />
   <link href='https://recommend-games.github.io/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.74.3" />
+  <meta name="generator" content="Hugo 0.75.1" />
   <link rel="alternate" href="https://recommend-games.github.io/index.xml" type="application/rss+xml" title="Data &amp; Games"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://recommend-games.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -266,10 +266,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on September 11, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;618&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;669&nbsp;words
   
   
     
@@ -298,7 +298,7 @@ if (!doNotTrack) {
 <p>While BGG founder Scott Alden admitted in a recent interview on the excellent <a href="https://fivegamesfordoomsday.com/2020/07/06/scott-alden/">Five Games For Doomsday</a> podcast that he doesn&rsquo;t care all that much about the rankings, gamers around the world certainly do. They would discuss heatedly any movement in the rankings, question why games X is up there while game Y is missing, and generally criticise the selection for either having <em>too many</em> or <em>not enough</em> recent releases.</p>
 <p>Reason enough for me to take a closer look at how the rankings work and some of the maths behind it.</p>
 <p>Generally speaking, we want to rank a game higher the better its score is. The first instinct would be to just sum up all the ratings users gave to that particular game, divide by the number of ratings, and rank games from highest to lowest. What I just described would be the <em>arithmetic mean</em> (or just <em>average</em> if you feel less fancy) of the ratings, which is simple and intuitive, but suffers from a sever defect: A game with a single rating of \(10\) would always sit on top of the ranking, well ahead of much beloved games with thousands of votes that couldn&rsquo;t possibly be all \(10\)s.</p>
-<p>The easiest fix is filtering out games with less than a certain number of ratings, say \(100\). That&rsquo;s a decent enough approach, and yields the following top 5 games at the time of writing:</p>
+<p>The easiest fix is filtering out games with less than a certain number of ratings, say \(100\). That&rsquo;s a decent enough approach, and yields the following top 5 games as of the time of writing:</p>
 <ol>
 <li><a href="https://recommend.games/#/game/261393" style="font-variant: small-caps;">Dungeon Universalis</a></li>
 <li><a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Gloomhaven: Jaws of the Lion</a></li>
@@ -307,9 +307,11 @@ if (!doNotTrack) {
 <li><a href="https://recommend.games/#/game/209877" style="font-variant: small-caps;">World At War 85: Storming the Gap</a></li>
 </ol>
 <p>Notably, those are all very recent games with relatively few ratings.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Some might consider this a feature, not a bug, but when your intention is to create a list of the best board games, you probably do want to give a nod to proven classics, and not just the latest hotness. How to balance out these ends of the spectrum is in the end a choice you have to make, and no matter what it is, People on the Internet™ will not like it.</p>
-<p>The way both IMDb and BGG chose to tackle this issue is by essentially not trusting the ratings – at least not too much. The method boils down to assigning a new item in the database (be it movie or game) a predefined average by default, and only gradually trusting the ratings&rsquo; average as thousands and thousands of users have cast their votes. More concretely the rankings are calculated by adding a number of dummy votes with a chosen average value, say \(5.5\), to each game&rsquo;s regular ratings. The result is that initially each game will have a score close to \(5.5\), but as more users rate the game, that score will move closer and closer to the conventional mean.</p>
+<p>The way both IMDb and BGG chose to tackle this issue is by essentially not trusting the ratings – at least not too much. The method boils down to assigning a new item in the database (be it movie or game) a predefined average by default, and only gradually trusting the ratings' average as thousands and thousands of users have cast their votes. More concretely the rankings are calculated by adding a number of dummy votes with a chosen average value, say \(5.5\), to each game&rsquo;s regular ratings. The result is that initially each game will have a score close to \(5.5\), but as more users rate the game, that score will move closer and closer to the conventional mean.</p>
 <p>BGG calls this their <strong>geek score</strong>. Mathematically speaking, it is a <em>Bayesian average</em>, and calculates as follows:</p>
 <p>\[ \textrm{geek score} = \frac{\textrm{number of ratings} \cdot \textrm{average rating} + \textrm{number of dummies} \cdot \textrm{dummy value}}{\textrm{number of ratings} + \textrm{number of dummies}} \]</p>
+<p>Don&rsquo;t worry too much about the details though – <em>adding dummy votes</em> is really all you need to understand.</p>
+<p>OK, so that&rsquo;s the concept, but crucially that&rsquo;s not all the details. You still need to choose <em>how many</em> dummy votes you want to add and <em>what value</em> they should take.</p>
 <h1 id="todo-link-to-some-external-resources">TODO: link to some external resources:</h1>
 <ul>
 <li><a href="https://www.peterjezik.com/bgg/">https://www.peterjezik.com/bgg/</a></li>
@@ -540,7 +542,7 @@ if (!doNotTrack) {
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.74.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.75.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

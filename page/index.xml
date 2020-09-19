@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Sun, 26 Apr 2020 08:14:27 +0300</lastBuildDate>
-    
-	<atom:link href="https://recommend-games.github.io/page/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 26 Apr 2020 08:14:27 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me</title>
       <link>https://recommend-games.github.io/page/about/</link>

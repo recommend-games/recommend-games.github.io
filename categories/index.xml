@@ -6,10 +6,6 @@
     <description>Recent content in Categories on Data &amp; Games</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
-    <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    
-	<atom:link href="https://recommend-games.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <webMaster>contact@recommend.games (Recommend.Games)</webMaster><atom:link href="https://recommend-games.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
