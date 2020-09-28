@@ -59,7 +59,7 @@
   "headline": "Reverse engineering the BoardGameGeek ranking",
   "description" : "I often describe BoardGameGeek (BGG) as \u0026ldquo;the Internet Movie Database (IMDb) for games\u0026rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \\(1\\) (awful - defies game description) to \\(10\\) (outstanding - will always enjoy playing). These ratings are then used to rank games, with Gloomhaven occupying the top spot since December 2017.",
   "inLanguage" : "en",
-  "wordCount":  976 ,
+  "wordCount":  1459 ,
   "datePublished" : "2020-09-11T00:00:00",
   "dateModified" : "2020-09-11T00:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -266,10 +266,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on September 11, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;976&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1459&nbsp;words
   
   
     
@@ -311,9 +311,33 @@ if (!doNotTrack) {
 <p>BGG calls this their <strong>geek score</strong>. Mathematically speaking, it is a <em>Bayesian average</em>, and calculates as follows:</p>
 <p>\[ \textrm{geek score} = \frac{\textrm{number of ratings} \cdot \textrm{average rating} + \textrm{number of dummies} \cdot \textrm{dummy value}}{\textrm{number of ratings} + \textrm{number of dummies}} \]</p>
 <p>Don&rsquo;t worry too much about the details though – <em>adding dummy votes</em> is really all you need to understand.</p>
-<p>OK, so that&rsquo;s the concept, but crucially that&rsquo;s not all the details. You still need to choose <em>how many</em> dummy votes you want to add and <em>what value</em> they should take. Since People on the Internet™ who disagree with your ranking will try to manipulate it in whatever way they can, sites are usually very cagey about said details. <a href="https://en.wikipedia.org/wiki/IMDb#Rankings">IMDb used to be more transparent</a>, <a href="https://www.boardgamegeek.com/thread/103639/new-game-ranking-system">as was BGG</a>, but now we have to dig a little deeper.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
-<p>Let&rsquo;s start from the easier of the two, the value of the dummy votes. It is commonly chosen to represent some <em>prior mean</em>, i.e., some decent estimate of the rating a new game in the database would have. A frequent choice would be to use the average rating across <em>all</em> games. It&rsquo;s a fair assumption – without further information about a game, we don&rsquo;t know if it&rsquo;s any better or worse than the average game. However, Scott Alden actually gave away the answer in that interview from the beginning: BGG chose the dummy value to be \(5.5\). Their rationale is that ratings range from \(1\) through \(10\), so \(5.5\) is the midpoint. Of course, people tend to rather play and rater much more the games they like, and so the average rating is around \(7\). Opting for the lower value here is part of the design of the ranking: it means a new game would enter the ranking rather at the end of the pack. On the other hand, using the mean as the dummy value means a new game is placed more or less in the middle. It is worth mentioning that IMBd does use the mean (or at least used to), but they only ever publish the top 250 movies, and don&rsquo;t care about the crowd behind.</p>
-<h1 id="todo-link-to-some-external-resources">TODO: link to some external resources:</h1>
+<p>OK, so that&rsquo;s the concept, but crucially that&rsquo;s not all the details. You still need to choose <em>how many</em> dummy votes you want to add and <em>what value</em> they should take. Since People on the Internet™ who disagree with your ranking will try to manipulate it in whatever way they can, sites are usually very cagey about said details. <a href="https://en.wikipedia.org/wiki/IMDb#Rankings">IMDb used to be more transparent</a>, <a href="https://www.boardgamegeek.com/thread/103639/new-game-ranking-system">as was BGG</a>, but now we have to dig a little deeper.</p>
+<p>Let&rsquo;s start from the easier of the two, the value of the dummy votes. It is commonly chosen to represent some <em>prior mean</em>, i.e., some decent estimate of the rating a new game in the database would have. A frequent choice would be to use the average rating across <em>all</em> games. It&rsquo;s a fair assumption – without further information about a game, we don&rsquo;t know if it&rsquo;s any better or worse than the average game. However, Scott Alden actually gave away the answer in that interview from the beginning: BGG chose the dummy value to be \(5.5\). Their rationale is that ratings range from \(1\) through \(10\), so \(5.5\) is the midpoint. Of course, people tend to rather play and rate much more the games they like, and so the average rating is around \(7\). Opting for the lower value here is part of the design of the ranking: it means a new game would enter the ranking rather at the end of the pack. On the other hand, using the mean as the dummy value means a new game is placed more or less in the middle. It is worth mentioning that IMBd does use the mean (or at least used to), but they only ever publish the top 250 movies, and don&rsquo;t care about the crowd behind.</p>
+<p>The other value, the <em>number</em> of dummy votes, requires more work. Because some of the details and data are unknown, we cannot actually pin down the exact number that BGG is using. Instead, we&rsquo;ll try three different approaches, and compare their results.</p>
+<h1 id="formula">Formula</h1>
+<p>On the surface, this should be super easy to solve: in the formula above, we know every single value but the number of dummy votes. BGG publishes the number of ratings, their arithmetic mean, and the &ldquo;geek score&rdquo; or Bayesian average for every game, and we know that the dummy value is \(5.5\). With a little high school algebra we solve the formula for <em>number of dummies</em>:</p>
+<p>\[ \textrm{number of dummies} = \textrm{number of ratings} \cdot \frac{\textrm{average rating} - \textrm{geek score}}{\textrm{geek score} - \textrm{dummy value}} \]</p>
+<p>Now we should be able to plug in those values for any given game, say <a href="https://recommend.games/#/game/199478" style="font-variant: small-caps;">Flamme Rouge</a>, and get the result. With \(10\,875\) ratings that average \(7.562\), and a geek score of \(7.265\), this yield:</p>
+<p>\[ \textrm{number of dummies} = \textrm{10875} \cdot \frac{\textrm{7.562} - \textrm{7.265}}{\textrm{7.265} - \textrm{5.5}} \approx 1830. \]</p>
+<p>So, there&rsquo;s about \(1830\) dummy ratings, end of story. Right? Unfortunately, not quite. When computing this formula for different games, the results vary <em>wildly</em>, as you can see from this histogram over the results for the same calculation with other games:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/num_dummies_hist.svg"
+	alt="Histogram over the number of dummy votes calculated by explicit formula" />
+<p>And this plot is even cropped, the results vary from \(-1.4\) million to \(+660\) thousand.</p>
+<p>What&rsquo;s going on, why are the results so inconsistent? The problem is the ranking&rsquo;s <em>secret sauce</em>. Both IMDb and BGG stress is that they only consider <em>regular</em> voters for their rankings. That&rsquo;s the most mysterious part of the system as it&rsquo;s the easiest to manipulate, so we&rsquo;ll just have to take their word for it. For this investigation it means that the average rating BGG publishes includes all the ratings, but the geek score might <em>not</em>.</p>
+<p>Still, clearly something is happening around the \(1500\) ratings mark, so we are at least getting closer to an answer. If exact calculations won&rsquo;t work, maybe we can approximate the correct value instead?</p>
+<h1 id="trial--error">Trial &amp; error</h1>
+<p>Let&rsquo;s take a step back here. What we&rsquo;re really trying to achieve here is not finding the exact formula for that mysterious &ldquo;geek score&rdquo;, but rather recreate the BGG ranking. That is, we want to find the values in the above formula, such that the resulting ranking matches BGG&rsquo;s ranking as closely as possible. Luckily, statistics has all the tools we need. <a href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman correlation</a> measures rank correlation – just what we need. This will be \(1\) if both rankings sort in exactly the same way, and \(0\) if they sort entirely differently. Again, don&rsquo;t worry about the details, just trust the maths.</p>
+<p>What we can do now is fairly simply and quickly compute the rankings for different number of dummy ratings, and pick the value with the highest Spearman correlation. Without further ado, here are the results:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/num_dummies_corr.svg"
+	alt="TODO" />
+<p>The best correlation of around \(0.996\) is achieved with \(1489\) dummy ratings. However, it is worth noticing that the changes in the correlation are very, <em>very</em> small throughout the range we examined here (\(1000\) to \(2500\)), so let&rsquo;s dig still a little deeper.</p>
+<h1 id="optimization">Optimization</h1>
+<p>TODO</p>
+<h1 id="external-resources">External resources</h1>
 <ul>
 <li><a href="https://www.peterjezik.com/bgg/">https://www.peterjezik.com/bgg/</a></li>
 <li><a href="https://youtu.be/Y1t_0LhpDmU">https://youtu.be/Y1t_0LhpDmU</a></li>
@@ -323,9 +347,6 @@ if (!doNotTrack) {
 <ol>
 <li id="fn:1" role="doc-endnote">
 <p><a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Jaws of the Lion</a> is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> as the number 1. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2" role="doc-endnote">
-<p>One feature both IMDb and BGG stress is that they only consider <em>regular</em> voters for their rankings. That&rsquo;s the most mysterious part of the system as it&rsquo;s the easiest to manipulate, so we&rsquo;ll just have to take their word for it. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
