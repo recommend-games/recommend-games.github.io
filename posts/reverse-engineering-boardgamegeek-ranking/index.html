@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Reverse engineering the BoardGameGeek ranking - Data &amp; Games</title>
-  <meta name="description" content="I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb) for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (awful - defies game description) to \(10\) (outstanding - will always enjoy playing). These ratings are then used to rank games, with Gloomhaven occupying the top spot since December 2017.">
+  <meta name="description" content="TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&#39; ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.
+I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb) for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (awful - defies game description) to \(10\) (outstanding - will always enjoy playing).">
   <meta name="author" content="Recommend.Games"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -57,9 +58,9 @@
     "name" : "Markus Shepherd"
   },
   "headline": "Reverse engineering the BoardGameGeek ranking",
-  "description" : "I often describe BoardGameGeek (BGG) as \u0026ldquo;the Internet Movie Database (IMDb) for games\u0026rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \\(1\\) (awful - defies game description) to \\(10\\) (outstanding - will always enjoy playing). These ratings are then used to rank games, with Gloomhaven occupying the top spot since December 2017.",
+  "description" : "TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users\u0027 ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.\nI often describe BoardGameGeek (BGG) as \u0026ldquo;the Internet Movie Database (IMDb) for games\u0026rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \\(1\\) (awful - defies game description) to \\(10\\) (outstanding - will always enjoy playing).",
   "inLanguage" : "en",
-  "wordCount":  1721 ,
+  "wordCount":  2202 ,
   "datePublished" : "2020-09-11T00:00:00",
   "dateModified" : "2020-09-11T00:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -79,14 +80,15 @@
 </script>
 
 <meta property="og:title" content="Reverse engineering the BoardGameGeek ranking" />
-<meta property="og:description" content="I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb) for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (awful - defies game description) to \(10\) (outstanding - will always enjoy playing). These ratings are then used to rank games, with Gloomhaven occupying the top spot since December 2017.">
+<meta property="og:description" content="TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&#39; ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.
+I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb) for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (awful - defies game description) to \(10\) (outstanding - will always enjoy playing).">
 <meta property="og:image" content="https://recommend-games.github.io/logo.png" />
 <meta property="og:url" content="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Data &amp; Games" />
 
   <meta name="twitter:title" content="Reverse engineering the BoardGameGeek ranking" />
-  <meta name="twitter:description" content="I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb) for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of …">
+  <meta name="twitter:description" content="TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&#39; ratings. They called it their geek score, statisticians call it a Bayesian average. We …">
   <meta name="twitter:image" content="https://recommend-games.github.io/logo.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@recommend_games" />
@@ -266,10 +268,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on September 11, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;9&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;11&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1721&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2202&nbsp;words
   
   
     
@@ -294,7 +296,8 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>I often describe <a href="https://boardgamegeek.com/">BoardGameGeek (BGG)</a> as &ldquo;the <a href="https://www.imdb.com/">Internet Movie Database (IMDb)</a> for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (<em>awful - defies game description</em>) to \(10\) (<em>outstanding - will always enjoy playing</em>). These ratings are then used to rank games, with <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> occupying the top spot since December 2017.</p>
+        <p><em><strong>TL;DR</strong></em>: <em>BoardGameGeek calculates its ranking by adding around <strong>1500-1600 dummy ratings of 5.5</strong> to the regular users' ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some <a href="#alternative-rankings">alternative rankings</a>.</em></p>
+<p>I often describe <a href="https://boardgamegeek.com/">BoardGameGeek (BGG)</a> as &ldquo;the <a href="https://www.imdb.com/">Internet Movie Database (IMDb)</a> for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (<em>awful - defies game description</em>) to \(10\) (<em>outstanding - will always enjoy playing</em>). These ratings are then used to rank games, with <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> occupying the top spot since December 2017.</p>
 <p>While BGG founder Scott Alden admitted in a recent interview on the excellent <a href="https://fivegamesfordoomsday.com/2020/07/06/scott-alden/">Five Games For Doomsday</a> podcast that he doesn&rsquo;t care all that much about the rankings, gamers around the world certainly do. They would discuss heatedly any movement in the rankings, question why games X is up there while game Y is missing, and generally criticise the selection for either having <em>too many</em> or <em>not enough</em> recent releases.</p>
 <p>Reason enough for me to take a closer look at how the rankings work and some of the maths behind it.</p>
 <p>Generally speaking, we want to rank a game higher the better its score is. The first instinct would be to just sum up all the ratings users gave to that particular game, divide by the number of ratings, and rank games from highest to lowest. What I just described would be the <em>arithmetic mean</em> (or just <em>average</em> if you feel less fancy) of the ratings, which is simple and intuitive, but suffers from a sever defect: a game with a single rating of \(10\) would always sit on top of the ranking, well ahead of much beloved games with thousands of votes that couldn&rsquo;t possibly be all \(10\)s.</p>
@@ -324,8 +327,7 @@ if (!doNotTrack) {
 <img
 	src="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/num_dummies_hist.svg"
 	alt="Histogram over the number of dummy votes calculated by explicit formula" />
-<p>And this plot is even cropped, the results vary from \(-1.4\) million to \(+660\) thousand.</p>
-<!-- TODO: add mean and median -->
+<p>And this plot is even cropped, the results vary from \(-1.4\) million to \(+660\) thousand, though some \(90\%\) lie within the above range, with a mean of around \(1450\) and a median of around \(1587\).</p>
 <p>What&rsquo;s going on, why are the results so inconsistent? The problem is the ranking&rsquo;s <em>secret sauce</em>. Both IMDb and BGG stress is that they only consider <em>regular</em> voters for their rankings. That&rsquo;s the most mysterious part of the system as it&rsquo;s the easiest to manipulate, so we&rsquo;ll just have to take their word for it. For this investigation it means that the average rating BGG publishes includes all the ratings, but the geek score might <em>not</em>.</p>
 <p>Still, clearly something is happening around the <strong>\(1500\) ratings</strong> mark, so we are at least getting closer to an answer. If exact calculations won&rsquo;t work, maybe we can approximate the correct value instead?</p>
 <h1 id="trial--error">Trial &amp; error</h1>
@@ -334,13 +336,64 @@ if (!doNotTrack) {
 
 <img
 	src="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/num_dummies_corr.svg"
-	alt="TODO" />
+	alt="Spearman correlation for different number of dummy ratings" />
 <p>The best correlation of around \(0.996\) is achieved with <strong>\(1489\) dummy ratings</strong>. However, it is worth noticing that the changes in the correlation are very, <em>very</em> small throughout the range we examined here (\(1000\) to \(2500\)), so let&rsquo;s dig still a little deeper.</p>
 <h1 id="optimisation">Optimisation</h1>
-<p>What we have here at hand is actually a classic optimisation task: a real valued function in one unknown (or two if we allow a variable dummy value as well) which we&rsquo;d like to maximise. This is a well-studied field, and with just a few lines of code we&rsquo;re up and running.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">TODO</span>
-</code></pre></div><p>Unsuprisingly, we get almost the same result as above: the best possible correlation is \(0.996\) with around <strong>\(1486\) dummy ratings</strong>.</p>
-<p>But since we made it this far, let&rsquo;s take it one step further. So far, we tried to optimise the correlation in order to recreate BGG&rsquo;s ranking. However, we can also try to recreate the actual <em>geek scores</em>. That is, we can look for the number of dummy ratings that will yield the closest to the actual geek score with our calculations. What exactly we mean by &ldquo;closest&rdquo; is up to us to define. A common metric is the <em>mean squared error</em>.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> It&rsquo;s not worth getting into the maths here either, but the general idea is that we want to punish outliers in our estimates more (qudratically so) the further away they lie from the actual datapoint. Long story short, this yields a minimum for around <strong>\(1630\) dummy ratings</strong>.</p>
+<p>What we have here at hand is actually a classic optimisation task: a real valued function in one unknown (or two if we allow a variable dummy value as well) which we&rsquo;d like to maximise. This is a well-studied field, with many fast and simple implementations that provide us the solution in no time. Unsuprisingly, we get almost the same result as above: the best possible correlation is \(0.996\) with around <strong>\(1486\) dummy ratings</strong>.</p>
+<p>But since we made it this far, let&rsquo;s take it one step further. So far, we tried to optimise the correlation in order to recreate BGG&rsquo;s ranking. However, we can also try to recreate the actual <em>geek scores</em>. That is, we can look for the number of dummy ratings that will yield the closest to the actual geek score with our calculations. What exactly we mean by &ldquo;closest&rdquo; is up to us to define. A common metric is the <em>mean squared error</em>.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> It&rsquo;s not worth getting into the maths here either, but the general idea is that we want to punish outliers in our estimates more (qudratically so) the further away they lie from the actual datapoint. Long story short, this yields a minimum for around <strong>\(1630\) dummy ratings</strong>.</p>
+<p>Let&rsquo;s take one last swing and see what happens if we don&rsquo;t fix the dummy value at \(5.5\) but allow that to be variable as well. This is no problem for the optimisation algorithm and yields the following results:</p>
+<ul>
+<li>the best correlation with <strong>\(1888\) dummy ratings of \(5.552\)</strong>, and</li>
+<li>the least squared error with <strong>\(1611\) dummy ratings of \(5.494\)</strong>.</li>
+</ul>
+<p>Either of those improvements are hardly noticable (in fact insible after rounding), but they do confirm nicely a dummy value of \(5.5\).</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>All things consider, we can be confident that BoardGameGeek calculates their rankings by adding around <strong>\(1500\) to \(1600\) dummy ratings of \(5.5\)</strong> to the regular users' ratings. What exactly constitutes a regular user, and what ratings might be discarded due to shilling, remains a well guarded secret though. Note that the number of dummies is pegged to the overall number of ratings, so this is a moving target, and the calculations would change as time passes.</p>
+<p>Now I must applaud anybody who actually made it all the way through this pretty dry and technical article. The real reason why I dwelled so much on the ratings, and how they are compressed into the BGG rankings, is to get a feeling of what&rsquo;s going on behind the scenes, what the can express, and what they cannot or even <em>do not try to</em> express. Another major take-away is that any of these decisions are choices that need to be made and that come with certain tradeoffs – like them or not.</p>
+<p>In this particular case, I have the feeling that both the Cult of the New™ and connoisseurs of classic games are equally unhappy about the BGG top 100, which one should probably consider a compliment.</p>
+<h1 id="alternative-rankings">Alternative rankings</h1>
+<p>I&rsquo;ll send you off with some rankings that were obtained by making different choices for the two values that we discussed throughout this article: the number of dummy ratings and their value.</p>
+<h2 id="using-the-ratings-average-as-dummy-value">Using the ratings average as dummy value</h2>
+<p>\(7.08245\)</p>
+<ol>
+<li><a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a></li>
+<li><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a></li>
+<li><a href="https://recommend.games/#/game/233078" style="font-variant: small-caps;">Twilight Imperium (Fourth Edition)</a></li>
+<li><a href="https://recommend.games/#/game/224517" style="font-variant: small-caps;">Brass: Birmingham</a></li>
+<li><a href="https://recommend.games/#/game/55690" style="font-variant: small-caps;">Kingdom Death: Monster</a></li>
+<li><a href="https://recommend.games/#/game/167791" style="font-variant: small-caps;">Terraforming Mars</a></li>
+<li><a href="https://recommend.games/#/game/220308" style="font-variant: small-caps;">Gaia Project</a></li>
+<li><a href="https://recommend.games/#/game/182028" style="font-variant: small-caps;">Through the Ages: A New Story of Civilization</a></li>
+<li><a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Gloomhaven: Jaws of the Lion</a></li>
+<li><a href="https://recommend.games/#/game/187645" style="font-variant: small-caps;">Star Wars: Rebellion</a></li>
+</ol>
+<h2 id="using-the-top-250-number-of-ratings">Using the top 250 number of ratings</h2>
+<p>\(11\,983\)</p>
+<ol>
+<li><a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a></li>
+<li><a href="https://recommend.games/#/game/167791" style="font-variant: small-caps;">Terraforming Mars</a></li>
+<li><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a></li>
+<li><a href="https://recommend.games/#/game/169786" style="font-variant: small-caps;">Scythe</a></li>
+<li><a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a></li>
+<li><a href="https://recommend.games/#/game/173346" style="font-variant: small-caps;">7 Wonders Duel</a></li>
+<li><a href="https://recommend.games/#/game/3076" style="font-variant: small-caps;">Puerto Rico</a></li>
+<li><a href="https://recommend.games/#/game/84876" style="font-variant: small-caps;">The Castles of Burgundy</a></li>
+<li><a href="https://recommend.games/#/game/31260" style="font-variant: small-caps;">Agricola</a></li>
+<li><a href="https://recommend.games/#/game/120677" style="font-variant: small-caps;">Terra Mystica</a></li>
+</ol>
+<h2 id="combining-both">Combining both!</h2>
+<ol>
+<li><a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a></li>
+<li><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a></li>
+<li><a href="https://recommend.games/#/game/167791" style="font-variant: small-caps;">Terraforming Mars</a></li>
+<li><a href="https://recommend.games/#/game/169786" style="font-variant: small-caps;">Scythe</a></li>
+<li><a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a></li>
+<li><a href="https://recommend.games/#/game/182028" style="font-variant: small-caps;">Through the Ages: A New Story of Civilization</a></li>
+<li><a href="https://recommend.games/#/game/224517" style="font-variant: small-caps;">Brass: Birmingham</a></li>
+<li><a href="https://recommend.games/#/game/187645" style="font-variant: small-caps;">Star Wars: Rebellion</a></li>
+<li><a href="https://recommend.games/#/game/193738" style="font-variant: small-caps;">Great Western Trail</a></li>
+<li><a href="https://recommend.games/#/game/173346" style="font-variant: small-caps;">7 Wonders Duel</a></li>
+</ol>
 <h1 id="external-resources">External resources</h1>
 <ul>
 <li><a href="https://www.peterjezik.com/bgg/">https://www.peterjezik.com/bgg/</a></li>
@@ -353,10 +406,7 @@ if (!doNotTrack) {
 <p><a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Jaws of the Lion</a> is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> as the number 1. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p>TODO <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3" role="doc-endnote">
-<p>It&rsquo;s probably even more common to use the <em>root</em> mean squared error, but for boring mathematical reasons, it doesn&rsquo;t make a difference when it comes to optimisation. In fact, we could even drop the word <em>mean</em> from our metric and still obtain the same optimal point, but then we&rsquo;d have to implement it ourselves, so there&rsquo;s no point. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>It&rsquo;s probably even more common to use the <em>root</em> mean squared error, but for boring mathematical reasons, it doesn&rsquo;t make a difference when it comes to optimisation. In fact, we could even drop the word <em>mean</em> from our metric and still obtain the same optimal point, but then we&rsquo;d have to implement it ourselves, so there&rsquo;s no point. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>

@@ -14,7 +14,8 @@
       <pubDate>Fri, 11 Sep 2020 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/</guid>
-      <description>I often describe BoardGameGeek (BGG) as &amp;ldquo;the Internet Movie Database (IMDb) for games&amp;rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (awful - defies game description) to \(10\) (outstanding - will always enjoy playing). These ratings are then used to rank games, with Gloomhaven occupying the top spot since December 2017.</description>
+      <description>TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&#39; ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.
+I often describe BoardGameGeek (BGG) as &amp;ldquo;the Internet Movie Database (IMDb) for games&amp;rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \(1\) (awful - defies game description) to \(10\) (outstanding - will always enjoy playing).</description>
     </item>
     
   </channel>
