@@ -60,7 +60,7 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
   "headline": "Reverse engineering the BoardGameGeek ranking",
   "description" : "TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users\u0027 ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.\nI often describe BoardGameGeek (BGG) as \u0026ldquo;the Internet Movie Database (IMDb) for games\u0026rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \\(1\\) (awful - defies game description) to \\(10\\) (outstanding - will always enjoy playing).",
   "inLanguage" : "en",
-  "wordCount":  2202 ,
+  "wordCount":  2499 ,
   "datePublished" : "2020-09-11T00:00:00",
   "dateModified" : "2020-09-11T00:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -268,10 +268,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on September 11, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;11&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;12&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2202&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2499&nbsp;words
   
   
     
@@ -312,8 +312,8 @@ if (!doNotTrack) {
 <p>Notably, those are all very recent games with relatively few ratings.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Some might consider this a feature, not a bug, but when your intention is to create a list of the best board games, you probably do want to give a nod to proven classics, and not just the latest hotness. How to balance out these ends of the spectrum is in the end a choice you have to make, and no matter what it is, People on the Internet™ will not like it.</p>
 <p>The way both IMDb and BGG chose to tackle this issue is by essentially not trusting the ratings – at least not too much. The method boils down to assigning a new item in the database (be it movie or game) a predefined average by default, and only gradually trusting the ratings' average as thousands and thousands of users have cast their votes. More concretely the rankings are calculated by adding a number of dummy votes with a chosen average value, say \(5.5\), to each game&rsquo;s regular ratings. The result is that initially each game will have a score close to \(5.5\), but as more users rate the game, that score will move closer and closer to the conventional mean.</p>
 <p>BGG calls this their <strong>geek score</strong>. Mathematically speaking, it is a <em>Bayesian average</em>, and calculates as follows:</p>
-<p>\[ \textrm{geek score} = \frac{\textrm{number of ratings} \cdot \textrm{average rating} + \textrm{number of dummies} \cdot \textrm{dummy value}}{\textrm{number of ratings} + \textrm{number of dummies}} \]</p>
-<p>Don&rsquo;t worry too much about the details though – <em>adding dummy votes</em> is really all you need to understand.</p>
+<p>\[ \textrm{geek score} = \frac{\textrm{sum of ratings} + \textrm{number of dummies} \cdot \textrm{dummy value}}{\textrm{number of ratings} + \textrm{number of dummies}}, \]</p>
+<p>where \(\textrm{sum of ratings}\) can be calculated either by, well, summing up all ratings or via \(\textrm{number of ratings} \cdot \textrm{average rating}\). Don&rsquo;t worry too much about the details though – <em>adding dummy votes</em> is really all you need to understand.</p>
 <p>OK, so that&rsquo;s the concept, but crucially that&rsquo;s not all the details. You still need to choose <em>how many</em> dummy votes you want to add and <em>what value</em> they should take. Since People on the Internet™ who disagree with your ranking will try to manipulate it in whatever way they can, sites are usually very cagey about said details. <a href="https://en.wikipedia.org/wiki/IMDb#Rankings">IMDb used to be more transparent</a>, <a href="https://www.boardgamegeek.com/thread/103639/new-game-ranking-system">as was BGG</a>, but now we have to dig a little deeper.</p>
 <p>Let&rsquo;s start from the easier of the two, the value of the dummy votes. It is commonly chosen to represent some <em>prior mean</em>, i.e., some decent estimate of the rating a new game in the database would have. A frequent choice would be to use the average rating across <em>all</em> games. It&rsquo;s a fair assumption – without further information about a game, we don&rsquo;t know if it&rsquo;s any better or worse than the average game. However, Scott Alden actually gave away the answer in that interview from the beginning: BGG chose the dummy value to be <strong>\(5.5\)</strong>. Their rationale is that ratings range from \(1\) through \(10\), so \(5.5\) is the midpoint. Of course, people tend to rather play and rate much more the games they like, and so the average rating is around \(7\). Opting for the lower value here is part of the design of the ranking: it means a new game would enter the ranking rather at the end of the pack. On the other hand, using the mean as the dummy value means a new game is placed more or less in the middle. It is worth mentioning that IMBd does use the mean (or at least used to), but they only ever publish the top 250 movies, and don&rsquo;t care about the crowd behind.</p>
 <p>The other value, the <em>number</em> of dummy votes, requires more work. Because some of the details and data are unknown, we cannot actually pin down the exact number that BGG is using. Instead, we&rsquo;ll try three different approaches, and compare their results.</p>
@@ -354,7 +354,7 @@ if (!doNotTrack) {
 <h1 id="alternative-rankings">Alternative rankings</h1>
 <p>I&rsquo;ll send you off with some rankings that were obtained by making different choices for the two values that we discussed throughout this article: the number of dummy ratings and their value.</p>
 <h2 id="using-the-ratings-average-as-dummy-value">Using the ratings average as dummy value</h2>
-<p>\(7.08245\)</p>
+<p>I&rsquo;ve mentioned before that the average rating across all games is around \(7\) – a little<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> more precisely \(7.08245\). What if we chose that as the dummy rating, but left their number at \(1500\)? The result should be a ranking that is a little friendlier to newer titles with fewer ratings as their score isn&rsquo;t dragged all the way down to \(5.5\) in the beginning.</p>
 <ol>
 <li><a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a></li>
 <li><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a></li>
@@ -367,8 +367,9 @@ if (!doNotTrack) {
 <li><a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Gloomhaven: Jaws of the Lion</a></li>
 <li><a href="https://recommend.games/#/game/187645" style="font-variant: small-caps;">Star Wars: Rebellion</a></li>
 </ol>
+<p>Sure enough, the brand new <a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Jaws of the Lion</a> with less than \(3000\) ratings already shows up in the top 10. The other game that sticks out here is <a href="https://recommend.games/#/game/55690" style="font-variant: small-caps;">Kingdom Death: Monster</a>. This Kickstarter success story clearly attracted a lot of enthusiasts, but not necessarily the mass.</p>
 <h2 id="using-the-top-250-number-of-ratings">Using the top 250 number of ratings</h2>
-<p>\(11\,983\)</p>
+<p>Just like IMDb publishes only their top 250 movies, we can consider the same and crank up the number of dummy ratings. A good number seems to be the 250th most rated game on BGG, which has been rated \(11\,983\) times. Using BGG&rsquo;s standard dummy value of \(5.5\), we obtain a ranking that is much more skewed towards proven classics:</p>
 <ol>
 <li><a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a></li>
 <li><a href="https://recommend.games/#/game/167791" style="font-variant: small-caps;">Terraforming Mars</a></li>
@@ -381,7 +382,9 @@ if (!doNotTrack) {
 <li><a href="https://recommend.games/#/game/31260" style="font-variant: small-caps;">Agricola</a></li>
 <li><a href="https://recommend.games/#/game/120677" style="font-variant: small-caps;">Terra Mystica</a></li>
 </ol>
+<p>The most recent release on this list is <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a>, but we also meet again the old BGG #1&rsquo;s, <a href="https://recommend.games/#/game/3076" style="font-variant: small-caps;">Puerto Rico</a> and <a href="https://recommend.games/#/game/31260" style="font-variant: small-caps;">Agricola</a>.</p>
 <h2 id="combining-both">Combining both!</h2>
+<p>Finally, let&rsquo;s do what IMDb does (or used to do), and add to each game&rsquo;s ratings \(11\,983\) dummy ratings of \(7.08245\):</p>
 <ol>
 <li><a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a></li>
 <li><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a></li>
@@ -394,11 +397,7 @@ if (!doNotTrack) {
 <li><a href="https://recommend.games/#/game/193738" style="font-variant: small-caps;">Great Western Trail</a></li>
 <li><a href="https://recommend.games/#/game/173346" style="font-variant: small-caps;">7 Wonders Duel</a></li>
 </ol>
-<h1 id="external-resources">External resources</h1>
-<ul>
-<li><a href="https://www.peterjezik.com/bgg/">https://www.peterjezik.com/bgg/</a></li>
-<li><a href="https://youtu.be/Y1t_0LhpDmU">https://youtu.be/Y1t_0LhpDmU</a></li>
-</ul>
+<p>The effects of more, but higher dummy ratings seem to almost cancel each other out. Compared to BGG&rsquo;s actual top 10, only <a href="https://recommend.games/#/game/233078" style="font-variant: small-caps;">Twilight Imperium</a> and <a href="https://recommend.games/#/game/220308" style="font-variant: small-caps;">Gaia Project</a> are missing, otherwise this ranking looks very familiar. Turns out, BGG did a pretty good job designing its ranking!</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -407,6 +406,9 @@ if (!doNotTrack) {
 </li>
 <li id="fn:2" role="doc-endnote">
 <p>It&rsquo;s probably even more common to use the <em>root</em> mean squared error, but for boring mathematical reasons, it doesn&rsquo;t make a difference when it comes to optimisation. In fact, we could even drop the word <em>mean</em> from our metric and still obtain the same optimal point, but then we&rsquo;d have to implement it ourselves, so there&rsquo;s no point. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Throughout this article I discarded games with less than \(100\) ratings, but the effect of this only shows in some negligible decimals. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
