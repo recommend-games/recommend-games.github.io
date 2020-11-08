@@ -7,18 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Thu, 22 Oct 2020 00:00:00 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/geek-score/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Reverse engineering the BoardGameGeek ranking – Part 2!</title>
-      <link>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/</link>
-      <pubDate>Thu, 22 Oct 2020 00:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/</guid>
-      <description>This is the second part of a series explaining and analysing the BoardGameGeek rankings. Read the first part here.
-Last time I left you with the nice result that BoardGameGeek (BGG) calculates its ranking by taking users&#39; ratings for a particular game and then add around 1500-1600 dummy ratings of 5.5. This so-called geek score is used to sort the games from best (Gloomhaven) to worst (Tic-Tac-Toe).
-One detail however we touched on in passing, but did not resolve, is how that number of dummy ratings develop over time.</description>
-    </item>
-    
+    <lastBuildDate>Sat, 03 Oct 2020 08:42:51 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/geek-score/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reverse engineering the BoardGameGeek ranking</title>
       <link>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/</link>
