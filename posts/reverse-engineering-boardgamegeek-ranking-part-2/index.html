@@ -61,9 +61,9 @@ One detail however we touched on in passing, but did not resolve, is how that nu
   "headline": "Reverse engineering the BoardGameGeek ranking – Part 2!",
   "description" : "This is the second part of a series explaining and analysing the BoardGameGeek rankings. Read the first part here.\nLast time I left you with the nice result that BoardGameGeek (BGG) calculates its ranking by taking users\u0027 ratings for a particular game and then add around 1500-1600 dummy ratings of 5.5. This so-called geek score is used to sort the games from best (Gloomhaven) to worst (Tic-Tac-Toe).\nOne detail however we touched on in passing, but did not resolve, is how that number of dummy ratings develop over time.",
   "inLanguage" : "en",
-  "wordCount":  121 ,
-  "datePublished" : "2020-10-22T00:00:00",
-  "dateModified" : "2020-10-22T00:00:00",
+  "wordCount":  404 ,
+  "datePublished" : "2020-11-10T00:00:00",
+  "dateModified" : "2020-11-10T00:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
   "keywords" : [ "BoardGameGeek, BGG, ranking, rating, statistics, Bayesian, geek score, top 100, dummy ratings, highest rated games, alternative rankings" ],
   "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/reverse-engineering-boardgamegeek-ranking-part-2\/",
@@ -268,13 +268,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on October 22, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on November 10, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;121&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;404&nbsp;words
   
   
     
@@ -302,14 +302,20 @@ if (!doNotTrack) {
         <p><em>This is the second part of a series explaining and analysing the BoardGameGeek rankings. Read the <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">first part here</a>.</em></p>
 <p><a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">Last time</a> I left you with the nice result that <a href="https://boardgamegeek.com/">BoardGameGeek (BGG)</a> calculates its ranking by taking users' ratings for a particular game and then add around <strong>1500-1600 dummy ratings of 5.5</strong>. This so-called <em>geek score</em> is used to sort the games from best (<a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a>) to worst (<a href="https://recommend.games/#/game/11901" style="font-variant: small-caps;">Tic-Tac-Toe</a>).</p>
 <p>One detail however we touched on in passing, but did not resolve, is how that number of dummy ratings develop over time. When the current calculation method was introduced, BGG founder <a href="https://www.boardgamegeek.com/thread/103639/new-game-ranking-system">Scott Alden mentioned</a> that this number would be pegged to the number of total ratings, but did not reveal any details. Challenge accepted!</p>
+<p>In order to tackle this question, we need to compare that dummy number to the total number of ratings over time. Fortunately, thanks to the scraping done for <a href="https://recommend.games/">Recommend.Games</a>, we have access to the <a href="https://boardgamegeek.com/thread/2287371/boardgamegeek-games-and-ratings-datasets">BGG games data</a> over the past year or so. Using these snapshots, we observe how the number of games and ratings in the database has grown:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/games.svg"
 	alt="Number of games and ratings on BGG over time" />
+<p>We can now repeat the exact same calculation we did in the <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/#optimisation">previous post</a>: For each point in time, the algorithm searches for the number of dummy ratings that yields an estimated geek score closest to the actual score. Now, we have a bunch of data points that correlate the total number of ratings with the number of dummies used at that time. Here&rsquo;s what it looks like:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/ratings.svg"
 	alt="Number of total ratings vs dummy ratings" />
+<p>We get a pretty nice straight line – the dashed line in the plot is fitted with linear regression, i.e., the straight line that most closely fits our data. Its formula is:</p>
+<p>\[ \textrm{number of dummies} \approx 0.0000997 \cdot \textrm{total number of ratings}. \]</p>
+<p>This means that for every rating entered into the BGG database, the number of dummy ratings is increased by \(0.0000997\). That number might look a bit opaque, but it&rsquo;s actually very easy to interpret once you put the question to its head: How many ratings have to be entered for the number of dummies to increase by \(1\)? You get the answer to that by taking the inverse of that factor, which happens to be about \(10\,032\). This number is way to close to \(10\,000\) to be a coincidence! We can conclude the exact formula for the number of dummy ratings:</p>
+<p>\[ \textrm{number of dummies} = \frac{\textrm{total number of ratings}}{10\,000}. \]</p>
 
 
         
