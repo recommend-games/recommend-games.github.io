@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Data &amp; Games</title>
+    <title>Tags on Analysis Paralysis</title>
     <link>https://recommend-games.github.io/tags/</link>
-    <description>Recent content in Tags on Data &amp; Games</description>
+    <description>Recent content in Tags on Analysis Paralysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Tue, 10 Nov 2020 00:00:00 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Oct 2020 08:42:51 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>alternative rankings</title>
       <link>https://recommend-games.github.io/tags/alternative-rankings/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/alternative-rankings/</guid>
       <description></description>
@@ -20,7 +20,7 @@
     <item>
       <title>Bayesian</title>
       <link>https://recommend-games.github.io/tags/bayesian/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/bayesian/</guid>
       <description></description>
@@ -29,7 +29,7 @@
     <item>
       <title>BGG</title>
       <link>https://recommend-games.github.io/tags/bgg/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/bgg/</guid>
       <description></description>
@@ -38,7 +38,7 @@
     <item>
       <title>BoardGameGeek</title>
       <link>https://recommend-games.github.io/tags/boardgamegeek/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/boardgamegeek/</guid>
       <description></description>
@@ -47,7 +47,7 @@
     <item>
       <title>dummy ratings</title>
       <link>https://recommend-games.github.io/tags/dummy-ratings/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/dummy-ratings/</guid>
       <description></description>
@@ -56,7 +56,7 @@
     <item>
       <title>geek score</title>
       <link>https://recommend-games.github.io/tags/geek-score/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/geek-score/</guid>
       <description></description>
@@ -65,7 +65,7 @@
     <item>
       <title>highest rated games</title>
       <link>https://recommend-games.github.io/tags/highest-rated-games/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/highest-rated-games/</guid>
       <description></description>
@@ -74,7 +74,7 @@
     <item>
       <title>ranking</title>
       <link>https://recommend-games.github.io/tags/ranking/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/ranking/</guid>
       <description></description>
@@ -83,7 +83,7 @@
     <item>
       <title>rating</title>
       <link>https://recommend-games.github.io/tags/rating/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/rating/</guid>
       <description></description>
@@ -92,7 +92,7 @@
     <item>
       <title>statistics</title>
       <link>https://recommend-games.github.io/tags/statistics/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/statistics/</guid>
       <description></description>
@@ -101,7 +101,7 @@
     <item>
       <title>top 100</title>
       <link>https://recommend-games.github.io/tags/top-100/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/top-100/</guid>
       <description></description>
