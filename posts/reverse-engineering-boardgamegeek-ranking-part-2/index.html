@@ -7,9 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>And the Spiel des Jahres 2020 goes to… Part 4! - Analysis Paralysis</title>
-  <meta name="description" content="After months of waiting, we finally know what games won this year&rsquo;s Spiel des Jahres and Kennerspiel des Jahres! Without further ado, I&rsquo;ll present the winners along with a comment on how the predictions went.
-Spiel des Jahres 2020 Pictures Reading through the comments on the interweb most players seem surprised about the winner of the red meeple. Not me! It was on my list from the very beginning as probably the strongest contender.">
+  <title>Reverse engineering the BoardGameGeek ranking – Part 2! - Analysis Paralysis</title>
+  <meta name="description" content="This is the second part of a series explaining and analysing the BoardGameGeek rankings. Read the first part here.
+Last time I left you with the nice result that BoardGameGeek (BGG) calculates its ranking by taking users&#39; ratings for a particular game and then add around 1500-1600 dummy ratings of 5.5. This so-called geek score is used to sort the games from best (Gloomhaven) to worst (Tic-Tac-Toe).
+One detail however we touched on in passing, but did not resolve, is how that number of dummy ratings develop over time.">
   <meta name="author" content="Recommend.Games"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -45,8 +46,8 @@ Spiel des Jahres 2020 Pictures Reading through the comments on the interweb most
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/recommend-games.github.io\/posts\/and-the-spiel-des-jahres-2020-goes-to-part-4\/",
-          "name": "And the spiel des jahres 2020 goes to… part 4!"
+          "@id": "https:\/\/recommend-games.github.io\/posts\/reverse-engineering-boardgamegeek-ranking-part-2\/",
+          "name": "Reverse engineering the board game geek ranking – part 2!"
         }
     }]
 }
@@ -57,15 +58,15 @@ Spiel des Jahres 2020 Pictures Reading through the comments on the interweb most
   "author": {
     "name" : "Markus Shepherd"
   },
-  "headline": "And the Spiel des Jahres 2020 goes to… Part 4!",
-  "description" : "After months of waiting, we finally know what games won this year\u0026rsquo;s Spiel des Jahres and Kennerspiel des Jahres! Without further ado, I\u0026rsquo;ll present the winners along with a comment on how the predictions went.\nSpiel des Jahres 2020 Pictures Reading through the comments on the interweb most players seem surprised about the winner of the red meeple. Not me! It was on my list from the very beginning as probably the strongest contender.",
+  "headline": "Reverse engineering the BoardGameGeek ranking – Part 2!",
+  "description" : "This is the second part of a series explaining and analysing the BoardGameGeek rankings. Read the first part here.\nLast time I left you with the nice result that BoardGameGeek (BGG) calculates its ranking by taking users\u0027 ratings for a particular game and then add around 1500-1600 dummy ratings of 5.5. This so-called geek score is used to sort the games from best (Gloomhaven) to worst (Tic-Tac-Toe).\nOne detail however we touched on in passing, but did not resolve, is how that number of dummy ratings develop over time.",
   "inLanguage" : "en",
-  "wordCount":  467 ,
-  "datePublished" : "2020-07-22T14:42:00",
-  "dateModified" : "2020-07-22T14:42:00",
+  "wordCount":  533 ,
+  "datePublished" : "2021-01-26T22:24:00",
+  "dateModified" : "2021-01-26T22:24:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
-  "keywords" : [ "SdJ, Spiel des Jahres, KSdJ, Kennerspiel des Jahres, Game of the Year, Germany, My City, Nova Luna, Pictures, Cartographers, The Crew, King\u0027s Dilemma, Daniela Stöhr, Christian Stöhr" ],
-  "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/and-the-spiel-des-jahres-2020-goes-to-part-4\/",
+  "keywords" : [ "BoardGameGeek, BGG, ranking, rating, statistics, Bayesian, geek score, top 100, dummy ratings, highest rated games, circle of hype" ],
+  "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/reverse-engineering-boardgamegeek-ranking-part-2\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/recommend-games.github.io\/",
@@ -79,16 +80,18 @@ Spiel des Jahres 2020 Pictures Reading through the comments on the interweb most
 }
 </script>
 
-<meta property="og:title" content="And the Spiel des Jahres 2020 goes to… Part 4!" />
-<meta property="og:description" content="After months of waiting, we finally know what games won this year&rsquo;s Spiel des Jahres and Kennerspiel des Jahres! Without further ado, I&rsquo;ll present the winners along with a comment on how the predictions went.
-Spiel des Jahres 2020 Pictures Reading through the comments on the interweb most players seem surprised about the winner of the red meeple. Not me! It was on my list from the very beginning as probably the strongest contender.">
+<meta property="og:title" content="Reverse engineering the BoardGameGeek ranking – Part 2!" />
+<meta property="og:description" content="This is the second part of a series explaining and analysing the BoardGameGeek rankings. Read the first part here.
+Last time I left you with the nice result that BoardGameGeek (BGG) calculates its ranking by taking users&#39; ratings for a particular game and then add around 1500-1600 dummy ratings of 5.5. This so-called geek score is used to sort the games from best (Gloomhaven) to worst (Tic-Tac-Toe).
+One detail however we touched on in passing, but did not resolve, is how that number of dummy ratings develop over time.">
 <meta property="og:image" content="https://recommend-games.github.io/logo.png" />
-<meta property="og:url" content="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-4/" />
+<meta property="og:url" content="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Analysis Paralysis" />
 
-  <meta name="twitter:title" content="And the Spiel des Jahres 2020 goes to… Part 4!" />
-  <meta name="twitter:description" content="After months of waiting, we finally know what games won this year&rsquo;s Spiel des Jahres and Kennerspiel des Jahres! Without further ado, I&rsquo;ll present the winners along with a comment on how …">
+  <meta name="twitter:title" content="Reverse engineering the BoardGameGeek ranking – Part 2!" />
+  <meta name="twitter:description" content="This is the second part of a series explaining and analysing the BoardGameGeek rankings. Read the first part here.
+Last time I left you with the nice result that BoardGameGeek (BGG) calculates its …">
   <meta name="twitter:image" content="https://recommend-games.github.io/logo.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@recommend_games" />
@@ -257,7 +260,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>And the Spiel des Jahres 2020 goes to… Part 4!</h1>
+                <h1>Reverse engineering the BoardGameGeek ranking – Part 2!</h1>
               
               
               
@@ -265,13 +268,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on July 22, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 26, 2021
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;467&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;533&nbsp;words
   
   
     
@@ -296,67 +299,52 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>After months of waiting, we finally <a href="https://www.spiel-des-jahres.de/die-gewinner-2020-stehen-fest/">know what games won</a> this year&rsquo;s <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> and <span style="color: #193F4A;"><em><strong>Kennerspiel des Jahres</strong></em></span>! Without further ado, I&rsquo;ll present the winners along with a comment on how the predictions went.</p>
-<h1 id="span-stylecolor-e30613spiel-des-jahres-2020span"><span style="color: #E30613;"><em>Spiel des Jahres 2020</em></span></h1>
+        <p><em>This is the second part of a series explaining and analysing the BoardGameGeek rankings. Read the <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">first part here</a>.</em></p>
+<p><a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">Last time</a> I left you with the nice result that <a href="https://boardgamegeek.com/">BoardGameGeek (BGG)</a> calculates its ranking by taking users' ratings for a particular game and then add around <strong>1500-1600 dummy ratings of 5.5</strong>. This so-called <em>geek score</em> is used to sort the games from best (<a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a>) to worst (<a href="https://recommend.games/#/game/11901" style="font-variant: small-caps;">Tic-Tac-Toe</a>).</p>
+<p>One detail however we touched on in passing, but did not resolve, is how that number of dummy ratings develop over time. When the current calculation method was introduced, BGG founder <a href="https://www.boardgamegeek.com/thread/103639/new-game-ranking-system">Scott Alden mentioned</a> that this number would be pegged to the number of total ratings, but did not reveal any details. Challenge accepted!</p>
+<p>In order to tackle this question, we need to compare that dummy number to the total number of ratings over time. Fortunately, thanks to the scraping done for <a href="https://recommend.games/">Recommend.Games</a>, we have access to the <a href="https://boardgamegeek.com/thread/2287371/boardgamegeek-games-and-ratings-datasets">BGG games data</a> over the past year or so. Using these snapshots, we observe how the number of games and ratings in the database has grown:</p>
 
 <img
-	src="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-4/sdj-2020_huad507e6f34717ce578bd95f63866e0e8_408481_0x300_resize_box_2.png"
-	alt="Spiel des Jahres 2020" />
-<h2 id="a-hrefhttpsrecommendgamesgame284108-stylefont-variant-small-capspicturesa"><a href="https://recommend.games/#/game/284108" style="font-variant: small-caps;">Pictures</a></h2>
+	src="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/games.svg"
+	alt="Number of games and ratings on BGG over time" />
+<p>We can now repeat the exact same calculation we did in the <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/#optimisation">previous post</a>: For each point in time, the algorithm searches for the number of dummy ratings that yields an estimated geek score closest to the actual score. Now, we have a bunch of data points that correlate the total number of ratings with the number of dummies used at that time. Here&rsquo;s what it looks like:</p>
 
 <img
-	src="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-4/284108_hu9ca5c167760da58cc5156745c38f4acf_1528579_0x300_resize_q75_box.jpg"
-	alt="Pictures" />
-<p>Reading through the comments on the interweb most players seem surprised about the winner of the red meeple. Not me! It was on my list <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to/">from the very beginning</a> as probably the strongest contender. Despite nominating the fairly complex <a href="https://recommend.games/#/game/295486" style="font-variant: small-caps;">My City</a> and <a href="https://recommend.games/#/game/284435" style="font-variant: small-caps;">Nova Luna</a> along with <a href="https://recommend.games/#/game/284108" style="font-variant: small-caps;">Pictures</a>, in the end the jury went – again – for the super simple and approachable game.</p>
-<p>Inevitable, there are those who complain that one year after <a href="https://recommend.games/#/game/254640" style="font-variant: small-caps;">Just One</a> there&rsquo;s yet another party game taking home the main award. I really think the BoardGameGeek crowd needs to rethink their definition of a party (and probably why they&rsquo;re never invited to any). Not every &ldquo;light&rdquo; game is automatically a party game, and I believe neither this nor last year&rsquo;s winner would be considered party games by the average gamer. At the end of the day, if you&rsquo;re hanging out on board gaming sites all day long, you&rsquo;re not the target audience of <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span>. The award is meant to guide people who might purchase one game a year to have a good time with a quick and approachable experience.</p>
-<p>By all accounts, <a href="https://recommend.games/#/game/284108" style="font-variant: small-caps;">Pictures</a> seems to fit that description perfectly, so I say congratulations to Daniela and Christian Stöhr for winning the most prestigious award in board gaming with their first (or second) design!</p>
-<h1 id="span-stylecolor-193f4akennerspiel-des-jahres-2020span"><span style="color: #193F4A;"><em>Kennerspiel des Jahres 2020</em></span></h1>
-
-<img
-	src="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-4/ksdj-2020_huabbfac70d4d236c608c8474b59f0dafe_404506_0x300_resize_box_2.png"
-	alt="Kennerspiel des Jahres 2020" />
-<h2 id="a-hrefhttpsrecommendgamesgame284083-stylefont-variant-small-capsthe-crew-the-quest-for-planet-ninea"><a href="https://recommend.games/#/game/284083" style="font-variant: small-caps;">The Crew: The Quest for Planet Nine</a></h2>
-
-<img
-	src="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-4/284083_hu5438825b9b6d1014226d20d231e650c2_382666_0x300_resize_q75_box.jpg"
-	alt="The Crew: The Quest for Planet Nine" />
-<p>Unlike the winner of the red meeple, virtually everybody agreed that <a href="https://recommend.games/#/game/284083" style="font-variant: small-caps;">The Crew</a> will win an award, though not necessarily <em>which one</em>. I&rsquo;ve discussed at length in the <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-2/">previous</a> <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-3/">articles</a> why I agree with the jury&rsquo;s classification of <a href="https://recommend.games/#/game/284083" style="font-variant: small-caps;">The Crew</a> as a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>.</p>
-<p>One last thing to mention is that <a href="https://recommend.games/#/game/284083" style="font-variant: small-caps;">The Crew</a>&rsquo;s predictable win wasn&rsquo;t down to a lack of competition. By all accounts, both <a href="https://recommend.games/#/game/263918" style="font-variant: small-caps;">Cartographers</a> and <a href="https://recommend.games/#/game/245655" style="font-variant: small-caps;">King&rsquo;s Dilemma</a> are highly regarded and would have deserved the award. As gamers, we can be excited that it&rsquo;s not only the quantity of games being released that&rsquo;s rising, but also the quality, throughout the spectrum.</p>
-<h1 id="conclusion">Conclusion</h1>
-<p>The jury explicitly pointed out the quality of this year&rsquo;s games in all of this hobby&rsquo;s facets. When you look back through the different games discussed in this series, I&rsquo;m sure you&rsquo;ll agree with them, and it&rsquo;ll get you excited for all the games yet to be published.</p>
-<p>I certainly had a ton of fun reading reviews, following discussions, crunching numbers, and distilling everything into my predictions. The outcome makes me quite proud and I&rsquo;m already thinking about next year&rsquo;s awards, so be sure to check back in for <span style="color: #E30613;"><em><strong>Spiel des Jahres 2021</strong></em></span>!</p>
+	src="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/ratings.svg"
+	alt="Number of total ratings vs dummy ratings" />
+<p>We get a pretty nice straight line – the dashed line in the plot is fitted with linear regression, i.e., the straight line that most closely fits our data. Its formula is:</p>
+<p>\[ \textrm{number of dummies} \approx 0.0000997 \cdot \textrm{total number of ratings}. \]</p>
+<p>This means that for every rating entered into the BGG database, the number of dummy ratings is increased by \(0.0000997\). That number might look a bit opaque, but it&rsquo;s actually very easy to interpret once you put the question to its head: How many ratings have to be entered for the number of dummies to increase by \(1\)? You get the answer to that by taking the inverse of that factor, which happens to be about \(10\,032\). This number is way to close to \(10\,000\) to be a coincidence! We can conclude the exact formula for the number of dummy ratings:</p>
+<p>\[ \textrm{number of dummies} = \frac{\textrm{total number of ratings}}{10\,000}. \]</p>
+<p>As of the time of writing, there are \(17\,287\,904\) ratings (give or take) in the BGG database, so there will be around 1729 dummy ratings of \(5.5\) added to the regular ratings.</p>
+<p>As the number of BGG users <a href="https://boardgamegeek.com/thread/2585742/happy-21st-birthday-geek">rises steadily</a>, this number of dummy ratings also keeps increasing. This is part of the reason why older games (particularly those with a newer edition) tend to drop in the rankings. When users stop adding new ratings, a game&rsquo;s average rating more or less freezes. But because more and more dummy votes are added, the geek score decreases every time it gets recalculated, and so the older games drop in the rankings, while the latest hotness gets all the fresh votes, and shoots up to the top.</p>
+<p>The circle of hype.</p>
 
 
         
           <div class="blog-tags">
             
-              <a href="https://recommend-games.github.io//tags/sdj/">SdJ</a>&nbsp;
+              <a href="https://recommend-games.github.io//tags/boardgamegeek/">BoardGameGeek</a>&nbsp;
             
-              <a href="https://recommend-games.github.io//tags/spiel-des-jahres/">Spiel des Jahres</a>&nbsp;
+              <a href="https://recommend-games.github.io//tags/bgg/">BGG</a>&nbsp;
             
-              <a href="https://recommend-games.github.io//tags/ksdj/">KSdJ</a>&nbsp;
+              <a href="https://recommend-games.github.io//tags/ranking/">ranking</a>&nbsp;
             
-              <a href="https://recommend-games.github.io//tags/kennerspiel-des-jahres/">Kennerspiel des Jahres</a>&nbsp;
+              <a href="https://recommend-games.github.io//tags/rating/">rating</a>&nbsp;
             
-              <a href="https://recommend-games.github.io//tags/game-of-the-year/">Game of the Year</a>&nbsp;
+              <a href="https://recommend-games.github.io//tags/statistics/">statistics</a>&nbsp;
             
-              <a href="https://recommend-games.github.io//tags/germany/">Germany</a>&nbsp;
+              <a href="https://recommend-games.github.io//tags/bayesian/">Bayesian</a>&nbsp;
             
-              <a href="https://recommend-games.github.io//tags/my-city/">My City</a>&nbsp;
+              <a href="https://recommend-games.github.io//tags/geek-score/">geek score</a>&nbsp;
             
-              <a href="https://recommend-games.github.io//tags/nova-luna/">Nova Luna</a>&nbsp;
+              <a href="https://recommend-games.github.io//tags/top-100/">top 100</a>&nbsp;
             
-              <a href="https://recommend-games.github.io//tags/pictures/">Pictures</a>&nbsp;
+              <a href="https://recommend-games.github.io//tags/dummy-ratings/">dummy ratings</a>&nbsp;
             
-              <a href="https://recommend-games.github.io//tags/cartographers/">Cartographers</a>&nbsp;
+              <a href="https://recommend-games.github.io//tags/highest-rated-games/">highest rated games</a>&nbsp;
             
-              <a href="https://recommend-games.github.io//tags/the-crew/">The Crew</a>&nbsp;
-            
-              <a href="https://recommend-games.github.io//tags/kings-dilemma/">King&#39;s Dilemma</a>&nbsp;
-            
-              <a href="https://recommend-games.github.io//tags/daniela-st%C3%B6hr/">Daniela Stöhr</a>&nbsp;
-            
-              <a href="https://recommend-games.github.io//tags/christian-st%C3%B6hr/">Christian Stöhr</a>&nbsp;
+              <a href="https://recommend-games.github.io//tags/circle-of-hype/">circle of hype</a>&nbsp;
             
           </div>
         
@@ -371,42 +359,42 @@ if (!doNotTrack) {
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fand-the-spiel-des-jahres-2020-goes-to-part-4%2f&amp;text=And%20the%20Spiel%20des%20Jahres%202020%20goes%20to%e2%80%a6%20Part%204%21&amp;via=recommend_games" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2frecommend-games.github.io%2fposts%2freverse-engineering-boardgamegeek-ranking-part-2%2f&amp;text=Reverse%20engineering%20the%20BoardGameGeek%20ranking%20%e2%80%93%20Part%202%21&amp;via=recommend_games" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frecommend-games.github.io%2fposts%2fand-the-spiel-des-jahres-2020-goes-to-part-4%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frecommend-games.github.io%2fposts%2freverse-engineering-boardgamegeek-ranking-part-2%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fand-the-spiel-des-jahres-2020-goes-to-part-4%2f&amp;title=And%20the%20Spiel%20des%20Jahres%202020%20goes%20to%e2%80%a6%20Part%204%21" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2freverse-engineering-boardgamegeek-ranking-part-2%2f&amp;title=Reverse%20engineering%20the%20BoardGameGeek%20ranking%20%e2%80%93%20Part%202%21" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fand-the-spiel-des-jahres-2020-goes-to-part-4%2f&amp;title=And%20the%20Spiel%20des%20Jahres%202020%20goes%20to%e2%80%a6%20Part%204%21" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frecommend-games.github.io%2fposts%2freverse-engineering-boardgamegeek-ranking-part-2%2f&amp;title=Reverse%20engineering%20the%20BoardGameGeek%20ranking%20%e2%80%93%20Part%202%21" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fand-the-spiel-des-jahres-2020-goes-to-part-4%2f&amp;title=And%20the%20Spiel%20des%20Jahres%202020%20goes%20to%e2%80%a6%20Part%204%21" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2freverse-engineering-boardgamegeek-ranking-part-2%2f&amp;title=Reverse%20engineering%20the%20BoardGameGeek%20ranking%20%e2%80%93%20Part%202%21" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fand-the-spiel-des-jahres-2020-goes-to-part-4%2f&amp;description=And%20the%20Spiel%20des%20Jahres%202020%20goes%20to%e2%80%a6%20Part%204%21" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frecommend-games.github.io%2fposts%2freverse-engineering-boardgamegeek-ranking-part-2%2f&amp;description=Reverse%20engineering%20the%20BoardGameGeek%20ranking%20%e2%80%93%20Part%202%21" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -428,11 +416,7 @@ if (!doNotTrack) {
                   <ul>
                 
                 
-                    <li><a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-3/">And the Spiel des Jahres 2020 goes to… Part 3!</a></li>
-                
-                    <li><a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-2/">And the Spiel des Jahres 2020 goes to… Part 2!</a></li>
-                
-                    <li><a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to/">And the Spiel des Jahres 2020 goes to…</a></li>
+                    <li><a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">Reverse engineering the BoardGameGeek ranking</a></li>
                 
               </ul>
 
@@ -444,13 +428,9 @@ if (!doNotTrack) {
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-3/" data-toggle="tooltip" data-placement="top" title="And the Spiel des Jahres 2020 goes to… Part 3!">&larr; Previous Post</a>
+              <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/" data-toggle="tooltip" data-placement="top" title="Reverse engineering the BoardGameGeek ranking">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/" data-toggle="tooltip" data-placement="top" title="Reverse engineering the BoardGameGeek ranking">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
