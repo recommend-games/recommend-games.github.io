@@ -93,6 +93,24 @@
   </url>
   
   <url>
+    <loc>https://recommend-games.github.io/tags/kennerspiel/</loc>
+    <lastmod>2021-01-08T12:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</loc>
+    <lastmod>2021-01-08T12:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/posts/kennerspiel/</loc>
+    <lastmod>2021-01-08T12:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
     <loc>https://recommend-games.github.io/tags/alternative-rankings/</loc>
     <lastmod>2020-10-03T08:42:51+03:00</lastmod>
     <changefreq>daily</changefreq>
@@ -136,12 +154,6 @@
   
   <url>
     <loc>https://recommend-games.github.io/tags/germany/</loc>
-    <lastmod>2020-07-22T14:42:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</loc>
     <lastmod>2020-07-22T14:42:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>

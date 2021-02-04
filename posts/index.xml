@@ -20,6 +20,15 @@ One detail however we touched on in passing, but did not resolve, is how that nu
     </item>
     
     <item>
+      <title>What makes a Kennerspiel?</title>
+      <link>https://recommend-games.github.io/posts/kennerspiel/</link>
+      <pubDate>Fri, 08 Jan 2021 12:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/posts/kennerspiel/</guid>
+      <description>    var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (this.readyState == 4 &amp;&amp; this.status == 200) { var item = JSON.parse(this.responseText); Bokeh.embed.embed_item(item, &#34;complexity_vs_min_age.json&#34;); } }; xmlhttp.open(&#34;GET&#34;, &#34;\/posts\/kennerspiel\/complexity_vs_min_age.json&#34;, true); xmlhttp.send();   </description>
+    </item>
+    
+    <item>
       <title>Reverse engineering the BoardGameGeek ranking</title>
       <link>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/</link>
       <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
