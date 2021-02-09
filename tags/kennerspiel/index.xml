@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Fri, 08 Jan 2021 12:00:00 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/kennerspiel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Feb 2021 12:00:00 +0200</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/kennerspiel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What makes a Kennerspiel?</title>
       <link>https://recommend-games.github.io/posts/kennerspiel/</link>
-      <pubDate>Fri, 08 Jan 2021 12:00:00 +0300</pubDate>
+      <pubDate>Tue, 09 Feb 2021 12:00:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/posts/kennerspiel/</guid>
-      <description>    var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (this.readyState == 4 &amp;&amp; this.status == 200) { var item = JSON.parse(this.responseText); Bokeh.embed.embed_item(item, &#34;complexity_vs_min_age.json&#34;); } }; xmlhttp.open(&#34;GET&#34;, &#34;\/posts\/kennerspiel\/complexity_vs_min_age.json&#34;, true); xmlhttp.send();   </description>
+      <description>Spiel des Jahres 2021 nominations might still be a couple of months away, but I thought now is still a good time to return to one of the harder questions in my predictions post from last year: What exactly makes a game a Kennerspiel? By that I don&amp;rsquo;t mean the qualities that earn a game the award, but the distinction between the more casual Spiel and the more complex Kennerspiel categories.</description>
     </item>
     
   </channel>

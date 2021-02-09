@@ -4,7 +4,43 @@
   
   <url>
     <loc>https://recommend-games.github.io/</loc>
-    <lastmod>2021-01-26T22:24:00+02:00</lastmod>
+    <lastmod>2021-02-09T12:00:00+02:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/kennerspiel/</loc>
+    <lastmod>2021-02-09T12:00:00+02:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</loc>
+    <lastmod>2021-02-09T12:00:00+02:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/posts/</loc>
+    <lastmod>2021-02-09T12:00:00+02:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/spiel-des-jahres/</loc>
+    <lastmod>2021-02-09T12:00:00+02:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/</loc>
+    <lastmod>2021-02-09T12:00:00+02:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/posts/kennerspiel/</loc>
+    <lastmod>2021-02-09T12:00:00+02:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
@@ -51,12 +87,6 @@
   </url>
   
   <url>
-    <loc>https://recommend-games.github.io/posts/</loc>
-    <lastmod>2021-01-26T22:24:00+02:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
     <loc>https://recommend-games.github.io/tags/ranking/</loc>
     <lastmod>2021-01-26T22:24:00+02:00</lastmod>
     <changefreq>daily</changefreq>
@@ -81,32 +111,8 @@
   </url>
   
   <url>
-    <loc>https://recommend-games.github.io/tags/</loc>
-    <lastmod>2021-01-26T22:24:00+02:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
     <loc>https://recommend-games.github.io/tags/top-100/</loc>
     <lastmod>2021-01-26T22:24:00+02:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/kennerspiel/</loc>
-    <lastmod>2021-01-08T12:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</loc>
-    <lastmod>2021-01-08T12:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/posts/kennerspiel/</loc>
-    <lastmod>2021-01-08T12:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
@@ -190,12 +196,6 @@
   
   <url>
     <loc>https://recommend-games.github.io/tags/sdj/</loc>
-    <lastmod>2020-07-22T14:42:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/spiel-des-jahres/</loc>
     <lastmod>2020-07-22T14:42:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>

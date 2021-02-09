@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Tue, 26 Jan 2021 22:24:00 +0200</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Feb 2021 12:00:00 +0200</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kennerspiel</title>
+      <link>https://recommend-games.github.io/tags/kennerspiel/</link>
+      <pubDate>Tue, 09 Feb 2021 12:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/kennerspiel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kennerspiel des Jahres</title>
+      <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</link>
+      <pubDate>Tue, 09 Feb 2021 12:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spiel des Jahres</title>
+      <link>https://recommend-games.github.io/tags/spiel-des-jahres/</link>
+      <pubDate>Tue, 09 Feb 2021 12:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/spiel-des-jahres/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Bayesian</title>
       <link>https://recommend-games.github.io/tags/bayesian/</link>
@@ -104,24 +131,6 @@
       <pubDate>Tue, 26 Jan 2021 22:24:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/top-100/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kennerspiel</title>
-      <link>https://recommend-games.github.io/tags/kennerspiel/</link>
-      <pubDate>Fri, 08 Jan 2021 12:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/kennerspiel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kennerspiel des Jahres</title>
-      <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</link>
-      <pubDate>Fri, 08 Jan 2021 12:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</guid>
       <description></description>
     </item>
     
@@ -230,15 +239,6 @@
       <pubDate>Wed, 22 Jul 2020 14:42:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/sdj/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spiel des Jahres</title>
-      <link>https://recommend-games.github.io/tags/spiel-des-jahres/</link>
-      <pubDate>Wed, 22 Jul 2020 14:42:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/spiel-des-jahres/</guid>
       <description></description>
     </item>
     
