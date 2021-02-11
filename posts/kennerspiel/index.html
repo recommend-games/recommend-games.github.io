@@ -59,7 +59,7 @@
   "headline": "What makes a Kennerspiel?",
   "description" : "Spiel des Jahres 2021 nominations might still be a couple of months away, but I thought now is still a good time to return to one of the harder questions in my predictions post from last year: What exactly makes a game a Kennerspiel? By that I don\u0026rsquo;t mean the qualities that earn a game the award, but the distinction between the more casual Spiel and the more complex Kennerspiel categories.",
   "inLanguage" : "en",
-  "wordCount":  746 ,
+  "wordCount":  1188 ,
   "datePublished" : "2021-02-09T12:00:00",
   "dateModified" : "2021-02-09T12:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -266,10 +266,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on February 9, 2021
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;746&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1188&nbsp;words
   
   
     
@@ -330,7 +330,7 @@ if (!doNotTrack) {
 <th style="text-align:center">Year</th>
 <th style="text-align:right">Complexity</th>
 <th style="text-align:right">Min age</th>
-<th style="text-align:left">Award</th>
+<th style="text-align:center">Award</th>
 </tr>
 </thead>
 <tbody>
@@ -339,60 +339,135 @@ if (!doNotTrack) {
 <td style="text-align:center">2013</td>
 <td style="text-align:right">2.2</td>
 <td style="text-align:right">14</td>
-<td style="text-align:left">SdJ</td>
+<td style="text-align:center">SdJ</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="https://recommend.games/#/game/244521" style="font-variant: small-caps;">The Quacks of Quedlinburg</a></td>
 <td style="text-align:center">2018</td>
 <td style="text-align:right">1.9</td>
 <td style="text-align:right">10</td>
-<td style="text-align:left">KdJ</td>
+<td style="text-align:center">KdJ</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a></td>
 <td style="text-align:center">2018</td>
 <td style="text-align:right">1.9</td>
 <td style="text-align:right">8</td>
-<td style="text-align:left">KdJ</td>
+<td style="text-align:center">KdJ</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="https://recommend.games/#/game/263918" style="font-variant: small-caps;">Cartographers</a></td>
 <td style="text-align:center">2020</td>
 <td style="text-align:right">1.9</td>
 <td style="text-align:right">10</td>
-<td style="text-align:left">KdJ</td>
+<td style="text-align:center">KdJ</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="https://recommend.games/#/game/284083" style="font-variant: small-caps;">The Crew: The Quest for Planet Nine</a></td>
 <td style="text-align:center">2020</td>
 <td style="text-align:right">2.0</td>
 <td style="text-align:right">10</td>
-<td style="text-align:left">KdJ</td>
+<td style="text-align:center">KdJ</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="https://recommend.games/#/game/295486" style="font-variant: small-caps;">My City</a></td>
 <td style="text-align:center">2020</td>
 <td style="text-align:right">2.1</td>
 <td style="text-align:right">10</td>
-<td style="text-align:left">SdJ</td>
+<td style="text-align:center">SdJ</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="https://recommend.games/#/game/223953" style="font-variant: small-caps;">Kitchen Rush</a></td>
 <td style="text-align:center">2020</td>
 <td style="text-align:right">2.2</td>
 <td style="text-align:right">12</td>
-<td style="text-align:left">SdJ</td>
+<td style="text-align:center">SdJ</td>
 </tr>
 </tbody>
 </table>
 <p>So by all means, 2020 <em>did</em> contain a lot of games just on the border of the two awards.</p>
 <p>Generally, this works pretty well for such a simple model (a linear function in two variables is really first semester kind of stuff). But some games seem to really push far into the other side, e.g., <a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a> and <a href="https://recommend.games/#/game/223953" style="font-variant: small-caps;">Kitchen Rush</a>. Are there some other characteristics of those games that explain the jury&rsquo;s classification?</p>
 <h1 id="can-we-do-better">Can we do better?</h1>
-<p>We can do better with more features, multinomial logistic regression.</p>
-<h1 id="outline">Outline</h1>
-<p>Interpret / highlight some features</p>
-<p>What games do we still get wrong and why?</p>
-<p>Apply to old SdJ winners / nominees: which ones would be a Kennerspiel by today&rsquo;s standards?</p>
+<p>Complexity and minimum age make a pretty powerful pair, but the only reason I picked two features is because we can nicely visualise everything in 2D. I don&rsquo;t know about you, but my brain can only handle three dimensions – on a good day…</p>
+<p>Mathematics to the rescue! Higher dimensions pose no challenge to our old friend, and we can throw as many variables at it as we want. So let&rsquo;s add some more features to our model:</p>
+<ul>
+<li>complexity (weight between 1 and 5),</li>
+<li>minimum age (between 6 and 16 years),</li>
+<li>minimum and maximum play time (between 1 minute 🏃 and 3 hours),</li>
+<li>player count (between 1 and 100 👀 players),</li>
+<li>cooperative or competitive game,</li>
+<li>types (e.g., family, strategy, or party game),</li>
+<li>categories (e.g., card, economic, or medieval game), and</li>
+<li>mechanics (e.g., hand management, set collection, or worker placement).</li>
+</ul>
+<p>Using the same set of games, but incorporating all those values, we can go through the same process that produced the separating line in the plot above (multivariate logistic regression, in case you&rsquo;re curious). This time, that dividing line would rather be a <em>hyperplane</em> in high dimensional space, but don&rsquo;t worry about that. In fact, we can do better that just a yes/no classification: We can estimate our <em>confidence</em> that a certain game is in fact a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>.</p>
+<p>This model classifies a whooping 150 out of 154 games correctly as either <span style="color: #E30613;"><em><strong>Spiel</strong></em></span> or <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> – that&rsquo;s 97.4% accurate. 🤯 So much for not being measurable, Mr Bartsch!</p>
+<p>So, let&rsquo;s take a look back at our problem games from before and check how much confidence our model has that the respective game is for connoisseurs:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:center">Year</th>
+<th style="text-align:center">Award</th>
+<th style="text-align:right">Confidence</th>
+<th style="text-align:center">🤔</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/125618" style="font-variant: small-caps;">Libertalia</a></td>
+<td style="text-align:center">2013</td>
+<td style="text-align:center">SdJ</td>
+<td style="text-align:right">91.2%</td>
+<td style="text-align:center">🤬</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/244521" style="font-variant: small-caps;">The Quacks of Quedlinburg</a></td>
+<td style="text-align:center">2018</td>
+<td style="text-align:center">KdJ</td>
+<td style="text-align:right">65.3%</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a></td>
+<td style="text-align:center">2018</td>
+<td style="text-align:center">KdJ</td>
+<td style="text-align:right">51.8%</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/263918" style="font-variant: small-caps;">Cartographers</a></td>
+<td style="text-align:center">2020</td>
+<td style="text-align:center">KdJ</td>
+<td style="text-align:right">84.7%</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/284083" style="font-variant: small-caps;">The Crew: The Quest for Planet Nine</a></td>
+<td style="text-align:center">2020</td>
+<td style="text-align:center">KdJ</td>
+<td style="text-align:right">41.7%</td>
+<td style="text-align:center">😕</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/295486" style="font-variant: small-caps;">My City</a></td>
+<td style="text-align:center">2020</td>
+<td style="text-align:center">SdJ</td>
+<td style="text-align:right">36.0%</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/223953" style="font-variant: small-caps;">Kitchen Rush</a></td>
+<td style="text-align:center">2020</td>
+<td style="text-align:center">SdJ</td>
+<td style="text-align:right">37.4%</td>
+<td style="text-align:center">✅</td>
+</tr>
+</tbody>
+</table>
+<p>This picture certainly has improved, and we&rsquo;re even classifying games like <a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a> (just about) and <a href="https://recommend.games/#/game/223953" style="font-variant: small-caps;">Kitchen Rush</a> right that caused us a lot of headaches before. However, <a href="https://recommend.games/#/game/284083" style="font-variant: small-caps;">The Crew</a> still eludes correct classification, and <a href="https://recommend.games/#/game/125618" style="font-variant: small-caps;">Libertalia</a> is so far off that I&rsquo;d argue the jury simply got that one wrong…</p>
+<p>&ldquo;Not so fast!&rdquo;, you might say. &ldquo;Aren&rsquo;t you simply overfitting here?&rdquo; Why, yes, you&rsquo;re right. The dataset is so small that there&rsquo;s a high risk of fine tuning the model too much for the data we&rsquo;re seeing. And of course, it&rsquo;s <strong>bad bad bad</strong> to assess you&rsquo;re model&rsquo;s performance on items it was trained on – that&rsquo;s just cheating. So let&rsquo;s test the model on some games it hadn&rsquo;t seen yet!</p>
+<h1 id="what-about-old-games">What about old games?</h1>
 <div id="complexity_vs_min_age_before_2011.json">
   <script charset="utf-8" type="text/javascript">
     var xmlhttp = new XMLHttpRequest();
@@ -406,6 +481,10 @@ if (!doNotTrack) {
     xmlhttp.send();
   </script>
 </div>
+<h1 id="outline">Outline</h1>
+<p>Interpret / highlight some features</p>
+<p>What games do we still get wrong and why?</p>
+<p>Apply to old SdJ winners / nominees: which ones would be a Kennerspiel by today&rsquo;s standards?</p>
 <p>Shapley values?</p>
 <p>Looking ahead to some 2021 candidates</p>
 <section class="footnotes" role="doc-endnotes">
