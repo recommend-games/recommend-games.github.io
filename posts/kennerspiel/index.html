@@ -59,7 +59,7 @@
   "headline": "What makes a Kennerspiel?",
   "description" : "Spiel des Jahres 2021 nominations might still be a couple of months away, but I thought now is still a good time to return to one of the harder questions in my predictions post from last year: What exactly makes a game a Kennerspiel? By that I don\u0026rsquo;t mean the qualities that earn a game the award, but the distinction between the more casual Spiel and the more complex Kennerspiel categories.",
   "inLanguage" : "en",
-  "wordCount":  342 ,
+  "wordCount":  746 ,
   "datePublished" : "2021-02-09T12:00:00",
   "dateModified" : "2021-02-09T12:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -266,10 +266,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on February 9, 2021
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;342&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;746&nbsp;words
   
   
     
@@ -304,8 +304,10 @@ if (!doNotTrack) {
 <p>Which game is a game for everyone and which is not is unfortunately not recognised by generally applicable, precisely measurable characteristics, but only when playing with as many different people as possible.</p>
 </blockquote>
 <p>Challenge accepted! Who needs humans when we can just deal with data instead? 🤓</p>
-<h1 id="outline">Outline</h1>
-<p>Simple 2D model, quite good at separating:</p>
+<h1 id="lets-look-at-the-data">Let&rsquo;s look at the data</h1>
+<p>Since the introduction of <span style="color: #193F4A;"><em><strong>Kennerspiel des Jahres</strong></em></span> in 2011 there were a total of <strong>90</strong> games on the longlist for <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> and <strong>64</strong> games for <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. It&rsquo;s not a large amount of data to make any inferences on, but we&rsquo;ll try anyways.</p>
+<p>The first step is always to familiarise yourself with the task and data at hand. With <a href="https://boardgamegeek.com/">BoardGameGeek</a> collecting all sorts of data about games, we know features of those jury recommendations like complexity, player age and count, play time, mechanics, themes, …</p>
+<p>Why don&rsquo;t we start simple and plot the games by their complexity (also known as weight) and minimum age?</p>
 <div id="complexity_vs_min_age.json">
   <script charset="utf-8" type="text/javascript">
     var xmlhttp = new XMLHttpRequest();
@@ -319,7 +321,75 @@ if (!doNotTrack) {
     xmlhttp.send();
   </script>
 </div>
+<p>You see the jury&rsquo;s favourites of the past decade lining up from simple (left) to complex (right), and from child friendly (bottom) to more mature (top). Unsurprisingly, the red <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> recommendations generally cluster in the bottom left, while the anthracite <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> games tend towards the top right. The dotted line is the one that best<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> separates <span style="color: #E30613;"><em><strong>Spiel</strong></em></span> from <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>.</p>
+<p>However, there is some significant overlap. In particular, a lot of games of either award can be found around the 10 year / complexity 2 (medium light) intersect. I&rsquo;ve marked games with squares that fall on the &ldquo;wrong&rdquo; side of the line. Some notable outliers are:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:center">Year</th>
+<th style="text-align:right">Complexity</th>
+<th style="text-align:right">Min age</th>
+<th style="text-align:left">Award</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/125618" style="font-variant: small-caps;">Libertalia</a></td>
+<td style="text-align:center">2013</td>
+<td style="text-align:right">2.2</td>
+<td style="text-align:right">14</td>
+<td style="text-align:left">SdJ</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/244521" style="font-variant: small-caps;">The Quacks of Quedlinburg</a></td>
+<td style="text-align:center">2018</td>
+<td style="text-align:right">1.9</td>
+<td style="text-align:right">10</td>
+<td style="text-align:left">KdJ</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a></td>
+<td style="text-align:center">2018</td>
+<td style="text-align:right">1.9</td>
+<td style="text-align:right">8</td>
+<td style="text-align:left">KdJ</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/263918" style="font-variant: small-caps;">Cartographers</a></td>
+<td style="text-align:center">2020</td>
+<td style="text-align:right">1.9</td>
+<td style="text-align:right">10</td>
+<td style="text-align:left">KdJ</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/284083" style="font-variant: small-caps;">The Crew: The Quest for Planet Nine</a></td>
+<td style="text-align:center">2020</td>
+<td style="text-align:right">2.0</td>
+<td style="text-align:right">10</td>
+<td style="text-align:left">KdJ</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/295486" style="font-variant: small-caps;">My City</a></td>
+<td style="text-align:center">2020</td>
+<td style="text-align:right">2.1</td>
+<td style="text-align:right">10</td>
+<td style="text-align:left">SdJ</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/223953" style="font-variant: small-caps;">Kitchen Rush</a></td>
+<td style="text-align:center">2020</td>
+<td style="text-align:right">2.2</td>
+<td style="text-align:right">12</td>
+<td style="text-align:left">SdJ</td>
+</tr>
+</tbody>
+</table>
+<p>So by all means, 2020 <em>did</em> contain a lot of games just on the border of the two awards.</p>
+<p>Generally, this works pretty well for such a simple model (a linear function in two variables is really first semester kind of stuff). But some games seem to really push far into the other side, e.g., <a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a> and <a href="https://recommend.games/#/game/223953" style="font-variant: small-caps;">Kitchen Rush</a>. Are there some other characteristics of those games that explain the jury&rsquo;s classification?</p>
+<h1 id="can-we-do-better">Can we do better?</h1>
 <p>We can do better with more features, multinomial logistic regression.</p>
+<h1 id="outline">Outline</h1>
 <p>Interpret / highlight some features</p>
 <p>What games do we still get wrong and why?</p>
 <p>Apply to old SdJ winners / nominees: which ones would be a Kennerspiel by today&rsquo;s standards?</p>
@@ -338,6 +408,17 @@ if (!doNotTrack) {
 </div>
 <p>Shapley values?</p>
 <p>Looking ahead to some 2021 candidates</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>In 2011, there was no separate recommendation list for the two awards, so I only included the nominees for 2011. I also added the special award winners <a href="https://recommend.games/#/game/18602" style="font-variant: small-caps;">Caylus</a>, <a href="https://recommend.games/#/game/31260" style="font-variant: small-caps;">Agricola</a>, <a href="https://recommend.games/#/game/43528" style="font-variant: small-caps;">World Without End</a>, and <a href="https://recommend.games/#/game/221107" style="font-variant: small-caps;">Pandemic Legacy: Season 2</a> to the <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> list. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Using logistic regression with F1–score as target metric. Other definitions of &ldquo;best line&rdquo; of course might yield different results. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
 
         
