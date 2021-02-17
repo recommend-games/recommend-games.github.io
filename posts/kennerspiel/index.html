@@ -59,7 +59,7 @@
   "headline": "What makes a Kennerspiel?",
   "description" : "Spiel des Jahres 2021 nominations might still be a couple of months away, but I thought now is still a good time to return to one of the harder questions in my predictions post from last year: What exactly makes a game a Kennerspiel? By that I don\u0026rsquo;t mean the qualities that earn a game the award, but the distinction between the more casual Spiel and the more complex Kennerspiel categories.",
   "inLanguage" : "en",
-  "wordCount":  1360 ,
+  "wordCount":  1952 ,
   "datePublished" : "2021-02-09T12:00:00",
   "dateModified" : "2021-02-09T12:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -266,10 +266,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on February 9, 2021
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;10&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1360&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1952&nbsp;words
   
   
     
@@ -466,12 +466,29 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <p>This picture certainly has improved, and we&rsquo;re even classifying games like <a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a> (just about) and <a href="https://recommend.games/#/game/223953" style="font-variant: small-caps;">Kitchen Rush</a> right that caused us a lot of headaches before. However, <a href="https://recommend.games/#/game/284083" style="font-variant: small-caps;">The Crew</a> still eludes correct classification, and <a href="https://recommend.games/#/game/125618" style="font-variant: small-caps;">Libertalia</a> is so far off that I&rsquo;d argue the jury simply got that one wrong…</p>
-<h1 id="how-does-it-work">How does it work?</h1>
+<h1 id="but-how-does-the-model-work">But how does the model work?</h1>
+<p>Our model takes the different features of a game as described above as input, multiplies each with a certain weight it learned by looking at all the games from previous year, sums those values up, and then yields a prediction in the form of a confidence (0–100%) score.</p>
+<p>To make things a little more concret, let&rsquo;s look at the ten most important features and how they impact the outcome:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/kennerspiel/shap_summary.svg"
 	alt="Summary of feature importance" />
-<p>&ldquo;Not so fast!&rdquo;, you might say. &ldquo;Aren&rsquo;t you simply overfitting here?&rdquo; Why, yes, you&rsquo;re right. The dataset is so small that there&rsquo;s a high risk of fine tuning the model too much for the data we&rsquo;re seeing. And of course, it&rsquo;s <strong>bad bad bad</strong> to assess you&rsquo;re model&rsquo;s performance on items it was trained on – that&rsquo;s just cheating. So let&rsquo;s test the model on some games it hadn&rsquo;t seen yet!</p>
+<p>As you can see, the <em>complexity</em> is the most important feature: the higher the value (blue = 1, red = 5), the higher our confidence that the game in question is a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>. This makes a lot of sense. Likewise, the next features are equally intuitive: the higher <em>play time</em> and <em>minimum age</em> are, the more likely it is we&rsquo;re dealing with a games for experts. And of course, in a way <em>strategy games</em> are much more frequently found in the <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> column. (Here, red means strategy game, blue means not).</p>
+<p>Somewhat more confusing is the player count though. Pay close attention to whether a game is playable with five or six players. Again, red means that game is playable with that head count, while blue means it is not. So a game that is playable with five players is <em>more</em> likely to be a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>, while a game for six players is <em>less</em> likely. This certainly is a little confusing, and might well be an artifact of our small sample size. Still, there&rsquo;s a system to this madness: whilst the vast majority of games accomodate three and four players, <span style="color: #E30613;"><em><strong>Spiel</strong></em></span> candidates often either stop at that count to keep components and costs down, or are for a much larger audience anyways and really shine with six, eight, or even more players. A <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> on the other hand can be a little more luxurious, and hence often includes components for a fifth player by default, but their more strategic nature limits the scalability beyond that point.</p>
+<p>Lastly, we have some mechanics in the top 10. While it&rsquo;s probably no surprise that solo modes are more common amongst more strategic games, the other mechanics are less intuitive. As it turns out, rolling dice is more prevalent in a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>, whilst hand management and worker placement are indicative of a lighter <span style="color: #E30613;"><em><strong>Spiel</strong></em></span>. But of course, all those different features and weights interact with each other in a little more subtle ways and often balance each other out.</p>
+<p>Let&rsquo;s make things more concret and visualise how our model scored some of those difficult to classify games above, starting from <a href="https://recommend.games/#/game/295486" style="font-variant: small-caps;">My City</a>:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/kennerspiel/shap_295486.svg"
+	alt="My City force plot" />
+<p>This so called force plot shows how some values push the score up, while some pull it down. In this case, complexity, strategy, and player count push the score towards <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>, while a tile laying game playable in 30 minutes pull it towards <span style="color: #E30613;"><em><strong>Spiel</strong></em></span>. In the sum, our model and the jury agree: this game falls on the red side of the line.</p>
+
+<img
+	src="https://recommend-games.github.io/posts/kennerspiel/shap_244522.svg"
+	alt="That&#39;s Pretty Clever! force plot" />
+<p>We contrast this with <a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a> Again, its play time of 30 minutes with players from 8 years old smell like a lighter game, but soloable dice rolling clearly push the needle (very narrowly) over the line of a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>.</p>
+<p>In the end, our evidence is a little thin – even after a decade of <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> winners and nominees, the patterns aren&rsquo;t very clear, and of course the jury&rsquo;s fickle opinion might drift over time as well. So while I&rsquo;m pretty confident in the predictions our model makes, they still need to be taken with a grain of salt.</p>
+<p>&ldquo;Not so fast!&rdquo;, you might say. &ldquo;Aren&rsquo;t you simply overfitting here?&rdquo; Why, yes, you&rsquo;re right. The dataset is so small that there&rsquo;s a high risk of fine tuning the model too much for the data we&rsquo;re seeing. And of course, it&rsquo;s <strong>bad bad bad</strong> to assess your model&rsquo;s performance with items it was trained on – that&rsquo;s just cheating. So let&rsquo;s test the model on some games it hadn&rsquo;t seen yet!</p>
 <h1 id="what-about-old-games">What about old games?</h1>
 <p>Pre-2011 <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> winners and nominees make a marvellous test set for this model. A lot of those games would be considered a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> by today&rsquo;s standards, so let&rsquo;s find out which ones.</p>
 <p>Again, we&rsquo;ll start with the simple model that takes the two input variables <em>complexity</em> and <em>minimum age</em>. We can then plot those 70 games and check what side of the line they fall on:</p>
