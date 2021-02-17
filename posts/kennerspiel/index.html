@@ -59,7 +59,7 @@
   "headline": "What makes a Kennerspiel?",
   "description" : "Spiel des Jahres 2021 nominations might still be a couple of months away, but I thought now is still a good time to return to one of the harder questions in my predictions post from last year: What exactly makes a game a Kennerspiel? By that I don\u0026rsquo;t mean the qualities that earn a game the award, but the distinction between the more casual Spiel and the more complex Kennerspiel categories.",
   "inLanguage" : "en",
-  "wordCount":  1356 ,
+  "wordCount":  1360 ,
   "datePublished" : "2021-02-09T12:00:00",
   "dateModified" : "2021-02-09T12:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -269,7 +269,7 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1356&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1360&nbsp;words
   
   
     
@@ -466,6 +466,11 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <p>This picture certainly has improved, and we&rsquo;re even classifying games like <a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a> (just about) and <a href="https://recommend.games/#/game/223953" style="font-variant: small-caps;">Kitchen Rush</a> right that caused us a lot of headaches before. However, <a href="https://recommend.games/#/game/284083" style="font-variant: small-caps;">The Crew</a> still eludes correct classification, and <a href="https://recommend.games/#/game/125618" style="font-variant: small-caps;">Libertalia</a> is so far off that I&rsquo;d argue the jury simply got that one wrong…</p>
+<h1 id="how-does-it-work">How does it work?</h1>
+
+<img
+	src="https://recommend-games.github.io/posts/kennerspiel/shap_summary.svg"
+	alt="Summary of feature importance" />
 <p>&ldquo;Not so fast!&rdquo;, you might say. &ldquo;Aren&rsquo;t you simply overfitting here?&rdquo; Why, yes, you&rsquo;re right. The dataset is so small that there&rsquo;s a high risk of fine tuning the model too much for the data we&rsquo;re seeing. And of course, it&rsquo;s <strong>bad bad bad</strong> to assess you&rsquo;re model&rsquo;s performance on items it was trained on – that&rsquo;s just cheating. So let&rsquo;s test the model on some games it hadn&rsquo;t seen yet!</p>
 <h1 id="what-about-old-games">What about old games?</h1>
 <p>Pre-2011 <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> winners and nominees make a marvellous test set for this model. A lot of those games would be considered a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> by today&rsquo;s standards, so let&rsquo;s find out which ones.</p>
