@@ -7,11 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Thu, 18 Feb 2021 12:00:00 +0200</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Feb 2021 12:00:00 +0200</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Game of the Year</title>
+      <link>https://recommend-games.github.io/tags/game-of-the-year/</link>
+      <pubDate>Fri, 19 Feb 2021 12:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/game-of-the-year/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Germany</title>
+      <link>https://recommend-games.github.io/tags/germany/</link>
+      <pubDate>Fri, 19 Feb 2021 12:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/germany/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Kennerspiel</title>
       <link>https://recommend-games.github.io/tags/kennerspiel/</link>
-      <pubDate>Thu, 18 Feb 2021 12:00:00 +0200</pubDate>
+      <pubDate>Fri, 19 Feb 2021 12:00:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kennerspiel/</guid>
       <description></description>
@@ -20,16 +38,43 @@
     <item>
       <title>Kennerspiel des Jahres</title>
       <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</link>
-      <pubDate>Thu, 18 Feb 2021 12:00:00 +0200</pubDate>
+      <pubDate>Fri, 19 Feb 2021 12:00:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>KSdJ</title>
+      <link>https://recommend-games.github.io/tags/ksdj/</link>
+      <pubDate>Fri, 19 Feb 2021 12:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/ksdj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logistic regression</title>
+      <link>https://recommend-games.github.io/tags/logistic-regression/</link>
+      <pubDate>Fri, 19 Feb 2021 12:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/logistic-regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SdJ</title>
+      <link>https://recommend-games.github.io/tags/sdj/</link>
+      <pubDate>Fri, 19 Feb 2021 12:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/sdj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Spiel des Jahres</title>
       <link>https://recommend-games.github.io/tags/spiel-des-jahres/</link>
-      <pubDate>Thu, 18 Feb 2021 12:00:00 +0200</pubDate>
+      <pubDate>Fri, 19 Feb 2021 12:00:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/spiel-des-jahres/</guid>
       <description></description>
@@ -171,38 +216,11 @@
     </item>
     
     <item>
-      <title>Game of the Year</title>
-      <link>https://recommend-games.github.io/tags/game-of-the-year/</link>
-      <pubDate>Wed, 22 Jul 2020 14:42:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/game-of-the-year/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Germany</title>
-      <link>https://recommend-games.github.io/tags/germany/</link>
-      <pubDate>Wed, 22 Jul 2020 14:42:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/germany/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>King&#39;s Dilemma</title>
       <link>https://recommend-games.github.io/tags/kings-dilemma/</link>
       <pubDate>Wed, 22 Jul 2020 14:42:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kings-dilemma/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>KSdJ</title>
-      <link>https://recommend-games.github.io/tags/ksdj/</link>
-      <pubDate>Wed, 22 Jul 2020 14:42:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/ksdj/</guid>
       <description></description>
     </item>
     
@@ -230,15 +248,6 @@
       <pubDate>Wed, 22 Jul 2020 14:42:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/pictures/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SdJ</title>
-      <link>https://recommend-games.github.io/tags/sdj/</link>
-      <pubDate>Wed, 22 Jul 2020 14:42:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/sdj/</guid>
       <description></description>
     </item>
     
