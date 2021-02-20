@@ -59,7 +59,7 @@
   "headline": "What makes a Kennerspiel?",
   "description" : "Spiel des Jahres 2021 nominations might still be a couple of months away, but I thought now is still a good time to return to one of the harder questions in my predictions post from last year: What exactly makes a game a Kennerspiel? By that I don\u0026rsquo;t mean the qualities that earn a game the award, but the distinction between the more casual Spiel and the more complex Kennerspiel categories.",
   "inLanguage" : "en",
-  "wordCount":  2324 ,
+  "wordCount":  2334 ,
   "datePublished" : "2021-02-19T12:00:00",
   "dateModified" : "2021-02-19T12:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -269,7 +269,7 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;11&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2324&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2334&nbsp;words
   
   
     
@@ -409,7 +409,7 @@ if (!doNotTrack) {
 <li>mechanics (e.g., hand management, set collection, or worker placement).</li>
 </ul>
 <p>Using the same set of games, but incorporating all those values, we can go through the same process that produced the separating line in the plot above (multivariate logistic regression, in case you&rsquo;re curious). This time, that dividing line would rather be a <em>hyperplane</em> in high dimensional space, but don&rsquo;t worry about that. In fact, we can do better that just a yes/no classification: We can estimate our <em>confidence</em> that a certain game is in fact a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>.</p>
-<p>This model classifies a whooping 150 out of 154 games correctly as either <span style="color: #E30613;"><em><strong>Spiel</strong></em></span> or <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> – that&rsquo;s 97.4% accurate. 🤯 So much for not being measurable, Mr Bartsch!</p>
+<p>This model classifies a whooping <strong>150 out of 154 games</strong> correctly as either <span style="color: #E30613;"><em><strong>Spiel</strong></em></span> or <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> – that&rsquo;s <strong>97.4%</strong> accurate. 🤯 So much for not being measurable, Mr Bartsch!</p>
 <p>So, let&rsquo;s take a look back at our problem games from before and check how much confidence our model has that the respective game is for connoisseurs:</p>
 <table>
 <thead>
@@ -481,7 +481,8 @@ if (!doNotTrack) {
 <img
 	src="https://recommend-games.github.io/posts/kennerspiel/shap_summary.svg"
 	alt="Summary of feature importance" />
-<p>As you can see, the <em>complexity</em> is the most important feature: the higher the value (blue = 1, red = 5), the higher our confidence that the game in question is a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>. This makes a lot of sense. Likewise, the next features are equally intuitive: the higher <em>play time</em> and <em>minimum age</em> are, the more likely it is we&rsquo;re dealing with a games for experts. And of course, in a way <em>strategy games</em> are much more frequently found in the <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> column. (Here, red means strategy game, blue means not).</p>
+<p><em>You can find the <a href="shap_summary_full.svg">full plot of all features here</a>.</em></p>
+<p>As you can see, the <em>complexity</em> is the most important feature: the higher the value (blue = 1, red = 5), the higher our confidence that the game in question is a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>. This makes a lot of sense. Likewise, the next features are equally intuitive: the higher <em>play time</em> and <em>minimum age</em> are, the more likely it is we&rsquo;re dealing with a games for experts. And of course, in a way <em>strategy games</em> are much more frequently found in the <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> column. (Here, red means strategy game, blue means not.)</p>
 <p>Somewhat more confusing is the player count though. Pay close attention to whether a game is playable with five or six players. Again, red means that game is playable with that head count, while blue means it is not. So a game that is playable with five players is <em>more</em> likely to be a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>, while a game for six players is <em>less</em> likely. This certainly is a little confusing, and might well be an artifact of our small sample size. Still, there&rsquo;s a system to this madness: whilst the vast majority of games accomodate three and four players, <span style="color: #E30613;"><em><strong>Spiel</strong></em></span> candidates often either stop at that count to keep components and costs down, or are for a much larger audience anyways and really shine with six, eight, or even more players. A <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> on the other hand can be a little more luxurious, and hence often includes components for a fifth player by default, but their more strategic nature limits the scalability beyond that point.</p>
 <p>Lastly, we have some mechanics in the top 10. While it&rsquo;s probably no surprise that solo modes are more common amongst more strategic games, the other mechanics are less intuitive. As it turns out, rolling dice is more prevalent in a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>, whilst hand management and worker placement are indicative of a lighter <span style="color: #E30613;"><em><strong>Spiel</strong></em></span>. But of course, all those different features and weights interact with each other in a little more subtle ways and often balance each other out.</p>
 <p>Let&rsquo;s make things more concret and visualise how our model scored some of those difficult to classify games above, starting from <a href="https://recommend.games/#/game/295486" style="font-variant: small-caps;">My City</a>:</p>
