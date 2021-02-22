@@ -44,7 +44,7 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/recommend-games.github.io\/posts\/kennerspiel\/",
+          "@id": "https:\/\/recommend-games.github.io\/posts\/what-makes-kennerspiel\/",
           "name": "What makes a kennerspiel?"
         }
     }]
@@ -59,12 +59,12 @@
   "headline": "What makes a Kennerspiel?",
   "description" : "Spiel des Jahres 2021 nominations might still be a couple of months away, but I thought now is still a good time to return to one of the harder questions in my predictions post from last year: What exactly makes a game a Kennerspiel? By that I don\u0026rsquo;t mean the qualities that earn a game the award, but the distinction between the more casual Spiel and the more complex Kennerspiel categories.",
   "inLanguage" : "en",
-  "wordCount":  2334 ,
-  "datePublished" : "2021-02-19T12:00:00",
-  "dateModified" : "2021-02-19T12:00:00",
+  "wordCount":  2421 ,
+  "datePublished" : "2021-02-22T22:34:57",
+  "dateModified" : "2021-02-22T22:34:57",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
   "keywords" : [ "SdJ, Spiel des Jahres, KSdJ, Kennerspiel, Kennerspiel des Jahres, Game of the Year, Germany, Logistic regression" ],
-  "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/kennerspiel\/",
+  "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/what-makes-kennerspiel\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/recommend-games.github.io\/",
@@ -81,7 +81,7 @@
 <meta property="og:title" content="What makes a Kennerspiel?" />
 <meta property="og:description" content="Spiel des Jahres 2021 nominations might still be a couple of months away, but I thought now is still a good time to return to one of the harder questions in my predictions post from last year: What exactly makes a game a Kennerspiel? By that I don&rsquo;t mean the qualities that earn a game the award, but the distinction between the more casual Spiel and the more complex Kennerspiel categories.">
 <meta property="og:image" content="https://recommend-games.github.io/logo.png" />
-<meta property="og:url" content="https://recommend-games.github.io/posts/kennerspiel/" />
+<meta property="og:url" content="https://recommend-games.github.io/posts/what-makes-kennerspiel/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Analysis Paralysis" />
 
@@ -263,13 +263,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on February 19, 2021
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 22, 2021
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;11&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;12&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2334&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2421&nbsp;words
   
   
     
@@ -317,7 +317,7 @@ if (!doNotTrack) {
         Bokeh.embed.embed_item(item, "complexity_vs_min_age.json");
       }
     };
-    xmlhttp.open("GET", "\/posts\/kennerspiel\/complexity_vs_min_age.json", true);
+    xmlhttp.open("GET", "\/posts\/what-makes-kennerspiel\/complexity_vs_min_age.json", true);
     xmlhttp.send();
   </script>
 </div>
@@ -394,19 +394,19 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <p>So by all means, 2020 <em>did</em> contain a lot of games just on the border of the two awards.</p>
-<p>Generally, this works pretty well for such a simple model (a linear function in two variables is really first semester kind of stuff). But some games seem to really push far into the other side, e.g., <a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a> and <a href="https://recommend.games/#/game/223953" style="font-variant: small-caps;">Kitchen Rush</a>. Are there some other characteristics of those games that explain the jury&rsquo;s classification?</p>
+<p>Generally, this works pretty well for such a simple model (a linear function in two variables is first semester kind of stuff). But some games seem to really push far into the other side, e.g., <a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a> and <a href="https://recommend.games/#/game/223953" style="font-variant: small-caps;">Kitchen Rush</a>. Are there some other characteristics of those games that explain the jury&rsquo;s classification?</p>
 <h1 id="can-we-do-better">Can we do better?</h1>
 <p>Complexity and minimum age make a pretty powerful pair, but the only reason I picked two features is because we can nicely visualise everything in 2D. I don&rsquo;t know about you, but my brain can only handle three dimensions – on a good day…</p>
-<p>Mathematics to the rescue! Higher dimensions pose no challenge to our old friend, and we can throw as many variables at it as we want. So let&rsquo;s add some more features to our model:</p>
+<p>Mathematics to the rescue! Higher dimensions pose no challenge to our old friend, and we can throw as many variables at it as we want. So let&rsquo;s add some more features to our model:<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
 <ul>
-<li>complexity (weight between 1 and 5),</li>
-<li>minimum age (between 6 and 16 years),</li>
-<li>minimum and maximum play time (between 1 minute 🏃 and 3 hours),</li>
-<li>player count (between 1 and 100 👀 players),</li>
-<li>cooperative or competitive game,</li>
-<li>types (e.g., family, strategy, or party game),</li>
-<li>categories (e.g., card, economic, or medieval game), and</li>
-<li>mechanics (e.g., hand management, set collection, or worker placement).</li>
+<li><em>complexity</em> (weight between 1 and 5),</li>
+<li><em>minimum age</em> (between 6 and 16 years),</li>
+<li><em>minimum</em> and <em>maximum play time</em> (between 1 minute 🏃 and 3 hours),</li>
+<li><em>player count</em> (between 1 and 100 👀 players),</li>
+<li><em>cooperative</em> or <em>competitive</em> game,</li>
+<li>types (e.g., <em>family</em>, <em>strategy</em>, or <em>party game</em>),</li>
+<li>categories (e.g., <em>card</em>, <em>economic</em>, or <em>medieval</em> game), and</li>
+<li>mechanics (e.g., <em>hand management</em>, <em>set collection</em>, or <em>worker placement</em>).</li>
 </ul>
 <p>Using the same set of games, but incorporating all those values, we can go through the same process that produced the separating line in the plot above (multivariate logistic regression, in case you&rsquo;re curious). This time, that dividing line would rather be a <em>hyperplane</em> in high dimensional space, but don&rsquo;t worry about that. In fact, we can do better that just a yes/no classification: We can estimate our <em>confidence</em> that a certain game is in fact a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>.</p>
 <p>This model classifies a whooping <strong>150 out of 154 games</strong> correctly as either <span style="color: #E30613;"><em><strong>Spiel</strong></em></span> or <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> – that&rsquo;s <strong>97.4%</strong> accurate. 🤯 So much for not being measurable, Mr Bartsch!</p>
@@ -473,13 +473,14 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
+<p><em>You can find the <a href="results_post_2011.csv">full results list here</a>.</em></p>
 <p>This picture certainly has improved, and we&rsquo;re even classifying games like <a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a> (just about) and <a href="https://recommend.games/#/game/223953" style="font-variant: small-caps;">Kitchen Rush</a> right that caused us a lot of headaches before. However, <a href="https://recommend.games/#/game/284083" style="font-variant: small-caps;">The Crew</a> still eludes correct classification, and <a href="https://recommend.games/#/game/125618" style="font-variant: small-caps;">Libertalia</a> is so far off that I&rsquo;d argue the jury simply got that one wrong…</p>
 <h1 id="but-how-does-the-model-work">But how does the model work?</h1>
 <p>Our model takes the different features of a game as described above as input, multiplies each with a certain weight it learned by looking at all the games from previous year, sums those values up, and then yields a prediction in the form of a confidence (0–100%) score.</p>
 <p>To make things a little more concret, let&rsquo;s look at the ten most important features and how they impact the outcome:</p>
 
 <img
-	src="https://recommend-games.github.io/posts/kennerspiel/shap_summary.svg"
+	src="https://recommend-games.github.io/posts/what-makes-kennerspiel/shap_summary.svg"
 	alt="Summary of feature importance" />
 <p><em>You can find the <a href="shap_summary_full.svg">full plot of all features here</a>.</em></p>
 <p>As you can see, the <em>complexity</em> is the most important feature: the higher the value (blue = 1, red = 5), the higher our confidence that the game in question is a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>. This makes a lot of sense. Likewise, the next features are equally intuitive: the higher <em>play time</em> and <em>minimum age</em> are, the more likely it is we&rsquo;re dealing with a games for experts. And of course, in a way <em>strategy games</em> are much more frequently found in the <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> column. (Here, red means strategy game, blue means not.)</p>
@@ -488,12 +489,12 @@ if (!doNotTrack) {
 <p>Let&rsquo;s make things more concret and visualise how our model scored some of those difficult to classify games above, starting from <a href="https://recommend.games/#/game/295486" style="font-variant: small-caps;">My City</a>:</p>
 
 <img
-	src="https://recommend-games.github.io/posts/kennerspiel/shap_295486.svg"
+	src="https://recommend-games.github.io/posts/what-makes-kennerspiel/shap_295486.svg"
 	alt="My City force plot" />
 <p>This so called force plot shows how some values push the score up, while some pull it down. In this case, complexity, strategy, and player count push the score towards <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>, while a tile laying game playable in 30 minutes pull it towards <span style="color: #E30613;"><em><strong>Spiel</strong></em></span>. In the sum, our model and the jury agree: this game falls on the red side of the line.</p>
 
 <img
-	src="https://recommend-games.github.io/posts/kennerspiel/shap_244522.svg"
+	src="https://recommend-games.github.io/posts/what-makes-kennerspiel/shap_244522.svg"
 	alt="That&#39;s Pretty Clever! force plot" />
 <p>We contrast this with <a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a> Again, its play time of 30 minutes with players from 8 years old smell like a lighter game, but soloable dice rolling clearly push the needle (very narrowly) over the line of a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>.</p>
 <p>In the end, our evidence is a little thin – even after a decade of <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> winners and nominees, the patterns aren&rsquo;t very clear, and of course the jury&rsquo;s fickle opinion might drift over time as well. So while I&rsquo;m pretty confident in the predictions our model makes, they still need to be taken with a grain of salt.</p>
@@ -510,7 +511,7 @@ if (!doNotTrack) {
         Bokeh.embed.embed_item(item, "complexity_vs_min_age_before_2011.json");
       }
     };
-    xmlhttp.open("GET", "\/posts\/kennerspiel\/complexity_vs_min_age_before_2011.json", true);
+    xmlhttp.open("GET", "\/posts\/what-makes-kennerspiel\/complexity_vs_min_age_before_2011.json", true);
     xmlhttp.send();
   </script>
 </div>
@@ -590,17 +591,18 @@ if (!doNotTrack) {
 | <a href="https://recommend.games/#/game/37380" style="font-variant: small-caps;">Roll Through the Ages: The Bronze Age</a> | 2010 |      90.7% |
 | <a href="https://recommend.games/#/game/30869" style="font-variant: small-caps;">Thebes</a>                                | 2007 |      21.5% |
 | <a href="https://recommend.games/#/game/9674" style="font-variant: small-caps;">Ingenious</a>                              | 2004 |       5.4% | -->
+<p><em>You can find the <a href="results_pre_2011.csv">full results list here</a>.</em></p>
 <p>On the one hand, it&rsquo;s weird to see games like <a href="https://recommend.games/#/game/13" style="font-variant: small-caps;">Catan</a> and <a href="https://recommend.games/#/game/30549" style="font-variant: small-caps;">Pandemic</a> so firmly in the <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> column when they are considered some of the quintessential modern gateway games. On the other hand, their complexity clearly does exceed by far what the jury demands of the average gamer these days. It&rsquo;s also worth observing that <a href="https://recommend.games/#/game/13" style="font-variant: small-caps;">Catan</a> did pave the way for some pretty complex games in the second half of the 90s, when the <em>euro revolution</em> was in full swing.</p>
 <p>As far as validating the model goes: I&rsquo;d agree with every single one of the model&rsquo;s assessments, though I&rsquo;m a little surprised that <a href="https://recommend.games/#/game/478" style="font-variant: small-caps;">Citadels</a> got a score of 95.3%. I see good reasons for putting this one into the <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> camp, but would do so with far more uncertainty.</p>
-<p>Overall, according to our model, <strong>9 out of 32</strong> <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> winners between 1979 and 2010 should really be considered a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> now. I wonder how many people trusted the red meeple, bought what they thought to be a welcoming game, only to get frustrated by 12 densely filled A4 pages<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> of <a href="https://recommend.games/#/game/93" style="font-variant: small-caps;">El Grande</a> rules? Or did people really have much longer attention spans in the pre-smartphone era? We might never know…</p>
+<p>Overall, according to our model, <strong>9 out of 32</strong> <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> winners between 1979 and 2010 should really be considered a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> now. I wonder how many people trusted the red meeple, bought what they thought to be a welcoming game, only to get frustrated by 12 densely filled A4 pages<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> of <a href="https://recommend.games/#/game/93" style="font-variant: small-caps;">El Grande</a> rules? Or did people really have much longer attention spans in the pre-smartphone era? We might never know…</p>
 <!-- 
 <img
-	src="https://recommend-games.github.io/posts/kennerspiel/shap_30549.svg"
+	src="https://recommend-games.github.io/posts/what-makes-kennerspiel/shap_30549.svg"
 	alt="Pandemic force plot" />
 
 
 <img
-	src="https://recommend-games.github.io/posts/kennerspiel/shap_6249.svg"
+	src="https://recommend-games.github.io/posts/what-makes-kennerspiel/shap_6249.svg"
 	alt="Alhambra force plot" /> -->
 <h1 id="kenner-spiel-des-jahres-2021">(Kenner-)Spiel des Jahres 2021</h1>
 <p>I&rsquo;ll send you off with a teaser for <span style="color: #E30613;"><em><strong>Spiel des Jahres 2021</strong></em></span>. I&rsquo;ve taken some of the <a href="https://recommend.games/#/?for=S_d_J&amp;yearMin=2020&amp;yearMax=2021&amp;excludeOwned=false&amp;playerCount=4&amp;playerCountType=box&amp;playTime=120&amp;playTimeType=max&amp;playerAge=16&amp;playerAgeType=box">hottest contenders for the 2021 awards</a> (as of the time of writing), and sort them by their <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> score for your convenience.</p>
@@ -665,7 +667,10 @@ if (!doNotTrack) {
 <p>Using logistic regression with F1–score as target metric. Other definitions of &ldquo;best line&rdquo; of course might yield different results. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p>Yes, I did pull out my old copy and counted. You&rsquo;re welcome. 🤓 <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>It&rsquo;s worth noticing that some of those values can be unreliable. <em>Complexity</em> and <em>game type</em> depend on user votes which often only a handful of contributors. Even more so, <em>categories</em> and <em>mechanics</em> are quite wonky taxonomies which are frequently applied inconsistently. Finally, <em>player count</em> and <em>age</em> as well as <em>play time</em> are taken from the publishers who do not hesitate to lie about these things if it helps sell their games. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>Yes, I did pull out my old copy and counted. You&rsquo;re welcome. 🤓 <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -703,42 +708,42 @@ if (!doNotTrack) {
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fkennerspiel%2f&amp;text=What%20makes%20a%20Kennerspiel%3f&amp;via=recommend_games" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fwhat-makes-kennerspiel%2f&amp;text=What%20makes%20a%20Kennerspiel%3f&amp;via=recommend_games" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frecommend-games.github.io%2fposts%2fkennerspiel%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frecommend-games.github.io%2fposts%2fwhat-makes-kennerspiel%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fkennerspiel%2f&amp;title=What%20makes%20a%20Kennerspiel%3f" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fwhat-makes-kennerspiel%2f&amp;title=What%20makes%20a%20Kennerspiel%3f" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fkennerspiel%2f&amp;title=What%20makes%20a%20Kennerspiel%3f" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fwhat-makes-kennerspiel%2f&amp;title=What%20makes%20a%20Kennerspiel%3f" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fkennerspiel%2f&amp;title=What%20makes%20a%20Kennerspiel%3f" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fwhat-makes-kennerspiel%2f&amp;title=What%20makes%20a%20Kennerspiel%3f" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fkennerspiel%2f&amp;description=What%20makes%20a%20Kennerspiel%3f" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fwhat-makes-kennerspiel%2f&amp;description=What%20makes%20a%20Kennerspiel%3f" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
