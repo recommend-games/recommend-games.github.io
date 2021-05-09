@@ -9,12 +9,6 @@
   </url>
   
   <url>
-    <loc>https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2021-goes-to/</loc>
-    <lastmod>2021-05-09T10:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
     <loc>https://recommend-games.github.io/tags/game-of-the-year/</loc>
     <lastmod>2021-05-09T10:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
@@ -112,6 +106,12 @@
   
   <url>
     <loc>https://recommend-games.github.io/tags/spiel-des-jahres-2021-predictions/</loc>
+    <lastmod>2021-05-09T10:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/</loc>
     <lastmod>2021-05-09T10:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
