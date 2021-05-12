@@ -59,7 +59,7 @@
   "headline": "Spiel des Jahres 2021 predictions",
   "description" : "It\u0026rsquo;s our favourite time of the year again: time for Spiel des Jahres nominations! On Monday, May 17th, the jury will once again announce their longlist (aka recommendations) and shortlist (aka nominations) for Spiel des Jahres, Kennerspiel des Jahres and Kinderspiel des Jahres 2021. Just like last year, I\u0026rsquo;ll try to produce a list of the most promising games to land on the longlist for Spiel and Kennerspiel. (I\u0026rsquo;ll promise to get around to Kinderspiel predictions in a couple of years.",
   "inLanguage" : "en",
-  "wordCount":  597 ,
+  "wordCount":  1022 ,
   "datePublished" : "2021-05-09T10:00:00",
   "dateModified" : "2021-05-09T10:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -266,10 +266,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on May 9, 2021
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;597&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1022&nbsp;words
   
   
     
@@ -296,6 +296,14 @@ if (!doNotTrack) {
       <article role="main" class="blog-post">
         <p>It&rsquo;s our favourite time of the year again: time for <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> nominations! On Monday, May 17th, the jury will once again announce their longlist (aka recommendations) and shortlist (aka nominations) for <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span>, <span style="color: #193F4A;"><em><strong>Kennerspiel des Jahres</strong></em></span> and <span style="color: #009FE3;"><em><strong>Kinderspiel des Jahres 2021</strong></em></span>. Just like <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to/">last year</a>, I&rsquo;ll try to produce a list of the most promising games to land on the longlist for <span style="color: #E30613;"><em><strong>Spiel</strong></em></span> and <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span>. (I&rsquo;ll promise to get around to <span style="color: #009FE3;"><em><strong>Kinderspiel</strong></em></span> predictions <a href="https://twitter.com/recommend_games/status/1373396030616694785?s=20">in a couple of years</a>.)</p>
 <p>Unlike last year, I won&rsquo;t use hard filters though to distinguish between <span style="color: #E30613;"><em><strong>red</strong></em></span> and <span style="color: #193F4A;"><em><strong>anthracite</strong></em></span> games, but will rely on the <strong><span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> score</strong> I developed <a href="https://recommend-games.github.io/posts/what-makes-kennerspiel/">a couple of months back</a>. This model tries to predict if a game is a <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> or not based on some key features, like complexity, play time, age recommendations and game type. The jury&rsquo;s decision this year what list a game belongs to will be the first actual test for that model too, so let&rsquo;s hope it actually made sense! 🤞</p>
+<p>Another difference is that I took an entirely algorithmic approach. That is, I do not follow my own taste or gut feeling, but I let the numbers talk. First, I took all eligible games<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and separated them into two lists: one for <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> and one for <span style="color: #193F4A;"><em><strong>Kennerspiel des Jahres</strong></em></span>, depending on their <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> score. Then I ranked those games in a couple of different ways, and finally combined those into the final result:</p>
+<ul>
+<li>Sorted by the Recommend.Games <a href="https://recommend.games/#/?for=S_d_J&amp;yearMin=2020&amp;yearMax=2021&amp;excludeOwned=false&amp;playerCount=4&amp;playerCountType=box&amp;playTime=120&amp;playTimeType=max&amp;playerAge=16&amp;playerAgeType=box">recommendation algorithm</a> (90%). This has proven to be a powerful and reliable method to capture the jury&rsquo;s taste, but it&rsquo;s slow to recommend new games with few ratings.</li>
+<li><span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> probability (5%). Similar to the model that calculates the <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> score, I&rsquo;ve trained a model that tries to predict a game&rsquo;s chances to end up on the jury&rsquo;s longlist. This is particularly designed to unearth candidates with few votes, but it&rsquo;s still rudimentary at this point.</li>
+<li>Average BoardGameGeek rating (2.5%). Let the gamers speak! In order to give new games a chance, we&rsquo;ll take a look at the simple average rating.</li>
+<li>Geek score (aka <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">Bayesian average</a>, 2.5%). This score starts out at 5.5, and gets closer to the actual average the more ratings come in. It&rsquo;s more reliable, but also strongly favours games that have been around for longer and hence gathered more ratings.</li>
+</ul>
+<p>You can find the detailed analysis <a href="predictions.py">here</a>. But without further ado, here are the favourite games to win <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> and <span style="color: #193F4A;"><em><strong>Kennerspiel des Jahres 2021</strong></em></span>.</p>
 <h1 id="candidates-for-span-stylecolor-e30613spiel-des-jahres-2021span">Candidates for <span style="color: #E30613;"><em><strong>Spiel des Jahres 2021</strong></em></span></h1>
 <!-- TODO update logo -->
 
@@ -303,84 +311,84 @@ if (!doNotTrack) {
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/sdj-2021_huad507e6f34717ce578bd95f63866e0e8_408481_0x300_resize_box_2.png"
 	alt="Spiel des Jahres 2021" />
 <!-- TODO data for each game: designers, player count, play time, age, complexity, Kennerspiel score -->
-<h2 id="a-hrefhttpsrecommendgamesgame266524-stylefont-variant-small-capsparksa"><a href="https://recommend.games/#/game/266524" style="font-variant: small-caps;">PARKS</a></h2>
+<h2 id="1-a-hrefhttpsrecommendgamesgame266524-stylefont-variant-small-capsparksa">#1: <a href="https://recommend.games/#/game/266524" style="font-variant: small-caps;">PARKS</a></h2>
 <p><em>1–5 players, 30–60 minutes, 10+ years, medium light (2.2), 88% <span style="color: #E30613;"><em><strong>Spiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/266524_huc0acd639e74304c90b878115a82c972c_583039_0x300_resize_q75_box.jpg"
 	alt="PARKS" />
 <p><a href="https://recommend.games/#/game/266524" style="font-variant: small-caps;">PARKS</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame318977-stylefont-variant-small-capsmicromacro-crime-citya"><a href="https://recommend.games/#/game/318977" style="font-variant: small-caps;">MicroMacro: Crime City</a></h2>
+<h2 id="2-a-hrefhttpsrecommendgamesgame318977-stylefont-variant-small-capsmicromacro-crime-citya">#2: <a href="https://recommend.games/#/game/318977" style="font-variant: small-caps;">MicroMacro: Crime City</a></h2>
 <p><em>1–4 players, 15–45 minutes, 10+ years, light (1.1), 99% <span style="color: #E30613;"><em><strong>Spiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/318977_hu5438825b9b6d1014226d20d231e650c2_1030234_0x300_resize_q75_box.jpg"
 	alt="MicroMacro: Crime City" />
 <p><a href="https://recommend.games/#/game/318977" style="font-variant: small-caps;">MicroMacro: Crime City</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame276498-stylefont-variant-small-capsparis-la-cité-de-la-lumièrea"><a href="https://recommend.games/#/game/276498" style="font-variant: small-caps;">Paris: La Cité de la Lumière</a></h2>
+<h2 id="3-a-hrefhttpsrecommendgamesgame276498-stylefont-variant-small-capsparis-la-cité-de-la-lumièrea">#3: <a href="https://recommend.games/#/game/276498" style="font-variant: small-caps;">Paris: La Cité de la Lumière</a></h2>
 <p><em>2 players, 30 minutes, 8+ years, medium light (2.1), 96% <span style="color: #E30613;"><em><strong>Spiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/276498_hu5438825b9b6d1014226d20d231e650c2_1377224_0x300_resize_q75_box.jpg"
 	alt="Paris: La Cité de la Lumière" />
 <p><a href="https://recommend.games/#/game/276498" style="font-variant: small-caps;">Paris: La Cité de la Lumière</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame283864-stylefont-variant-small-capstrails-of-tucanaa"><a href="https://recommend.games/#/game/283864" style="font-variant: small-caps;">Trails of Tucana</a></h2>
+<h2 id="4-a-hrefhttpsrecommendgamesgame283864-stylefont-variant-small-capstrails-of-tucanaa">#4: <a href="https://recommend.games/#/game/283864" style="font-variant: small-caps;">Trails of Tucana</a></h2>
 <p><em>1–8 players, 15 minutes, 8+ years, light (1.3), 100% <span style="color: #E30613;"><em><strong>Spiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/283864_hu77819644fd0299a6139110eb0c579ea5_151719_0x300_resize_q75_box.jpg"
 	alt="Trails of Tucana" />
 <p><a href="https://recommend.games/#/game/283864" style="font-variant: small-caps;">Trails of Tucana</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame223040-stylefont-variant-small-capsfantasy-realmsa"><a href="https://recommend.games/#/game/223040" style="font-variant: small-caps;">Fantasy Realms</a></h2>
+<h2 id="5-a-hrefhttpsrecommendgamesgame223040-stylefont-variant-small-capsfantasy-realmsa">#5: <a href="https://recommend.games/#/game/223040" style="font-variant: small-caps;">Fantasy Realms</a></h2>
 <p><em>3–6 players, 20 minutes, 14+ years, medium light (1.7), 100% <span style="color: #E30613;"><em><strong>Spiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/223040_hud044617e8fd0e9546f53b5e78f279fc8_462970_0x300_resize_q75_box.jpg"
 	alt="Fantasy Realms" />
 <p><a href="https://recommend.games/#/game/223040" style="font-variant: small-caps;">Fantasy Realms</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame274960-stylefont-variant-small-capspoint-salada"><a href="https://recommend.games/#/game/274960" style="font-variant: small-caps;">Point Salad</a></h2>
+<h2 id="6-a-hrefhttpsrecommendgamesgame274960-stylefont-variant-small-capspoint-salada">#6: <a href="https://recommend.games/#/game/274960" style="font-variant: small-caps;">Point Salad</a></h2>
 <p><em>2–6 players, 15–30 minutes, 8+ years, light (1.2), 100% <span style="color: #E30613;"><em><strong>Spiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/274960_hub9953d19963a89c991228b81af29aba0_191736_0x300_resize_box_2.png"
 	alt="Point Salad" />
 <p><a href="https://recommend.games/#/game/274960" style="font-variant: small-caps;">Point Salad</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame256788-stylefont-variant-small-capsdetective-cluba"><a href="https://recommend.games/#/game/256788" style="font-variant: small-caps;">Detective Club</a></h2>
+<h2 id="7-a-hrefhttpsrecommendgamesgame256788-stylefont-variant-small-capsdetective-cluba">#7: <a href="https://recommend.games/#/game/256788" style="font-variant: small-caps;">Detective Club</a></h2>
 <p><em>4–8 players, 45 minutes, 8+ years, light (1.2), 100% <span style="color: #E30613;"><em><strong>Spiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/256788_hufc6c6ec20f92acdf9d5df15780528ab7_507419_0x300_resize_q75_box.jpg"
 	alt="Detective Club" />
 <p><a href="https://recommend.games/#/game/256788" style="font-variant: small-caps;">Detective Club</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame300877-stylefont-variant-small-capsnew-york-zooa"><a href="https://recommend.games/#/game/300877" style="font-variant: small-caps;">New York Zoo</a></h2>
+<h2 id="8-a-hrefhttpsrecommendgamesgame300877-stylefont-variant-small-capsnew-york-zooa">#8: <a href="https://recommend.games/#/game/300877" style="font-variant: small-caps;">New York Zoo</a></h2>
 <p><em>1–5 players, 30–60 minutes, 10+ years, medium light (2.0), 96% <span style="color: #E30613;"><em><strong>Spiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/300877_hub7a172eed62bd03509640813f9a13dce_1125674_0x300_resize_q75_box.jpg"
 	alt="New York Zoo" />
 <p><a href="https://recommend.games/#/game/300877" style="font-variant: small-caps;">New York Zoo</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame326494-stylefont-variant-small-capsthe-adventures-of-robin-hooda"><a href="https://recommend.games/#/game/326494" style="font-variant: small-caps;">The Adventures of Robin Hood</a></h2>
+<h2 id="9-a-hrefhttpsrecommendgamesgame326494-stylefont-variant-small-capsthe-adventures-of-robin-hooda">#9: <a href="https://recommend.games/#/game/326494" style="font-variant: small-caps;">The Adventures of Robin Hood</a></h2>
 <p><em>2–4 players, 60 minutes, 10+ years, medium light (1.7), 99% <span style="color: #E30613;"><em><strong>Spiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/326494_huc78f66ad97a20685e1fe733e97c417ba_217267_0x300_resize_q75_box.jpg"
 	alt="The Adventures of Robin Hood" />
 <p><a href="https://recommend.games/#/game/326494" style="font-variant: small-caps;">The Adventures of Robin Hood</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame295948-stylefont-variant-small-capsaqualina"><a href="https://recommend.games/#/game/295948" style="font-variant: small-caps;">Aqualin</a></h2>
+<h2 id="10-a-hrefhttpsrecommendgamesgame295948-stylefont-variant-small-capsaqualina">#10: <a href="https://recommend.games/#/game/295948" style="font-variant: small-caps;">Aqualin</a></h2>
 <p><em>2 players, 20 minutes, 10+ years, medium light (1.8), 98% <span style="color: #E30613;"><em><strong>Spiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/295948_hu5438825b9b6d1014226d20d231e650c2_722589_0x300_resize_q75_box.jpg"
 	alt="Aqualin" />
 <p><a href="https://recommend.games/#/game/295948" style="font-variant: small-caps;">Aqualin</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame300327-stylefont-variant-small-capsthe-castles-of-tuscanya"><a href="https://recommend.games/#/game/300327" style="font-variant: small-caps;">The Castles of Tuscany</a></h2>
+<h2 id="11-a-hrefhttpsrecommendgamesgame300327-stylefont-variant-small-capsthe-castles-of-tuscanya">#11: <a href="https://recommend.games/#/game/300327" style="font-variant: small-caps;">The Castles of Tuscany</a></h2>
 <p><em>2–4 players, 45–60 minutes, 10+ years, medium light (2.2), 89% <span style="color: #E30613;"><em><strong>Spiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/300327_hu12a0304a2bcbe74411d3f9dfb05688c0_278226_0x300_resize_q75_box.jpg"
 	alt="The Castles of Tuscany" />
 <p><a href="https://recommend.games/#/game/300327" style="font-variant: small-caps;">The Castles of Tuscany</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame299172-stylefont-variant-small-capsthe-key-murder-at-the-oakdale-cluba"><a href="https://recommend.games/#/game/299172" style="font-variant: small-caps;">The Key: Murder at the Oakdale Club</a></h2>
+<h2 id="12-a-hrefhttpsrecommendgamesgame299172-stylefont-variant-small-capsthe-key-murder-at-the-oakdale-cluba">#12: <a href="https://recommend.games/#/game/299172" style="font-variant: small-caps;">The Key: Murder at the Oakdale Club</a></h2>
 <p><em>1–4 players, 15–20 minutes, 8+ years, medium light (2.0), 99% <span style="color: #E30613;"><em><strong>Spiel</strong></em></span></em></p>
 
 <img
@@ -388,6 +396,7 @@ if (!doNotTrack) {
 	alt="The Key: Murder at the Oakdale Club" />
 <p><a href="https://recommend.games/#/game/299172" style="font-variant: small-caps;">The Key: Murder at the Oakdale Club</a></p>
 <h2 id="my-two-cents">My two cents</h2>
+<p>Alright, that&rsquo;s what the algorithms say. But just like last year, I&rsquo;d like to let my guts have some say as well. These are the three games I consider having the best shot at ending up on the jury&rsquo;s shortlist:</p>
 <ul>
 <li><a href="https://recommend.games/#/game/318977" style="font-variant: small-caps;">MicroMacro: Crime City</a></li>
 <li><a href="https://recommend.games/#/game/326494" style="font-variant: small-caps;">The Adventures of Robin Hood</a></li>
@@ -399,84 +408,84 @@ if (!doNotTrack) {
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/ksdj-2021_huabbfac70d4d236c608c8474b59f0dafe_404506_0x300_resize_box_2.png"
 	alt="Kennerspiel des Jahres 2021" />
-<h2 id="a-hrefhttpsrecommendgamesgame281259-stylefont-variant-small-capsthe-isle-of-catsa"><a href="https://recommend.games/#/game/281259" style="font-variant: small-caps;">The Isle of Cats</a></h2>
+<h2 id="1-a-hrefhttpsrecommendgamesgame281259-stylefont-variant-small-capsthe-isle-of-catsa">#1: <a href="https://recommend.games/#/game/281259" style="font-variant: small-caps;">The Isle of Cats</a></h2>
 <p><em>1–4 players, 60–90 minutes, 8+ years, medium light (2.3), 94% <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/281259_hu25e19462e20600fc6469abdd13405d01_394440_0x300_resize_q75_box.jpg"
 	alt="The Isle of Cats" />
 <p><a href="https://recommend.games/#/game/281259" style="font-variant: small-caps;">The Isle of Cats</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame312484-stylefont-variant-small-capslost-ruins-of-arnaka"><a href="https://recommend.games/#/game/312484" style="font-variant: small-caps;">Lost Ruins of Arnak</a></h2>
+<h2 id="2-a-hrefhttpsrecommendgamesgame312484-stylefont-variant-small-capslost-ruins-of-arnaka">#2: <a href="https://recommend.games/#/game/312484" style="font-variant: small-caps;">Lost Ruins of Arnak</a></h2>
 <p><em>1–4 players, 30–120 minutes, 12+ years, medium (2.8), 100% <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/312484_hu5438825b9b6d1014226d20d231e650c2_370584_0x300_resize_q75_box.jpg"
 	alt="Lost Ruins of Arnak" />
 <p><a href="https://recommend.games/#/game/312484" style="font-variant: small-caps;">Lost Ruins of Arnak</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame283155-stylefont-variant-small-capscalicoa"><a href="https://recommend.games/#/game/283155" style="font-variant: small-caps;">Calico</a></h2>
+<h2 id="3-a-hrefhttpsrecommendgamesgame283155-stylefont-variant-small-capscalicoa">#3: <a href="https://recommend.games/#/game/283155" style="font-variant: small-caps;">Calico</a></h2>
 <p><em>1–4 players, 30–45 minutes, 13+ years, medium light (2.2), 62% <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/283155_hu5438825b9b6d1014226d20d231e650c2_306571_0x300_resize_q75_box.jpg"
 	alt="Calico" />
 <p><a href="https://recommend.games/#/game/283155" style="font-variant: small-caps;">Calico</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame224517-stylefont-variant-small-capsbrass-birminghama"><a href="https://recommend.games/#/game/224517" style="font-variant: small-caps;">Brass: Birmingham</a></h2>
+<h2 id="4-a-hrefhttpsrecommendgamesgame224517-stylefont-variant-small-capsbrass-birminghama">#4: <a href="https://recommend.games/#/game/224517" style="font-variant: small-caps;">Brass: Birmingham</a></h2>
 <p><em>2–4 players, 60–120 minutes, 14+ years, medium heavy (3.9), 100% <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/224517_hu5438825b9b6d1014226d20d231e650c2_231720_0x300_resize_q75_box.jpg"
 	alt="Brass: Birmingham" />
 <p><a href="https://recommend.games/#/game/224517" style="font-variant: small-caps;">Brass: Birmingham</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame317311-stylefont-variant-small-capsswitch--signala"><a href="https://recommend.games/#/game/317311" style="font-variant: small-caps;">Switch &amp; Signal</a></h2>
+<h2 id="5-a-hrefhttpsrecommendgamesgame317311-stylefont-variant-small-capsswitch--signala">#5: <a href="https://recommend.games/#/game/317311" style="font-variant: small-caps;">Switch &amp; Signal</a></h2>
 <p><em>2–4 players, 45 minutes, 10+ years, medium light (2.2), 83% <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/317311_hud383272a48625eadbf3a21bcab3d8797_227635_0x300_resize_q75_box.jpg"
 	alt="Switch &amp; Signal" />
 <p><a href="https://recommend.games/#/game/317311" style="font-variant: small-caps;">Switch &amp; Signal</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame300531-stylefont-variant-small-capspaleoa"><a href="https://recommend.games/#/game/300531" style="font-variant: small-caps;">Paleo</a></h2>
+<h2 id="6-a-hrefhttpsrecommendgamesgame300531-stylefont-variant-small-capspaleoa">#6: <a href="https://recommend.games/#/game/300531" style="font-variant: small-caps;">Paleo</a></h2>
 <p><em>1–4 players, 45–60 minutes, 10+ years, medium (2.6), 88% <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/300531_huc85032f06db4ac6edbe0b59c0ce904bd_86684_0x300_resize_q75_box.jpg"
 	alt="Paleo" />
 <p><a href="https://recommend.games/#/game/300531" style="font-variant: small-caps;">Paleo</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame293014-stylefont-variant-small-capsnidavellira"><a href="https://recommend.games/#/game/293014" style="font-variant: small-caps;">Nidavellir</a></h2>
+<h2 id="7-a-hrefhttpsrecommendgamesgame293014-stylefont-variant-small-capsnidavellira">#7: <a href="https://recommend.games/#/game/293014" style="font-variant: small-caps;">Nidavellir</a></h2>
 <p><em>2–5 players, 30–60 minutes, 10+ years, medium light (2.2), 96% <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/293014_huccd70db56dff1f8f8883462bba4bca7a_597353_0x300_resize_q75_box.jpg"
 	alt="Nidavellir" />
 <p><a href="https://recommend.games/#/game/293014" style="font-variant: small-caps;">Nidavellir</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame291457-stylefont-variant-small-capsgloomhaven-jaws-of-the-liona"><a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Gloomhaven: Jaws of the Lion</a></h2>
+<h2 id="8-a-hrefhttpsrecommendgamesgame291457-stylefont-variant-small-capsgloomhaven-jaws-of-the-liona">#8: <a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Gloomhaven: Jaws of the Lion</a></h2>
 <p><em>1–4 players, 30–120 minutes, 14+ years, medium heavy (3.6), 100% <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/291457_hu5438825b9b6d1014226d20d231e650c2_133620_0x300_resize_q75_box.jpg"
 	alt="Gloomhaven: Jaws of the Lion" />
 <p><a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Gloomhaven: Jaws of the Lion</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame286096-stylefont-variant-small-capstapestrya"><a href="https://recommend.games/#/game/286096" style="font-variant: small-caps;">Tapestry</a></h2>
+<h2 id="9-a-hrefhttpsrecommendgamesgame286096-stylefont-variant-small-capstapestrya">#9: <a href="https://recommend.games/#/game/286096" style="font-variant: small-caps;">Tapestry</a></h2>
 <p><em>1–5 players, 90–120 minutes, 12+ years, medium (2.9), 100% <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/286096_hu08829497e2f546972599f9b6b8e8e60e_668074_0x300_resize_q75_box.jpg"
 	alt="Tapestry" />
 <p><a href="https://recommend.games/#/game/286096" style="font-variant: small-caps;">Tapestry</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame271324-stylefont-variant-small-capsits-a-wonderful-worlda"><a href="https://recommend.games/#/game/271324" style="font-variant: small-caps;">It&rsquo;s a Wonderful World</a></h2>
+<h2 id="10-a-hrefhttpsrecommendgamesgame271324-stylefont-variant-small-capsits-a-wonderful-worlda">#10: <a href="https://recommend.games/#/game/271324" style="font-variant: small-caps;">It&rsquo;s a Wonderful World</a></h2>
 <p><em>1–5 players, 30–60 minutes, 14+ years, medium light (2.3), 100% <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/271324_hu690454564990a419fa8d5d34eb02ba17_977642_0x300_resize_q75_box.jpg"
 	alt="It&#39;s a Wonderful World" />
 <p><a href="https://recommend.games/#/game/271324" style="font-variant: small-caps;">It&rsquo;s a Wonderful World</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame283294-stylefont-variant-small-capsyukon-airwaysa"><a href="https://recommend.games/#/game/283294" style="font-variant: small-caps;">Yukon Airways</a></h2>
+<h2 id="11-a-hrefhttpsrecommendgamesgame283294-stylefont-variant-small-capsyukon-airwaysa">#11: <a href="https://recommend.games/#/game/283294" style="font-variant: small-caps;">Yukon Airways</a></h2>
 <p><em>1–4 players, 60–90 minutes, 14+ years, medium (2.7), 100% <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span></em></p>
 
 <img
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/283294_hu5438825b9b6d1014226d20d231e650c2_1235554_0x300_resize_q75_box.jpg"
 	alt="Yukon Airways" />
 <p><a href="https://recommend.games/#/game/283294" style="font-variant: small-caps;">Yukon Airways</a></p>
-<h2 id="a-hrefhttpsrecommendgamesgame282954-stylefont-variant-small-capsparisa"><a href="https://recommend.games/#/game/282954" style="font-variant: small-caps;">Paris</a></h2>
+<h2 id="12-a-hrefhttpsrecommendgamesgame282954-stylefont-variant-small-capsparisa">#12: <a href="https://recommend.games/#/game/282954" style="font-variant: small-caps;">Paris</a></h2>
 <p><em>2–4 players, 90 minutes, 12+ years, medium (2.7), 100% <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span></em></p>
 
 <img
@@ -489,6 +498,23 @@ if (!doNotTrack) {
 <li><a href="https://recommend.games/#/game/300531" style="font-variant: small-caps;">Paleo</a></li>
 <li><a href="https://recommend.games/#/game/281259" style="font-variant: small-caps;">The Isle of Cats</a></li>
 </ul>
+<h1 id="honourable-mentions">Honourable mentions</h1>
+<h2 id="span-stylecolor-e30613spiel-des-jahresspan"><span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span></h2>
+<ul>
+<li>TODO</li>
+</ul>
+<h2 id="span-stylecolor-193f4akennerspiel-des-jahresspan"><span style="color: #193F4A;"><em><strong>Kennerspiel des Jahres</strong></em></span></h2>
+<ul>
+<li>TODO</li>
+</ul>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>As every year, it&rsquo;s not straightforward to determine what games are eligible for the awards. Generally speaking, it&rsquo;d be those games release between April 2020 and March 2021 into German retail (though because of COVID–19 hitting in March last year we might see a few latecomers this year). Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there&rsquo;s always some that get away. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
 
         
