@@ -7,11 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Sat, 26 Jun 2021 22:00:00 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fantasy Realms</title>
+      <link>https://recommend-games.github.io/tags/fantasy-realms/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/fantasy-realms/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Game of the Year</title>
       <link>https://recommend-games.github.io/tags/game-of-the-year/</link>
-      <pubDate>Sat, 26 Jun 2021 22:00:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/game-of-the-year/</guid>
       <description></description>
@@ -20,7 +29,7 @@
     <item>
       <title>Germany</title>
       <link>https://recommend-games.github.io/tags/germany/</link>
-      <pubDate>Sat, 26 Jun 2021 22:00:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/germany/</guid>
       <description></description>
@@ -29,7 +38,7 @@
     <item>
       <title>Kennerspiel</title>
       <link>https://recommend-games.github.io/tags/kennerspiel/</link>
-      <pubDate>Sat, 26 Jun 2021 22:00:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kennerspiel/</guid>
       <description></description>
@@ -38,52 +47,16 @@
     <item>
       <title>Kennerspiel des Jahres</title>
       <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</link>
-      <pubDate>Sat, 26 Jun 2021 22:00:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>KSdJ</title>
-      <link>https://recommend-games.github.io/tags/ksdj/</link>
-      <pubDate>Sat, 26 Jun 2021 22:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/ksdj/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SdJ</title>
-      <link>https://recommend-games.github.io/tags/sdj/</link>
-      <pubDate>Sat, 26 Jun 2021 22:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/sdj/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spiel des Jahres</title>
-      <link>https://recommend-games.github.io/tags/spiel-des-jahres/</link>
-      <pubDate>Sat, 26 Jun 2021 22:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/spiel-des-jahres/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fantasy Realms</title>
-      <link>https://recommend-games.github.io/tags/fantasy-realms/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/fantasy-realms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Kennerspiel des Jahres 2021</title>
       <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2021/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2021/</guid>
       <description></description>
@@ -92,7 +65,7 @@
     <item>
       <title>Kennerspiel des Jahres 2021 nominations</title>
       <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2021-nominations/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2021-nominations/</guid>
       <description></description>
@@ -101,7 +74,7 @@
     <item>
       <title>Kennerspiel des Jahres nominations</title>
       <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres-nominations/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres-nominations/</guid>
       <description></description>
@@ -110,16 +83,25 @@
     <item>
       <title>Kennerspiel nominations</title>
       <link>https://recommend-games.github.io/tags/kennerspiel-nominations/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kennerspiel-nominations/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>KSdJ</title>
+      <link>https://recommend-games.github.io/tags/ksdj/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/ksdj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Lost Ruins of Arnak</title>
       <link>https://recommend-games.github.io/tags/lost-ruins-of-arnak/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/lost-ruins-of-arnak/</guid>
       <description></description>
@@ -128,7 +110,7 @@
     <item>
       <title>MicroMacro: Crime City</title>
       <link>https://recommend-games.github.io/tags/micromacro-crime-city/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/micromacro-crime-city/</guid>
       <description></description>
@@ -137,7 +119,7 @@
     <item>
       <title>Paleo</title>
       <link>https://recommend-games.github.io/tags/paleo/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/paleo/</guid>
       <description></description>
@@ -146,16 +128,25 @@
     <item>
       <title>Predictions</title>
       <link>https://recommend-games.github.io/tags/predictions/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/predictions/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>SdJ</title>
+      <link>https://recommend-games.github.io/tags/sdj/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/sdj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>SdJ 2021</title>
       <link>https://recommend-games.github.io/tags/sdj-2021/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/sdj-2021/</guid>
       <description></description>
@@ -164,16 +155,25 @@
     <item>
       <title>SdJ nominations</title>
       <link>https://recommend-games.github.io/tags/sdj-nominations/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/sdj-nominations/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Spiel des Jahres</title>
+      <link>https://recommend-games.github.io/tags/spiel-des-jahres/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/spiel-des-jahres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Spiel des Jahres 2021</title>
       <link>https://recommend-games.github.io/tags/spiel-des-jahres-2021/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/spiel-des-jahres-2021/</guid>
       <description></description>
@@ -182,7 +182,7 @@
     <item>
       <title>Spiel des Jahres 2021 nominations</title>
       <link>https://recommend-games.github.io/tags/spiel-des-jahres-2021-nominations/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/spiel-des-jahres-2021-nominations/</guid>
       <description></description>
@@ -191,7 +191,7 @@
     <item>
       <title>Spiel des Jahres nominations</title>
       <link>https://recommend-games.github.io/tags/spiel-des-jahres-nominations/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/spiel-des-jahres-nominations/</guid>
       <description></description>
@@ -200,7 +200,7 @@
     <item>
       <title>The Adventures of Robin Hood</title>
       <link>https://recommend-games.github.io/tags/the-adventures-of-robin-hood/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/the-adventures-of-robin-hood/</guid>
       <description></description>
@@ -209,7 +209,7 @@
     <item>
       <title>Zombie Teenz Evolution</title>
       <link>https://recommend-games.github.io/tags/zombie-teenz-evolution/</link>
-      <pubDate>Tue, 18 May 2021 23:25:00 +0300</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/zombie-teenz-evolution/</guid>
       <description></description>
