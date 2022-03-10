@@ -61,7 +61,7 @@ OK, let&rsquo;s back up for a second. R.G&rsquo;s primary purpose is a recommend
   "headline": "Recommend.Games ranking explained",
   "description" : "We have some pretty exciting news! 🤩 Since 2022-02-22, we\u0026rsquo;ve been using a new and improved ranking as the default sorting for our front page at Recommend.Games.\n… What do you mean, you haven\u0026rsquo;t noticed there\u0026rsquo;s a R.G ranking? You know, that thing that\u0026rsquo;s referenced in the statistics? … You haven\u0026rsquo;t ever opened that view?!? 😱\nOK, let\u0026rsquo;s back up for a second. R.G\u0026rsquo;s primary purpose is a recommendation engine, that is, finding personalised game recommendations based on a user\u0026rsquo;s preferences (in this case as expressed through their BoardGameGeek ratings).",
   "inLanguage" : "en",
-  "wordCount":  1094 ,
+  "wordCount":  1109 ,
   "datePublished" : "2022-02-22T22:02:22",
   "dateModified" : "2022-02-22T22:02:22",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -274,7 +274,7 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1094&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1109&nbsp;words
   
   
     
@@ -312,7 +312,7 @@ if (!doNotTrack) {
 <p>Instead, I wanted to create a new ranking which I can at least explain. So here goes:</p>
 <p><strong>The basic idea is to calculate the recommended games for all users, and then average those rankings. Those averages would become the Recommend.Games rankings.</strong></p>
 <p>That sounds simple and intuitive, but, as the saying goes, the devil is in the details. For starters, there are over 100,000 games in the BoardGameGeek database, and <a href="https://twitter.com/recommend_games/status/1498184269402980355">over 400,000 users</a> with at least one rated game. Calculating <em>all recommendations</em> for <em>all users</em> would therefore mean over 40 billion user–game pairs. That&rsquo;s a lot. 😅 But really, we don&rsquo;t care if a game is the 1,000th, 10,000th or 100,000th highest rated game. Instead, we only recommend the top 100 games for each user. The highest game on that list receives 100 points, the next 99, and so on, until the 100th game receives a single point from that user. All other games will be awarded 0 points. The we can simply average those points across all users, and voilà, those scores become the R.G rankings. 🤩</p>
-<p>… Except that&rsquo;s still not the whole story. I wasn&rsquo;t happy about the idea of a user who 15 years ago left a single rating being equally important as someone who played and rated hundreds of board games over two decades of BGG history. That&rsquo;s why I tried to model the &ldquo;trust&rdquo; we should put in different users' ratings. The idea here would be that we should trust a user&rsquo;s rating more if two things are true:</p>
+<p>… Except that&rsquo;s still not the whole story. I wasn&rsquo;t happy about the idea of a user who fifteen years ago left a single rating being equally important as someone who played and rated hundreds of board games over two decades of BGG history. That&rsquo;s why I tried to model the &ldquo;trust&rdquo; we should put in different users' ratings. The idea here would be that we should trust a user&rsquo;s rating more if two things are true:</p>
 <ul>
 <li>They are a regular contributor to BGG, i.e., rate, log plays etc at least once a month over a long period of time.</li>
 <li>They should rate games with a reasonable distribution, i.e., on a nice bell curve.</li>
@@ -324,7 +324,8 @@ if (!doNotTrack) {
 	src="https://recommend-games.github.io/posts/recommend-games-ranking/tomvasel_hu8122f04d0f9b00836ce5a39d456e5117_119633_0x300_resize_box_2.png"
 	alt="Tom Vasel&#39;s ratings" />
 <p>If on the other hand a user only ever rates games with a 10, never any other score, their factor would be 0, and again, they wouldn&rsquo;t take part in the R.G rankings calculations.</p>
-<p>So, long story short, we have those two factors that are supposed to describe how much we can trust a user&rsquo;s ratings. We can now multiply them with each other, and the higher the score, the higher will be our trust in their ratings, and consequently, the more weight their &ldquo;vote&rdquo; will have when calculating the R.G ranking. But before we got there, what users <em>do</em> we trust the most? Many of the highest scores actually belong to pretty random users, so I&rsquo;m not comfortable exposing them here, but it&rsquo;s interesting to compare some of the &ldquo;celebrities&rdquo; in the hobby (and yours truly):</p>
+<p>So, long story short, we have those two factors that are supposed to describe how much we can trust a user&rsquo;s ratings. We can now multiply them with each other, and the higher the score, the higher will be our trust in their ratings, and consequently, the more weight their &ldquo;vote&rdquo; will have when calculating the R.G ranking.</p>
+<p>But before we go there, what users <em>do</em> we trust the most? Many of the highest scores actually belong to pretty random users, so I&rsquo;m not comfortable exposing them here, but it&rsquo;s interesting to compare some of the &ldquo;celebrities&rdquo; in the hobby (and yours truly):</p>
 <table>
 <thead>
 <tr>
@@ -401,6 +402,7 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
+<p>My opinions on board games having more weight than Quintin Smith&rsquo;s sure feels good. 🧐</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
