@@ -62,7 +62,12 @@ params = {
 }
 
 max_results = 1000
-candidates = list(tqdm(recommend_games(max_results=max_results, **params)))
+candidates = list(
+    tqdm(
+        iterable=recommend_games(max_results=max_results, **params),
+        total=max_results,
+    )
+)
 
 for game in candidates[:10]:
     print(
@@ -136,19 +141,19 @@ data.shape
 sdj_score_weights = {
     "avg_rating": 0,
     "avg_rating_rank": 0,
-    "avg_rating_scale_10": 0,
+    "avg_rating_scale_10": 5,
     "bayes_rating": 0,
     "bayes_rating_rank": 0,
-    "bayes_rating_scale_10": 1,
+    "bayes_rating_scale_10": 5,
     "num_votes": 0,
     "num_votes_rank": 0,
     "num_votes_scale_max": 0,
     "r_g_score": 0,
-    "r_g_score_rank": 1,
+    "r_g_score_rank": 5,
     "rec_rating": 0,
-    "rec_rating_rank": 2,
-    "rec_rating_scale_max": 2,
-    "sdj_prob": 2,
+    "rec_rating_rank": 50,
+    "rec_rating_scale_max": 25,
+    "sdj_prob": 10,
     "sdj_prob_rank": 0,
 }
 
