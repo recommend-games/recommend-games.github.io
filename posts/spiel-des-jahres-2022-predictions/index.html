@@ -59,7 +59,7 @@
   "headline": "Spiel des Jahres 2022 predictions",
   "description" : "Spiel des Jahres 2022 is around the corner! (Has it really been a year already since we last spoke with each other? 😅) We\u0026rsquo;re blessed with another strong year full of wonderful games that all compete for the most prestigious awards in board gaming. As in the previous years, I\u0026rsquo;ll try to predict what games have the best shot at ending up on the longlist (aka recommendations) and the shortlist (aka nominations) when the jury announces their picks on May 23rd.",
   "inLanguage" : "en",
-  "wordCount":  1523 ,
+  "wordCount":  1638 ,
   "datePublished" : "2022-05-10T22:30:00",
   "dateModified" : "2022-05-10T22:30:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -269,7 +269,7 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;8&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1523&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1638&nbsp;words
   
   
     
@@ -299,7 +299,7 @@ if (!doNotTrack) {
 	src="https://recommend-games.github.io/posts/spiel-des-jahres-2022-predictions/sdj-all_hu5d46b6d1d3cc39711dce52d4118e17b2_130838_0x300_resize_q75_box.jpg"
 	alt="Spiel des Jahres" />
 <p><span style="color: #E30613;"><em><strong>Spiel des Jahres 2022</strong></em></span> is around the corner! (Has it really been a year already since we last spoke with each other? 😅) We&rsquo;re blessed with another strong year full of wonderful games that all compete for the most prestigious awards in board gaming. As in the <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to/">previous</a> <a href="https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions/">years</a>, I&rsquo;ll try to predict what games have the best shot at ending up on the longlist (aka <em>recommendations</em>) and the shortlist (aka <em>nominations</em>) when the jury announces their picks on May 23rd.</p>
-<p>Even more so than in previous years, I didn&rsquo;t have much time (thanks, kids 👨‍👩‍👧‍👧), so I&rsquo;ve mostly used the same algorithmic approach as last year. First, I took all eligible games and separated them into two lists: one for <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> and one for <span style="color: #193F4A;"><em><strong>Kennerspiel des Jahres</strong></em></span>, depending on their <a href="https://recommend-games.github.io/posts/what-makes-kennerspiel/"><span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> score</a>. Then I ranked those games in a couple of different ways, and finally combined those into the final result:</p>
+<p>Even more so than in previous years, I didn&rsquo;t have much time (thanks, kids 👨‍👩‍👧‍👧), so I&rsquo;ve mostly used the same algorithmic approach as last year. First, I took all eligible<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> games and separated them into two lists: one for <span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> and one for <span style="color: #193F4A;"><em><strong>Kennerspiel des Jahres</strong></em></span>, depending on their <a href="https://recommend-games.github.io/posts/what-makes-kennerspiel/"><span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> score</a>.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> Then I ranked those games in a couple of different ways, and finally combined those into the final result:</p>
 <ul>
 <li>Recommend.Games <a href="https://recommend.games/#/?for=S_d_J&amp;yearMin=2021&amp;yearMax=2022&amp;excludeOwned=false&amp;playerCount=4&amp;playerCountType=box&amp;playTime=120&amp;playTimeType=max&amp;playerAge=16&amp;playerAgeType=box">recommendation algorithm</a> (50% ranking, 25% score). This has proven to be a powerful and reliable method to capture the jury&rsquo;s taste, but it&rsquo;s slow to recommend new games with few ratings.</li>
 <li><span style="color: #E30613;"><em><strong>Spiel des Jahres</strong></em></span> probability (10%). Similar to the model that calculates the <span style="color: #193F4A;"><em><strong>Kennerspiel</strong></em></span> score, I&rsquo;ve trained a model that tries to predict a game&rsquo;s chances to end up on the jury&rsquo;s longlist. This is particularly designed to unearth candidates with few votes, but it&rsquo;s still rudimentary at this point.</li>
@@ -485,6 +485,17 @@ if (!doNotTrack) {
 <li>Nature. Maybe this is the legacy of smash hit <a href="https://recommend.games/#/game/266192" style="font-variant: small-caps;">Wingspan</a> or maybe it&rsquo;s people looking for comfort. But there are definitely <em>a lot</em> of animals, plants, parks, etc, on the covers of this list.</li>
 </ol>
 <p>Will the jury agree and follow my predictions? We&rsquo;ll see on Monday, May 23. I can&rsquo;t wait! 🤩</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>As every year, it&rsquo;s not straightforward to determine what games are eligible for the awards. Generally speaking, it&rsquo;d be those games release between April 2021 and March 2022 into German retail. Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there&rsquo;s always some that get away. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>I&rsquo;ll trust the algorithm and the scores it outputs blindly. As every year, it&rsquo;ll be an interesting validation of the Kennerspiel score to see whether the jury agrees or not. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
 
         
