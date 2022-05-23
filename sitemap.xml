@@ -4,31 +4,163 @@
   
   <url>
     <loc>https://recommend-games.github.io/</loc>
-    <lastmod>2022-05-16T18:40:51+03:00</lastmod>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/fantasy-realms/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
   <url>
     <loc>https://recommend-games.github.io/tags/game-of-the-year/</loc>
-    <lastmod>2022-05-16T18:40:51+03:00</lastmod>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
   <url>
     <loc>https://recommend-games.github.io/tags/germany/</loc>
-    <lastmod>2022-05-16T18:40:51+03:00</lastmod>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
   <url>
     <loc>https://recommend-games.github.io/tags/kennerspiel/</loc>
-    <lastmod>2022-05-16T18:40:51+03:00</lastmod>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
   <url>
     <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</loc>
-    <lastmod>2022-05-16T18:40:51+03:00</lastmod>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2021/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2021-nominations/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres-nominations/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/kennerspiel-nominations/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/ksdj/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/lost-ruins-of-arnak/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/micromacro-crime-city/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/paleo/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/posts/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/predictions/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/sdj/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/sdj-2021/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/sdj-nominations/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/spiel-des-jahres/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/spiel-des-jahres-2021/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/spiel-des-jahres-2021-nominations/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/posts/spiel-des-jahres-2022-nominations/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/spiel-des-jahres-nominations/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/the-adventures-of-robin-hood/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/zombie-teenz-evolution/</loc>
+    <lastmod>2022-05-23T22:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
@@ -57,30 +189,6 @@
   </url>
   
   <url>
-    <loc>https://recommend-games.github.io/tags/ksdj/</loc>
-    <lastmod>2022-05-16T18:40:51+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/posts/</loc>
-    <lastmod>2022-05-16T18:40:51+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/predictions/</loc>
-    <lastmod>2022-05-16T18:40:51+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/sdj/</loc>
-    <lastmod>2022-05-16T18:40:51+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
     <loc>https://recommend-games.github.io/tags/sdj-2022/</loc>
     <lastmod>2022-05-16T18:40:51+03:00</lastmod>
     <changefreq>daily</changefreq>
@@ -88,12 +196,6 @@
   
   <url>
     <loc>https://recommend-games.github.io/tags/sdj-predictions/</loc>
-    <lastmod>2022-05-16T18:40:51+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/spiel-des-jahres/</loc>
     <lastmod>2022-05-16T18:40:51+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
@@ -123,61 +225,7 @@
   </url>
   
   <url>
-    <loc>https://recommend-games.github.io/tags/</loc>
-    <lastmod>2022-05-16T18:40:51+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/fantasy-realms/</loc>
-    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2021/</loc>
-    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/lost-ruins-of-arnak/</loc>
-    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/micromacro-crime-city/</loc>
-    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/paleo/</loc>
-    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/sdj-2021/</loc>
-    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/spiel-des-jahres-2021/</loc>
-    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
     <loc>https://recommend-games.github.io/posts/spiel-des-jahres-2021-winners/</loc>
-    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/the-adventures-of-robin-hood/</loc>
     <lastmod>2021-07-27T00:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
@@ -189,49 +237,7 @@
   </url>
   
   <url>
-    <loc>https://recommend-games.github.io/tags/zombie-teenz-evolution/</loc>
-    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2021-nominations/</loc>
-    <lastmod>2021-07-14T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres-nominations/</loc>
-    <lastmod>2021-07-14T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/kennerspiel-nominations/</loc>
-    <lastmod>2021-07-14T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/sdj-nominations/</loc>
-    <lastmod>2021-07-14T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/spiel-des-jahres-2021-nominations/</loc>
-    <lastmod>2021-07-14T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
     <loc>https://recommend-games.github.io/posts/spiel-des-jahres-2021-predictions-part-2/</loc>
-    <lastmod>2021-07-14T00:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/spiel-des-jahres-nominations/</loc>
     <lastmod>2021-07-14T00:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
