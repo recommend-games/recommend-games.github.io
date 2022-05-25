@@ -9,11 +9,29 @@
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
     <lastBuildDate>Tue, 24 May 2022 17:04:17 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fantasy Realms</title>
-      <link>https://recommend-games.github.io/tags/fantasy-realms/</link>
+      <title>Cascadia</title>
+      <link>https://recommend-games.github.io/tags/cascadia/</link>
       <pubDate>Tue, 24 May 2022 17:04:17 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/fantasy-realms/</guid>
+      <guid>https://recommend-games.github.io/tags/cascadia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cryptid</title>
+      <link>https://recommend-games.github.io/tags/cryptid/</link>
+      <pubDate>Tue, 24 May 2022 17:04:17 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/cryptid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dune: Imperium</title>
+      <link>https://recommend-games.github.io/tags/dune-imperium/</link>
+      <pubDate>Tue, 24 May 2022 17:04:17 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/dune-imperium/</guid>
       <description></description>
     </item>
     
@@ -99,29 +117,11 @@
     </item>
     
     <item>
-      <title>Lost Ruins of Arnak</title>
-      <link>https://recommend-games.github.io/tags/lost-ruins-of-arnak/</link>
+      <title>Living Forest</title>
+      <link>https://recommend-games.github.io/tags/living-forest/</link>
       <pubDate>Tue, 24 May 2022 17:04:17 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/lost-ruins-of-arnak/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MicroMacro: Crime City</title>
-      <link>https://recommend-games.github.io/tags/micromacro-crime-city/</link>
-      <pubDate>Tue, 24 May 2022 17:04:17 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/micromacro-crime-city/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Paleo</title>
-      <link>https://recommend-games.github.io/tags/paleo/</link>
-      <pubDate>Tue, 24 May 2022 17:04:17 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/paleo/</guid>
+      <guid>https://recommend-games.github.io/tags/living-forest/</guid>
       <description></description>
     </item>
     
@@ -131,6 +131,15 @@
       <pubDate>Tue, 24 May 2022 17:04:17 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/predictions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SCOUT</title>
+      <link>https://recommend-games.github.io/tags/scout/</link>
+      <pubDate>Tue, 24 May 2022 17:04:17 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/scout/</guid>
       <description></description>
     </item>
     
@@ -198,20 +207,11 @@
     </item>
     
     <item>
-      <title>The Adventures of Robin Hood</title>
-      <link>https://recommend-games.github.io/tags/the-adventures-of-robin-hood/</link>
+      <title>Top Ten</title>
+      <link>https://recommend-games.github.io/tags/top-ten/</link>
       <pubDate>Tue, 24 May 2022 17:04:17 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/the-adventures-of-robin-hood/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Zombie Teenz Evolution</title>
-      <link>https://recommend-games.github.io/tags/zombie-teenz-evolution/</link>
-      <pubDate>Tue, 24 May 2022 17:04:17 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/zombie-teenz-evolution/</guid>
+      <guid>https://recommend-games.github.io/tags/top-ten/</guid>
       <description></description>
     </item>
     
@@ -270,11 +270,47 @@
     </item>
     
     <item>
+      <title>Fantasy Realms</title>
+      <link>https://recommend-games.github.io/tags/fantasy-realms/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/fantasy-realms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Kennerspiel des Jahres 2021</title>
       <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2021/</link>
       <pubDate>Tue, 27 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lost Ruins of Arnak</title>
+      <link>https://recommend-games.github.io/tags/lost-ruins-of-arnak/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/lost-ruins-of-arnak/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MicroMacro: Crime City</title>
+      <link>https://recommend-games.github.io/tags/micromacro-crime-city/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/micromacro-crime-city/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paleo</title>
+      <link>https://recommend-games.github.io/tags/paleo/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/paleo/</guid>
       <description></description>
     </item>
     
@@ -297,11 +333,29 @@
     </item>
     
     <item>
+      <title>The Adventures of Robin Hood</title>
+      <link>https://recommend-games.github.io/tags/the-adventures-of-robin-hood/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/the-adventures-of-robin-hood/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Winners</title>
       <link>https://recommend-games.github.io/tags/winners/</link>
       <pubDate>Tue, 27 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/winners/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zombie Teenz Evolution</title>
+      <link>https://recommend-games.github.io/tags/zombie-teenz-evolution/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/zombie-teenz-evolution/</guid>
       <description></description>
     </item>
     

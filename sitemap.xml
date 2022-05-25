@@ -9,7 +9,19 @@
   </url>
   
   <url>
-    <loc>https://recommend-games.github.io/tags/fantasy-realms/</loc>
+    <loc>https://recommend-games.github.io/tags/cascadia/</loc>
+    <lastmod>2022-05-24T17:04:17+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/cryptid/</loc>
+    <lastmod>2022-05-24T17:04:17+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/dune-imperium/</loc>
     <lastmod>2022-05-24T17:04:17+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
@@ -69,19 +81,7 @@
   </url>
   
   <url>
-    <loc>https://recommend-games.github.io/tags/lost-ruins-of-arnak/</loc>
-    <lastmod>2022-05-24T17:04:17+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/micromacro-crime-city/</loc>
-    <lastmod>2022-05-24T17:04:17+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/paleo/</loc>
+    <loc>https://recommend-games.github.io/tags/living-forest/</loc>
     <lastmod>2022-05-24T17:04:17+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
@@ -94,6 +94,12 @@
   
   <url>
     <loc>https://recommend-games.github.io/tags/predictions/</loc>
+    <lastmod>2022-05-24T17:04:17+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/scout/</loc>
     <lastmod>2022-05-24T17:04:17+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
@@ -153,13 +159,7 @@
   </url>
   
   <url>
-    <loc>https://recommend-games.github.io/tags/the-adventures-of-robin-hood/</loc>
-    <lastmod>2022-05-24T17:04:17+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/zombie-teenz-evolution/</loc>
+    <loc>https://recommend-games.github.io/tags/top-ten/</loc>
     <lastmod>2022-05-24T17:04:17+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
@@ -207,7 +207,31 @@
   </url>
   
   <url>
+    <loc>https://recommend-games.github.io/tags/fantasy-realms/</loc>
+    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
     <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2021/</loc>
+    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/lost-ruins-of-arnak/</loc>
+    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/micromacro-crime-city/</loc>
+    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/paleo/</loc>
     <lastmod>2021-07-27T00:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
@@ -231,7 +255,19 @@
   </url>
   
   <url>
+    <loc>https://recommend-games.github.io/tags/the-adventures-of-robin-hood/</loc>
+    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
     <loc>https://recommend-games.github.io/tags/winners/</loc>
+    <lastmod>2021-07-27T00:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/zombie-teenz-evolution/</loc>
     <lastmod>2021-07-27T00:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
