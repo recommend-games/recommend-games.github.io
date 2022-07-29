@@ -7,11 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Thu, 14 Jul 2022 00:00:00 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Jul 2022 13:37:00 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Announcement</title>
+      <link>https://recommend-games.github.io/tags/announcement/</link>
+      <pubDate>Fri, 29 Jul 2022 13:37:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/announcement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hiatus</title>
+      <link>https://recommend-games.github.io/tags/hiatus/</link>
+      <pubDate>Fri, 29 Jul 2022 13:37:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/hiatus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Internal</title>
+      <link>https://recommend-games.github.io/tags/internal/</link>
+      <pubDate>Fri, 29 Jul 2022 13:37:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/internal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recommend.Games</title>
+      <link>https://recommend-games.github.io/tags/recommend.games/</link>
+      <pubDate>Fri, 29 Jul 2022 13:37:00 +0300</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/recommend.games/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Cascadia</title>
       <link>https://recommend-games.github.io/tags/cascadia/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/cascadia/</guid>
       <description></description>
@@ -20,7 +56,7 @@
     <item>
       <title>Cryptid</title>
       <link>https://recommend-games.github.io/tags/cryptid/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/cryptid/</guid>
       <description></description>
@@ -29,7 +65,7 @@
     <item>
       <title>Dune: Imperium</title>
       <link>https://recommend-games.github.io/tags/dune-imperium/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/dune-imperium/</guid>
       <description></description>
@@ -38,7 +74,7 @@
     <item>
       <title>Game of the Year</title>
       <link>https://recommend-games.github.io/tags/game-of-the-year/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/game-of-the-year/</guid>
       <description></description>
@@ -47,7 +83,7 @@
     <item>
       <title>Germany</title>
       <link>https://recommend-games.github.io/tags/germany/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/germany/</guid>
       <description></description>
@@ -56,7 +92,7 @@
     <item>
       <title>Kennerspiel</title>
       <link>https://recommend-games.github.io/tags/kennerspiel/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kennerspiel/</guid>
       <description></description>
@@ -65,7 +101,7 @@
     <item>
       <title>Kennerspiel des Jahres</title>
       <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</guid>
       <description></description>
@@ -74,9 +110,90 @@
     <item>
       <title>Kennerspiel des Jahres 2022</title>
       <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2022/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KSdJ</title>
+      <link>https://recommend-games.github.io/tags/ksdj/</link>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/ksdj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Living Forest</title>
+      <link>https://recommend-games.github.io/tags/living-forest/</link>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/living-forest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SCOUT</title>
+      <link>https://recommend-games.github.io/tags/scout/</link>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/scout/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SdJ</title>
+      <link>https://recommend-games.github.io/tags/sdj/</link>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/sdj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SdJ 2022</title>
+      <link>https://recommend-games.github.io/tags/sdj-2022/</link>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/sdj-2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spiel des Jahres</title>
+      <link>https://recommend-games.github.io/tags/spiel-des-jahres/</link>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/spiel-des-jahres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spiel des Jahres 2022</title>
+      <link>https://recommend-games.github.io/tags/spiel-des-jahres-2022/</link>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/spiel-des-jahres-2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Top Ten</title>
+      <link>https://recommend-games.github.io/tags/top-ten/</link>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/top-ten/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Winners</title>
+      <link>https://recommend-games.github.io/tags/winners/</link>
+      <pubDate>Sat, 16 Jul 2022 19:00:00 +0200</pubDate>
+      <author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/winners/</guid>
       <description></description>
     </item>
     
@@ -108,24 +225,6 @@
     </item>
     
     <item>
-      <title>KSdJ</title>
-      <link>https://recommend-games.github.io/tags/ksdj/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/ksdj/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Living Forest</title>
-      <link>https://recommend-games.github.io/tags/living-forest/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/living-forest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Predictions</title>
       <link>https://recommend-games.github.io/tags/predictions/</link>
       <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
@@ -135,56 +234,11 @@
     </item>
     
     <item>
-      <title>SCOUT</title>
-      <link>https://recommend-games.github.io/tags/scout/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/scout/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SdJ</title>
-      <link>https://recommend-games.github.io/tags/sdj/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/sdj/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SdJ 2022</title>
-      <link>https://recommend-games.github.io/tags/sdj-2022/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/sdj-2022/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>SdJ nominations</title>
       <link>https://recommend-games.github.io/tags/sdj-nominations/</link>
       <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/sdj-nominations/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spiel des Jahres</title>
-      <link>https://recommend-games.github.io/tags/spiel-des-jahres/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/spiel-des-jahres/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spiel des Jahres 2022</title>
-      <link>https://recommend-games.github.io/tags/spiel-des-jahres-2022/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/spiel-des-jahres-2022/</guid>
       <description></description>
     </item>
     
@@ -203,15 +257,6 @@
       <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/spiel-des-jahres-nominations/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Top Ten</title>
-      <link>https://recommend-games.github.io/tags/top-ten/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/top-ten/</guid>
       <description></description>
     </item>
     
@@ -338,15 +383,6 @@
       <pubDate>Tue, 27 Jul 2021 00:00:00 +0300</pubDate>
       <author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/the-adventures-of-robin-hood/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Winners</title>
-      <link>https://recommend-games.github.io/tags/winners/</link>
-      <pubDate>Tue, 27 Jul 2021 00:00:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/winners/</guid>
       <description></description>
     </item>
     
