@@ -4,7 +4,61 @@
   
   <url>
     <loc>https://recommend-games.github.io/</loc>
-    <lastmod>2023-07-31T16:25:13+03:00</lastmod>
+    <lastmod>2023-09-23T19:17:14+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/announcement/</loc>
+    <lastmod>2023-09-23T19:17:14+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/collection/</loc>
+    <lastmod>2023-09-23T19:17:14+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/donations/</loc>
+    <lastmod>2023-09-23T19:17:14+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/hiatus/</loc>
+    <lastmod>2023-09-23T19:17:14+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/internal/</loc>
+    <lastmod>2023-09-23T19:17:14+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/posts/</loc>
+    <lastmod>2023-09-23T19:17:14+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/recommend.games/</loc>
+    <lastmod>2023-09-23T19:17:14+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/posts/recommend-games-is-back/</loc>
+    <lastmod>2023-09-23T19:17:14+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://recommend-games.github.io/tags/</loc>
+    <lastmod>2023-09-23T19:17:14+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
   
@@ -57,12 +111,6 @@
   </url>
   
   <url>
-    <loc>https://recommend-games.github.io/posts/</loc>
-    <lastmod>2023-07-31T16:25:13+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
     <loc>https://recommend-games.github.io/tags/sdj/</loc>
     <lastmod>2023-07-31T16:25:13+03:00</lastmod>
     <changefreq>daily</changefreq>
@@ -88,12 +136,6 @@
   
   <url>
     <loc>https://recommend-games.github.io/posts/spiel-des-jahres-2023-winners/</loc>
-    <lastmod>2023-07-31T16:25:13+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/</loc>
     <lastmod>2023-07-31T16:25:13+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
@@ -231,31 +273,7 @@
   </url>
   
   <url>
-    <loc>https://recommend-games.github.io/tags/announcement/</loc>
-    <lastmod>2022-07-29T13:37:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
     <loc>https://recommend-games.github.io/posts/announcement-hiatus/</loc>
-    <lastmod>2022-07-29T13:37:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/hiatus/</loc>
-    <lastmod>2022-07-29T13:37:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/internal/</loc>
-    <lastmod>2022-07-29T13:37:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://recommend-games.github.io/tags/recommend.games/</loc>
     <lastmod>2022-07-29T13:37:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url>
