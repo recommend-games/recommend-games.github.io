@@ -32,5 +32,6 @@ Temporary Items
 .apdisk
 
 # Hugo
+.hugo_build.lock
 public/
 /resources/
