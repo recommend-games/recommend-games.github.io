@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Reverse engineering the BoardGameGeek ranking - Analysis Paralysis</title>
-  <meta name="description" content="TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&#39; ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.
+  <meta name="description" content="TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&rsquo; ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.
 I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb) for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from 1 (awful - defies game description) to 10 (outstanding - will always enjoy playing).">
   <meta name="author" content="Recommend.Games"/><script type="application/ld+json">
 {
@@ -58,9 +58,9 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
     "name" : "Markus Shepherd"
   },
   "headline": "Reverse engineering the BoardGameGeek ranking",
-  "description" : "TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users\u0027 ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.\nI often describe BoardGameGeek (BGG) as \u0026ldquo;the Internet Movie Database (IMDb) for games\u0026rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from 1 (awful - defies game description) to 10 (outstanding - will always enjoy playing).",
+  "description" : "TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users\u0026rsquo; ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.\nI often describe BoardGameGeek (BGG) as \u0026ldquo;the Internet Movie Database (IMDb) for games\u0026rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from 1 (awful - defies game description) to 10 (outstanding - will always enjoy playing).",
   "inLanguage" : "en",
-  "wordCount":  2610 ,
+  "wordCount":  2607 ,
   "datePublished" : "2020-10-03T08:42:51",
   "dateModified" : "2020-10-03T08:42:51",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -80,7 +80,7 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
 </script>
 
 <meta property="og:title" content="Reverse engineering the BoardGameGeek ranking" />
-<meta property="og:description" content="TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&#39; ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.
+<meta property="og:description" content="TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&rsquo; ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.
 I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb) for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from 1 (awful - defies game description) to 10 (outstanding - will always enjoy playing).">
 <meta property="og:image" content="https://recommend-games.github.io/logo.png" />
 <meta property="og:url" content="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/" />
@@ -88,13 +88,13 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
 <meta property="og:site_name" content="Analysis Paralysis" />
 
   <meta name="twitter:title" content="Reverse engineering the BoardGameGeek ranking" />
-  <meta name="twitter:description" content="TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&#39; ratings. They called it their geek score, statisticians call it a Bayesian average. We …">
+  <meta name="twitter:description" content="TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&rsquo; ratings. They called it their geek score, statisticians call it a Bayesian …">
   <meta name="twitter:image" content="https://recommend-games.github.io/logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@recommend_games" />
   <meta name="twitter:creator" content="@recommend_games" />
   <link href='https://recommend-games.github.io/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.75.1" />
+  <meta name="generator" content="Hugo 0.122.0">
   <link rel="alternate" href="https://recommend-games.github.io/index.xml" type="application/rss+xml" title="Analysis Paralysis"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://recommend-games.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -230,13 +230,13 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on map[Count:October 3, 2020]
+  <i class="fas fa-calendar"></i>&nbsp;Posted on October 3, 2020
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;13&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2610&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2607&nbsp;words
   
   
     
@@ -262,7 +262,7 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p><em><strong>TL;DR</strong></em>: <em>BoardGameGeek calculates its ranking by adding around <strong>1500-1600 dummy ratings of 5.5</strong> to the regular users' ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some <a href="#alternative-rankings">alternative rankings</a>.</em></p>
+        <p><em><strong>TL;DR</strong></em>: <em>BoardGameGeek calculates its ranking by adding around <strong>1500-1600 dummy ratings of 5.5</strong> to the regular users&rsquo; ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some <a href="#alternative-rankings">alternative rankings</a>.</em></p>
 <p>I often describe <a href="https://boardgamegeek.com/">BoardGameGeek (BGG)</a> as &ldquo;the <a href="https://www.imdb.com/">Internet Movie Database (IMDb)</a> for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from 1 (<em>awful - defies game description</em>) to 10 (<em>outstanding - will always enjoy playing</em>). These ratings are then used to rank games, with <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> occupying the top spot since December 2017.</p>
 <p>While BGG founder Scott Alden admitted in a recent interview on the excellent <a href="https://fivegamesfordoomsday.com/2020/07/06/scott-alden/">Five Games For Doomsday</a> podcast that he doesn&rsquo;t care all that much about the rankings, gamers around the world certainly do. They would discuss heatedly any movement in the rankings, question why games <em>X</em> is up there while game <em>Y</em> is missing, and generally criticise the selection for either having <em>too many</em> or <em>not enough</em> recent releases.</p>
 <p>Reason enough for me to take a closer look at how the rankings work and some of the maths behind it.</p>
@@ -276,7 +276,7 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
 <li><a href="https://recommend.games/#/game/209877" style="font-variant: small-caps;">World At War 85: Storming the Gap</a></li>
 </ol>
 <p>Notably, those are all very recent games with relatively few ratings.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> Some might consider this a feature, not a bug, but when your intention is to create a list of the best board games, you probably do want to give a nod to proven classics, and not just the latest hotness. How to balance out these ends of the spectrum is in the end a choice you have to make, and no matter what it is, People on the Internet™ will not like it.</p>
-<p>The way both IMDb and BGG chose to tackle this issue is by essentially not trusting the ratings – at least not too much. The method boils down to assigning a new item in the database (be it movie or game) a predefined average by default, and only gradually trusting the ratings' average as thousands and thousands of users have cast their votes. More concretely the rankings are calculated by adding a number of dummy ratings with a chosen average value, say 5.5, to each game&rsquo;s regular ratings. The result is that initially each game will have a score close to 5.5, but as more users rate the game, that score will move closer and closer to the conventional mean.</p>
+<p>The way both IMDb and BGG chose to tackle this issue is by essentially not trusting the ratings – at least not too much. The method boils down to assigning a new item in the database (be it movie or game) a predefined average by default, and only gradually trusting the ratings&rsquo; average as thousands and thousands of users have cast their votes. More concretely the rankings are calculated by adding a number of dummy ratings with a chosen average value, say 5.5, to each game&rsquo;s regular ratings. The result is that initially each game will have a score close to 5.5, but as more users rate the game, that score will move closer and closer to the conventional mean.</p>
 <p>BGG calls this their <strong>geek score</strong>. Mathematically speaking, it is a <em>Bayesian average</em>, and calculates as follows:</p>
 <p>\[ \textrm{geek score} = \frac{\textrm{sum of ratings} + \textrm{number of dummies} \cdot \textrm{dummy value}}{\textrm{number of ratings} + \textrm{number of dummies}}, \]</p>
 <p>where <code>sum of ratings</code> can be calculated either by, well, summing up all ratings or via <code>number of ratings</code> ⋅ <code>average rating</code>. Don&rsquo;t worry too much about the details though – <em>adding dummy ratings</em> is really all you need to understand.</p>
@@ -314,13 +314,13 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
 </ul>
 <p>Either of those improvements in the performance metrics are hardly noticable (in fact insible after rounding), but they do confirm nicely a dummy value of 5.5.</p>
 <h1 id="conclusion">Conclusion</h1>
-<p>All things consider, we can be confident that BoardGameGeek calculates their rankings by adding around <strong>1500 to 1600 dummy ratings of 5.5</strong> to the regular users' ratings. What exactly constitutes a regular user, and what ratings might be discarded due to shilling, remains a well guarded secret though. Note that the number of dummies is pegged to the overall number of ratings, so this is a moving target, and the calculations would change as time passes.</p>
+<p>All things consider, we can be confident that BoardGameGeek calculates their rankings by adding around <strong>1500 to 1600 dummy ratings of 5.5</strong> to the regular users&rsquo; ratings. What exactly constitutes a regular user, and what ratings might be discarded due to shilling, remains a well guarded secret though. Note that the number of dummies is pegged to the overall number of ratings, so this is a moving target, and the calculations would change as time passes.</p>
 <p>Now I must applaud anybody who actually made it all the way through this pretty dry and technical article. The real reason why I dwelled so much on the ratings, and how they are compressed into the BGG rankings, is to get a feeling of what&rsquo;s going on behind the scenes, what the can express, and what they cannot or even <em>do not try to</em> express. Another major take-away is that any of these decisions are choices that need to be made and that come with certain tradeoffs – like them or not.</p>
 <p>In this particular case, I have the feeling that both the Cult of the New™ and connoisseurs of classic games are equally unhappy about the BGG top 100, which one should probably consider a compliment.</p>
 <h1 id="alternative-rankings">Alternative rankings</h1>
 <p>I&rsquo;ll send you off with some rankings that were obtained by making different choices for the two values that we discussed throughout this article: the number of dummy ratings and their value.</p>
 <h2 id="using-the-ratings-average-as-dummy-value">Using the ratings average as dummy value</h2>
-<p>I&rsquo;ve mentioned before that the average rating across all games is around 7 – a little<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> more precisely 7.08278. What if we chose that as the dummy rating, but left their number at 1600? The result should be a ranking that is a little friendlier to newer titles with fewer ratings as their score isn&rsquo;t dragged all the way down to 5.5 in the beginning.</p>
+<p>I&rsquo;ve mentioned before that the average rating across all games is around 7 – a little<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> more precisely 7.08278. What if we chose that as the dummy rating, but left their number at 1600? The result should be a ranking that is a little friendlier to newer titles with fewer ratings as their score isn&rsquo;t dragged all the way down to 5.5 in the beginning.</p>
 <ol>
 <li><a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a></li>
 <li><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a></li>
@@ -367,20 +367,20 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
 <p><em>Read the <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/">second part here</a> where we nail down the number of dummy ratings to the dot.</em></p>
 <p><em><strong>PS</strong></em>: You can find the notebook I used to do all the calculations <a href="https://www.kaggle.com/mshepherd/reverse-engineering-the-boardgamegeek-ranking">on Kaggle</a>.</p>
 <p><em><strong>PPS</strong></em>: Turns out that <a href="https://godatadriven.com/blog/reverse-engineering-boardgamegeek/">GoDataDriven did almost the same calculation</a> three years ago – even with the same title! Back then, they estimated that BGG added 725 dummy ratings. <a href="https://www.kaggle.com/jorgenieva/bayes-algorithm">Jorge Nieva replicated their analysis</a> with a more recent dataset, which thankfully yielded a very close match to our result: 1594 dummy ratings.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
-<p>Throughout this article I only considered games with at least 100 ratings, mostly to ensure that the very long tail of games with few ratings won&rsquo;t unduely skew the results. However, most of the calculations would only change in some negligible decimals when including all games. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:1">
+<p>Throughout this article I only considered games with at least 100 ratings, mostly to ensure that the very long tail of games with few ratings won&rsquo;t unduely skew the results. However, most of the calculations would only change in some negligible decimals when including all games.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
-<p><a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Jaws of the Lion</a> is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> as the number 1. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:2">
+<p><a href="https://recommend.games/#/game/291457" style="font-variant: small-caps;">Jaws of the Lion</a> is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> as the number 1.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
-<p>It&rsquo;s probably even more common to use the <em>root</em> mean squared error, but for boring mathematical reasons, it doesn&rsquo;t make a difference when it comes to optimisation. In fact, we could even drop the word <em>mean</em> from our metric and still obtain the same optimal point, so let&rsquo;s not dwell on this. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:3">
+<p>It&rsquo;s probably even more common to use the <em>root</em> mean squared error, but for boring mathematical reasons, it doesn&rsquo;t make a difference when it comes to optimisation. In fact, we could even drop the word <em>mean</em> from our metric and still obtain the same optimal point, so let&rsquo;s not dwell on this.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 
         
@@ -618,7 +618,7 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.75.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.122.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

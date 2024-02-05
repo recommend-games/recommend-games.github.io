@@ -5,29 +5,24 @@
     <link>https://recommend-games.github.io/tags/statistics/</link>
     <description>Recent content in statistics on Analysis Paralysis</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Tue, 26 Jan 2021 22:24:00 +0200</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jan 2021 22:24:00 +0200</lastBuildDate>
+    <atom:link href="https://recommend-games.github.io/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reverse engineering the BoardGameGeek ranking – Part 2!</title>
       <link>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/</link>
-      <pubDate>Tue, 26 Jan 2021 22:24:00 +0200</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Tue, 26 Jan 2021 22:24:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/</guid>
-      <description>This is the second part of a series explaining and analysing the BoardGameGeek rankings. Read the first part here.
-Last time I left you with the nice result that BoardGameGeek (BGG) calculates its ranking by taking users&#39; ratings for a particular game and then add around 1500-1600 dummy ratings of 5.5. This so-called geek score is used to sort the games from best (Gloomhaven) to worst (Tic-Tac-Toe).
-One detail however we touched on in passing, but did not resolve, is how that number of dummy ratings develop over time.</description>
+      <description>This is the second part of a series explaining and analysing the BoardGameGeek rankings. Read the first part here.&#xA;Last time I left you with the nice result that BoardGameGeek (BGG) calculates its ranking by taking users&amp;rsquo; ratings for a particular game and then add around 1500-1600 dummy ratings of 5.5. This so-called geek score is used to sort the games from best (Gloomhaven) to worst (Tic-Tac-Toe).&#xA;One detail however we touched on in passing, but did not resolve, is how that number of dummy ratings develop over time.</description>
     </item>
-    
     <item>
       <title>Reverse engineering the BoardGameGeek ranking</title>
       <link>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/</link>
-      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Sat, 03 Oct 2020 08:42:51 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/</guid>
-      <description>TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&#39; ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.
-I often describe BoardGameGeek (BGG) as &amp;ldquo;the Internet Movie Database (IMDb) for games&amp;rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from 1 (awful - defies game description) to 10 (outstanding - will always enjoy playing).</description>
+      <description>TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&amp;rsquo; ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.&#xA;I often describe BoardGameGeek (BGG) as &amp;ldquo;the Internet Movie Database (IMDb) for games&amp;rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from 1 (awful - defies game description) to 10 (outstanding - will always enjoy playing).</description>
     </item>
-    
   </channel>
 </rss>

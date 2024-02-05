@@ -5,18 +5,17 @@
     <link>https://recommend-games.github.io/tags/donations/</link>
     <description>Recent content in Donations on Analysis Paralysis</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Sat, 23 Sep 2023 19:17:14 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/donations/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Sep 2023 19:17:14 +0300</lastBuildDate>
+    <atom:link href="https://recommend-games.github.io/tags/donations/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recommend.Games is back!</title>
       <link>https://recommend-games.github.io/posts/recommend-games-is-back/</link>
-      <pubDate>Sat, 23 Sep 2023 19:17:14 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Sat, 23 Sep 2023 19:17:14 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/posts/recommend-games-is-back/</guid>
-      <description>The hiatus is over! Already since April 2023 the recommendation engine at Recommend.Games has been back online, albeit with reduced functionality. In order to cut down serving costs, I made the recommendation model much more lightweight (this deserves its own article) and removed rarely used features as well as a bunch of bloat from the database.
-Most of the database was filled with users&#39; collection items, i.e., games they rated, owned, have played etc.</description>
+      <description>The hiatus is over! Already since April 2023 the recommendation engine at Recommend.Games has been back online, albeit with reduced functionality. In order to cut down serving costs, I made the recommendation model much more lightweight (this deserves its own article) and removed rarely used features as well as a bunch of bloat from the database.&#xA;Most of the database was filled with users&amp;rsquo; collection items, i.e., games they rated, owned, have played etc.</description>
     </item>
-    
   </channel>
 </rss>

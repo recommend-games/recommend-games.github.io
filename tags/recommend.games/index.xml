@@ -5,28 +5,24 @@
     <link>https://recommend-games.github.io/tags/recommend.games/</link>
     <description>Recent content in Recommend.Games on Analysis Paralysis</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Sat, 23 Sep 2023 19:17:14 +0300</lastBuildDate><atom:link href="https://recommend-games.github.io/tags/recommend.games/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Sep 2023 19:17:14 +0300</lastBuildDate>
+    <atom:link href="https://recommend-games.github.io/tags/recommend.games/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recommend.Games is back!</title>
       <link>https://recommend-games.github.io/posts/recommend-games-is-back/</link>
-      <pubDate>Sat, 23 Sep 2023 19:17:14 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Sat, 23 Sep 2023 19:17:14 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/posts/recommend-games-is-back/</guid>
-      <description>The hiatus is over! Already since April 2023 the recommendation engine at Recommend.Games has been back online, albeit with reduced functionality. In order to cut down serving costs, I made the recommendation model much more lightweight (this deserves its own article) and removed rarely used features as well as a bunch of bloat from the database.
-Most of the database was filled with users&#39; collection items, i.e., games they rated, owned, have played etc.</description>
+      <description>The hiatus is over! Already since April 2023 the recommendation engine at Recommend.Games has been back online, albeit with reduced functionality. In order to cut down serving costs, I made the recommendation model much more lightweight (this deserves its own article) and removed rarely used features as well as a bunch of bloat from the database.&#xA;Most of the database was filled with users&amp;rsquo; collection items, i.e., games they rated, owned, have played etc.</description>
     </item>
-    
     <item>
       <title>Announcement: Recommend.Games will take a hiatus</title>
       <link>https://recommend-games.github.io/posts/announcement-hiatus/</link>
-      <pubDate>Fri, 29 Jul 2022 13:37:00 +0300</pubDate>
-      <author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Fri, 29 Jul 2022 13:37:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/posts/announcement-hiatus/</guid>
-      <description>Update: The hiatus is over! Recommend.Games is back, albeit with some reduced functionality.
-The very first commit to the project ludoj1, as I called it back then, was on December 5th, 2016. I registered the domain Recommend.Games on November 22nd, 2018. On May 15th, 2020, I published the first post on this blog. Over the years, this site attracted more than 50,000 users, which is a huge number, if you think about it.</description>
+      <description>Update: The hiatus is over! Recommend.Games is back, albeit with some reduced functionality.&#xA;The very first commit to the project ludoj1, as I called it back then, was on December 5th, 2016. I registered the domain Recommend.Games on November 22nd, 2018. On May 15th, 2020, I published the first post on this blog. Over the years, this site attracted more than 50,000 users, which is a huge number, if you think about it.</description>
     </item>
-    
   </channel>
 </rss>
