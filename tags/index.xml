@@ -8,61 +8,82 @@
     <language>en</language>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Sun, 25 Feb 2024 15:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2024 20:00:00 +0200</lastBuildDate>
     <atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shut Up &amp; Sit Down</title>
+      <link>https://recommend-games.github.io/tags/shut-up-sit-down/</link>
+      <pubDate>Fri, 01 Mar 2024 20:00:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/shut-up-sit-down/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SU&amp;SD</title>
+      <link>https://recommend-games.github.io/tags/susd/</link>
+      <pubDate>Fri, 01 Mar 2024 20:00:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/susd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Synthetic Control</title>
+      <link>https://recommend-games.github.io/tags/synthetic-control/</link>
+      <pubDate>Fri, 01 Mar 2024 20:00:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/synthetic-control/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Game length</title>
       <link>https://recommend-games.github.io/tags/game-length/</link>
-      <pubDate>Sun, 25 Feb 2024 15:00:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Tue, 27 Feb 2024 22:37:01 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/game-length/</guid>
       <description></description>
     </item>
     <item>
       <title>High Society</title>
       <link>https://recommend-games.github.io/tags/high-society/</link>
-      <pubDate>Sun, 25 Feb 2024 15:00:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Tue, 27 Feb 2024 22:37:01 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/high-society/</guid>
       <description></description>
     </item>
     <item>
       <title>Negative hypergeometric distribution</title>
       <link>https://recommend-games.github.io/tags/negative-hypergeometric-distribution/</link>
-      <pubDate>Sun, 25 Feb 2024 15:00:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Tue, 27 Feb 2024 22:37:01 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/negative-hypergeometric-distribution/</guid>
       <description></description>
     </item>
     <item>
       <title>numpy</title>
       <link>https://recommend-games.github.io/tags/numpy/</link>
-      <pubDate>Sun, 25 Feb 2024 15:00:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Tue, 27 Feb 2024 22:37:01 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/numpy/</guid>
       <description></description>
     </item>
     <item>
       <title>Osprey Games</title>
       <link>https://recommend-games.github.io/tags/osprey-games/</link>
-      <pubDate>Sun, 25 Feb 2024 15:00:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Tue, 27 Feb 2024 22:37:01 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/osprey-games/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
       <link>https://recommend-games.github.io/tags/python/</link>
-      <pubDate>Sun, 25 Feb 2024 15:00:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Tue, 27 Feb 2024 22:37:01 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Reiner Knizia</title>
       <link>https://recommend-games.github.io/tags/reiner-knizia/</link>
-      <pubDate>Sun, 25 Feb 2024 15:00:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Tue, 27 Feb 2024 22:37:01 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/reiner-knizia/</guid>
       <description></description>
     </item>
     <item>
       <title>Simulation</title>
       <link>https://recommend-games.github.io/tags/simulation/</link>
-      <pubDate>Sun, 25 Feb 2024 15:00:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Tue, 27 Feb 2024 22:37:01 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/simulation/</guid>
       <description></description>
     </item>
