@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Measuring the Shut Up &amp; Sit Down effect - Analysis Paralysis</title>
-  <meta name="description" content="Shut Up &amp; Sit Down (SU&amp;SD) is arguably the largest (at over 400k subscribers) and most influential YouTube channel in board gaming. A video with a glowing recommendation by them can lead to a game sell out overnight. Or at least that&rsquo;s how the anecdotes go. There&rsquo;s been previous attempts at quantifying the effect, but over here at Recommend.Games is where board games and data science meet, so obviously, we have to dig a little deeper.">
+  <meta name="description" content="Using synthetic control to make up our own counterfactual world">
   <meta name="author" content="Recommend.Games"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -57,13 +57,13 @@
     "name" : "Markus Shepherd"
   },
   "headline": "Measuring the Shut Up \u0026 Sit Down effect",
-  "description" : "Shut Up \u0026amp; Sit Down (SU\u0026amp;SD) is arguably the largest (at over 400k subscribers) and most influential YouTube channel in board gaming. A video with a glowing recommendation by them can lead to a game sell out overnight. Or at least that\u0026rsquo;s how the anecdotes go. There\u0026rsquo;s been previous attempts at quantifying the effect, but over here at Recommend.Games is where board games and data science meet, so obviously, we have to dig a little deeper.",
+  "description" : "Shut Up \u0026amp; Sit Down Shut Up \u0026amp; Sit Down (SU\u0026amp;SD) is arguably the largest (at over 400k subscribers) and most influential YouTube channel in board gaming. A video with a glowing recommendation by them can lead to a game sell out overnight. Or at least that\u0026rsquo;s how the anecdotes go. There\u0026rsquo;s been previous attempts at quantifying the effect, but over here at Recommend.Games is where board games and data science meet, so obviously, we have to dig a little deeper.",
   "inLanguage" : "en",
-  "wordCount":  855 ,
+  "wordCount":  1351 ,
   "datePublished" : "2024-03-01T20:00:00",
   "dateModified" : "2024-03-01T20:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
-  "keywords" : [ "Shut Up \u0026 Sit Down, SU\u0026SD, Synthetic Control" ],
+  "keywords" : [ "Shut Up \u0026 Sit Down, SU\u0026SD, Synthetic Control, John Company, Cole Wehrle" ],
   "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/susd-effect\/",
   "publisher" : {
     "@type": "Organization",
@@ -79,14 +79,14 @@
 </script>
 
 <meta property="og:title" content="Measuring the Shut Up &amp; Sit Down effect" />
-<meta property="og:description" content="Shut Up &amp; Sit Down (SU&amp;SD) is arguably the largest (at over 400k subscribers) and most influential YouTube channel in board gaming. A video with a glowing recommendation by them can lead to a game sell out overnight. Or at least that&rsquo;s how the anecdotes go. There&rsquo;s been previous attempts at quantifying the effect, but over here at Recommend.Games is where board games and data science meet, so obviously, we have to dig a little deeper.">
+<meta property="og:description" content="Using synthetic control to make up our own counterfactual world">
 <meta property="og:image" content="https://recommend-games.github.io/logo.png" />
 <meta property="og:url" content="https://recommend-games.github.io/posts/susd-effect/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Analysis Paralysis" />
 
   <meta name="twitter:title" content="Measuring the Shut Up &amp; Sit Down effect" />
-  <meta name="twitter:description" content="Shut Up &amp; Sit Down (SU&amp;SD) is arguably the largest (at over 400k subscribers) and most influential YouTube channel in board gaming. A video with a glowing recommendation by them can lead to a …">
+  <meta name="twitter:description" content="Using synthetic control to make up our own counterfactual world">
   <meta name="twitter:image" content="https://recommend-games.github.io/logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@recommend_games" />
@@ -224,6 +224,10 @@
               
               
               
+                
+                  <h2 class="post-subheading">Using synthetic control to make up our own counterfactual world</h2>
+                
+              
               
                 <span class="post-meta">
   
@@ -231,10 +235,10 @@
   <i class="fas fa-calendar"></i>&nbsp;Posted on March 1, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;855&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1351&nbsp;words
   
   
     
@@ -260,7 +264,9 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p><a href="https://www.shutupandsitdown.com/">Shut Up &amp; Sit Down</a> (SU&amp;SD) is arguably the largest (at over 400k subscribers) and most influential <a href="https://www.youtube.com/@shutupandsitdown">YouTube channel</a> in board gaming. A video with a glowing recommendation by them can lead to a game sell out overnight. Or at least that&rsquo;s how the anecdotes go. There&rsquo;s been <a href="https://www.reddit.com/r/boardgames/comments/ngqoow/i_tried_to_quantify_the_shut_up_sit_down_effect/">previous attempts</a> at quantifying the effect, but over here at Recommend.Games is where board games and data science meet, so obviously, we have to dig a little deeper.</p>
+        <h2 id="shut-up--sit-down">Shut Up &amp; Sit Down</h2>
+<p><a href="https://www.shutupandsitdown.com/">Shut Up &amp; Sit Down</a> (SU&amp;SD) is arguably the largest (at over 400k subscribers) and most influential <a href="https://www.youtube.com/@shutupandsitdown">YouTube channel</a> in board gaming. A video with a glowing recommendation by them can lead to a game sell out overnight. Or at least that&rsquo;s how the anecdotes go. There&rsquo;s been <a href="https://www.reddit.com/r/boardgames/comments/ngqoow/i_tried_to_quantify_the_shut_up_sit_down_effect/">previous attempts</a> at quantifying the effect, but over here at Recommend.Games is where board games and data science meet, so obviously, we have to dig a little deeper.</p>
+<h2 id="john-company">John Company</h2>
 <p>Their recent review of <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> is an interesting case study:</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -274,16 +280,18 @@
 	alt="Number of ratings of John Company before and after the SU&amp;SD review" />
 <p>One might simply draw a line through the number of ratings before the video and extrapolate it to the present, then call the difference to the actual number of ratings the &ldquo;Shut Up &amp; Sit Down effect&rdquo;. But if you&rsquo;re reading this blog, your mind is probably of the kind that immediately goes: &ldquo;Hang on, how do we know the increase is actually because of SU&amp;SD and not because of some other unrelated reason?&rdquo; The problem is that we don&rsquo;t have a &ldquo;control world&rdquo;: one that has never been exposed to the video, but is otherwise identical to ours. These kinds of counterfactual questions are what keeps business analysts up at night (luckily that&rsquo;s not me, so writing blog posts like this one keeps me up instead 😅).</p>
 <p>So how can we know that it really was the SU&amp;SD video that drew the extra attention to the game and not, for instance, just the fact that we approached Christmas and people were just buying, playing and rating more games? 🤔</p>
+<h2 id="synthetic-control">Synthetic Control</h2>
 <p>Enter <a href="https://en.wikipedia.org/wiki/Synthetic_control_method">synthetic control</a>. As said, we don&rsquo;t have a control world that wasn&rsquo;t exposed to the video – so instead we synthesise one! At first, this might sound more like alchemy than science, but the basic idea is really quite simple: we look at the number of ratings up to the day of the video and compare those to other, similar games over the time period. Because <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> got the SU&amp;SD treatment, but the other games didn&rsquo;t, we can reason that the same weighting of the other games&rsquo; ratings should give us a good estimate of what would have happened to <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> if it hadn&rsquo;t been for the video.</p>
 <p>Concretely, we&rsquo;ll look at all the games on BGG and sample 300 of them that are most similar to <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> in terms of the number of ratings before the video. We then try to find a convex combination of these games that best approximates the number of ratings of <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> before the video. If this all sounds like gibberish, don&rsquo;t worry, just take my word for it that the algorithm spits out this model:</p>
 <blockquote>
-<p>\(+30.7\%\) * <a href="https://recommend.games/#/game/356033" style="font-variant: small-caps;">Libertalia: Winds of Galecrest</a><br>
-\(+20.9\%\) * <a href="https://recommend.games/#/game/362986" style="font-variant: small-caps;">Tribes of the Wind</a><br>
-\(+18.3\%\) * <a href="https://recommend.games/#/game/340041" style="font-variant: small-caps;">Kingdomino Origins</a><br>
-\(+12.3\%\) * <a href="https://recommend.games/#/game/383206" style="font-variant: small-caps;">Freelancers: A Crossroads Game</a><br>
-\(+8.2\%\) * <a href="https://recommend.games/#/game/332772" style="font-variant: small-caps;">Revive</a><br>
-\(+5.5\%\) * <a href="https://recommend.games/#/game/315767" style="font-variant: small-caps;">Cartographers Heroes</a><br>
-\(+4.2\%\) * <a href="https://recommend.games/#/game/318182" style="font-variant: small-caps;">Imperium: Legends</a></p>
+<p><strong>Synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> =</strong><br>
++30.7% * <a href="https://recommend.games/#/game/356033" style="font-variant: small-caps;">Libertalia: Winds of Galecrest</a><br>
++20.9% * <a href="https://recommend.games/#/game/362986" style="font-variant: small-caps;">Tribes of the Wind</a><br>
++18.3% * <a href="https://recommend.games/#/game/340041" style="font-variant: small-caps;">Kingdomino Origins</a><br>
++12.3% * <a href="https://recommend.games/#/game/383206" style="font-variant: small-caps;">Freelancers: A Crossroads Game</a><br>
++8.2% * <a href="https://recommend.games/#/game/332772" style="font-variant: small-caps;">Revive</a><br>
++5.5% * <a href="https://recommend.games/#/game/315767" style="font-variant: small-caps;">Cartographers Heroes</a><br>
++4.2% * <a href="https://recommend.games/#/game/318182" style="font-variant: small-caps;">Imperium: Legends</a></p>
 </blockquote>
 <p>It&rsquo;s worth stressing one thing: during training, the model only gets to see the number of ratings up to the review date. The idea is that the weighted sum of the ratings of those games are a &ldquo;synthetic&rdquo; version of <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a>. Since those games did not receive the SU&amp;SD treatment, this synthetic gives a glimpse into a world, where that video was never made. Without further ado, this is what the fake ratings look like compared to the real ones:</p>
 
@@ -291,98 +299,208 @@
 	src="https://recommend-games.github.io/posts/susd-effect/332686_synthetic_control.svg"
 	alt="Number of ratings of John Company before and after the SU&amp;SD review, compared to the synthetic control" />
 <p>So, it looks as though our synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> would have continued to steadily gather attention, just without that bump in the days after the video&rsquo;s release. In the sixty days after the video, our synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> received 498 new ratings, while the real one got 662. So it looks like the <strong>SU&amp;SD effect added about 164 ratings</strong> to the game, which is <strong>roughly a quarter</strong> of all new ratings in that period. The absolute numbers might not sound impressive for a video with over 300'000 views, but keep in mind that only a fraction of board game enthusiasts are active on BGG. Further, in an industry where a couple of thousand copies sold is considered a success, a couple of hundred additional ratings is nothing to sneeze at. Of course, whether this kind of activity on BGG translates to actual sales is a different question entirely.</p>
-<hr>
+<h2 id="what-about-the-other-videos">What about the other videos?</h2>
 <p>Obviously, this was just one video and one game. Can we see a similar effect in other games that SU&amp;SD has covered? Let&rsquo;s check the same plot for some other videos.</p>
+<h3 id="noticeable-increase-">Noticeable increase 📈</h3>
+<p>Most games covered by SU&amp;SD will see a clearly visible uplift in interest, such as <a href="https://recommend.games/#/game/330592" style="font-variant: small-caps;">Phantom Ink</a>. The model predicted interest to somewhat fizzle out, but the video introduced more players to the game:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/susd-effect/330592_synthetic_control.svg"
 	alt="Number of ratings of Phantom Ink before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/368061_synthetic_control.svg"
-	alt="Number of ratings of Zoo Vadis before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/358386_synthetic_control.svg"
-	alt="Number of ratings of Moon before and after the SU&amp;SD review, compared to the synthetic control" />
+<p>The <a href="https://recommend.games/#/game/351538" style="font-variant: small-caps;">Bamboo</a> review produced a clear bump in interest, which then continued rather in parallel of the synthetic version after a couple of days:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/susd-effect/351538_synthetic_control.svg"
 	alt="Number of ratings of Bamboo before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/350184_synthetic_control.svg"
-	alt="Number of ratings of Earth before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/354568_synthetic_control.svg"
-	alt="Number of ratings of Amun-Re before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/11_synthetic_control.svg"
-	alt="Number of ratings of Bohnanza before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/311031_synthetic_control.svg"
-	alt="Number of ratings of Five Three Five before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/298383_synthetic_control.svg"
-	alt="Number of ratings of Golem before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/386937_synthetic_control.svg"
-	alt="Number of ratings of Lacuna before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/331571_synthetic_control.svg"
-	alt="Number of ratings of My Gold Mine before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/367771_synthetic_control.svg"
-	alt="Number of ratings of Stomp the Plank before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/177478_synthetic_control.svg"
-	alt="Number of ratings of IKI before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/362944_synthetic_control.svg"
-	alt="Number of ratings of War of the Ring: The Card Game before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/281549_synthetic_control.svg"
-	alt="Number of ratings of Beast before and after the SU&amp;SD review, compared to the synthetic control" />
+<p>Coverage of <a href="https://recommend.games/#/game/276086" style="font-variant: small-caps;">Hamlet</a> clearly led to a similar bump right after the review, but interest continue to rise afterwards:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/susd-effect/276086_synthetic_control.svg"
 	alt="Number of ratings of Hamlet before and after the SU&amp;SD review, compared to the synthetic control" />
+<h3 id="supercharged-">Supercharged 🚀</h3>
+<p>Some games, in particular hidden gems, really thrive under the spotlight SU&amp;SD shines on them. <a href="https://recommend.games/#/game/311031" style="font-variant: small-caps;">Five Three Five</a> is one such example. Over 70% of the new ratings after the review can be attributed to its review:</p>
 
 <img
-	src="https://recommend-games.github.io/posts/susd-effect/267609_synthetic_control.svg"
-	alt="Number of ratings of Guards of Atlantis II before and after the SU&amp;SD review, compared to the synthetic control" />
+	src="https://recommend-games.github.io/posts/susd-effect/311031_synthetic_control.svg"
+	alt="Number of ratings of Five Three Five before and after the SU&amp;SD review, compared to the synthetic control" />
+<p>The number for <a href="https://recommend.games/#/game/331571" style="font-variant: small-caps;">My Gold Mine</a> is even close to 90%. This game was recommended by the <a href="https://recommend-games.github.io/posts/spiel-des-jahres-2022-nominations/">Spiel des Jahres</a> jury, so hardly unknown, but clearly it needed SU&amp;SD to introduce it to the English speaking world:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/susd-effect/331571_synthetic_control.svg"
+	alt="Number of ratings of My Gold Mine before and after the SU&amp;SD review, compared to the synthetic control" />
+<p><a href="https://recommend.games/#/game/367771" style="font-variant: small-caps;">Stomp the Plank</a> is a children&rsquo;s game, a genre the BGG crowd generally ignores. Consequently, there was a steep incline in interest right after the review was published. It&rsquo;s interesting though that the model predicts a significant increase even without the video, so the SU&amp;SD effect here is only about 33%:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/susd-effect/367771_synthetic_control.svg"
+	alt="Number of ratings of Stomp the Plank before and after the SU&amp;SD review, compared to the synthetic control" />
+<h3 id="no-or-negative-effect-">No (or negative) effect 🫤</h3>
+<p>Interest in a game doesn&rsquo;t skyrocket in all cases after a SU&amp;SD video, sometimes it seems to make hardly a difference – and some coverage might actually harm a game, even though SU&amp;SD rarely releases truely negative reviews.</p>
+<p><a href="https://recommend.games/#/game/298383" style="font-variant: small-caps;">Golem</a>&rsquo;s reception was definitely rather lackluster, and consequently ratings have gone up a little, but not dramatically:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/susd-effect/298383_synthetic_control.svg"
+	alt="Number of ratings of Golem before and after the SU&amp;SD review, compared to the synthetic control" />
+<p><a href="https://recommend.games/#/game/354568" style="font-variant: small-caps;">Amun-Re</a> (another <a href="https://recommend-games.github.io/posts/high-society/">Knizia classic</a>) saw a bit of a typical SU&amp;SD bump, but by end of the 60 day period we examined here, the effect had completely evaporated:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/susd-effect/354568_synthetic_control.svg"
+	alt="Number of ratings of Amun-Re before and after the SU&amp;SD review, compared to the synthetic control" />
+<p>SU&amp;SD&rsquo;s video about <a href="https://recommend.games/#/game/295770" style="font-variant: small-caps;">Frosthaven</a> might have actually harmed that game…? 🤷 The site has been a vocal fan of the series, so the more plausible explanation for declining interest is probably rather saturation:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/susd-effect/295770_synthetic_control.svg"
 	alt="Number of ratings of Frosthaven before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/350205_synthetic_control.svg"
-	alt="Number of ratings of Horseless Carriage before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/811_synthetic_control.svg"
-	alt="Number of ratings of Rummikub before and after the SU&amp;SD review, compared to the synthetic control" />
-
-<img
-	src="https://recommend-games.github.io/posts/susd-effect/366013_synthetic_control.svg"
-	alt="Number of ratings of Heat: Pedal to the Metal before and after the SU&amp;SD review, compared to the synthetic control" />
-<!-- Explain the convex combination and print resulting weights -->
-<!-- Plot synthetic control, both absolute and relative -->
+<h3 id="full-results">Full results</h3>
+<p>Here&rsquo;s an overview over most of the videos SU&amp;SD has released in 2023 and the impact they had on the games they covered:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Game</th>
+<th style="text-align:center">Review date</th>
+<th style="text-align:right">SU&amp;SD effect</th>
+<th style="text-align:center">Plot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a></td>
+<td style="text-align:center">2023-11-28</td>
+<td style="text-align:right"><strong>+24.6%</strong></td>
+<td style="text-align:center"><a href="332686_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/330592" style="font-variant: small-caps;">Phantom Ink</a></td>
+<td style="text-align:center">2023-10-26</td>
+<td style="text-align:right"><strong>+43.5%</strong></td>
+<td style="text-align:center"><a href="330592_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/368061" style="font-variant: small-caps;">Zoo Vadis</a></td>
+<td style="text-align:center">2023-10-19</td>
+<td style="text-align:right"><strong>+64.9%</strong></td>
+<td style="text-align:center"><a href="368061_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/358386" style="font-variant: small-caps;">Moon</a></td>
+<td style="text-align:center">2023-10-12</td>
+<td style="text-align:right"><strong>+69.2%</strong></td>
+<td style="text-align:center"><a href="358386_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/351538" style="font-variant: small-caps;">Bamboo</a></td>
+<td style="text-align:center">2023-10-05</td>
+<td style="text-align:right"><strong>+50.3%</strong></td>
+<td style="text-align:center"><a href="351538_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/350184" style="font-variant: small-caps;">Earth</a></td>
+<td style="text-align:center">2023-09-28</td>
+<td style="text-align:right"><strong>-19.0%</strong></td>
+<td style="text-align:center"><a href="350184_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/354568" style="font-variant: small-caps;">Amun-Re</a></td>
+<td style="text-align:center">2023-09-22</td>
+<td style="text-align:right"><strong>+1.7%</strong></td>
+<td style="text-align:center"><a href="354568_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/11" style="font-variant: small-caps;">Bohnanza</a></td>
+<td style="text-align:center">2023-09-14</td>
+<td style="text-align:right"><strong>+20.9%</strong></td>
+<td style="text-align:center"><a href="11_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/311031" style="font-variant: small-caps;">Five Three Five</a></td>
+<td style="text-align:center">2023-08-23</td>
+<td style="text-align:right"><strong>+71.6%</strong></td>
+<td style="text-align:center"><a href="311031_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/298383" style="font-variant: small-caps;">Golem</a></td>
+<td style="text-align:center">2023-08-17</td>
+<td style="text-align:right"><strong>+12.8%</strong></td>
+<td style="text-align:center"><a href="298383_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/386937" style="font-variant: small-caps;">Lacuna</a></td>
+<td style="text-align:center">2023-08-03</td>
+<td style="text-align:right"><strong>+104.7%</strong></td>
+<td style="text-align:center"><a href="386937_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/331571" style="font-variant: small-caps;">My Gold Mine</a></td>
+<td style="text-align:center">2023-07-19</td>
+<td style="text-align:right"><strong>+89.6%</strong></td>
+<td style="text-align:center"><a href="331571_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/367771" style="font-variant: small-caps;">Stomp the Plank</a></td>
+<td style="text-align:center">2023-07-06</td>
+<td style="text-align:right"><strong>+33.2%</strong></td>
+<td style="text-align:center"><a href="367771_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/177478" style="font-variant: small-caps;">IKI</a></td>
+<td style="text-align:center">2023-06-29</td>
+<td style="text-align:right"><strong>+32.5%</strong></td>
+<td style="text-align:center"><a href="177478_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/362944" style="font-variant: small-caps;">War of the Ring: The Card Game</a></td>
+<td style="text-align:center">2023-06-15</td>
+<td style="text-align:right"><strong>+25.4%</strong></td>
+<td style="text-align:center"><a href="362944_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/281549" style="font-variant: small-caps;">Beast</a></td>
+<td style="text-align:center">2023-06-09</td>
+<td style="text-align:right"><strong>-18.6%</strong></td>
+<td style="text-align:center"><a href="281549_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/276086" style="font-variant: small-caps;">Hamlet</a></td>
+<td style="text-align:center">2023-05-25</td>
+<td style="text-align:right"><strong>+66.8%</strong></td>
+<td style="text-align:center"><a href="276086_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/267609" style="font-variant: small-caps;">Guards of Atlantis II</a></td>
+<td style="text-align:center">2023-05-18</td>
+<td style="text-align:right"><strong>+52.7%</strong></td>
+<td style="text-align:center"><a href="267609_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/295770" style="font-variant: small-caps;">Frosthaven</a></td>
+<td style="text-align:center">2023-05-11</td>
+<td style="text-align:right"><strong>-30.4%</strong></td>
+<td style="text-align:center"><a href="295770_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/350205" style="font-variant: small-caps;">Horseless Carriage</a></td>
+<td style="text-align:center">2023-02-09</td>
+<td style="text-align:right"><strong>+35.2%</strong></td>
+<td style="text-align:center"><a href="350205_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/811" style="font-variant: small-caps;">Rummikub</a></td>
+<td style="text-align:center">2023-01-26</td>
+<td style="text-align:right"><strong>-6.1%</strong></td>
+<td style="text-align:center"><a href="811_synthetic_control.svg">[link]</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://recommend.games/#/game/366013" style="font-variant: small-caps;">Heat: Pedal to the Metal</a></td>
+<td style="text-align:center">2022-12-22</td>
+<td style="text-align:right"><strong>+19.1%</strong></td>
+<td style="text-align:center"><a href="366013_synthetic_control.svg">[link]</a></td>
+</tr>
+</tbody>
+</table>
+<p>Even more detailed results can be found <a href="results.json">here</a>.</p>
+<!-- TODO: Pick a couple of representative plots, e.g., unknown and boosted, known and moderate effect, no or negative effect. -->
+<!-- TODO: Result table for all (?) videos, conclusion about typical SU&SD effect. -->
 <!-- Note: cannot exclude the possibility of a different "intervention", e.g., KS opened or fulfilled, some other review or social media mention, etc. -->
-<!-- Is it significant? Fisher's exact test -->
 <!-- Link to articles with further details and code with actual implementation -->
-<!-- Other games, maybe include ridge regression too -->
 <!-- TODO: Explain actual data source (collection items) better. -->
 <div class="footnotes" role="doc-endnotes">
 <hr>
@@ -402,6 +520,10 @@
               <a href="https://recommend-games.github.io//tags/susd/">SU&amp;SD</a>&nbsp;
             
               <a href="https://recommend-games.github.io//tags/synthetic-control/">Synthetic Control</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/john-company/">John Company</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/cole-wehrle/">Cole Wehrle</a>&nbsp;
             
           </div>
         
