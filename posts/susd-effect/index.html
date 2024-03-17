@@ -59,9 +59,9 @@
   "headline": "Measuring the Shut Up \u0026 Sit Down effect",
   "description" : "Shut Up \u0026amp; Sit Down Shut Up \u0026amp; Sit Down (SU\u0026amp;SD) is arguably the largest (at over 400k subscribers) and most influential YouTube channel in board gaming. A video with a glowing recommendation by them can lead to a game sell out overnight. Or at least that\u0026rsquo;s how the anecdotes go. There\u0026rsquo;s been previous attempts at quantifying the effect, but over here at Recommend.Games is where board games and data science meet, so obviously, we have to dig a little deeper.",
   "inLanguage" : "en",
-  "wordCount":  1633 ,
-  "datePublished" : "2024-03-01T20:00:00",
-  "dateModified" : "2024-03-01T20:00:00",
+  "wordCount":  2392 ,
+  "datePublished" : "2024-03-17T21:37:46",
+  "dateModified" : "2024-03-17T21:37:46",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
   "keywords" : [ "Shut Up \u0026 Sit Down, SU\u0026SD, Synthetic Control, John Company, Cole Wehrle" ],
   "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/susd-effect\/",
@@ -232,13 +232,13 @@
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 1, 2024
+  <i class="fas fa-calendar"></i>&nbsp;Posted on March 17, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;8&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;12&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1633&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2392&nbsp;words
   
   
     
@@ -267,13 +267,13 @@
         <h2 id="shut-up--sit-down">Shut Up &amp; Sit Down</h2>
 <p><a href="https://www.shutupandsitdown.com/">Shut Up &amp; Sit Down</a> (SU&amp;SD) is arguably the largest (at over 400k subscribers) and most influential <a href="https://www.youtube.com/@shutupandsitdown">YouTube channel</a> in board gaming. A video with a glowing recommendation by them can lead to a game sell out overnight. Or at least that&rsquo;s how the anecdotes go. There&rsquo;s been <a href="https://www.reddit.com/r/boardgames/comments/ngqoow/i_tried_to_quantify_the_shut_up_sit_down_effect/">previous attempts</a> at quantifying the effect, but over here at Recommend.Games is where board games and data science meet, so obviously, we have to dig a little deeper.</p>
 <h2 id="john-company">John Company</h2>
-<p>Their recent review of <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> is an interesting case study:</p>
+<p>Their recent<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> review of <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> is an interesting case study:</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/ykrqCX2_mhU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<p>The game was by no means a hidden gem before: designer Cole Wehrle has two games in the BoardGameGeek (BGG) top 50 with <a href="https://recommend.games/#/game/237182" style="font-variant: small-caps;">Root</a> and <a href="https://recommend.games/#/game/256960" style="font-variant: small-caps;">Pax Pamir</a>, the latter being released by his own publishing house Wehrlegig Games as well. So it&rsquo;s fair to say that <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> already had a lot of eyes on it. Still, when we look at the number of ratings<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> on BGG, it&rsquo;s hard to deny the apparent increase in the slope after the video was released:</p>
+<p>The game was by no means a hidden gem before: designer Cole Wehrle has two games in the BoardGameGeek (BGG) top 50 with <a href="https://recommend.games/#/game/237182" style="font-variant: small-caps;">Root</a> and <a href="https://recommend.games/#/game/256960" style="font-variant: small-caps;">Pax Pamir</a>, the latter being released by his own publishing house <a href="https://wehrlegig.com/">Wehrlegig Games</a> as well. So it&rsquo;s fair to say that <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> already had a lot of eyes on it. Still, when we look at the number of ratings<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> on BGG, it&rsquo;s hard to deny the apparent increase in the slope after the video was released:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/susd-effect/332686_ratings.svg"
@@ -281,8 +281,8 @@
 <p>One might simply draw a line through the number of ratings before the video and extrapolate it to the present, then call the difference to the actual number of ratings the &ldquo;Shut Up &amp; Sit Down effect&rdquo;. But if you&rsquo;re reading this blog, your mind is probably of the kind that immediately goes: &ldquo;Hang on, how do we know the increase is actually because of SU&amp;SD and not because of some other unrelated reason?&rdquo; The problem is that we don&rsquo;t have a &ldquo;control world&rdquo;: one that has never been exposed to the video, but is otherwise identical to ours. These kinds of counterfactual questions are what keeps business analysts up at night (luckily that&rsquo;s not me, so writing blog posts like this one keeps me up instead 😅).</p>
 <p>So how can we know that it really was the SU&amp;SD video that drew the extra attention to the game and not, for instance, just the fact that we approached Christmas and people were just buying, playing and rating more games? 🤔</p>
 <h2 id="synthetic-control">Synthetic Control</h2>
-<p>Enter <a href="https://en.wikipedia.org/wiki/Synthetic_control_method">synthetic control</a>. As said, we don&rsquo;t have a control world that wasn&rsquo;t exposed to the video – so instead we synthesise one! At first, this might sound more like alchemy than science, but the basic idea is really quite simple: we look at the number of ratings up to the day of the video and compare those to other, similar games over the time period. Because <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> got the SU&amp;SD treatment, but the other games didn&rsquo;t, we can reason that the same weighting of the other games&rsquo; ratings should give us a good estimate of what would have happened to <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> if it hadn&rsquo;t been for the video.</p>
-<p>Concretely, we&rsquo;ll look at all the games on BGG and sample 300 of them that are most similar to <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> in terms of the number of ratings before the video. We then try to find a convex combination of these games that best approximates the number of ratings of <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> before the video. If this all sounds like gibberish, don&rsquo;t worry, just take my word for it that the algorithm spits out this model:</p>
+<p>Enter <a href="https://en.wikipedia.org/wiki/Synthetic_control_method">synthetic control</a>. As said, we don&rsquo;t have a control world that wasn&rsquo;t exposed to the video – so instead we synthesise one! At first, this might sound more like alchemy than science, but the basic idea is really quite simple: we look at the number of ratings up to the day of the video and compare those to other, similar games over the time period. A weighted sum of those games&rsquo; ratings then gives us a &ldquo;synthetic&rdquo; version of the game which closely approximates the number of ratings up to the video. Because <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> got the SU&amp;SD treatment, but the other games didn&rsquo;t, we can reason that the same weighting of the other games&rsquo; ratings after the video should give us a good estimate of what would have happened to <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> if it hadn&rsquo;t been for the video.</p>
+<p>Concretely, we&rsquo;ll look at all the games on BGG and sample 300 of them that are most similar to <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> in terms of the number of ratings before the video. We then try to find a convex combination (i.e., the weights need to sum to 1) of these games that best approximates the number of ratings of <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> before the video. If this all sounds like gibberish, don&rsquo;t worry, just take my word for it that the algorithm<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> spits out this model:</p>
 <blockquote>
 <p><strong>Synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> =</strong><br>
 +30.7% * <a href="https://recommend.games/#/game/356033" style="font-variant: small-caps;">Libertalia: Winds of Galecrest</a><br>
@@ -293,24 +293,24 @@
 +5.5% * <a href="https://recommend.games/#/game/315767" style="font-variant: small-caps;">Cartographers Heroes</a><br>
 +4.2% * <a href="https://recommend.games/#/game/318182" style="font-variant: small-caps;">Imperium: Legends</a></p>
 </blockquote>
-<p>It&rsquo;s worth stressing one thing: during training, the model only gets to see the number of ratings up to the review date. The idea is that the weighted sum of the ratings of those games are a &ldquo;synthetic&rdquo; version of <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a>. Since those games did not receive the SU&amp;SD treatment, this synthetic gives a glimpse into a world, where that video was never made. Without further ado, this is what the fake ratings look like compared to the real ones:</p>
+<p>It&rsquo;s worth stressing one thing: during training, the model only gets to see the number of ratings up to the review date. The idea is that the weighted sum of the ratings of those games are a &ldquo;synthetic&rdquo; version of <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a>. Since those games did not receive the SU&amp;SD treatment, this synthetic gives a glimpse into a world where that video was never made. Without further ado, this is what the fake ratings look like compared to the real ones:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/susd-effect/332686_synthetic_control.svg"
 	alt="Number of ratings of John Company before and after the SU&amp;SD review, compared to the synthetic control" />
-<p>So, it looks as though our synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> would have continued to steadily gather attention, just without that bump in the days after the video&rsquo;s release. In the sixty days after the video, our synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> received 498 new ratings, while the real one got 662. So it looks like the <strong>SU&amp;SD effect added about 164 ratings</strong> to the game, which is <strong>roughly a quarter</strong> of all new ratings in that period.</p>
-<p>Another way to visualise this effect is when we plot the difference between the real and the synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a>:</p>
+<p>So, it looks as though our synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> would have continued to steadily gather attention, just without that bump in the days after the video&rsquo;s release. In the 60 days after the video, our synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> received 498 new ratings, while the real one got 662. So it looks like the <strong>SU&amp;SD effect added about 164 ratings</strong> to the game, which is <strong>roughly a quarter</strong> of all new ratings in that period.</p>
+<p>Another way to visualise this effect is plotting the difference between the real and the synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a>:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/susd-effect/332686_susd_effect.svg"
 	alt="Difference between the number of ratings of John Company and the synthetic control before and after the SU&amp;SD review: the SU&amp;SD effect" />
-<p>Because the synthetic version is meant to approximate the number of ratings of the real numbers until the review is published, the plot dances around 0 in the left hand side. Right after the review, we see a steep incline for about a week, which then flattens out. This is the SU&amp;SD effect in action.</p>
+<p>Because the synthetic version is meant to approximate the number of ratings of the real numbers until the review is published, the line dances around 0 on the left hand side. Right after the review, we see a steep incline for about a week, which then flattens out. This is the SU&amp;SD effect in action.</p>
 <p>You might still not be quite convinced that this is an isolated effect for <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a>. How do we know that other games didn&rsquo;t see a similar, if not bigger effect? Is this observation in any way significant? One way to approach an answer is called <a href="https://en.wikipedia.org/wiki/Fisher's_exact_test">Fisher&rsquo;s exact test</a>. Applied to our situation, we can simply pretend that other games got the same treatment and see if a similar synthetic control model shows the same effect. In practice, we sample around 120 games with a similar number of ratings as <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a>, calculate the same synthetic control model for each of them, and then compare the difference between the real and synthetic number of ratings after the review. A picture is worth a thousand words, so let&rsquo;s look at the result plot:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/susd-effect/332686_susd_effect_fisher.svg"
 	alt="Fisher&#39;s exact test of the SU&amp;SD effect for John Company" />
-<p>The strong line is the same as the one in the previous plot, but the faint lines are the differences for the other games. Again, all the lines on the left meander around 0, while they stray to different positive or negative values after the review. That kind of spread is typical for random observations without actual underlying cause. It&rsquo;s clear that <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> really received an exceptional amount of attention after the SU&amp;SD review.</p>
+<p>The strong line is the same as the one in the previous plot, but the faint lines are the differences for the other games. Again, all the lines on the left meander around 0, as expected, while they stray to different positive or negative values after the review. That kind of spread is typical for random observations without actual underlying cause. It&rsquo;s clear that <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> really received an exceptional amount of attention after the SU&amp;SD review.</p>
 <p>The absolute numbers might not sound impressive for a video with over 300'000 views, but keep in mind that only a fraction of board game enthusiasts are active on BGG. Further, in an industry where a couple of thousand copies sold is considered a success, a couple of hundred additional ratings is nothing to sneeze at. Of course, whether this kind of activity on BGG translates to actual sales is a different question entirely.</p>
 <h2 id="what-about-the-other-videos">What about the other videos?</h2>
 <p>Obviously, this was just one video and one game. Can we see a similar effect in other games that SU&amp;SD has covered? Let&rsquo;s check the same plot for some other videos.</p>
@@ -341,7 +341,7 @@
 <img
 	src="https://recommend-games.github.io/posts/susd-effect/331571_synthetic_control.svg"
 	alt="Number of ratings of My Gold Mine before and after the SU&amp;SD review, compared to the synthetic control" />
-<p><a href="https://recommend.games/#/game/367771" style="font-variant: small-caps;">Stomp the Plank</a> is a children&rsquo;s game, a genre the BGG crowd generally ignores. Consequently, there was a steep incline in interest right after the review was published. It&rsquo;s interesting though that the model predicts a significant increase even without the video, so the SU&amp;SD effect here is only about 33%:</p>
+<p><a href="https://recommend.games/#/game/367771" style="font-variant: small-caps;">Stomp the Plank</a> is a children&rsquo;s game, a genre the BGG crowd generally ignores. Consequently, there was a steep incline in interest right after the review was published. It&rsquo;s interesting though that the model predicts a significant increase even without the video, so the SU&amp;SD effect here is &ldquo;only&rdquo; about 33%:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/susd-effect/367771_synthetic_control.svg"
@@ -363,6 +363,7 @@
 <img
 	src="https://recommend-games.github.io/posts/susd-effect/295770_synthetic_control.svg"
 	alt="Number of ratings of Frosthaven before and after the SU&amp;SD review, compared to the synthetic control" />
+<p>There&rsquo;s a saying in data science: <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">all models are wrong</a>, but some are useful. While synthetic control is a powerful tool that provides interesting insights in some cases, it might also be misleading in other cases. Always interpret with caution. 🧐</p>
 <h3 id="full-results">Full results</h3>
 <p>Here&rsquo;s an overview over most of the videos SU&amp;SD has released in 2023 and the impact they had on the games they covered:</p>
 <table>
@@ -436,12 +437,6 @@
 <td style="text-align:center"><a href="298383_synthetic_control.svg">[link]</a></td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://recommend.games/#/game/386937" style="font-variant: small-caps;">Lacuna</a></td>
-<td style="text-align:center">2023-08-03</td>
-<td style="text-align:right"><strong>+104.7%</strong></td>
-<td style="text-align:center"><a href="386937_synthetic_control.svg">[link]</a></td>
-</tr>
-<tr>
 <td style="text-align:left"><a href="https://recommend.games/#/game/331571" style="font-variant: small-caps;">My Gold Mine</a></td>
 <td style="text-align:center">2023-07-19</td>
 <td style="text-align:right"><strong>+89.6%</strong></td>
@@ -510,16 +505,27 @@
 </tbody>
 </table>
 <p>Even more detailed results can be found <a href="results.json">here</a>.</p>
-<!-- TODO: Pick a couple of representative plots, e.g., unknown and boosted, known and moderate effect, no or negative effect. -->
-<!-- TODO: Result table for all (?) videos, conclusion about typical SU&SD effect. -->
-<!-- Note: cannot exclude the possibility of a different "intervention", e.g., KS opened or fulfilled, some other review or social media mention, etc. -->
-<!-- Link to articles with further details and code with actual implementation -->
-<!-- TODO: Explain actual data source (collection items) better. -->
+<h2 id="conclusion-the-shut-up--sit-down-effect-is-real">Conclusion: the Shut Up &amp; Sit Down effect is real</h2>
+<p>According to synthetic control, in the weeks after a SU&amp;SD video is published, 20% to 60% of the new ratings can be attributed to that review, in extreme cases up to 90%. In other words, <strong>for some games interest increases tenfold</strong>. It&rsquo;s hard to deny, SU&amp;SD exercises a great deal of influence over the hobby – and finally we got some numbers to back up the anecdotes. They&rsquo;ve worked for over a decade on sharing the love for board games with a broader audience, and it&rsquo;s clear that they&rsquo;ve been successful in doing so.</p>
+<p>As powerful as this method is, let&rsquo;s not forget some caveats: First off, we cannot exclude the possibility of some other &ldquo;intervention&rdquo; that might have caused the increase in interest. Maybe the video conincided with a crowdfunding campaign or some other &ldquo;influencer&rdquo; mentioning the game on their feed. We did our best to work out that some significant &ldquo;treatment&rdquo; happened on the day of the review, but we can&rsquo;t be sure it&rsquo;s SU&amp;SD.</p>
+<p>Second, let&rsquo;s not forget not all interest is good interest. We considered the number of new ratings, but we didn&rsquo;t at all take into account if they were <em>positive</em> ratings. A review might well be devastating, which leads to large number of interest being detected by this method, but it&rsquo;d probably be unwanted attention and actually harm sales. Our model wouldn&rsquo;t know the difference.</p>
+<p>The review of <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> is actually a good example of this complexity: the video was by no means just a glowing &ldquo;must buy&rdquo; hype fest, but rather a 48 minute video essay full of nuiances that probably contained as many praises for the design as caveats why this game might not be for everyone – or in fact for most people. (If you, for some reason, spent your time reading this article but haven&rsquo;t watched the video it&rsquo;s about, do yourself a favour and watch it now. It&rsquo;s really excellent.) So much of the activity on BGG following the review might well have been &ldquo;thanks, but not for me&rdquo; – it&rsquo;s hard to tell.</p>
+<p>Still, after spending a lot of time looking at the data, I&rsquo;m convinced that the SU&amp;SD effect is real. And it&rsquo;s a good thing, too: the hobby needs more people to play and enjoy games, and SU&amp;SD is doing a great job at that. 🎲</p>
+<h2 id="postscriptum-the-technical-details">Postscriptum: the technical details</h2>
+<p>I&rsquo;ve cut a great deal of details about the data and the method from this article as I wanted to focus on the outcome and not get bogged down in how we got there. If you want to learn more about synthetic control, I highly recommend the <a href="https://matheusfacure.github.io/python-causality-handbook/15-Synthetic-Control.html">corresponding chapter</a> of <a href="https://matheusfacure.github.io/python-causality-handbook/index.html">Causal Inference for the Brave and True</a>, which directly inspired the method and plots of this article. If the book can&rsquo;t convince you of synthetic control, maybe the <a href="https://www.washingtonpost.com/news/wonk/wp/2015/10/30/how-to-measure-things-in-a-world-of-competing-claims/">Washington Post</a> can.</p>
+<p>If you want to verify the model and run the code yourself, as always you can find the complete code from <a href="https://gitlab.com/recommend.games/blog/-/tree/master/experiments/synthetic_control">GitLab</a>.</p>
+<p>Finally, let me conclude by saying that I&rsquo;ve spent a lot of time on this article (probably much more than I should have 😅), so I hope you enjoyed it and learned something interesting. I know I did. 🤓 If you did too, please consider sharing it with your friends, on social media or wherever the cool kids hang out these days. It&rsquo;s a great way to support the blog and help it grow. 🙏</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
-<p>We use the number of ratings as a coarse proxy for interest. It&rsquo;s far from perfect, but it has the advantage of representing both positive and negative attention – and it&rsquo;s readily available from <a href="https://github.com/beefsack/bgg-ranking-historicals">this repository</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>I&rsquo;ve been working on this article for a very long time, OK? When I started writing it, the video was pretty recent. 😅&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Those numbers are actually the number of all &ldquo;collection items&rdquo; on BGG, which include ratings, owned and pre-ordered games, wishlists, logged plays and more. For the sake of simplicity, I just refer to &ldquo;ratings&rdquo; throughout. This number is obviously just a coarse proxy for interest (positive or negative), but at least it&rsquo;s a number we can measure and have readily available thanks to the scraping I do for Recommend.Games. Also note that the values are somewhat approximate since I don&rsquo;t have all the freshest data at all times. Approximations upon approximations to synthesise a counterfactual world – but it&rsquo;s the best we&rsquo;ve got. 🤷&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html">Sequential Least Squares Programming</a> (SLSQP). I&rsquo;m glad you asked. 🤓&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
