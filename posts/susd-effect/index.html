@@ -59,7 +59,7 @@
   "headline": "Measuring the Shut Up \u0026 Sit Down effect",
   "description" : "Shut Up \u0026amp; Sit Down Shut Up \u0026amp; Sit Down (SU\u0026amp;SD) is arguably the largest (at over 400k subscribers) and most influential YouTube channel in board gaming. A video with a glowing recommendation by them can lead to a game sell out overnight. Or at least that\u0026rsquo;s how the anecdotes go. There\u0026rsquo;s been previous attempts at quantifying the effect, but over here at Recommend.Games is where board games and data science meet, so obviously, we have to dig a little deeper.",
   "inLanguage" : "en",
-  "wordCount":  1351 ,
+  "wordCount":  1633 ,
   "datePublished" : "2024-03-01T20:00:00",
   "dateModified" : "2024-03-01T20:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -235,10 +235,10 @@
   <i class="fas fa-calendar"></i>&nbsp;Posted on March 1, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;8&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1351&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1633&nbsp;words
   
   
     
@@ -298,7 +298,20 @@
 <img
 	src="https://recommend-games.github.io/posts/susd-effect/332686_synthetic_control.svg"
 	alt="Number of ratings of John Company before and after the SU&amp;SD review, compared to the synthetic control" />
-<p>So, it looks as though our synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> would have continued to steadily gather attention, just without that bump in the days after the video&rsquo;s release. In the sixty days after the video, our synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> received 498 new ratings, while the real one got 662. So it looks like the <strong>SU&amp;SD effect added about 164 ratings</strong> to the game, which is <strong>roughly a quarter</strong> of all new ratings in that period. The absolute numbers might not sound impressive for a video with over 300'000 views, but keep in mind that only a fraction of board game enthusiasts are active on BGG. Further, in an industry where a couple of thousand copies sold is considered a success, a couple of hundred additional ratings is nothing to sneeze at. Of course, whether this kind of activity on BGG translates to actual sales is a different question entirely.</p>
+<p>So, it looks as though our synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> would have continued to steadily gather attention, just without that bump in the days after the video&rsquo;s release. In the sixty days after the video, our synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> received 498 new ratings, while the real one got 662. So it looks like the <strong>SU&amp;SD effect added about 164 ratings</strong> to the game, which is <strong>roughly a quarter</strong> of all new ratings in that period.</p>
+<p>Another way to visualise this effect is when we plot the difference between the real and the synthetic <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a>:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/susd-effect/332686_susd_effect.svg"
+	alt="Difference between the number of ratings of John Company and the synthetic control before and after the SU&amp;SD review: the SU&amp;SD effect" />
+<p>Because the synthetic version is meant to approximate the number of ratings of the real numbers until the review is published, the plot dances around 0 in the left hand side. Right after the review, we see a steep incline for about a week, which then flattens out. This is the SU&amp;SD effect in action.</p>
+<p>You might still not be quite convinced that this is an isolated effect for <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a>. How do we know that other games didn&rsquo;t see a similar, if not bigger effect? Is this observation in any way significant? One way to approach an answer is called <a href="https://en.wikipedia.org/wiki/Fisher's_exact_test">Fisher&rsquo;s exact test</a>. Applied to our situation, we can simply pretend that other games got the same treatment and see if a similar synthetic control model shows the same effect. In practice, we sample around 120 games with a similar number of ratings as <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a>, calculate the same synthetic control model for each of them, and then compare the difference between the real and synthetic number of ratings after the review. A picture is worth a thousand words, so let&rsquo;s look at the result plot:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/susd-effect/332686_susd_effect_fisher.svg"
+	alt="Fisher&#39;s exact test of the SU&amp;SD effect for John Company" />
+<p>The strong line is the same as the one in the previous plot, but the faint lines are the differences for the other games. Again, all the lines on the left meander around 0, while they stray to different positive or negative values after the review. That kind of spread is typical for random observations without actual underlying cause. It&rsquo;s clear that <a href="https://recommend.games/#/game/332686" style="font-variant: small-caps;">John Company</a> really received an exceptional amount of attention after the SU&amp;SD review.</p>
+<p>The absolute numbers might not sound impressive for a video with over 300'000 views, but keep in mind that only a fraction of board game enthusiasts are active on BGG. Further, in an industry where a couple of thousand copies sold is considered a success, a couple of hundred additional ratings is nothing to sneeze at. Of course, whether this kind of activity on BGG translates to actual sales is a different question entirely.</p>
 <h2 id="what-about-the-other-videos">What about the other videos?</h2>
 <p>Obviously, this was just one video and one game. Can we see a similar effect in other games that SU&amp;SD has covered? Let&rsquo;s check the same plot for some other videos.</p>
 <h3 id="noticeable-increase-">Noticeable increase 📈</h3>
