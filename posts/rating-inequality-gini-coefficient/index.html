@@ -44,7 +44,7 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/recommend-games.github.io\/posts\/gini\/",
+          "@id": "https:\/\/recommend-games.github.io\/posts\/rating-inequality-gini-coefficient\/",
           "name": "Has board game rating inequality increased over the years?"
         }
     }]
@@ -59,12 +59,12 @@
   "headline": "Has board game rating inequality increased over the years?",
   "description" : "The number of ratings per game Perhaps one of the more controversial choices of the Shut Up \u0026amp; Sit Down Effect article was using the number of ratings on BoardGameGeek (BGG) as proxy for \u0026ldquo;attention\u0026rdquo; to a game. So let\u0026rsquo;s double down on that! 😈\nIf lots of ratings mean a lots of eyes on a game, we can ask questions like: What games get all the attention? Do few games steal the spotlight?",
   "inLanguage" : "en",
-  "wordCount":  836 ,
+  "wordCount":  1016 ,
   "datePublished" : "2024-04-11T20:00:00",
   "dateModified" : "2024-04-11T20:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
   "keywords" : [ "BoardGameGeek, Ratings, Gini coefficient, Inequality" ],
-  "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/gini\/",
+  "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/rating-inequality-gini-coefficient\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/recommend-games.github.io\/",
@@ -81,7 +81,7 @@
 <meta property="og:title" content="Has board game rating inequality increased over the years?" />
 <meta property="og:description" content="Applying the Gini coefficient to BoardGameGeek ratings">
 <meta property="og:image" content="https://recommend-games.github.io/logo.png" />
-<meta property="og:url" content="https://recommend-games.github.io/posts/gini/" />
+<meta property="og:url" content="https://recommend-games.github.io/posts/rating-inequality-gini-coefficient/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Analysis Paralysis" />
 
@@ -235,10 +235,10 @@
   <i class="fas fa-calendar"></i>&nbsp;Posted on April 11, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;836&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1016&nbsp;words
   
   
     
@@ -270,36 +270,39 @@
 <p>The answer is pretty clear if we sort the games by their number of ratings and plot them from fewest to most:</p>
 
 <img
-	src="https://recommend-games.github.io/posts/gini/num_ratings.svg"
+	src="https://recommend-games.github.io/posts/rating-inequality-gini-coefficient/num_ratings.svg"
 	alt="The distribution of the number of ratings on BoardGameGeek, from fewest to most ratings per game" />
 <p>Note that in this plot and everything that follows, I only include ranked games, i.e., games with at least 30 ratings. This is partially for convenience (we have excellent <a href="https://github.com/beefsack/bgg-ranking-historicals">historical ranking data</a> going back to 2016), but also because the BGG database is full of obscure games with very limited distribution and audience.</p>
 <p>With that out of the way, what do we see in the plot? It&rsquo;s clear that the vast majority of games have very few ratings, while a handful of games have a ton of ratings. This is a classic example of a <a href="https://en.wikipedia.org/wiki/Long_tail">long-tailed distribution</a>, where most of the data is concentrated in the &ldquo;tail&rdquo; of the distribution.</p>
 <p>Fun fact: there are three absolute classic games that have been competing for the distinction of most-rated game on BGG for years now. As of the time of writing, the current standings are:</p>
 <ol>
-<li><a href="https://recommend.games/#/game/13" style="font-variant: small-caps;">CATAN</a>: 126,425 ratings</li>
-<li><a href="https://recommend.games/#/game/822" style="font-variant: small-caps;">Carcassonne</a>: 125,831 ratings</li>
-<li><a href="https://recommend.games/#/game/30549" style="font-variant: small-caps;">Pandemic</a>: 124,575 ratings</li>
+<li><a href="https://recommend.games/#/game/13" style="font-variant: small-caps;">CATAN</a>: 126,448 ratings</li>
+<li><a href="https://recommend.games/#/game/822" style="font-variant: small-caps;">Carcassonne</a>: 125,850 ratings</li>
+<li><a href="https://recommend.games/#/game/30549" style="font-variant: small-caps;">Pandemic</a>: 124,584 ratings</li>
 </ol>
-<p>It is clear that the attention of the board game world is concentrated on <em>very</em> few games. Can we quantify this inequality in attention? Why, I&rsquo;m glad you asked! 🧐</p>
+<p>So, obviously the attention of the board game world is concentrated on <em>very</em> few games. The 26,168 ranked games share a total of 24,353,222 ratings<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> between them. The top 1%, the 262 games with the most ratings, account for 35.5% of those ratings. Conversely, the bottom 23.2%, the 6,071 games with the fewest ratings, account for only 1% of the ratings.</p>
+<p>Can we somehow quantify this inequality more precisely? Why, I&rsquo;m glad you asked! 🧐</p>
 <h2 id="the-gini-coefficient">The Gini coefficient</h2>
 <p>Enter the <a href="https://en.wikipedia.org/wiki/Gini_coefficient">Gini coefficient</a>. This measure is commonly used to quantify income inequality, but it can be applied to any distribution of values. In our case, we can use it to measure the inequality in the distribution of ratings on BGG.</p>
-<p>For this, we change the point of view slightly. Instead of looking at the absolute number of ratings, we ask the question: What share of all ratings do the top X% of games have? This is the cumulative distribution of ratings, and it looks like this:</p>
+<p>For this, we dive deeper into the question: What share of all ratings do the top X% of games have? This is the cumulative distribution of ratings, and it looks like this:</p>
 
 <img
-	src="https://recommend-games.github.io/posts/gini/gini_coefficient.svg"
+	src="https://recommend-games.github.io/posts/rating-inequality-gini-coefficient/gini_coefficient.svg"
 	alt="The share of the total ratings and the Gini coefficient of BoardGameGeek ratings" />
-<p>The thin 45° line is the (hypothetical) perfectly equal distribution, where every game has exactly the same number of ratings; the thick curve is the actual cumulative distribution of ratings. The area between the two lines is (essentially) the Gini coefficient, which – as you can see – is <strong>0.836</strong> in our case. A perfectly equal distribution of ratings (every game has the same number of ratings) would have a Gini coefficient of 0, while a perfectly unequal distribution (one game would have <em>all</em> the ratings, whilst all others have none) would have a Gini coefficient of 1. So 0.836 is really high, meaning a <em>very</em> unequal distribution of ratings. This shouldn&rsquo;t come as a surprise to anyone following the glut of new games coming out every year, with only a few of them getting the lion&rsquo;s share of attention, whilst most of the rest languish in obscurity. Has this phenomenon changed over the years though? 🤔</p>
+<p>The thin 45° line is the (hypothetical) perfectly equal distribution, where every game has exactly the same number of ratings; the thick curve is the actual cumulative distribution of ratings. The area between the two lines is (essentially<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>) the Gini coefficient, which – as you can see – is <strong>0.836</strong> in our case. A perfectly equal distribution of ratings (every game has the same number of ratings) would have a Gini coefficient of 0, while a perfectly unequal distribution (one game would have <em>all</em> the ratings, whilst all others have none) would have a Gini coefficient of 1. So 0.836 is really high, meaning a <em>very</em> unequal distribution of ratings. This shouldn&rsquo;t come as a surprise to anyone following the glut of new games coming out every year, with only a few of them getting the lion&rsquo;s share of attention, whilst most of the rest languish in obscurity. Has this phenomenon changed over the years though? 🤔</p>
 <h2 id="historical-perspective">Historical perspective</h2>
 <p>To answer that question, we can look at how the Gini coefficient has changed over time. Here&rsquo;s how it has evolved since late 2016:</p>
 
 <img
-	src="https://recommend-games.github.io/posts/gini/gini_coefficient_over_time.svg"
+	src="https://recommend-games.github.io/posts/rating-inequality-gini-coefficient/gini_coefficient_over_time.svg"
 	alt="The Gini coefficient of BoardGameGeek ratings over time" />
 <p>So, we started out this period with a little over 0.8 and have been steadily creeping up to over 0.835 today. This increase of inequality on a very high level is an interesting observation – and somewhat worrying. For comparison: The most unequal country in the world is considered to be South Africa 🇿🇦, with a Gini coefficient of 0.62. The US 🇺🇸 has a Gini coefficient of 0.39, Finland 🇫🇮 0.27 and Slowakia 🇸🇰 0.21, the lowest value in the world.</p>
 <p>Obviously, those values don&rsquo;t compare directly, but they serve as a reminder of just how unequal the baseline in 2016 was, and the situation has intensified since then. So, why is that?</p>
 <p>Maybe it&rsquo;s worth pausing for a moment to consider if this inequality is actually bad – or if it could even be a good thing. One should remember that the easiest way (arguably the only one) to achieve perfect equality is by assigning everyone the exact same value: zero. Put another way: while the <em>share</em> of attention captured by the top games of the hobby has increased, this doesn&rsquo;t necessarily mean this attention has been taken away from the rest of the games.️ Overall, interest in modern games has been growing, so even the long tail of games should receive more attention overall when measured in absolute terms. A rising tide lifts all boats, at least that&rsquo;s what those on the steering wheels tell those toiling in the engine rooms. 🚢</p>
 <h3 id="outline">Outline</h3>
 <ul>
+<li>How many games are released each year? Does the increase correlate to the increase in the Gini coefficient?</li>
+<li>Do we see the same phenomenon if we look at different slices of data? E.g., by year.</li>
 <li>Conclusion:
 <ul>
 <li>Where could this increased inequality come from?</li>
@@ -309,6 +312,17 @@
 </ul>
 </li>
 </ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Remember that the number dummy ratings added to <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">calculate the geek score</a>, which is used for the BGG rankings, is pegged to the total number of ratings. Since there&rsquo;s one dummy rating for every 10,000 ratings, the current number of dummy ratings is somewhere around 2435. When we <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/">last checked in</a> around three years ago, that number was around 1729 dummies. Quite the growth indeed.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>The Gini coefficient is actually twice the area between the two lines. The line of equality cuts the unit square in half, so the area of perfect inequality would be 0.5. For the coefficient to be between 0 and 1, we double that area to get the final value.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
 
         
@@ -335,42 +349,42 @@
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fgini%2f&amp;text=Has%20board%20game%20rating%20inequality%20increased%20over%20the%20years%3f&amp;via=recommend_games" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2frecommend-games.github.io%2fposts%2frating-inequality-gini-coefficient%2f&amp;text=Has%20board%20game%20rating%20inequality%20increased%20over%20the%20years%3f&amp;via=recommend_games" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frecommend-games.github.io%2fposts%2fgini%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frecommend-games.github.io%2fposts%2frating-inequality-gini-coefficient%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fgini%2f&amp;title=Has%20board%20game%20rating%20inequality%20increased%20over%20the%20years%3f" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2frating-inequality-gini-coefficient%2f&amp;title=Has%20board%20game%20rating%20inequality%20increased%20over%20the%20years%3f" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fgini%2f&amp;title=Has%20board%20game%20rating%20inequality%20increased%20over%20the%20years%3f" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frecommend-games.github.io%2fposts%2frating-inequality-gini-coefficient%2f&amp;title=Has%20board%20game%20rating%20inequality%20increased%20over%20the%20years%3f" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fgini%2f&amp;title=Has%20board%20game%20rating%20inequality%20increased%20over%20the%20years%3f" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2frating-inequality-gini-coefficient%2f&amp;title=Has%20board%20game%20rating%20inequality%20increased%20over%20the%20years%3f" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fgini%2f&amp;description=Has%20board%20game%20rating%20inequality%20increased%20over%20the%20years%3f" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frecommend-games.github.io%2fposts%2frating-inequality-gini-coefficient%2f&amp;description=Has%20board%20game%20rating%20inequality%20increased%20over%20the%20years%3f" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
