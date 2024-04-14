@@ -57,13 +57,13 @@
     "name" : "Markus Shepherd"
   },
   "headline": "Has board game rating inequality increased over the years?",
-  "description" : "The number of ratings per game Perhaps one of the more controversial choices of the Shut Up \u0026amp; Sit Down Effect article was using the number of ratings on BoardGameGeek (BGG) as proxy for \u0026ldquo;attention\u0026rdquo; to a game. So let\u0026rsquo;s double down on that! 😈\nIf lots of ratings mean a lots of eyes on a game, we can ask questions like: What games get all the attention? Do few games steal the spotlight?",
+  "description" : "The number of ratings per game Perhaps one of the most controversial choices of the Shut Up \u0026amp; Sit Down Effect article was using the number of ratings1 on BoardGameGeek (BGG) as proxy for \u0026ldquo;attention\u0026rdquo; to a game. So let\u0026rsquo;s double down on that! 😈\nIf lots of ratings mean a lots of eyes on a game, we can ask questions like: What games get most of the attention? Do few games steal the spotlight?",
   "inLanguage" : "en",
-  "wordCount":  1291 ,
-  "datePublished" : "2024-04-11T20:00:00",
-  "dateModified" : "2024-04-11T20:00:00",
+  "wordCount":  1571 ,
+  "datePublished" : "2024-04-14T18:20:45",
+  "dateModified" : "2024-04-14T18:20:45",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
-  "keywords" : [ "BoardGameGeek, Ratings, Gini coefficient, Inequality" ],
+  "keywords" : [ "BoardGameGeek, Ratings, Gini coefficient, Inequality, Asmodee" ],
   "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/rating-inequality-gini-coefficient\/",
   "publisher" : {
     "@type": "Organization",
@@ -232,13 +232,13 @@
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on April 11, 2024
+  <i class="fas fa-calendar"></i>&nbsp;Posted on April 14, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;8&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1291&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1571&nbsp;words
   
   
     
@@ -265,8 +265,8 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <h2 id="the-number-of-ratings-per-game">The number of ratings per game</h2>
-<p>Perhaps one of the more controversial choices of the <a href="https://recommend-games.github.io/posts/susd-effect/">Shut Up &amp; Sit Down Effect</a> article was using the number of ratings on BoardGameGeek (BGG) as proxy for &ldquo;attention&rdquo; to a game. So let&rsquo;s double down on that! 😈</p>
-<p>If lots of ratings mean a lots of eyes on a game, we can ask questions like: What games get all the attention? Do few games steal the spotlight? Or is the attention spread out evenly?</p>
+<p>Perhaps one of the most controversial choices of the <a href="https://recommend-games.github.io/posts/susd-effect/">Shut Up &amp; Sit Down Effect</a> article was using the number of ratings<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> on BoardGameGeek (BGG) as proxy for &ldquo;attention&rdquo; to a game. So let&rsquo;s double down on that! 😈</p>
+<p>If lots of ratings mean a lots of eyes on a game, we can ask questions like: What games get most of the attention? Do few games steal the spotlight? Or is the attention spread out evenly?</p>
 <p>The answer is pretty clear if we sort the games by their number of ratings and plot them from fewest to most:</p>
 
 <img
@@ -280,8 +280,8 @@
 <li><a href="https://recommend.games/#/game/822" style="font-variant: small-caps;">Carcassonne</a>: 125,850 ratings</li>
 <li><a href="https://recommend.games/#/game/30549" style="font-variant: small-caps;">Pandemic</a>: 124,584 ratings</li>
 </ol>
-<p>So, obviously the attention of the board game world is concentrated on <em>very</em> few games. The 26,168 ranked games share a total of 24,353,222 ratings<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> between them. The top 1%, the 262 games with the most ratings, account for 35.5% of those ratings. Conversely, the bottom 23.2%, the 6,071 games with the fewest ratings, account for only 1% of the ratings.</p>
-<p>Can we somehow quantify this inequality more precisely? Why, I&rsquo;m glad you asked! 🧐</p>
+<p>So, obviously the attention of the board game world is concentrated on <em>very</em> few games. The 26,168 ranked games share a total of 24,353,222 ratings<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> between them. The top 1%, the 262 games with the most ratings, account for 35.5% of those ratings. Conversely, the bottom 23.2%, the 6,071 games with the fewest ratings, account for only 1% of the ratings.</p>
+<p>Can we somehow quantify this inequality more precisely? Why yes, I&rsquo;m glad you asked! 🧐</p>
 <h2 id="the-gini-coefficient">The Gini coefficient</h2>
 <p>Enter the <a href="https://en.wikipedia.org/wiki/Gini_coefficient">Gini coefficient</a>. This measure is commonly used to quantify income inequality, but it can be applied to any distribution of values. In our case, we can use it to measure the inequality in the distribution of ratings on BGG.</p>
 <p>For this, we dive deeper into the question: What share of all ratings do the top X% of games have? This is the cumulative distribution of ratings, and it looks like this:</p>
@@ -289,48 +289,41 @@
 <img
 	src="https://recommend-games.github.io/posts/rating-inequality-gini-coefficient/gini_coefficient.svg"
 	alt="The share of the total ratings and the Gini coefficient of BoardGameGeek ratings" />
-<p>The thin 45° line is the (hypothetical) perfectly equal distribution, where every game has exactly the same number of ratings; the thick curve is the actual cumulative distribution of ratings. The area between the two lines is (essentially<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>) the Gini coefficient, which – as you can see – is <strong>0.836</strong> in our case. A perfectly equal distribution of ratings (every game has the same number of ratings) would have a Gini coefficient of 0, while a perfectly unequal distribution (one game would have <em>all</em> the ratings, whilst all others have none) would have a Gini coefficient of 1. So 0.836 is really high, meaning a <em>very</em> unequal distribution of ratings. This shouldn&rsquo;t come as a surprise to anyone following the glut of new games coming out every year, with only a few of them getting the lion&rsquo;s share of attention, whilst most of the rest languish in obscurity. Has this phenomenon changed over the years though? 🤔</p>
+<p>The thin 45° line is the (hypothetical) perfectly equal distribution, where every game has exactly the same number of ratings; the thick curve is the actual cumulative distribution of ratings. The area between the two lines is (essentially<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>) the Gini coefficient, which – as you can see – is <strong>0.836</strong> in our case. A perfectly equal distribution of ratings (every game has the same number of ratings) would have a Gini coefficient of 0, while a perfectly unequal distribution (one game would have <em>all</em> the ratings, whilst all others have none) would have a Gini coefficient of 1. So 0.836 is really high, meaning a <em>very</em> unequal distribution of ratings. This shouldn&rsquo;t come as a surprise to anyone following the glut of new games coming out every year, with only a few of them getting the lion&rsquo;s share of attention, whilst most of the rest languish in obscurity. Has this phenomenon changed over the years though? 🤔</p>
 <h2 id="historical-perspective">Historical perspective</h2>
 <p>To answer that question, we can look at how the Gini coefficient has changed over time. Here&rsquo;s how it has evolved since late 2016:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/rating-inequality-gini-coefficient/gini_coefficient_over_time.svg"
 	alt="The Gini coefficient of BoardGameGeek ratings over time" />
-<p>So, we started out this period with a little over 0.8 and have been steadily creeping up to over 0.835 today. This increase of inequality on a very high level is an interesting observation – and somewhat worrying. For comparison: The most unequal country in the world is considered to be South Africa 🇿🇦, with a Gini coefficient of 0.63. The US 🇺🇸 has a Gini coefficient of 0.40, Finland 🇫🇮 0.27 and Slowakia 🇸🇰 0.23, the lowest value in the world.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
-<p>Obviously, those values don&rsquo;t compare directly, but they serve as a reminder of just how unequal the baseline in 2016 was, and the situation has intensified since then. So, why is that?</p>
-<p>Maybe it&rsquo;s worth pausing for a moment to consider if this inequality is actually bad – or if it could even be a good thing. One should remember that the easiest way (arguably the only one) to achieve perfect equality is by assigning everyone the exact same value: zero. Put another way: while the <em>share</em> of attention captured by the top games of the hobby has increased, this doesn&rsquo;t necessarily mean this attention has been taken away from the rest of the games.️ Overall, interest in modern games has been growing, so even the long tail of games should receive more attention overall when measured in absolute terms. A rising tide lifts all boats, at least that&rsquo;s what those on the steering wheels tell those toiling in the engine rooms. 🚢</p>
-<p>Back to the search for reasons for this increased inequality: One obvious factor is the number of new games being released each year. Let&rsquo;s take a look at this plot:</p>
+<p>So, we started out this period with a little over 0.8 and have been steadily creeping up to over 0.835 today. This increase of inequality on a very high level is an interesting observation – and somewhat worrying. For comparison: The most unequal country in the world is considered to be South Africa 🇿🇦, with a Gini coefficient of 0.63. The US 🇺🇸 has a Gini coefficient of 0.40, Finland 🇫🇮 0.27 and Slowakia 🇸🇰 0.23, the lowest value in the world.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<p>Obviously, those values don&rsquo;t compare directly, but they serve as a reminder of just how unequal the baseline in 2016 was, and the situation has intensified since then. So, why is that? One obvious factor is the number of new games being released each year. Let&rsquo;s take a look at this plot:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/rating-inequality-gini-coefficient/games_per_year.svg"
 	alt="The number of games released each year between 1990 and 2022" />
-<p>So, there&rsquo;s a lot to unpack here. Start from the bars in the background: they count the number of games released each year from 1990 to 2022. Just look at the growth from 2013 through 2019 in particular – that&rsquo;s probably the influence of crowdfunding. The abrupt drop in 2020 is, of course, due to COVID–19. Interestingly, the number of releases haven&rsquo;t picked up since and 2019 remains the record year.</p>
+<p>So, there&rsquo;s a lot to unpack here. Start from the bars in the background: they count the number of games released each year from 1990 to 2022. Just look at the explosive growth from 2013 through 2019 in particular – that&rsquo;s probably the influence of crowdfunding. The abrupt drop in 2020 is, of course, due to COVID–19. Interestingly, the number of releases haven&rsquo;t picked up since and 2019 remains the record year.</p>
 <p>The dots are the Gini coefficient just for that cohort, i.e., those dots measure how unequal the ratings are distributed among the games released in that year. The higher up a dot is, the more a year is dominated by a few games – or just a single one. <a href="https://recommend.games/#/game/13" style="font-variant: small-caps;">CATAN</a>, the most rated game on BGG (see above), single-handedly makes the 1995 cohort the most unequal year in the dataset. The sizes of the dots represent the most popular game of that year, so 1995, 2000 and 2008 get the biggest dots. Unsurprisingly, games with an uber-popular game (big dot) tend to have a higher Gini coefficient (high up on the y-axis).</p>
 <p>But there something else going on: whilst the number of releases have been skyrocketing since 2013, the Gini coefficients of the years since 2016 have been falling noticibly, indicating less concentration of the ratings on just a few games. Games released in 2022 form the first cohort with a Gini coefficient below 0.75 since the 90s.</p>
-<h3 id="outline">Outline</h3>
-<ul>
-<li>How many games are released each year? Does the increase correlate to the increase in the Gini coefficient?</li>
-<li>Do we see the same phenomenon if we look at different slices of data? E.g., by year.</li>
-<li>Conclusion:
-<ul>
-<li>Where could this increased inequality come from?</li>
-<li>What does this mean for the board game industry?</li>
-<li>What does this mean for the board game community?</li>
-<li>PS: mention inspiration for this article</li>
-</ul>
-</li>
-</ul>
+<p>So how come that rating inequality is still rising? This might have to do with publishers&rsquo; increased focus on evergreens – flagship titles and lines that have proven to be consistently popular. Most publishers will rather release new expansions for and versions of a successful game than take a risk on a new one. So while new releases get slightly more evenly distributed attention, much of the overall attention (and marketing budget) is still drawn to select few games. Publishers and designers certainly complain that it&rsquo;s increasingly harder for new games to get noticed and even get a second printrun, and the data seems to support those complaints.</p>
+<p>Maybe it&rsquo;s worth pausing for a moment to consider if this inequality is actually bad – or if it could even be a good thing. One should remember that the easiest way (arguably the only one) to achieve perfect equality is by assigning everyone the exact same value: zero. Put another way: while the <em>share</em> of attention captured by the top games of the hobby has increased, this doesn&rsquo;t necessarily mean this attention has been taken away from the rest of the games.️ Overall, interest in modern games has been growing, so even the long tail of games should receive more attention overall when measured in absolute terms. A rising tide lifts all boats, at least that&rsquo;s what those on the steering wheels tell those toiling in the engine rooms. 🚢</p>
+<p>You might deduce that I don&rsquo;t fully buy into this narrative. The continuing increase of the Gini coefficient, the focus on blockbuster title, the ongoing consolidation of the hobby board game publishers (although Asmodee has noticably slowed down after <a href="https://www.dicebreaker.com/companies/asmodee/news/asmodee-embracer-earnings-2023-saudi-arabia-deal">their owners got too greedy</a>) – all of these are signs of a Marvelisation of the board game industry. ️Have we reached the end of this industry being run by boutique publishers? Will it all be nature kitsch, anthropomorphic animals or billion dollar licenses from here on out? I have no doubt that quirky and sometimes downright weird games will continue to be made, some of which will tackle difficult topics or push the boundaries of what a game can be. But I&rsquo;m afraid those will be more and more pushed to the fringes of the hobby, while the mainstream will be dominated by the same old, same old.</p>
+<p><em>PS: I was inspired to write this article by Bluesky user <a href="https://bsky.app/profile/slngshot-dvnngrod.bsky.social/post/3knwg4sgd2k2g">Nick Sherefkin</a>. If you have some insteresting questions about board games and data, why don&rsquo;t you reach out to me on one of the channels linked below? Maybe I&rsquo;ll answer them in the next blog post.</em></p>
+<p><em>PPS: As always, the complete code for this analysis can be found from <a href="https://gitlab.com/recommend.games/blog/-/tree/master/experiments/gini">GitLab</a>.</em></p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
-<p>Remember that the number dummy ratings added to <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">calculate the geek score</a>, which is used for the BGG rankings, is pegged to the total number of ratings. Since there&rsquo;s one dummy rating for every 10,000 ratings, the current number of dummy ratings is somewhere around 2435. When we <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/">last checked in</a> around three years ago, that number was around 1729 dummies. Quite the growth indeed.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>It&rsquo;s worth emphasising that the SU&amp;SD Effect article didn&rsquo;t just use the number of ratings, but the number of collection items, which also include owned games, wishlists and more. This article strictly focuses on the number of ratings.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
-<p>The Gini coefficient is actually twice the area between the two lines. The line of equality cuts the unit square in half, so the area of perfect inequality would be 0.5. For the coefficient to be between 0 and 1, we double that area to get the final value.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Remember that the number dummy ratings added to <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">calculate the geek score</a>, which is used for the BGG rankings, is pegged to the total number of ratings. Since there&rsquo;s one dummy rating for every 10,000 ratings, the current number of dummy ratings is somewhere around 2435. When we <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/">last checked in</a> around three years ago, that number was around 1729 dummies. Quite the growth indeed.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3">
-<p><a href="https://en.wikipedia.org/wiki/List_of_countries_by_income_equality">List of countries by income equality</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>The Gini coefficient is actually twice the area between the two lines. The line of equality cuts the unit square in half, so the area of perfect inequality would be 0.5. For the coefficient to be between 0 and 1, we double that area to get the final value.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://en.wikipedia.org/wiki/List_of_countries_by_income_equality">List of countries by income equality</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -346,6 +339,8 @@
               <a href="https://recommend-games.github.io//tags/gini-coefficient/">Gini coefficient</a>&nbsp;
             
               <a href="https://recommend-games.github.io//tags/inequality/">Inequality</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/asmodee/">Asmodee</a>&nbsp;
             
           </div>
         

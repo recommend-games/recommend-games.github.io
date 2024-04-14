@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>BoardGameGeek - Analysis Paralysis</title>
+  <title>Asmodee - Analysis Paralysis</title>
   <meta name="author" content="Recommend.Games"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -29,13 +29,13 @@
 }
 </script>
 
-<meta property="og:title" content="BoardGameGeek" />
+<meta property="og:title" content="Asmodee" />
 <meta property="og:image" content="https://recommend-games.github.io/logo.png" />
-<meta property="og:url" content="https://recommend-games.github.io/tags/boardgamegeek/" />
+<meta property="og:url" content="https://recommend-games.github.io/tags/asmodee/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Analysis Paralysis" />
 
-  <meta name="twitter:title" content="BoardGameGeek" />
+  <meta name="twitter:title" content="Asmodee" />
   <meta name="twitter:image" content="https://recommend-games.github.io/logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@recommend_games" />
@@ -169,7 +169,7 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="tags-heading">
               
-                <h1>BoardGameGeek</h1>
+                <h1>Asmodee</h1>
               
               
                 <hr class="small">
@@ -246,143 +246,6 @@ If lots of ratings mean a lots of eyes on a game, we can ask questions like: Wha
         <a href="https://recommend-games.github.io//tags/inequality/">Inequality</a>&nbsp;
         
         <a href="https://recommend-games.github.io//tags/asmodee/">Asmodee</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/">
-        <h2 class="post-title">Reverse engineering the BoardGameGeek ranking – Part 2!</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 26, 2021
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;533&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Markus Shepherd
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        This is the second part of a series explaining and analysing the BoardGameGeek rankings. Read the first part here.
-Last time I left you with the nice result that BoardGameGeek (BGG) calculates its ranking by taking users&rsquo; ratings for a particular game and then add around 1500-1600 dummy ratings of 5.5. This so-called geek score is used to sort the games from best (Gloomhaven) to worst (Tic-Tac-Toe).
-One detail however we touched on in passing, but did not resolve, is how that number of dummy ratings develop over time.
-        <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://recommend-games.github.io//tags/boardgamegeek/">BoardGameGeek</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/bgg/">BGG</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/ranking/">ranking</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/rating/">rating</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/statistics/">statistics</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/bayesian/">Bayesian</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/geek-score/">geek score</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/top-100/">top 100</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/dummy-ratings/">dummy ratings</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/highest-rated-games/">highest rated games</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/circle-of-hype/">circle of hype</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">
-        <h2 class="post-title">Reverse engineering the BoardGameGeek ranking</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on October 3, 2020
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;13&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2607&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Markus Shepherd
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        TL;DR: BoardGameGeek calculates its ranking by adding around 1500-1600 dummy ratings of 5.5 to the regular users&rsquo; ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.
-I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb) for games&rdquo;. Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from 1 (awful - defies game description) to 10 (outstanding - will always enjoy playing).
-        <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://recommend-games.github.io//tags/boardgamegeek/">BoardGameGeek</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/bgg/">BGG</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/ranking/">ranking</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/rating/">rating</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/statistics/">statistics</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/bayesian/">Bayesian</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/geek-score/">geek score</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/top-100/">top 100</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/dummy-ratings/">dummy ratings</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/highest-rated-games/">highest rated games</a>&nbsp;
-        
-        <a href="https://recommend-games.github.io//tags/alternative-rankings/">alternative rankings</a>&nbsp;
         
     </div>
     
@@ -504,7 +367,7 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
               </li>
           
           <li>
-            <a href="https://recommend-games.github.io/tags/boardgamegeek/index.xml" title="RSS">
+            <a href="https://recommend-games.github.io/tags/asmodee/index.xml" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>

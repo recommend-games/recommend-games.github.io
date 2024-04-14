@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ratings on Analysis Paralysis</title>
-    <link>https://recommend-games.github.io/tags/ratings/</link>
-    <description>Recent content in Ratings on Analysis Paralysis</description>
+    <title>Asmodee on Analysis Paralysis</title>
+    <link>https://recommend-games.github.io/tags/asmodee/</link>
+    <description>Recent content in Asmodee on Analysis Paralysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
     <lastBuildDate>Sun, 14 Apr 2024 18:20:45 +0300</lastBuildDate>
-    <atom:link href="https://recommend-games.github.io/tags/ratings/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://recommend-games.github.io/tags/asmodee/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Has board game rating inequality increased over the years?</title>
       <link>https://recommend-games.github.io/posts/rating-inequality-gini-coefficient/</link>
