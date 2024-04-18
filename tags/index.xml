@@ -8,8 +8,57 @@
     <language>en</language>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Sun, 14 Apr 2024 18:20:45 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 17 Apr 2024 21:00:00 +0300</lastBuildDate>
     <atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Game of the Year</title>
+      <link>https://recommend-games.github.io/tags/game-of-the-year/</link>
+      <pubDate>Wed, 17 Apr 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/game-of-the-year/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Germany</title>
+      <link>https://recommend-games.github.io/tags/germany/</link>
+      <pubDate>Wed, 17 Apr 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/germany/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kennerspiel</title>
+      <link>https://recommend-games.github.io/tags/kennerspiel/</link>
+      <pubDate>Wed, 17 Apr 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/kennerspiel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kennerspiel des Jahres</title>
+      <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</link>
+      <pubDate>Wed, 17 Apr 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>KSdJ</title>
+      <link>https://recommend-games.github.io/tags/ksdj/</link>
+      <pubDate>Wed, 17 Apr 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/ksdj/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SdJ</title>
+      <link>https://recommend-games.github.io/tags/sdj/</link>
+      <pubDate>Wed, 17 Apr 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/sdj/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spiel des Jahres</title>
+      <link>https://recommend-games.github.io/tags/spiel-des-jahres/</link>
+      <pubDate>Wed, 17 Apr 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/spiel-des-jahres/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Asmodee</title>
       <link>https://recommend-games.github.io/tags/asmodee/</link>
@@ -235,34 +284,6 @@
       <description></description>
     </item>
     <item>
-      <title>Game of the Year</title>
-      <link>https://recommend-games.github.io/tags/game-of-the-year/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/game-of-the-year/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Germany</title>
-      <link>https://recommend-games.github.io/tags/germany/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/germany/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kennerspiel</title>
-      <link>https://recommend-games.github.io/tags/kennerspiel/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/kennerspiel/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kennerspiel des Jahres</title>
-      <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Kennerspiel des Jahres 2023</title>
       <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2023/</link>
       <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
@@ -270,31 +291,10 @@
       <description></description>
     </item>
     <item>
-      <title>KSdJ</title>
-      <link>https://recommend-games.github.io/tags/ksdj/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/ksdj/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SdJ</title>
-      <link>https://recommend-games.github.io/tags/sdj/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/sdj/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>SdJ 2023</title>
       <link>https://recommend-games.github.io/tags/sdj-2023/</link>
       <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/sdj-2023/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Spiel des Jahres</title>
-      <link>https://recommend-games.github.io/tags/spiel-des-jahres/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/spiel-des-jahres/</guid>
       <description></description>
     </item>
     <item>

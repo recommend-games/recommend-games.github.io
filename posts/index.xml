@@ -8,8 +8,15 @@
     <language>en</language>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Sun, 14 Apr 2024 18:20:45 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 17 Apr 2024 21:00:00 +0300</lastBuildDate>
     <atom:link href="https://recommend-games.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The best board game designers of all times</title>
+      <link>https://recommend-games.github.io/posts/best-board-game-designers/</link>
+      <pubDate>Wed, 17 Apr 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/posts/best-board-game-designers/</guid>
+      <description>Designer Spiel Kennerspiel Kinderspiel Total Wolfgang Kramer 5 / 4 / 12 0 / 1 / 0 1 / 2 / 3 28 Klaus Teuber 4 / 0 / 3 0 / 0 / 0 0 / 1 / 1 9 Alex Randolph 1 (2) / 0 / 11 0 / 0 / 0 2 / 1 / 0 17 Michael Kiesling 3 / 3 / 4 0 / 2 / 0 0 / 0 / 0 12 Inka Brand 0 / 0 / 2 2 / 0 / 0 1 / 2 / 0 7 Markus Brand 0 / 0 / 2 2 / 0 / 0 1 / 2 / 0 7 Reiner Knizia 1 (1) / 6 / 17 0 / 0 / 1 1 / 4 / 5 36 Marie Fort 0 / 0 / 0 0 / 0 / 0 2 (1) / 1 / 0 4 Wilfried Fort 0 / 0 / 0 0 / 0 / 0 2 (1) / 1 / 0 4 Bruno Cathala 1 (1) / 0 / 7 0 / 0 / 1 1 / 0 / 0 11 Heinz Meister 0 / 1 / 2 0 / 0 / 0 2 / 3 / 5 13 Alan R.</description>
+    </item>
     <item>
       <title>Has board game rating inequality increased over the years?</title>
       <link>https://recommend-games.github.io/posts/rating-inequality-gini-coefficient/</link>
