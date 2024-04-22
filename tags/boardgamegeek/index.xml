@@ -8,8 +8,15 @@
     <language>en</language>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Sun, 14 Apr 2024 18:20:45 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 22 Apr 2024 14:00:00 +0300</lastBuildDate>
     <atom:link href="https://recommend-games.github.io/tags/boardgamegeek/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The world of board games</title>
+      <link>https://recommend-games.github.io/posts/world-of-board-games/</link>
+      <pubDate>Mon, 22 Apr 2024 14:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/posts/world-of-board-games/</guid>
+      <description> </description>
+    </item>
     <item>
       <title>Has board game rating inequality increased over the years?</title>
       <link>https://recommend-games.github.io/posts/rating-inequality-gini-coefficient/</link>
