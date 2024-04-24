@@ -59,7 +59,7 @@
   "headline": "The world of board games",
   "description" : "BoardGameGeek (BGG) users can select their country of residence in their profile. The main purpose is to find other users in your region to play face to face or maybe trade games, but but over here at Recommend.Games we obviously cannot help ourselves but to use this information for some interesting statistics. 🤓\nLet\u0026rsquo;s start with the usual disclaimer: We will have to rely on whatever information BGG provides. In particular, users can freely choose their country.",
   "inLanguage" : "en",
-  "wordCount":  610 ,
+  "wordCount":  1047 ,
   "datePublished" : "2024-04-22T14:00:00",
   "dateModified" : "2024-04-22T14:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -235,10 +235,10 @@
   <i class="fas fa-calendar"></i>&nbsp;Posted on April 22, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;610&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1047&nbsp;words
   
   
     
@@ -269,61 +269,106 @@
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.4.1.min.js" ></script>
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-3.4.1.min.js" ></script>
 <p>BoardGameGeek (BGG) users can select their country of residence in their profile. The main purpose is to find other users in your region to play face to face or maybe trade games, but but over here at <a href="https://recommend.games/#/">Recommend.Games</a> we obviously cannot help ourselves but to use this information for some interesting statistics. 🤓</p>
-<p>Let&rsquo;s start with the usual disclaimer: We will have to rely on whatever information BGG provides. In particular, users can freely choose their country. As mentioned, this is meant to be the country of residence, but some users might rather choose their country of origin – or some outright nonsense. There are 19 BGG users who claim to be from Antarctica, for example. While I&rsquo;m sure that the long polar nights on lonely research stations are perfect for playing board games, I&rsquo;m not sure if they have a lot of time to rate them on BGG. 🐧 (If they actually did, Antarctica would have 6,880 ratings per 100 thousand residents, which would make them by far the biggest board game enthusiasts in the world – more on that later.)</p>
-<p>On a more serious note, what exactly is a country is a <em>very</em> political question and frequently highly controversial. I&rsquo;m trying to stick with the sovereign nations recognized by the United Nations and️ add users from subdivisions and autonomous regions to the parent country. BGG allows users to choose England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿 or Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿 as their residence (not Northern Ireland though 🤔) – but for now, they&rsquo;re all stuck together in a United Kingdom 🇬🇧, if they like it or not. The borders in the map that follows shortly are even more contentious – I just had to stick with what the provider chose, and they emphasised the actual situation on the ground.</p>
-<p>With that out of the way, let&rsquo;s look at some basic statistics. For this analysis, we used almost <strong>20 million ratings</strong> by <strong>346,697 users</strong> who selected one of the <strong>200 countries</strong> as their residence. Close to <strong>88 thousand games</strong> received at least one rating.</p>
+<p>Let&rsquo;s start with the usual disclaimer: We will have to rely on whatever information BGG provides. In particular, users can freely choose their country. As mentioned, this is meant to be the country of residence, but some users might rather choose their country of origin – or some outright nonsense. There are 19 BGG users who claim to be from 🇦🇶 Antarctica, for example. While I&rsquo;m sure that the long polar nights on lonely research stations are perfect for playing board games, I&rsquo;m not sure if they have a lot of time to rate them on BGG. 🐧 (If they actually did, Antarctica would have 6,880 ratings per 100 thousand residents, which would make them the second biggest board game enthusiasts in the world – only behind the 🇻🇦 Vatican&rsquo;s 6 reported users, resulting in almost 20,000 ratings per 100 thousand residents. 🙏)</p>
+<p>On a more serious note, what exactly is a country is a <em>very</em> political question and frequently highly controversial. I&rsquo;m trying to stick with the sovereign nations recognized by the United Nations and️ add users from subdivisions and autonomous regions to the parent country. BGG allows users to choose 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland or 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales as their residence (not Northern Ireland though 🤔) – but for now, they&rsquo;re all stuck together in a 🇬🇧 United Kingdom, if they like it or not. The borders in the map that follows shortly are even more contentious – I just had to stick with what the provider chose, and they emphasised the actual situation on the ground.</p>
+<p>With that out of the way, let&rsquo;s look at some basic statistics. For this analysis, we used <strong>19.8 million ratings</strong> by <strong>347 thousand users</strong> who selected one of the <strong>199 countries</strong> as their residence. Close to <strong>88 thousand games</strong> received at least one rating.</p>
 <p>In order to understand how board game preferences differ around the globe, we want to calculate a ranking similar to the way BGG ranks games. Remember that BGG calculates their &ldquo;<a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">geek score</a>&rdquo; based on a Bayesian average by adding a number of dummy ratings of 5.5 to each game. That <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/">number of dummy ratings</a> is determined by the total number of ratings divided by 10,000. We can apply exactly the same logic to calculate a ranking by country. Since we want to apply at least one dummy rating to each game, we only consider countries with at least 10,000 ratings in total – <strong>62 countries</strong> meet this criterion. BGG ranks games with at least 30 ratings. If we applied the same rule to the country rankings, we would often have very short lists. So, I decided to include games with at least 3 times the number of dummy ratings in the country ranking, but never more than the BGG standard of 30.</p>
-<p>Enough of the boring technicalities, on to the fun part! 😎</p>
+<p>Enough of the boring technicalities, on to the fun part! 😎 Let&rsquo;s first answer some basic questions: How many users from that country? How many ratings have the entered? How many ratings per capita? And maybe most interestingly: What is their favourite game? Here&rsquo;s a quick overview over the 10 largest communities on BGG:</p>
 <table>
 <thead>
 <tr>
-<th>Country</th>
-<th>Game</th>
+<th style="text-align:left">Country</th>
+<th style="text-align:right">Population</th>
+<th style="text-align:right">Users</th>
+<th style="text-align:right">Ratings</th>
+<th style="text-align:right">Per 100k residents</th>
+<th style="text-align:left">#1 rated game</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>🇺🇸 United States</td>
-<td><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a></td>
+<td style="text-align:left"><strong>🇺🇸 United States</strong></td>
+<td style="text-align:right">331.9 mil</td>
+<td style="text-align:right">131.7k</td>
+<td style="text-align:right">7,724k</td>
+<td style="text-align:right">2,327</td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a></td>
 </tr>
 <tr>
-<td>🇩🇪 Germany</td>
-<td><a href="https://recommend.games/#/game/342942" style="font-variant: small-caps;">Ark Nova</a></td>
+<td style="text-align:left"><strong>🇩🇪 Germany</strong></td>
+<td style="text-align:right">83.2 mil</td>
+<td style="text-align:right">19.0k</td>
+<td style="text-align:right">1,457k</td>
+<td style="text-align:right">1,751</td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/342942" style="font-variant: small-caps;">Ark Nova</a></td>
 </tr>
 <tr>
-<td>🇨🇦 Canada</td>
-<td><a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a></td>
+<td style="text-align:left"><strong>🇨🇦 Canada</strong></td>
+<td style="text-align:right">38.2 mil</td>
+<td style="text-align:right">23.4k</td>
+<td style="text-align:right">1,390k</td>
+<td style="text-align:right">3,636</td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a></td>
 </tr>
 <tr>
-<td>🇬🇧 United Kingdom</td>
-<td><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a></td>
+<td style="text-align:left"><strong>🇬🇧 United Kingdom</strong></td>
+<td style="text-align:right">67.3 mil</td>
+<td style="text-align:right">24.3k</td>
+<td style="text-align:right">1,300k</td>
+<td style="text-align:right">1,931</td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a></td>
 </tr>
 <tr>
-<td>🇪🇸 Spain</td>
-<td><a href="https://recommend.games/#/game/224517" style="font-variant: small-caps;">Brass: Birmingham</a></td>
+<td style="text-align:left"><strong>🇪🇸 Spain</strong></td>
+<td style="text-align:right">47.4 mil</td>
+<td style="text-align:right">16.0k</td>
+<td style="text-align:right">913k</td>
+<td style="text-align:right">1,926</td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/224517" style="font-variant: small-caps;">Brass: Birmingham</a></td>
 </tr>
 <tr>
-<td>🇵🇱 Poland</td>
-<td><a href="https://recommend.games/#/game/187645" style="font-variant: small-caps;">Star Wars: Rebellion</a></td>
+<td style="text-align:left"><strong>🇵🇱 Poland</strong></td>
+<td style="text-align:right">37.7 mil</td>
+<td style="text-align:right">11.8k</td>
+<td style="text-align:right">620k</td>
+<td style="text-align:right">1,644</td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/187645" style="font-variant: small-caps;">Star Wars: Rebellion</a></td>
 </tr>
 <tr>
-<td>🇮🇹 Italy</td>
-<td><a href="https://recommend.games/#/game/182028" style="font-variant: small-caps;">Through the Ages: A New Story of Civilization</a></td>
+<td style="text-align:left"><strong>🇮🇹 Italy</strong></td>
+<td style="text-align:right">59.1 mil</td>
+<td style="text-align:right">9.1k</td>
+<td style="text-align:right">550k</td>
+<td style="text-align:right">930</td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/182028" style="font-variant: small-caps;">Through the Ages: A New Story of Civilization</a></td>
 </tr>
 <tr>
-<td>🇫🇷 France</td>
-<td><a href="https://recommend.games/#/game/342942" style="font-variant: small-caps;">Ark Nova</a></td>
+<td style="text-align:left"><strong>🇫🇷 France</strong></td>
+<td style="text-align:right">67.7 mil</td>
+<td style="text-align:right">10.6k</td>
+<td style="text-align:right">529k</td>
+<td style="text-align:right">782</td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/342942" style="font-variant: small-caps;">Ark Nova</a></td>
 </tr>
 <tr>
-<td>🇳🇱 Netherlands</td>
-<td><a href="https://recommend.games/#/game/224517" style="font-variant: small-caps;">Brass: Birmingham</a></td>
+<td style="text-align:left"><strong>🇳🇱 Netherlands</strong></td>
+<td style="text-align:right">17.5 mil</td>
+<td style="text-align:right">7.5k</td>
+<td style="text-align:right">469k</td>
+<td style="text-align:right">2,680</td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/224517" style="font-variant: small-caps;">Brass: Birmingham</a></td>
 </tr>
 <tr>
-<td>🇦🇺 Australia</td>
-<td><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a></td>
+<td style="text-align:left"><strong>🇦🇺 Australia</strong></td>
+<td style="text-align:right">25.7 mil</td>
+<td style="text-align:right">9.2k</td>
+<td style="text-align:right">468k</td>
+<td style="text-align:right">1,824</td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a></td>
 </tr>
 </tbody>
 </table>
+<p>We see lots of familiar names amongst the highest rated games. The 62 country rankings have 26 different games in the top spot. These nine games are favourites in more than one country:</p>
 <table>
 <thead>
 <tr>
@@ -370,6 +415,8 @@
 </tr>
 </tbody>
 </table>
+<p>This looks almost identical to the BGG top 10 list – only <a href="https://recommend.games/#/game/316554" style="font-variant: small-caps;">Dune: Imperium</a> is missing, though it is 🇦🇷 Argentina&rsquo;s favourite game. Overall, the country rankings are dominated by international hits, but there are a couple of local favourites with a strong tie to the country, such as <a href="https://recommend.games/#/game/188" style="font-variant: small-caps;">Go</a> in 🇨🇳 China and <a href="https://recommend.games/#/game/368789" style="font-variant: small-caps;">AFU: Armed Forces of Ukraine</a> in 🇺🇦 Ukraine.</p>
+<p>Explore more details about the different countries in this interactive map:</p>
 <div id="board_games_world_map.json">
   <script charset="utf-8" type="text/javascript">
     var xmlhttp = new XMLHttpRequest();
@@ -383,6 +430,10 @@
     xmlhttp.send();
   </script>
 </div>
+<!-- TODO: Most enthusiastic countries (ratings per capita) -->
+<!-- TODO: Very uneven distribution of countries, only one African country, no Pakistan and Bangladesh etc -->
+<p>Finally, if you&rsquo;re interested in the full country overview, you can find it <a href="countries.csv">here</a>. Browse the full rankings for each country here:</p>
+<p><a href="rankings/ar.csv">🇦🇷 Argentina</a> | <a href="rankings/au.csv">🇦🇺 Australia</a> | <a href="rankings/at.csv">🇦🇹 Austria</a> | <a href="rankings/by.csv">🇧🇾 Belarus</a> | <a href="rankings/be.csv">🇧🇪 Belgium</a> | <a href="rankings/br.csv">🇧🇷 Brazil</a> | <a href="rankings/bg.csv">🇧🇬 Bulgaria</a> | <a href="rankings/ca.csv">🇨🇦 Canada</a> | <a href="rankings/cl.csv">🇨🇱 Chile</a> | <a href="rankings/cn.csv">🇨🇳 China</a> | <a href="rankings/co.csv">🇨🇴 Colombia</a> | <a href="rankings/cr.csv">🇨🇷 Costa Rica</a> | <a href="rankings/hr.csv">🇭🇷 Croatia</a> | <a href="rankings/cz.csv">🇨🇿 Czechia</a> | <a href="rankings/dk.csv">🇩🇰 Denmark</a> | <a href="rankings/ee.csv">🇪🇪 Estonia</a> | <a href="rankings/fi.csv">🇫🇮 Finland</a> | <a href="rankings/fr.csv">🇫🇷 France</a> | <a href="rankings/de.csv">🇩🇪 Germany</a> | <a href="rankings/gr.csv">🇬🇷 Greece</a> | <a href="rankings/hk.csv">🇭🇰 Hong Kong</a> | <a href="rankings/hu.csv">🇭🇺 Hungary</a> | <a href="rankings/is.csv">🇮🇸 Iceland</a> | <a href="rankings/in.csv">🇮🇳 India</a> | <a href="rankings/id.csv">🇮🇩 Indonesia</a> | <a href="rankings/ir.csv">🇮🇷 Iran</a> | <a href="rankings/ie.csv">🇮🇪 Ireland</a> | <a href="rankings/il.csv">🇮🇱 Israel</a> | <a href="rankings/it.csv">🇮🇹 Italy</a> | <a href="rankings/jp.csv">🇯🇵 Japan</a> | <a href="rankings/lv.csv">🇱🇻 Latvia</a> | <a href="rankings/lt.csv">🇱🇹 Lithuania</a> | <a href="rankings/lu.csv">🇱🇺 Luxembourg</a> | <a href="rankings/my.csv">🇲🇾 Malaysia</a> | <a href="rankings/mx.csv">🇲🇽 Mexico</a> | <a href="rankings/nl.csv">🇳🇱 Netherlands</a> | <a href="rankings/nz.csv">🇳🇿 New Zealand</a> | <a href="rankings/no.csv">🇳🇴 Norway</a> | <a href="rankings/pe.csv">🇵🇪 Peru</a> | <a href="rankings/ph.csv">🇵🇭 Philippines</a> | <a href="rankings/pl.csv">🇵🇱 Poland</a> | <a href="rankings/pt.csv">🇵🇹 Portugal</a> | <a href="rankings/ro.csv">🇷🇴 Romania</a> | <a href="rankings/ru.csv">🇷🇺 Russia</a> | <a href="rankings/rs.csv">🇷🇸 Serbia</a> | <a href="rankings/sg.csv">🇸🇬 Singapore</a> | <a href="rankings/sk.csv">🇸🇰 Slovakia</a> | <a href="rankings/si.csv">🇸🇮 Slovenia</a> | <a href="rankings/za.csv">🇿🇦 South Africa</a> | <a href="rankings/kr.csv">🇰🇷 South Korea</a> | <a href="rankings/es.csv">🇪🇸 Spain</a> | <a href="rankings/se.csv">🇸🇪 Sweden</a> | <a href="rankings/ch.csv">🇨🇭 Switzerland</a> | <a href="rankings/tw.csv">🇹🇼 Taiwan</a> | <a href="rankings/th.csv">🇹🇭 Thailand</a> | <a href="rankings/tr.csv">🇹🇷 Türkiye</a> | <a href="rankings/ua.csv">🇺🇦 Ukraine</a> | <a href="rankings/ae.csv">🇦🇪 United Arab Emirates</a> | <a href="rankings/gb.csv">🇬🇧 United Kingdom</a> | <a href="rankings/us.csv">🇺🇸 United States</a> | <a href="rankings/uy.csv">🇺🇾 Uruguay</a> | <a href="rankings/vn.csv">🇻🇳 Vietnam</a></p>
 
 
         
