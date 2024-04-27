@@ -8,8 +8,29 @@
     <language>en</language>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Thu, 25 Apr 2024 23:02:24 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 27 Apr 2024 20:00:00 +0300</lastBuildDate>
     <atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BoardGameGeek</title>
+      <link>https://recommend-games.github.io/tags/boardgamegeek/</link>
+      <pubDate>Sat, 27 Apr 2024 20:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/boardgamegeek/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Collaborative filtering</title>
+      <link>https://recommend-games.github.io/tags/collaborative-filtering/</link>
+      <pubDate>Sat, 27 Apr 2024 20:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/collaborative-filtering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recommendations</title>
+      <link>https://recommend-games.github.io/tags/recommendations/</link>
+      <pubDate>Sat, 27 Apr 2024 20:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/recommendations/</guid>
+      <description></description>
+    </item>
     <item>
       <title>alternative rankings</title>
       <link>https://recommend-games.github.io/tags/alternative-rankings/</link>
@@ -29,13 +50,6 @@
       <link>https://recommend-games.github.io/tags/bgg/</link>
       <pubDate>Thu, 25 Apr 2024 23:02:24 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/bgg/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>BoardGameGeek</title>
-      <link>https://recommend-games.github.io/tags/boardgamegeek/</link>
-      <pubDate>Thu, 25 Apr 2024 23:02:24 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/boardgamegeek/</guid>
       <description></description>
     </item>
     <item>
