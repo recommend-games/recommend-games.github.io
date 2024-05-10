@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Collaborative filtering: How does it work? - Analysis Paralysis</title>
-  <meta name="description" content="A gentle introduction to the most popular recommendation algorithm">
+  <title>A brief introduction to Collaborative Filtering - Analysis Paralysis</title>
+  <meta name="description" content="Recommend.Games explained, part 1: how we recommend games to you">
   <meta name="author" content="Recommend.Games"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -45,7 +45,7 @@
         "position": 3,
         "item": {
           "@id": "https:\/\/recommend-games.github.io\/posts\/collaborative-filtering\/",
-          "name": "Collaborative filtering how does it work?"
+          "name": "A brief introduction to collaborative filtering"
         }
     }]
 }
@@ -56,14 +56,14 @@
   "author": {
     "name" : "Markus Shepherd"
   },
-  "headline": "Collaborative filtering: How does it work?",
-  "description" : "Collaborative filtering is the workhorse powering the recommendations by Recommend.Games. Over the years, I\u0026rsquo;ve been asked every now and then how it works. So, I thought it\u0026rsquo;s high time I outlined the basic ideas behind our recommendation engine.\nLet\u0026rsquo;s first take a step back and talk about recommendations in general. What is it we\u0026rsquo;re trying to achieve? The answer to this question is far from trivial, and it gets harder when you want to formalise its goals.",
+  "headline": "A brief introduction to Collaborative Filtering",
+  "description" : "What is a good recommendation? Collaborative filtering is the workhorse powering the recommendations by Recommend.Games. Over the years, I\u0026rsquo;ve been asked every now and then how it works. So, I thought it\u0026rsquo;s high time I outlined the basic ideas behind our recommendation engine.\nLet\u0026rsquo;s first take a step back and talk about recommendations in general. What is it we\u0026rsquo;re trying to achieve? The answer to this question is far from trivial, and it gets harder when you want to formalise its goals.",
   "inLanguage" : "en",
-  "wordCount":  1072 ,
-  "datePublished" : "2024-04-27T20:00:00",
-  "dateModified" : "2024-04-27T20:00:00",
+  "wordCount":  1219 ,
+  "datePublished" : "2024-05-09T21:47:57",
+  "dateModified" : "2024-05-09T21:47:57",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
-  "keywords" : [ "Collaborative filtering, Recommendations, BoardGameGeek" ],
+  "keywords" : [ "Recommend.Games explained, Collaborative filtering, Recommendations, Recommendation engine, Machine learning, Matrix factorisation, Embeddings, Latent factors, Cosine similarity, Alternating least squares, Linear regression, BoardGameGeek" ],
   "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/collaborative-filtering\/",
   "publisher" : {
     "@type": "Organization",
@@ -78,15 +78,15 @@
 }
 </script>
 
-<meta property="og:title" content="Collaborative filtering: How does it work?" />
-<meta property="og:description" content="A gentle introduction to the most popular recommendation algorithm">
+<meta property="og:title" content="A brief introduction to Collaborative Filtering" />
+<meta property="og:description" content="Recommend.Games explained, part 1: how we recommend games to you">
 <meta property="og:image" content="https://recommend-games.github.io/logo.png" />
 <meta property="og:url" content="https://recommend-games.github.io/posts/collaborative-filtering/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Analysis Paralysis" />
 
-  <meta name="twitter:title" content="Collaborative filtering: How does it work?" />
-  <meta name="twitter:description" content="A gentle introduction to the most popular recommendation algorithm">
+  <meta name="twitter:title" content="A brief introduction to Collaborative Filtering" />
+  <meta name="twitter:description" content="Recommend.Games explained, part 1: how we recommend games to you">
   <meta name="twitter:image" content="https://recommend-games.github.io/logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@recommend_games" />
@@ -220,25 +220,25 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Collaborative filtering: How does it work?</h1>
+                <h1>A brief introduction to Collaborative Filtering</h1>
               
               
               
                 
-                  <h2 class="post-subheading">A gentle introduction to the most popular recommendation algorithm</h2>
+                  <h2 class="post-subheading">Recommend.Games explained, part 1: how we recommend games to you</h2>
                 
               
               
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on April 27, 2024
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 9, 2024
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1072&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1219&nbsp;words
   
   
     
@@ -264,9 +264,11 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>Collaborative filtering is the workhorse powering the recommendations by Recommend.Games. Over the years, I&rsquo;ve been asked every now and then how it works. So, I thought it&rsquo;s high time I outlined the basic ideas behind our recommendation engine.</p>
-<p>Let&rsquo;s first take a step back and talk about recommendations in general. What is it we&rsquo;re trying to achieve? The answer to this question is far from trivial, and it gets harder when you want to formalise its goals. Maybe a somewhat naïve approach would be to say that we want to recommend items that the user will like. But recommendations are as much about predicting what the user wants as what they didn&rsquo;t even know they wanted. Sometimes the most correct answer is also the least useful: maybe our #1 recommendation is <a href="https://recommend.games/#/game/266192" style="font-variant: small-caps;">Wingspan</a> and the user indeed would love to play it - but if they already knew about it, why recommend it in the first place?</p>
+        <h2 id="what-is-a-good-recommendation">What is a good recommendation?</h2>
+<p>Collaborative filtering is the workhorse powering the recommendations by Recommend.Games. Over the years, I&rsquo;ve been asked every now and then how it works. So, I thought it&rsquo;s high time I outlined the basic ideas behind our recommendation engine.</p>
+<p>Let&rsquo;s first take a step back and talk about recommendations in general. What is it we&rsquo;re trying to achieve? The answer to this question is far from trivial, and it gets harder when you want to formalise its goals. Maybe a somewhat naïve approach would be to say that we want to recommend items that the user will like. But recommendations are as much about predicting what the user wants as what they didn&rsquo;t even know they wanted. Sometimes the most &ldquo;correct&rdquo; answer is also the least useful: maybe our #1 recommendation is <a href="https://recommend.games/#/game/266192" style="font-variant: small-caps;">Wingspan</a> and the user indeed would love to play it - but if they already knew about it, why recommend it in the first place?</p>
 <p>To be honest, the solution that powers Recommend.Games pretty much ignores all those questions and asks a much simpler question: given the games a user has rated, can we predict how they would rate all the other games? We can then take the highest predicted ratings and use those to recommend games to the user.</p>
+<h2 id="the-intuition-behind-collaborative-filtering">The intuition behind collaborative filtering</h2>
 <p>Let&rsquo;s make this a little more concrete and assume we only have six users we&rsquo;ll call A through F. They&rsquo;ve left the following ratings:</p>
 <table>
 <thead>
@@ -283,62 +285,90 @@
 <tbody>
 <tr>
 <td><strong><a href="https://recommend.games/#/game/266192" style="font-variant: small-caps;">Wingspan</a></strong></td>
-<td style="text-align:center">10</td>
-<td style="text-align:center">?</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">7</td>
-<td style="text-align:center">?</td>
-<td style="text-align:center">?</td>
+<td style="text-align:center"><strong>10</strong></td>
+<td style="text-align:center"><em>?</em></td>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>7</strong></td>
+<td style="text-align:center"><em>?</em></td>
+<td style="text-align:center"><em>?</em></td>
 </tr>
 <tr>
 <td><strong><a href="https://recommend.games/#/game/13" style="font-variant: small-caps;">CATAN</a></strong></td>
-<td style="text-align:center">?</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">?</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">2</td>
+<td style="text-align:center"><em>?</em></td>
+<td style="text-align:center"><strong>8</strong></td>
+<td style="text-align:center"><strong>6</strong></td>
+<td style="text-align:center"><em>?</em></td>
+<td style="text-align:center"><strong>5</strong></td>
+<td style="text-align:center"><strong>2</strong></td>
 </tr>
 <tr>
 <td><strong><a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a></strong></td>
-<td style="text-align:center">9</td>
-<td style="text-align:center">?</td>
-<td style="text-align:center">?</td>
-<td style="text-align:center">10</td>
-<td style="text-align:center">?</td>
-<td style="text-align:center">8</td>
+<td style="text-align:center"><strong>9</strong></td>
+<td style="text-align:center"><em>?</em></td>
+<td style="text-align:center"><em>?</em></td>
+<td style="text-align:center"><strong>10</strong></td>
+<td style="text-align:center"><em>?</em></td>
+<td style="text-align:center"><strong>8</strong></td>
 </tr>
 <tr>
 <td><strong><a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a></strong></td>
-<td style="text-align:center">?</td>
-<td style="text-align:center">7</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">?</td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">?</td>
+<td style="text-align:center"><em>?</em></td>
+<td style="text-align:center"><strong>7</strong></td>
+<td style="text-align:center"><strong>5</strong></td>
+<td style="text-align:center"><em>?</em></td>
+<td style="text-align:center"><strong>6</strong></td>
+<td style="text-align:center"><em>?</em></td>
 </tr>
 </tbody>
 </table>
-<p>Our task is to find a model to fill in the blanks. How would we go about this? The basic idea behind collaborative filtering is to find users with similar tastes and use their ratings to predict the missing ones. Let&rsquo;s take a closer look at users C and E. They both seem to agree fairly well on their ratings for <a href="https://recommend.games/#/game/13" style="font-variant: small-caps;">CATAN</a> and <a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a>, so it&rsquo;s a fair guess that user E would rate <a href="https://recommend.games/#/game/266192" style="font-variant: small-caps;">Wingspan</a> similar to user C. But we can also make this argument &ldquo;in the other direction&rdquo;: users seem to rate <a href="https://recommend.games/#/game/13" style="font-variant: small-caps;">CATAN</a> and <a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a> in general similarly, so one game&rsquo;s ratings should be a good predictor for the other&rsquo;s. So since users F seems to dislike <a href="https://recommend.games/#/game/13" style="font-variant: small-caps;">CATAN</a>, it&rsquo;s a fair assumption that they would also dislike <a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a>.</p>
+<p>Our task is to find a model to fill in the blanks. How would we go about this? The basic idea behind collaborative filtering is to find users with similar tastes and use their ratings to predict the missing ones. Let&rsquo;s take a closer look at users <strong>C</strong> and <strong>E</strong>. They both seem to agree fairly well on their ratings for <a href="https://recommend.games/#/game/13" style="font-variant: small-caps;">CATAN</a> and <a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a>, so it&rsquo;s a fair guess that user <strong>E</strong> would rate <a href="https://recommend.games/#/game/266192" style="font-variant: small-caps;">Wingspan</a> similar to user <strong>C</strong>. But we can also make this argument &ldquo;in the other direction&rdquo;: users seem to rate <a href="https://recommend.games/#/game/13" style="font-variant: small-caps;">CATAN</a> and <a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a> in general similarly, so one game&rsquo;s ratings should be a good predictor for the other&rsquo;s. So since users <strong>F</strong> seems to dislike <a href="https://recommend.games/#/game/13" style="font-variant: small-caps;">CATAN</a>, it&rsquo;s a fair assumption that they would also dislike <a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a>.</p>
+<h2 id="matrix-factorisation-via-alternating-least-squares">Matrix factorisation via alternating least squares</h2>
 <p>That&rsquo;s the high level idea behind collaborative filtering – but how do we actually implement it? If you know your Machine Learning 101, you might be familiar with linear regression, which tries to find a &ldquo;line of best fit&rdquo; for a set of given data points. We can think of collaborative filtering as linear regression in two directions: if we fix the games and try to predict the users&rsquo; ratings, we&rsquo;re doing linear regression in the user space. If we fix the users and try to predict the games&rsquo; ratings, we&rsquo;re doing linear regression in the game space. Collaborative filtering tries to do both at the same time – by alternating between the two, which is why this method is known as <em>alternating least squares</em> (ALS, &ldquo;least squares&rdquo; referring to minimising the squared error).</p>
 <p>After running the algorithm, we end up with one vector for each user and one for each game. Taking the inner product (sometimes referred to as dot product) of those vectors yields a single number, the predicted rating. If we stack all the vectors for the users into a matrix \(U\) and the vectors for the games into a matrix \(G\), we can multiply those two matrices to get a matrix \(R\) of predicted ratings:</p>
 <p>\[
 R = U^\top \cdot G.
 \]</p>
 <p>In other words: we&rsquo;ve taken the matrix of ratings from the table above and factored it into two matrices. So another way of thinking about collaborative filtering is as a matrix factorisation problem: we&rsquo;re trying to find two matrices that, when multiplied together, approximate the original matrix as closely as possible.</p>
-<p>Those user and game vectors are also known as <em>latent factors</em>. That&rsquo;s because they take the high-dimensional space of users and games and project it into a lower-dimensional space. While those latent dimensions don&rsquo;t carry any particular human interpretable meaning, they capture the essence of what makes a user like a game. For example, one latent factor might capture how much a user likes games with a lot of player interaction, while another might capture how much they like games with a lot of strategic depth. Note that we can freely choose the number of latent factors, which is an important hyperparameter of the model. The more latent factors we use, the more expressive the model can be – but it also becomes more prone to overfitting. Recommend.Games uses 32 latent dimensions, which is a decent default choice for many recommendation problems.</p>
-<p>The latent factors also have some interesting properties. For example, there&rsquo;s a meaningful distance between them: if two users are close together in the latent space, they have similar tastes. The distance in question is the cosine distance, which measures the angle between two vectors. Think of it this way: if the vectors for two users point in the same direction (cosine similarity close to 1), they have similar tastes. If they point in opposite directions (cosine similarity close to -1), they have opposite tastes. If they&rsquo;re orthogonal (cosine similarity close to 0), they have no correlation.</p>
+<h2 id="latent-factors-and-embeddings">Latent factors and embeddings</h2>
+<p>Those user and game vectors are also known as <em>latent factors</em>. That&rsquo;s because they take the high-dimensional space of users and games and project it into a lower-dimensional space. While those latent dimensions don&rsquo;t carry any particular human interpretable meaning, they capture the essence of what makes a user like a game. For example, one latent factor might capture how much a user likes games with a lot of player interaction, while another might capture how much they like games with a lot of strategic depth. Note that we can freely choose the number of latent factors, which is an important hyperparameter of the model. The more latent factors we use, the more expressive the model can be – but it also becomes more prone to overfitting. Recommend.Games uses 32 latent dimensions, which is a decent default choice for many recommendation problems.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>The latent factors also have some interesting properties. For example, there&rsquo;s a meaningful distance between them: if two users are close together in the latent space, they have similar tastes. The distance in question is the cosine similarity, which measures the angle between two vectors. Think of it this way: if the vectors for two users point in the same direction (cosine similarity close to 1), they have similar tastes. If they point in opposite directions (cosine similarity close to -1), they have opposite tastes. If they&rsquo;re orthogonal (cosine similarity close to 0), they have no correlation.</p>
 <p>The same goes for the game vectors: we can calculate the cosine similarity between two games to see if they appeal to the same users. Every game page on Recommend.Games has a &ldquo;You might also like&rdquo; section at the bottom. Those are the games with the highest cosine similarity to the game in question.</p>
 <p>Vector representations with some measure of distance are called <em>embeddings</em>. So this is yet another way of thinking about collaborative filtering: we&rsquo;re embedding users and games into a latent space where we can measure their similarity.</p>
 <p>So, this was a pretty lengthy and technical article, but I hope it provides some intuition of how the recommendation engine behind Recommend.Games works. Obviously, there are a lot more details to it, but those are the most important ideas. One of the reasons why I wanted to talk about this topic is that we can have more fun with those latent factors, so stay tuned for more articles on this topic!</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The number of latent dimensions also affects the size of the model. As mentioned, we have one latent vector for every user and every game, each with 32 entries. Currently, we have over 500 thousand users and over 90 thousand games, so the matrix \(U\) has over \(500\,000 \cdot 32 = 16\,000\,000\) entries and the matrix \(G\) has over \(90\,000 \cdot 32 = 2\,880\,000\) entries. Each entry is a 64-bit (8 bytes) floating point number, so the total size of the model is around \((16\,000\,000 + 2\,880\,000) \cdot 8\,\text{B} \approx 150\,\text{MB}\). It&rsquo;s not a negligible size to load into the memory of a cheap server (which is what we&rsquo;re using), but in the modern age of deep neural networks with gazillions of parameters, it feels almost tiny.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
 
         
           <div class="blog-tags">
             
+              <a href="https://recommend-games.github.io//tags/recommend.games-explained/">Recommend.Games explained</a>&nbsp;
+            
               <a href="https://recommend-games.github.io//tags/collaborative-filtering/">Collaborative filtering</a>&nbsp;
             
               <a href="https://recommend-games.github.io//tags/recommendations/">Recommendations</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/recommendation-engine/">Recommendation engine</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/machine-learning/">Machine learning</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/matrix-factorisation/">Matrix factorisation</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/embeddings/">Embeddings</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/latent-factors/">Latent factors</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/cosine-similarity/">Cosine similarity</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/alternating-least-squares/">Alternating least squares</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/linear-regression/">Linear regression</a>&nbsp;
             
               <a href="https://recommend-games.github.io//tags/boardgamegeek/">BoardGameGeek</a>&nbsp;
             
@@ -355,7 +385,7 @@ R = U^\top \cdot G.
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fcollaborative-filtering%2f&amp;text=Collaborative%20filtering%3a%20How%20does%20it%20work%3f&amp;via=recommend_games" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fcollaborative-filtering%2f&amp;text=A%20brief%20introduction%20to%20Collaborative%20Filtering&amp;via=recommend_games" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -369,28 +399,28 @@ R = U^\top \cdot G.
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fcollaborative-filtering%2f&amp;title=Collaborative%20filtering%3a%20How%20does%20it%20work%3f" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fcollaborative-filtering%2f&amp;title=A%20brief%20introduction%20to%20Collaborative%20Filtering" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fcollaborative-filtering%2f&amp;title=Collaborative%20filtering%3a%20How%20does%20it%20work%3f" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fcollaborative-filtering%2f&amp;title=A%20brief%20introduction%20to%20Collaborative%20Filtering" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fcollaborative-filtering%2f&amp;title=Collaborative%20filtering%3a%20How%20does%20it%20work%3f" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fcollaborative-filtering%2f&amp;title=A%20brief%20introduction%20to%20Collaborative%20Filtering" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fcollaborative-filtering%2f&amp;description=Collaborative%20filtering%3a%20How%20does%20it%20work%3f" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fcollaborative-filtering%2f&amp;description=A%20brief%20introduction%20to%20Collaborative%20Filtering" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -433,6 +463,10 @@ R = U^\top \cdot G.
               <a href="https://recommend-games.github.io/posts/world-of-board-games/" data-toggle="tooltip" data-placement="top" title="The world of board games">&larr; Previous Post</a>
             </li>
           
+          
+            <li class="next">
+              <a href="https://recommend-games.github.io/posts/best-board-game-designers/" data-toggle="tooltip" data-placement="top" title="The best board game designers of all times – according to Spiel des Jahres">Next Post &rarr;</a>
+            </li>
           
         </ul>
       

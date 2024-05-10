@@ -18,6 +18,13 @@
       <description>BoardGameGeek (BGG) users can select their country of residence in their profile. The main purpose is to find other users in your region to play face to face or maybe trade games, but but over here at Recommend.Games we obviously cannot help ourselves but to use this information for some interesting statistics. 🤓&#xA;Let&amp;rsquo;s start with the usual disclaimer: We will have to rely on whatever information BGG provides. In particular, users can freely choose their country.</description>
     </item>
     <item>
+      <title>Recommend.Games ranking explained</title>
+      <link>https://recommend-games.github.io/posts/recommend-games-ranking/</link>
+      <pubDate>Tue, 22 Feb 2022 22:02:22 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/posts/recommend-games-ranking/</guid>
+      <description>We have some pretty exciting news! 🤩 Since 2022-02-22, we&amp;rsquo;ve been using a new and improved ranking as the default sorting for our front page at Recommend.Games.&#xA;… What do you mean, you haven&amp;rsquo;t noticed there&amp;rsquo;s a R.G ranking? You know, that thing that&amp;rsquo;s referenced in the statistics? … You haven&amp;rsquo;t ever opened that view?!? 😱&#xA;OK, let&amp;rsquo;s back up for a second. R.G&amp;rsquo;s primary purpose is a recommendation engine, that is, finding personalised game recommendations based on a user&amp;rsquo;s preferences (in this case as expressed through their BoardGameGeek ratings).</description>
+    </item>
+    <item>
       <title>Reverse engineering the BoardGameGeek ranking – Part 2!</title>
       <link>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/</link>
       <pubDate>Tue, 26 Jan 2021 22:24:00 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>

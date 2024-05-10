@@ -8,26 +8,138 @@
     <language>en</language>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Sat, 27 Apr 2024 20:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2024 21:00:00 +0300</lastBuildDate>
     <atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Game of the Year</title>
+      <link>https://recommend-games.github.io/tags/game-of-the-year/</link>
+      <pubDate>Fri, 10 May 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/game-of-the-year/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Germany</title>
+      <link>https://recommend-games.github.io/tags/germany/</link>
+      <pubDate>Fri, 10 May 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/germany/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kennerspiel</title>
+      <link>https://recommend-games.github.io/tags/kennerspiel/</link>
+      <pubDate>Fri, 10 May 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/kennerspiel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kennerspiel des Jahres</title>
+      <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</link>
+      <pubDate>Fri, 10 May 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>KSdJ</title>
+      <link>https://recommend-games.github.io/tags/ksdj/</link>
+      <pubDate>Fri, 10 May 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/ksdj/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SdJ</title>
+      <link>https://recommend-games.github.io/tags/sdj/</link>
+      <pubDate>Fri, 10 May 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/sdj/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spiel des Jahres</title>
+      <link>https://recommend-games.github.io/tags/spiel-des-jahres/</link>
+      <pubDate>Fri, 10 May 2024 21:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/spiel-des-jahres/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Alternating least squares</title>
+      <link>https://recommend-games.github.io/tags/alternating-least-squares/</link>
+      <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/alternating-least-squares/</guid>
+      <description></description>
+    </item>
     <item>
       <title>BoardGameGeek</title>
       <link>https://recommend-games.github.io/tags/boardgamegeek/</link>
-      <pubDate>Sat, 27 Apr 2024 20:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/boardgamegeek/</guid>
       <description></description>
     </item>
     <item>
       <title>Collaborative filtering</title>
       <link>https://recommend-games.github.io/tags/collaborative-filtering/</link>
-      <pubDate>Sat, 27 Apr 2024 20:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/collaborative-filtering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cosine similarity</title>
+      <link>https://recommend-games.github.io/tags/cosine-similarity/</link>
+      <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/cosine-similarity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Embeddings</title>
+      <link>https://recommend-games.github.io/tags/embeddings/</link>
+      <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/embeddings/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Latent factors</title>
+      <link>https://recommend-games.github.io/tags/latent-factors/</link>
+      <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/latent-factors/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linear regression</title>
+      <link>https://recommend-games.github.io/tags/linear-regression/</link>
+      <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/linear-regression/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine learning</title>
+      <link>https://recommend-games.github.io/tags/machine-learning/</link>
+      <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Matrix factorisation</title>
+      <link>https://recommend-games.github.io/tags/matrix-factorisation/</link>
+      <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/matrix-factorisation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recommend.Games explained</title>
+      <link>https://recommend-games.github.io/tags/recommend.games-explained/</link>
+      <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/recommend.games-explained/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recommendation engine</title>
+      <link>https://recommend-games.github.io/tags/recommendation-engine/</link>
+      <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/recommendation-engine/</guid>
       <description></description>
     </item>
     <item>
       <title>Recommendations</title>
       <link>https://recommend-games.github.io/tags/recommendations/</link>
-      <pubDate>Sat, 27 Apr 2024 20:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/recommendations/</guid>
       <description></description>
     </item>
@@ -298,34 +410,6 @@
       <description></description>
     </item>
     <item>
-      <title>Game of the Year</title>
-      <link>https://recommend-games.github.io/tags/game-of-the-year/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/game-of-the-year/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Germany</title>
-      <link>https://recommend-games.github.io/tags/germany/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/germany/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kennerspiel</title>
-      <link>https://recommend-games.github.io/tags/kennerspiel/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/kennerspiel/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kennerspiel des Jahres</title>
-      <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Kennerspiel des Jahres 2023</title>
       <link>https://recommend-games.github.io/tags/kennerspiel-des-jahres-2023/</link>
       <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
@@ -333,31 +417,10 @@
       <description></description>
     </item>
     <item>
-      <title>KSdJ</title>
-      <link>https://recommend-games.github.io/tags/ksdj/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/ksdj/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SdJ</title>
-      <link>https://recommend-games.github.io/tags/sdj/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/sdj/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>SdJ 2023</title>
       <link>https://recommend-games.github.io/tags/sdj-2023/</link>
       <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/sdj-2023/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Spiel des Jahres</title>
-      <link>https://recommend-games.github.io/tags/spiel-des-jahres/</link>
-      <pubDate>Mon, 31 Jul 2023 16:25:13 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/spiel-des-jahres/</guid>
       <description></description>
     </item>
     <item>
@@ -589,6 +652,13 @@
       <link>https://recommend-games.github.io/tags/spiel-des-jahres-2022-predictions/</link>
       <pubDate>Mon, 16 May 2022 18:40:51 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/spiel-des-jahres-2022-predictions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>news</title>
+      <link>https://recommend-games.github.io/tags/news/</link>
+      <pubDate>Tue, 22 Feb 2022 22:02:22 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/news/</guid>
       <description></description>
     </item>
     <item>
