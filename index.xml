@@ -8,8 +8,22 @@
     <language>en</language>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Thu, 09 May 2024 21:47:57 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 28 May 2024 17:00:00 +0300</lastBuildDate>
     <atom:link href="https://recommend-games.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spiel des Jahres 2024 predictions</title>
+      <link>https://recommend-games.github.io/posts/spiel-des-jahres-2024-predictions/</link>
+      <pubDate>Tue, 28 May 2024 17:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/posts/spiel-des-jahres-2024-predictions/</guid>
+      <description>Spiel des Jahres 2024 is around the corner! As in the previous four years, I&amp;rsquo;ll try to predict what games have the best shot at ending up on the longlist (aka recommendations) and the shortlist (aka nominations) when the jury announces their picks on June 11th.&#xA;As every year, I&amp;rsquo;ll let the algorithms speak. The predictions for the longlist come directly from the recommendendations out of all eligible1 games. Our very own Kennerspiel score is then used to sort those into their respective list of the top 10 contenders for either award.</description>
+    </item>
+    <item>
+      <title>Game Designer Hall of Fame</title>
+      <link>https://recommend-games.github.io/posts/game-designer-hall-of-fame/</link>
+      <pubDate>Fri, 17 May 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/posts/game-designer-hall-of-fame/</guid>
+      <description>Spiel des Jahres 2024 nominations are just around the corner (watch this space for our annual predictions), but I wanted to take this opportunity for a look back over the history of the award. Specifically, I wanted to see which designers have been most successful at the Spiel, Kennerspiel and Kinderspiel des Jahres awards.&#xA;The first red meeple was given out in 1979. Since 1989, the jury also awarded the Kinderspiel des Jahres for children&amp;rsquo;s games, initially as an annual special award, and from 2001 as its own award with the blue meeple.</description>
+    </item>
     <item>
       <title>A brief introduction to Collaborative Filtering</title>
       <link>https://recommend-games.github.io/posts/collaborative-filtering/</link>
