@@ -2,67 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://recommend-games.github.io/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/tags/designers/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/posts/game-designer-hall-of-fame/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/tags/game-of-the-year/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/tags/hall-of-fame/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/tags/kinderspiel-des-jahres/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/posts/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/tags/records/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/tags/reiner-knizia/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/tags/spiel-des-jahres/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/tags/statistics/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/tags/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/tags/wolfgang-kramer/</loc>
-    <lastmod>2024-05-13T15:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
     <loc>https://recommend-games.github.io/posts/collaborative-filtering/</loc>
     <lastmod>2024-05-09T21:47:57+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://recommend-games.github.io/tags/alternating-least-squares/</loc>
+    <lastmod>2024-05-09T21:47:57+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/</loc>
     <lastmod>2024-05-09T21:47:57+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -98,6 +46,10 @@
     <lastmod>2024-05-09T21:47:57+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
+    <loc>https://recommend-games.github.io/posts/</loc>
+    <lastmod>2024-05-09T21:47:57+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
     <loc>https://recommend-games.github.io/tags/recommend.games-explained/</loc>
     <lastmod>2024-05-09T21:47:57+03:00</lastmod>
     <changefreq>daily</changefreq>
@@ -107,6 +59,10 @@
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://recommend-games.github.io/tags/recommendations/</loc>
+    <lastmod>2024-05-09T21:47:57+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/tags/</loc>
     <lastmod>2024-05-09T21:47:57+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -214,6 +170,10 @@
     <lastmod>2024-02-27T22:37:01+02:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
+    <loc>https://recommend-games.github.io/tags/reiner-knizia/</loc>
+    <lastmod>2024-02-27T22:37:01+02:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
     <loc>https://recommend-games.github.io/tags/simulation/</loc>
     <lastmod>2024-02-27T22:37:01+02:00</lastmod>
     <changefreq>daily</changefreq>
@@ -282,11 +242,19 @@
     <lastmod>2023-07-31T16:25:13+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
+    <loc>https://recommend-games.github.io/tags/game-of-the-year/</loc>
+    <lastmod>2023-07-31T16:25:13+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
     <loc>https://recommend-games.github.io/tags/germany/</loc>
     <lastmod>2023-07-31T16:25:13+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://recommend-games.github.io/tags/kennerspiel/</loc>
+    <lastmod>2023-07-31T16:25:13+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/tags/kennerspiel-des-jahres/</loc>
     <lastmod>2023-07-31T16:25:13+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -303,6 +271,10 @@
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://recommend-games.github.io/tags/sdj-2023/</loc>
+    <lastmod>2023-07-31T16:25:13+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/tags/spiel-des-jahres/</loc>
     <lastmod>2023-07-31T16:25:13+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -567,6 +539,10 @@
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/</loc>
+    <lastmod>2021-01-26T22:24:00+02:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/tags/statistics/</loc>
     <lastmod>2021-01-26T22:24:00+02:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
