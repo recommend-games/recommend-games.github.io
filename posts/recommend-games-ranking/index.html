@@ -134,6 +134,12 @@ OK, let&rsquo;s back up for a second. R.G&rsquo;s primary purpose is a recommend
             </li>
           
         
+          
+            <li>
+              <a title="Donate" href="https://recommend-games.github.io/page/donations/">Donate</a>
+            </li>
+          
+        
 
         
 
@@ -273,7 +279,9 @@ OK, let&rsquo;s back up for a second. R.G&rsquo;s primary purpose is a recommend
 <p><a href="history_full.png">
 <img
 	src="https://recommend-games.github.io/posts/recommend-games-ranking/history_crop_hu7f8881c2ae59177d1401aee3088d48ad_239973_0x300_resize_box_3.png"
-	alt="Ancient history" /></a></p>
+	alt="Ancient history"
+	 />
+</a></p>
 <p>Maybe more importantly, the exact algorithm to determine those recommendations for new users is extremely obscure. There&rsquo;s been a <a href="https://gitlab.com/recommend.games/board-game-recommender/-/issues/38">long-standing ticket</a> to find out what&rsquo;s going on. The answer isn&rsquo;t documented anywhere, but you can find it somewhere in <a href="https://github.com/apple/turicreate/blob/30eced4508bf86c4c59a1fef96bd0b23363db283/src/toolkits/recsys/models/itemcf.cpp#L194">these lines of code</a>. Let me know if you can make sense of them, I&rsquo;ve simply given up at some point.</p>
 <p>Instead, I wanted to create a new ranking which I can at least explain. So here goes:</p>
 <p><strong>The basic idea is to calculate the recommended games for all users, and then average those rankings. Those averages would become the Recommend.Games rankings.</strong></p>
@@ -288,7 +296,9 @@ OK, let&rsquo;s back up for a second. R.G&rsquo;s primary purpose is a recommend
 
 <img
 	src="https://recommend-games.github.io/posts/recommend-games-ranking/tomvasel_hu8122f04d0f9b00836ce5a39d456e5117_119633_0x300_resize_box_3.png"
-	alt="Tom Vasel&#39;s ratings" />
+	alt="Tom Vasel&#39;s ratings"
+	 />
+
 <p>If on the other hand a user only ever rates games with a 10, never any other score, their factor would be 0, and again, they wouldn&rsquo;t take part in the R.G rankings calculations.</p>
 <p>So, long story short, we have those two factors that are supposed to describe how much we can trust a user&rsquo;s ratings. We can now multiply them with each other, and the higher the score, the higher will be our trust in their ratings, and consequently, the more weight their &ldquo;vote&rdquo; will have when calculating the R.G ranking.</p>
 <p>But before we go there, what users <em>do</em> we trust the most? Many of the highest scores actually belong to pretty random users, so I&rsquo;m not comfortable exposing them here, but it&rsquo;s interesting to compare some of the &ldquo;celebrities&rdquo; in the hobby (and yours truly):</p>

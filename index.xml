@@ -18,6 +18,13 @@
       <description>Spiel des Jahres 2024 nominations are just around the corner (watch this space for our annual predictions), but I wanted to take this opportunity for a look back over the history of the award. Specifically, I wanted to see which designers have been most successful at the Spiel, Kennerspiel and Kinderspiel des Jahres awards.&#xA;The first red meeple was given out in 1979. Since 1989, the jury also awarded the Kinderspiel des Jahres for children&amp;rsquo;s games, initially as an annual special award, and from 2001 as its own award with the blue meeple.</description>
     </item>
     <item>
+      <title>Donations</title>
+      <link>https://recommend-games.github.io/page/donations/</link>
+      <pubDate>Wed, 15 May 2024 22:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/page/donations/</guid>
+      <description>Recommend.Games and Analysis Paralysis always have been and always will be 100% open source and free from paywalls, ads or tracking. If you find some value in what we&amp;rsquo;re doing and your finances allow you to support us with server costs etc, you can do so by donating through any of the links below (Wise and PayPal allow us to keep most of your donation):&#xA;Wise PayPal Patreon Ko-fi Liberapay GitHub sponsors If you&amp;rsquo;d rather donate to a charity of your choice, why not give some money to an organisation that promotes a more diverse, sustainable and loving world on our behalf?</description>
+    </item>
+    <item>
       <title>A brief introduction to Collaborative Filtering</title>
       <link>https://recommend-games.github.io/posts/collaborative-filtering/</link>
       <pubDate>Thu, 09 May 2024 21:47:57 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
@@ -214,11 +221,11 @@
       <description>For the impatient: If you don&amp;rsquo;t care about the analysis of previous winners and all you&amp;rsquo;re interested in are the candidates for this year&amp;rsquo;s awards, jump straight to the list…&#xA;It&amp;rsquo;s that time of year again when the whole board game scene takes a deep look into their crystal balls: On Monday, May 18, the jury Spiel des Jahres will announce the nominees for the game of the year award in Germany.</description>
     </item>
     <item>
-      <title>About me</title>
+      <title>About</title>
       <link>https://recommend-games.github.io/page/about/</link>
       <pubDate>Sun, 26 Apr 2020 08:14:27 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/page/about/</guid>
-      <description>Check out Recommend.Games to learn all bout me!</description>
+      <description>Recommend.Games Recommend.Games strives to recommend the best board games for you. We take the user ratings from BoardGameGeek (BGG), apply some black magic, and present recommendations that suit you. Check out its own About page to learn more about the details!&#xA;If you enjoy our work, please check out the Donations page or tell your friends about us.&#xA;Analysis Paralysis This blog takes the data we collect for Recommend.Games and tries to answer insteresting questions with them (at least we think they are interesting).</description>
     </item>
   </channel>
 </rss>

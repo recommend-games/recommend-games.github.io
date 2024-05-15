@@ -134,6 +134,12 @@ Last time I left you with the nice result that BoardGameGeek (BGG) calculates it
             </li>
           
         
+          
+            <li>
+              <a title="Donate" href="https://recommend-games.github.io/page/donations/">Donate</a>
+            </li>
+          
+        
 
         
 
@@ -272,12 +278,16 @@ Last time I left you with the nice result that BoardGameGeek (BGG) calculates it
 
 <img
 	src="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/games.svg"
-	alt="Number of games and ratings on BGG over time" />
+	alt="Number of games and ratings on BGG over time"
+	 />
+
 <p>We can now repeat the exact same calculation we did in the <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/#optimisation">previous post</a>: For each point in time, the algorithm searches for the number of dummy ratings that yields an estimated geek score closest to the actual score. Now, we have a bunch of data points that correlate the total number of ratings with the number of dummies used at that time. Here&rsquo;s what it looks like:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/ratings.svg"
-	alt="Number of total ratings vs dummy ratings" />
+	alt="Number of total ratings vs dummy ratings"
+	 />
+
 <p>We get a pretty nice straight line – the dashed line in the plot is fitted with linear regression, i.e., the straight line that most closely fits our data. Its formula is:</p>
 <p>\[ \textrm{number of dummies} \approx 0.0000997 \cdot \textrm{total number of ratings}. \]</p>
 <p>This means that for every rating entered into the BGG database, the number of dummy ratings is increased by 0.0000997. That number might look a bit opaque, but it&rsquo;s actually very easy to interpret once you put the question to its head: How many ratings have to be entered for the number of dummies to increase by 1? You get the answer to that by taking the inverse of that factor, which happens to be about 10,032. This number is way to close to 10,000 to be a coincidence! We can conclude the exact formula for the number of dummy ratings:</p>

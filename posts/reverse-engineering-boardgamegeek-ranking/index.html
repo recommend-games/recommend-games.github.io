@@ -131,6 +131,12 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
             </li>
           
         
+          
+            <li>
+              <a title="Donate" href="https://recommend-games.github.io/page/donations/">Donate</a>
+            </li>
+          
+        
 
         
 
@@ -292,7 +298,9 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
 
 <img
 	src="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/num_dummies_hist.svg"
-	alt="Histogram over the number of dummy ratings calculated by explicit formula" />
+	alt="Histogram over the number of dummy ratings calculated by explicit formula"
+	 />
+
 <p>And this plot is even cropped, the results vary from -1.4 million to +810 thousand, though some 90% lie within the above range, with a mean of around 1604 and a median of around 1590.</p>
 <p>What&rsquo;s going on, why are the results so inconsistent? The problem is the ranking&rsquo;s <em>secret sauce</em>. Both IMDb and BGG stress is that they only consider <em>regular</em> voters for their rankings. That&rsquo;s the most mysterious part of the system as it&rsquo;s the easiest to manipulate, so we&rsquo;ll just have to take their word for it. For this investigation it means that the average rating BGG publishes includes all the ratings, but the geek score might <em>not</em>.</p>
 <p>Still, clearly something is happening around the <strong>1600 ratings</strong> mark, so we are at least getting closer to an answer. If exact calculations won&rsquo;t work, maybe we can approximate the correct value instead?</p>
@@ -302,7 +310,9 @@ I often describe BoardGameGeek (BGG) as &ldquo;the Internet Movie Database (IMDb
 
 <img
 	src="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/num_dummies_corr.svg"
-	alt="Spearman correlation for different number of dummy ratings" />
+	alt="Spearman correlation for different number of dummy ratings"
+	 />
+
 <p>The best correlation of around 0.996 is achieved with <strong>1488 dummy ratings</strong>. However, it is worth noticing that the changes in the correlation are very, <em>very</em> small throughout the range we examined here (1000 to 2500), so let&rsquo;s dig still a little deeper.</p>
 <h1 id="optimisation">Optimisation</h1>
 <p>What we have here at hand is actually a classic optimisation task: a real valued function in one unknown (or two if we allow a variable dummy value as well) which we&rsquo;d like to maximise. This is a well-studied field, with many fast and simple implementations that provide us the solution in no time. Unsuprisingly, we get the same result as above: the best possible correlation is 0.996 with around <strong>1488 dummy ratings</strong>.</p>

@@ -129,6 +129,12 @@
             </li>
           
         
+          
+            <li>
+              <a title="Donate" href="https://recommend-games.github.io/page/donations/">Donate</a>
+            </li>
+          
+        
 
         
 
@@ -447,7 +453,9 @@
 
 <img
 	src="https://recommend-games.github.io/posts/what-makes-kennerspiel/shap_summary.svg"
-	alt="Summary of feature importance" />
+	alt="Summary of feature importance"
+	 />
+
 <p><em>You can find the <a href="shap_summary_full.svg">full plot of all features here</a>.</em></p>
 <p>As you can see, the <em>complexity</em> is the most important feature: the higher the value (blue = 1, red = 5), the higher our confidence that the game in question is a <span style="color: #193F4A; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Kennerspiel</strong></em></span>. This makes a lot of sense. Likewise, the next features are equally intuitive: the higher <em>play time</em> and <em>minimum age</em> are, the more likely it is we&rsquo;re dealing with a games for experts. And of course, in a way <em>strategy games</em> are much more frequently found in the <span style="color: #193F4A; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Kennerspiel</strong></em></span> column. (Here, red means strategy game, blue means not.)</p>
 <p>Somewhat more confusing is the player count though. Pay close attention to whether a game is playable with five or six players. Again, red means that game is playable with that head count, while blue means it is not. So a game that is playable with five players is <em>more</em> likely to be a <span style="color: #193F4A; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Kennerspiel</strong></em></span>, while a game for six players is <em>less</em> likely. This certainly is a little confusing, and might well be an artifact of our small sample size. Still, there&rsquo;s a system to this madness: whilst the vast majority of games accomodate three and four players, <span style="color: #E30613; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Spiel</strong></em></span> candidates often either stop at that count to keep components and costs down, or are for a much larger audience anyways and really shine with six, eight, or even more players. A <span style="color: #193F4A; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Kennerspiel</strong></em></span> on the other hand can be a little more luxurious, and hence often includes components for a fifth player by default, but their more strategic nature limits the scalability beyond that point.</p>
@@ -456,12 +464,16 @@
 
 <img
 	src="https://recommend-games.github.io/posts/what-makes-kennerspiel/shap_295486.svg"
-	alt="My City force plot" />
+	alt="My City force plot"
+	 />
+
 <p>This so called force plot shows how some values push the score up, while some pull it down. In this case, complexity, strategy, and player count push the score towards <span style="color: #193F4A; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Kennerspiel</strong></em></span>, while a tile laying game playable in 30 minutes pull it towards <span style="color: #E30613; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Spiel</strong></em></span>. In the sum, our model and the jury agree: this game falls on the red side of the line.</p>
 
 <img
 	src="https://recommend-games.github.io/posts/what-makes-kennerspiel/shap_244522.svg"
-	alt="That&#39;s Pretty Clever! force plot" />
+	alt="That&#39;s Pretty Clever! force plot"
+	 />
+
 <p>We contrast this with <a href="https://recommend.games/#/game/244522" style="font-variant: small-caps;">That&rsquo;s Pretty Clever!</a> Again, its play time of 30 minutes with players from 8 years old smell like a lighter game, but soloable dice rolling clearly push the needle (very narrowly) over the line of a <span style="color: #193F4A; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Kennerspiel</strong></em></span>.</p>
 <p>In the end, our evidence is a little thin – even after a decade of <span style="color: #193F4A; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Kennerspiel</strong></em></span> winners and nominees, the patterns aren&rsquo;t very clear, and of course the jury&rsquo;s fickle opinion might drift over time as well. So while I&rsquo;m pretty confident in the predictions our model makes, they still need to be taken with a grain of salt.</p>
 <p>&ldquo;Not so fast!&rdquo;, you might say. &ldquo;Aren&rsquo;t you simply overfitting here?&rdquo; Why, yes, you&rsquo;re right. The dataset is so small that there&rsquo;s a high risk of fine tuning the model too much for the data we&rsquo;re seeing. And of course, it&rsquo;s <strong>bad bad bad</strong> to assess your model&rsquo;s performance with items it was trained on – that&rsquo;s just cheating. So let&rsquo;s test the model on some games it hadn&rsquo;t seen yet!</p>
@@ -564,12 +576,16 @@
 <!-- 
 <img
 	src="https://recommend-games.github.io/posts/what-makes-kennerspiel/shap_30549.svg"
-	alt="Pandemic force plot" />
+	alt="Pandemic force plot"
+	 />
+
 
 
 <img
 	src="https://recommend-games.github.io/posts/what-makes-kennerspiel/shap_6249.svg"
-	alt="Alhambra force plot" /> -->
+	alt="Alhambra force plot"
+	 />
+ -->
 <h1 id="kenner-spiel-des-jahres-2021">(Kenner-)Spiel des Jahres 2021</h1>
 <p>I&rsquo;ll send you off with a teaser for <span style="color: #E30613; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Spiel des Jahres 2021</strong></em></span>. I&rsquo;ve taken some of the <a href="https://recommend.games/#/?for=S_d_J&amp;yearMin=2020&amp;yearMax=2021&amp;excludeOwned=false&amp;playerCount=4&amp;playerCountType=box&amp;playTime=120&amp;playTimeType=max&amp;playerAge=16&amp;playerAgeType=box">hottest contenders for the 2021 awards</a> (as of the time of writing), and sort them by their <span style="color: #193F4A; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Kennerspiel</strong></em></span> score for your convenience.</p>
 <table>

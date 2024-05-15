@@ -129,6 +129,12 @@
             </li>
           
         
+          
+            <li>
+              <a title="Donate" href="https://recommend-games.github.io/page/donations/">Donate</a>
+            </li>
+          
+        
 
         
 
@@ -264,17 +270,23 @@
 
 <img
 	src="https://recommend-games.github.io/posts/orchard/orchard_cover_huecd9ec0d293c1cf1fe0ce58b00ca2553_181332_600x0_resize_q75_box.jpg"
-	alt="Cover of Orchard" />
+	alt="Cover of Orchard"
+	 />
+
 <p>It&rsquo;s really quite charming and the fruits make great toys. Kids learn to wait for their turns, to recognise colours and maybe even to accept when they lose. But one thing the game does not teach is making smart decisions: on most turns, the die roll completely determines your action. One die face shows a basket which allows you to pick any fruit you want, but you probably already figured out what&rsquo;s the dominant strategy: select the fruit we have the most left of. So really, the game offers no meaningful decisions at all.</p>
 
 <img
 	src="https://recommend-games.github.io/posts/orchard/orchard_detail_hufeed133767ebd7912eff5df4bd2af11a_266861_600x0_resize_q75_box.jpg"
-	alt="Detail shot of Orchard" />
+	alt="Detail shot of Orchard"
+	 />
+
 <p>What makes for a pretty dull game (by adult standards, of course) actually makes for an excellent playground for simulations! The lack of choices means that the probability of winning is completely determined by die rolls, not skills, and hence can be objectively measured. So if you ever wondered how hard it is to beat the raven in that game from your childhood, you&rsquo;re in for a treat! 🤓</p>
 
 <img
 	src="https://recommend-games.github.io/posts/orchard/orchard_in_orchard_hudb548f1e7d2e3afd6ae16d4765dfa0a1_785660_600x0_resize_q75_box.jpg"
-	alt="Orchard in an orchard" />
+	alt="Orchard in an orchard"
+	 />
+
 <p>In order to determine the win rate, we can just simulate a series of die rolls and check if their outcome means we win or lose the game. Repeat this process thousands of times and we get a pretty good estimate of the win rate. So without further ado, here&rsquo;s the win rate for <a href="https://recommend.games/#/game/5770" style="font-variant: small-caps;">Orchard</a>:</p>
 <p>It&rsquo;s <strong>68.3%</strong>. You&rsquo;re going to win just over two thirds of your games of <a href="https://recommend.games/#/game/5770" style="font-variant: small-caps;">Orchard</a>.</p>
 <p>Is this particularly high or low? It&rsquo;s actually a really tough challenge in game design to calibrate the win rate of a co-operative game. If you ask people how often they should win a co-operative game for it to be interesting and challenging, they might say something like 50–50, but in reality people simply don&rsquo;t like losing and would probably be frustrated to play a game where they lose half the time. With that in mind, a game the children will lose 32% of the time seems like a desaster in the making. 😅</p>
@@ -282,29 +294,39 @@
 
 <img
 	src="https://recommend-games.github.io/posts/orchard/game_length_original.svg"
-	alt="Histogram over the lengths of games of Orchard" />
+	alt="Histogram over the lengths of games of Orchard"
+	 />
+
 <p>So the average game last for about 40 rounds, with a standard deviation of about 5.4, i.e., quite a lot of spread. The shortest possible game would be losing after rolling 9 ravens in a row – the probability of that is \( 6^{-9} \approx 0.00001\% \) or 1 in 10 million games. The shortest possible win would mean rolling the basket 20 times in a row (basket rolls allow you to pick two fruits at once) – which happens in 1 in 3,656,158,440,062,976 games. In theory, the game could go on forever if you keep rolling fruits you&rsquo;ve already emptied, but honestly, already 40 die rolls without any decisions feels long enough for my taste – in particular when you have to watch a toddler at the same time. 👶</p>
 
 <img
 	src="https://recommend-games.github.io/posts/orchard/first_orchard_cover_hu8c86d820db0f3c708709ba252911b277_470501_600x0_resize_q75_box.jpg"
-	alt="Cover of First Orchard" />
+	alt="Cover of First Orchard"
+	 />
+
 <p>Luckily, there&rsquo;s a version for even smaller children called <a href="https://recommend.games/#/game/41302" style="font-variant: small-caps;">First Orchard</a>. Mechanically, it&rsquo;s almost equivalent except for a few hyperparameter: there&rsquo;s only 4 of each fruit instead of 10, you only get to pick one fruit on a basket roll and you lose the game after 6 raven rolls,<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> but that&rsquo;s it. How do these changes affect the win rate?</p>
 <p>The answer is <strong>76.8%</strong>. Expect to win 3 out of 4 games of <a href="https://recommend.games/#/game/41302" style="font-variant: small-caps;">First Orchard</a>.</p>
 <p>When playing with toddlers who rarely have the emotional maturity to handle losing, this seems like a much better win rate. Reducing the number of fruits also cuts the game length in half, much more accomodating for the attention span of a toddler:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/orchard/game_length_first.svg"
-	alt="Histogram over the lengths of games of First Orchard" />
+	alt="Histogram over the lengths of games of First Orchard"
+	 />
+
 <p>Obviously, the win rate will be affected by chosing any of those parameters, but the length of the raven path would probably be the easiest lever to pull if we wanted to make <a href="https://recommend.games/#/game/41302" style="font-variant: small-caps;">First Orchard</a> as hard as its big sibling. Here&rsquo;s the win rate for different lengths of the raven path:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/orchard/win_rates_first.svg"
-	alt="Win rates for First Orchard with different lengths of the raven path" />
+	alt="Win rates for First Orchard with different lengths of the raven path"
+	 />
+
 <p>Reducing the path by just one step drops the win rate to 63%, i.e., even below that of <a href="https://recommend.games/#/game/5770" style="font-variant: small-caps;">Orchard</a>, another step reducting would lower it below 50%. For the sake of the peace in our household, I&rsquo;m glad they&rsquo;ve found the space in the box for the extra steps. 😅</p>
 
 <img
 	src="https://recommend-games.github.io/posts/orchard/first_orchard_detail_hu378dbc7f42c10156c9592c0e7737f9fd_819988_600x0_resize_q75_box.jpg"
-	alt="Detail shot of First Orchard" />
+	alt="Detail shot of First Orchard"
+	 />
+
 <p>I&rsquo;ll leave you with one final thought: as an obsessive data collector, I have logged 68 games of <a href="https://recommend.games/#/game/41302" style="font-variant: small-caps;">First Orchard</a>, 47 of which we&rsquo;ve won, i.e., we have a win rate of 69.1%. Our sample isn&rsquo;t big enough for this difference to be significant (or is it? I&rsquo;m not going to crunch the numbers now 🤷), but anyways there&rsquo;s plenty of factors that influence our win rate IRL: my children will rather pick their favourite colour when given a choice than follow the optimal strategy, there was an extra apple in our box (and children emphatically cannot stand leftover components – publishers, take note and stop putting variants in children&rsquo;s games 😉), their die rolling is far from random, etc. Also, I don&rsquo;t think we ever really lost a game of <a href="https://recommend.games/#/game/41302" style="font-variant: small-caps;">First Orchard</a>: when the raven reaches the orchard, my older daughter will just say that the raven flies off to its nest. 🐦‍⬛ Toddlers… 🤷</p>
 <p><em>PS</em>: You can find the code for the simulations <a href="https://gitlab.com/recommend.games/blog/-/tree/master/experiments/orchard">here</a>.</p>
 <div class="footnotes" role="doc-endnotes">
