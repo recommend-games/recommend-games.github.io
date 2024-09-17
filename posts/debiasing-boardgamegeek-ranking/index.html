@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Debiasing the BoardGameGeek ranking - Analysis Paralysis</title>
+  <meta name="description" content="Bias is a bit of an ugly word, isn&rsquo;t it? It certainly has become one of those battle phrases in the culture war, where both sides of the argument accuse the other of forcing their biases onto society. Board game reviews frequently need to justify themselves for their biases affecting their views. Dan Thurot recently wrote a very eloquent piece on the matter, diving deeper into different kinds of biases.">
+  <meta name="author" content="Recommend.Games"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Analysis Paralysis",
+    
+    "url": "https:\/\/recommend-games.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/recommend-games.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/recommend-games.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/recommend-games.github.io\/posts\/debiasing-boardgamegeek-ranking\/",
+          "name": "Debiasing the board game geek ranking"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Markus Shepherd"
+  },
+  "headline": "Debiasing the BoardGameGeek ranking",
+  "description" : "Bias is a bit of an ugly word, isn\u0026rsquo;t it? It certainly has become one of those battle phrases in the culture war, where both sides of the argument accuse the other of forcing their biases onto society. Board game reviews frequently need to justify themselves for their biases affecting their views. Dan Thurot recently wrote a very eloquent piece on the matter, diving deeper into different kinds of biases.",
+  "inLanguage" : "en",
+  "wordCount":  1178 ,
+  "datePublished" : "2024-09-05T12:00:00",
+  "dateModified" : "2024-09-05T12:00:00",
+  "image" : "https:\/\/recommend-games.github.io\/logo.png",
+  "keywords" : [ "BoardGameGeek, Debiasing, ranking, rating, alternative rankings" ],
+  "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/debiasing-boardgamegeek-ranking\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/recommend-games.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/recommend-games.github.io\/logo.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Debiasing the BoardGameGeek ranking" />
+<meta property="og:description" content="Bias is a bit of an ugly word, isn&rsquo;t it? It certainly has become one of those battle phrases in the culture war, where both sides of the argument accuse the other of forcing their biases onto society. Board game reviews frequently need to justify themselves for their biases affecting their views. Dan Thurot recently wrote a very eloquent piece on the matter, diving deeper into different kinds of biases.">
+<meta property="og:image" content="https://recommend-games.github.io/logo.png" />
+<meta property="og:url" content="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Analysis Paralysis" />
+
+  <meta name="twitter:title" content="Debiasing the BoardGameGeek ranking" />
+  <meta name="twitter:description" content="Bias is a bit of an ugly word, isn&rsquo;t it? It certainly has become one of those battle phrases in the culture war, where both sides of the argument accuse the other of forcing their biases onto …">
+  <meta name="twitter:image" content="https://recommend-games.github.io/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@recommend_games" />
+  <meta name="twitter:creator" content="@recommend_games" />
+  <link href='https://recommend-games.github.io/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.122.0">
+  <link rel="alternate" href="https://recommend-games.github.io/index.xml" type="application/rss+xml" title="Analysis Paralysis"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://recommend-games.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://recommend-games.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://recommend-games.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://recommend-games.github.io/">Analysis Paralysis</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Recommend.Games" href="https://recommend.games/#/">Recommend.Games</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="https://recommend-games.github.io/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Donate" href="https://recommend-games.github.io/page/donations/">Donate</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Analysis Paralysis" href="https://recommend-games.github.io/">
+            <img class="avatar-img" src="https://recommend-games.github.io/logo.png" alt="Analysis Paralysis" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Debiasing the BoardGameGeek ranking</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on September 5, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1178&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Markus Shepherd
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><em>Bias</em> is a bit of an ugly word, isn&rsquo;t it? It certainly has become one of those battle phrases in the culture war, where both sides of the argument accuse the other of forcing their biases onto society. Board game reviews frequently need to justify themselves for their biases affecting their views. <a href="https://spacebiff.com/2024/08/20/talking-about-games-18/">Dan Thurot</a> recently wrote a very eloquent piece on the matter, diving deeper into different kinds of biases.</p>
+<p>But <em>bias</em> also has a well defined <a href="https://en.wikipedia.org/wiki/Bias_(statistics)">meaning in statistics</a>. Moving from emotions to cold hard numbers, the word <em>bias</em> loses its antagonistic nature and simply becomes a measurement one might want to minimise or remove entirely. Hence, <em>debiasing</em> the BoardGameGeek (BGG) ranking is about asking the question what it would look like if we removed the influence of a particular parameter. One such parameter is a game&rsquo;s age: we&rsquo;ve seen in the <a href="https://recommend-games.github.io/posts/highest-rated-year/">previous article</a> that ratings have gone up over time, so removing the age bias from the BGG ranking means correcting for this trend.</p>
+<p>This is by no means a new idea: <a href="https://dvatvani.com/blog/bgg-analysis-part-2">Dinesh Vatvani</a> published an often referenced article back in 2018 focussing on removing the complexity bias from the ratings. This article is an update to and an extension of his work.</p>
+<h1 id="removing-the-age-bias">Removing the age bias</h1>
+<p>So, let&rsquo;s start with the bias readers of this blog will already be familar with: age bias, which really is just a slightly more neutral term for <em>cult of the new</em>. The first step is plotting the games&rsquo; ages vs their average ratings:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_reg_age.png"
+	alt="Scatter plot: a game&#39;s age vs its rating"
+	 />
+
+<p>The points on the very left are the oldest games in our dataset, those published in 1970, whilst the ones on the right are those published in 2024. I&rsquo;ve plotted games with few ratings more faintly in order to declutter the image. The bold red line is the line of best fit, i.e., the trend line that best describes the yearly increase in average ratings. This picture should look pretty familiar if you&rsquo;ve read the <a href="https://recommend-games.github.io/posts/highest-rated-year/">previous article</a>, though we didn&rsquo;t aggregate by year but plotted every single game as an individual dot.</p>
+<p>That trend line has a slope of 0.03, which means that overall, a game&rsquo;s average rating decrease by 0.03 with every year that has passed since its release. Now, removing the age bias means reducing that slope to 0. It&rsquo;s as if we consider each year on its own and only care how much better or worse a game was compared to its peers released at the same time. I hope this little animation will make things much clearer:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_reg_age_animated.gif"
+	alt="Animation: removing the age bias from games&#39; ratings"
+	 />
+
+<p>(Again, credit to Dinesh Vatvani for introducing this kind of visualisation in <a href="https://dvatvani.com/blog/bgg-analysis-part-2">his article</a>.)</p>
+<p>Next, we can use those adjusted average ratings to calculate a new, debiased ranking. In order to do this, we recreate the <a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking/">BGG ranking</a> by taking the Bayesian average, i.e., adding 2311 dummy ratings (<a href="https://recommend-games.github.io/posts/reverse-engineering-boardgamegeek-ranking-part-2/">one for every 10,000 ratings</a> in total) of 5.5.</p>
+<p>Without further ado, those are the new top 10 rated games after removing the age bias:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Rank</th>
+<th style="text-align:left">Game</th>
+<th style="text-align:center">Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>#1</strong> <small>(🔺 2)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> <small>(2017)</small></td>
+<td style="text-align:center">8.4 <small>(🔻 0.2)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#2</strong> <small>(🔺 11)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a> <small>(2005)</small></td>
+<td style="text-align:center">8.4 <small>(🔺 0.2)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#3</strong> <small>(🔻 1)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a> <small>(2015)</small></td>
+<td style="text-align:center">8.4 <small>(🔻 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#4</strong> <small>(🔺 4)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/115746" style="font-variant: small-caps;">War of the Ring: Second Edition</a> <small>(2011)</small></td>
+<td style="text-align:center">8.5 <small>(🔸 0.0)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#5</strong> <small>(🔻 4)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/224517" style="font-variant: small-caps;">Brass: Birmingham</a> <small>(2018)</small></td>
+<td style="text-align:center">8.4 <small>(🔻 0.2)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#6</strong> <small>(🔺 145)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/2511" style="font-variant: small-caps;">Sherlock Holmes Consulting Detective</a> <small>(1982)</small></td>
+<td style="text-align:center">8.5 <small>(🔺 0.8)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#7</strong> <small>(🔸 0)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/167791" style="font-variant: small-caps;">Terraforming Mars</a> <small>(2016)</small></td>
+<td style="text-align:center">8.2 <small>(🔻 0.2)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#8</strong> <small>(🔻 4)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/342942" style="font-variant: small-caps;">Ark Nova</a> <small>(2021)</small></td>
+<td style="text-align:center">8.2 <small>(🔻 0.3)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#9</strong> <small>(🔺 36)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/3076" style="font-variant: small-caps;">Puerto Rico</a> <small>(2002)</small></td>
+<td style="text-align:center">8.2 <small>(🔺 0.2)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#10</strong> <small>(🔻 1)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/187645" style="font-variant: small-caps;">Star Wars: Rebellion</a> <small>(2016)</small></td>
+<td style="text-align:center">8.2 <small>(🔻 0.2)</small></td>
+</tr>
+</tbody>
+</table>
+<p>As designed, older games are the big winners of this adjustment, with former BGG #1s <a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a> and <a href="https://recommend.games/#/game/3076" style="font-variant: small-caps;">Puerto Rico</a> making a comeback. Classic murder mystery game <a href="https://recommend.games/#/game/2511" style="font-variant: small-caps;">Sherlock Holmes Consulting Detective</a> makes a huge leap into the top 10 as one of the few games from the 80s that stood the test of time. Download the full new ranking <a href="ranking_debiased_age.csv">here</a>.</p>
+<h1 id="removing-the-complexity-bias">Removing the complexity bias</h1>
+<p>Obviously, we can apply the exact same idea to other features, e.g., a game&rsquo;s complexity (or weight) as Dinesh Vatvani did in his <a href="https://dvatvani.com/blog/bgg-analysis-part-2">original article</a>. Again, we start by looking at the spread of the data points:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_reg_complexity.png"
+	alt="Scatter plot: a game&#39;s complexity vs its rating"
+	 />
+
+<!-- TODO: Do we need to explain the complexity score from BGG? -->
+<p>The trend line has a slope of 0.63, i.e., the heaviest games on BGG have on average a full 2.5 point higher average score than the lighest ones. Somehow it feels particularly pleasing to see the light but clever games being lifted when we remove this complexity bias:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_reg_complexity_animated.gif"
+	alt="Animation: removing the complexity bias from games&#39; ratings"
+	 />
+
+<p>This is the new top 10 after adjusting for the complexity bias:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Rank</th>
+<th style="text-align:left">Game</th>
+<th style="text-align:center">Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>#1</strong> <small>(🔺 141)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/254640" style="font-variant: small-caps;">Just One</a> <small>(2018)</small></td>
+<td style="text-align:center">8.2 <small>(🔺 0.6)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#2</strong> <small>(🔺 127)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/178900" style="font-variant: small-caps;">Codenames</a> <small>(2015)</small></td>
+<td style="text-align:center">8.0 <small>(🔺 0.4)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#3</strong> <small>(🔺 45)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/295947" style="font-variant: small-caps;">Cascadia</a> <small>(2021)</small></td>
+<td style="text-align:center">8.0 <small>(🔺 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#4</strong> <small>(🔺 101)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/291453" style="font-variant: small-caps;">SCOUT</a> <small>(2019)</small></td>
+<td style="text-align:center">8.2 <small>(🔺 0.4)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#5</strong> <small>(🔻 3)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a> <small>(2015)</small></td>
+<td style="text-align:center">8.0 <small>(🔻 0.6)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#6</strong> <small>(🔺 13)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/173346" style="font-variant: small-caps;">7 Wonders Duel</a> <small>(2015)</small></td>
+<td style="text-align:center">7.9 <small>(🔻 0.2)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#7</strong> <small>(🔺 30)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/324856" style="font-variant: small-caps;">The Crew: Mission Deep Sea</a> <small>(2021)</small></td>
+<td style="text-align:center">8.1 <small>(🔻 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#8</strong> <small>(🔺 71)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/230802" style="font-variant: small-caps;">Azul</a> <small>(2017)</small></td>
+<td style="text-align:center">7.8 <small>(🔺 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#9</strong> <small>(🔺 117)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/163412" style="font-variant: small-caps;">Patchwork</a> <small>(2014)</small></td>
+<td style="text-align:center">7.8 <small>(🔺 0.2)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#10</strong> <small>(🔺 57)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/244521" style="font-variant: small-caps;">The Quacks of Quedlinburg</a> <small>(2018)</small></td>
+<td style="text-align:center">7.8 <small>(🔸 0.0)</small></td>
+</tr>
+</tbody>
+</table>
+<p>I&rsquo;m not going to lie: As a lover of small and interactive games, this top 10 looks much more apealing to me than the actual BGG top 10. Download the full new ranking <a href="ranking_debiased_complexity.csv">here</a>.</p>
+<h1 id="removing-the-playing-time-bias">Removing the playing time bias</h1>
+<p>Next, we&rsquo;ll take a look at how a game&rsquo;s playing time (as measured by the minimum playing time printed on the box) affects its rating:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_reg_min_time.png"
+	alt="Scatter plot: a game&#39;s minimum playing time vs its rating"
+	 />
+
+<p>We see a similar trend line as with the complexity bias, which shouldn&rsquo;t come as a surprise since a game&rsquo;s length and complexity are highly correlated. The slope here is 0.0045, i.e., every minute it takes longer to play a game makes it 0.0045 points &ldquo;better&rdquo;, which does sound a bit weird when one puts it like that.</p>
+<p>Because publishers love to lie about playing time and claim most games can be played in about an hour, the adjusted ranking doesn&rsquo;t look all that different from the usual one, so I&rsquo;ll skip it for this article, but download it <a href="ranking_debiased_min_time.csv">here</a> if you&rsquo;d like to take a look anyways.</p>
+<h1 id="removing-the-bias-towards-cooperative-games">Removing the bias towards cooperative games</h1>
+
+<img
+	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_cat_cooperative.png"
+	alt="Violin plot: competitive/cooperative games vs their ratings"
+	 />
+
+<h1 id="removing-the-game-type-bias">Removing the game type bias</h1>
+
+<img
+	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_cat_game_type.png"
+	alt="Violin plot: game types vs their ratings"
+	 />
+
+<h1 id="the-boring-details">The boring details</h1>
+<p>In order to have good data and comparable values for all those corrections, I had to filter out games by certain criteria. We only only considered games which:</p>
+<ul>
+<li>have a ranking (i.e., are rated by at least 30 users),</li>
+<li>have a complexity score,</li>
+<li>have been released between 1970 and 2024 and</li>
+<li>have a minimum playing time of at most 3 hours.</li>
+</ul>
+<p>This includes 23,325 of the 26,266 currently ranked games (88.8%), but does exclude some notable games, such as:</p>
+<ul>
+<li><a href="https://recommend.games/#/game/233078" style="font-variant: small-caps;">Twilight Imperium (Fourth Edition)</a>, <a href="https://recommend.games/#/game/91" style="font-variant: small-caps;">Paths of Glory</a> and <a href="https://recommend.games/#/game/1" style="font-variant: small-caps;">Die Macher</a> (too long), as well as</li>
+<li><a href="https://recommend.games/#/game/521" style="font-variant: small-caps;">Crokinole</a>, <a href="https://recommend.games/#/game/188" style="font-variant: small-caps;">Go</a> and <a href="https://recommend.games/#/game/5" style="font-variant: small-caps;">Acquire</a> (too old).</li>
+</ul>
+<p>Those are the highest ranked exclusions. While it&rsquo;s definitely sad to miss out on those and some other games, they make up only 2% of the top 1000 games on BGG, so I feel it&rsquo;s a reasonable tradeoff.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://recommend-games.github.io//tags/boardgamegeek/">BoardGameGeek</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/debiasing/">Debiasing</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/ranking/">ranking</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/rating/">rating</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/alternative-rankings/">alternative rankings</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fdebiasing-boardgamegeek-ranking%2f&amp;text=Debiasing%20the%20BoardGameGeek%20ranking&amp;via=recommend_games" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frecommend-games.github.io%2fposts%2fdebiasing-boardgamegeek-ranking%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fdebiasing-boardgamegeek-ranking%2f&amp;title=Debiasing%20the%20BoardGameGeek%20ranking" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fdebiasing-boardgamegeek-ranking%2f&amp;title=Debiasing%20the%20BoardGameGeek%20ranking" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fdebiasing-boardgamegeek-ranking%2f&amp;title=Debiasing%20the%20BoardGameGeek%20ranking" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frecommend-games.github.io%2fposts%2fdebiasing-boardgamegeek-ranking%2f&amp;description=Debiasing%20the%20BoardGameGeek%20ranking" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="https://recommend-games.github.io/posts/highest-rated-year/">What was the best year for board games?</a></li>
+                
+                    <li><a href="https://recommend-games.github.io/posts/collaborative-filtering/">A brief introduction to Collaborative Filtering</a></li>
+                
+                    <li><a href="https://recommend-games.github.io/posts/world-of-board-games/">The world of board games</a></li>
+                
+                    <li><a href="https://recommend-games.github.io/posts/rating-inequality-gini-coefficient/">Has board game rating inequality increased over the years?</a></li>
+                
+                    <li><a href="https://recommend-games.github.io/posts/recommend-games-ranking/">Recommend.Games ranking explained</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://recommend-games.github.io/posts/highest-rated-year/" data-toggle="tooltip" data-placement="top" title="What was the best year for board games?">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:contact@recommend.games" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/recommend-games" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://gitlab.com/recommend.games" title="GitLab">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://twitter.com/recommend_games" title="Twitter">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://linkedin.com/in/markusschepke" title="LinkedIn">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://stackoverflow.com/users/2634131/markus-shepherd" title="StackOverflow">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.youtube.com/user/MarkusSchepke" title="Youtube">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://paypal.me/mschepke" title="PayPal">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-paypal fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.kaggle.com/mshepherd" title="kaggle">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a rel="me"href="https://tabletop.social/@markus" title="Mastodon">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://recommend.games/">Recommend.Games</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://recommend-games.github.io/">Analysis Paralysis</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.122.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://recommend-games.github.io/js/main.js"></script>
+<script src="https://recommend-games.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://recommend-games.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
