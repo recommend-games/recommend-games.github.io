@@ -59,7 +59,7 @@
   "headline": "Debiasing the BoardGameGeek ranking",
   "description" : "Bias is a bit of an ugly word, isn\u0026rsquo;t it? It certainly has become one of those battle phrases in the culture war, where both sides of the argument accuse the other of forcing their biases onto society. Board game reviews frequently need to justify themselves for their biases affecting their views. Dan Thurot recently wrote a very eloquent piece on the matter, diving deeper into different kinds of biases.",
   "inLanguage" : "en",
-  "wordCount":  1518 ,
+  "wordCount":  1856 ,
   "datePublished" : "2024-09-05T12:00:00",
   "dateModified" : "2024-09-05T12:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -237,10 +237,10 @@
   <i class="fas fa-calendar"></i>&nbsp;Posted on September 5, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;8&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;9&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1518&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1856&nbsp;words
   
   
     
@@ -518,12 +518,33 @@
 </table>
 <p>At first glance, it might seem curious that some games from the current BGG top 10 stay (more or less) put whilst others fall off. The reason for this is that both <a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a> and <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> are considered to be both strategy and thematic games, two of the most popular categories, and so the model weighs them down twice. Instead, we see some of the top rated customisable, abstract and family games in this adjusted top 10. Download the full new ranking <a href="ranking_debiased_game_type.csv">here</a>.</p>
 <h1 id="removing-the-bias-towards-cooperative-games">Removing the bias towards cooperative games</h1>
+<p>Let&rsquo;s take a look at one final categorical feature to debias: competitive vs cooperative games. Cooperative games have been on the rise for a number of years now, winning six out of ten <span style="color: #E30613; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Spiel</strong></em></span> and <span style="color: #193F4A; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Kennerspiel des Jahres</strong></em></span> awards since I started my predictions in <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-4/">2020</a>. While less than 9% of all games in our dataset are cooperative, on average they have a significanly higher (by almost 0.48 points) rating compared to competitive games:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_cat_cooperative.png"
 	alt="Violin plot: competitive/cooperative games vs their ratings"
 	 />
 
+<p>We can go through the exercise of debiasing the ratings and calculating a new ranking here too, but the outcome would pretty much be just the standard BGG ranking with the cooperative games filter out (or rather weighed down). If you really want to take a look, you can download the new ranking <a href="ranking_debiased_cooperative.csv">here</a>.</p>
+<h1 id="removing-all-the-biases">Removing ALL the biases</h1>
+<p>OK, so you might be thinking by now why I went through all that trouble, in particular since complexity, playing time and game types are all so strongly correlated. You&rsquo;ve probably also been thinking <em>association isn&rsquo;t causation</em>. You&rsquo;d be right: viewing those different features <em>individually</em>, this approach yields nothing but correlations. But take them all <em>together</em> and we get a shot at a bit of <a href="https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html">causal inference</a>.</p>
+<p>How does it work? So far, I&rsquo;ve calculated those trend lines using simple linear regression (also known as the ordinary least squares method) in a single explanatory variable. But the maths works just the same in higher dimensions and we can throw in <em>all</em> the features discussed above into a single model, predicting again the game&rsquo;s rating, but now with much more information. The outcome is this:</p>
+<blockquote>
+<p><strong>Estimated rating</strong> =<br>
+-0.031 * age in years<br>
++0.567 * complexity score<br>
+-0.001 * minimum playing time in minutes<br>
++0.199 * if cooperative<br>
++0.167 * if an abstract game<br>
+-0.029 * if a children&rsquo;s game<br>
+-0.030 * if a customizable game<br>
++0.225 * if a family game<br>
++0.274 * if a party game<br>
++0.125 * if a strategy game<br>
++0.125 * if a thematic game<br>
++0.485 * if a war game<br>
++5.700</p>
+</blockquote>
 <h1 id="the-boring-details">The boring details</h1>
 <p>In order to have good data and comparable values for all those corrections, I had to filter out games by certain criteria. We only only considered games which:</p>
 <ul>
