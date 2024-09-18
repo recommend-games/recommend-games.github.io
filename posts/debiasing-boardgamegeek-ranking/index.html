@@ -59,7 +59,7 @@
   "headline": "Debiasing the BoardGameGeek ranking",
   "description" : "Bias is a bit of an ugly word, isn\u0026rsquo;t it? It certainly has become one of those battle phrases in the culture war, where both sides of the argument accuse the other of forcing their biases onto society. Board game reviews frequently need to justify themselves for their biases affecting their views. Dan Thurot recently wrote a very eloquent piece on the matter, diving deeper into different kinds of biases.",
   "inLanguage" : "en",
-  "wordCount":  1178 ,
+  "wordCount":  1518 ,
   "datePublished" : "2024-09-05T12:00:00",
   "dateModified" : "2024-09-05T12:00:00",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
@@ -237,10 +237,10 @@
   <i class="fas fa-calendar"></i>&nbsp;Posted on September 5, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;8&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1178&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1518&nbsp;words
   
   
     
@@ -438,19 +438,90 @@
 	 />
 
 <p>We see a similar trend line as with the complexity bias, which shouldn&rsquo;t come as a surprise since a game&rsquo;s length and complexity are highly correlated. The slope here is 0.0045, i.e., every minute it takes longer to play a game makes it 0.0045 points &ldquo;better&rdquo;, which does sound a bit weird when one puts it like that.</p>
-<p>Because publishers love to lie about playing time and claim most games can be played in about an hour, the adjusted ranking doesn&rsquo;t look all that different from the usual one, so I&rsquo;ll skip it for this article, but download it <a href="ranking_debiased_min_time.csv">here</a> if you&rsquo;d like to take a look anyways.</p>
+<p>Because publishers love to lie about playing time and claim most games can be played in about an hour, the adjusted ranking doesn&rsquo;t look all that different from the usual one, so I&rsquo;ll skip it for this article, but you can download it <a href="ranking_debiased_min_time.csv">here</a> if you&rsquo;d like to take a look anyways.</p>
+<h1 id="removing-the-game-type-bias">Removing the game type bias</h1>
+<p>So far, we&rsquo;ve been looking at continuous values (also known as numerical features), but we can apply the same principal to categories. One particularly interesting feature in this context is a game&rsquo;s type: BGG maintains separate rankings for eight different game types, and users can vote which of those types a game belongs to (depending on the share of votes, a game might be classified as more than one type). Given everything we&rsquo;ve seen so far, you can probably already guess that the lighter categories like children&rsquo;s and party games aren&rsquo;t as highly praised as war and strategy games. Here&rsquo;s all eight types sorted from lowest to highest average rating:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_cat_game_type.png"
+	alt="Violin plot: game types vs their ratings"
+	 />
+
+<p>Each of those little violins represent the distribution of ratings amongst that type, with the white line indicating the median. Removing the game type bias now means bringing those distributions in line:</p>
+
+<img
+	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_cat_game_type_animated.gif"
+	alt="Animation: removing the game type bias from games&#39; ratings"
+	 />
+
+<p>Just like before, we can calculate a new, debiased ranking:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Rank</th>
+<th style="text-align:left">Game</th>
+<th style="text-align:center">Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>#1</strong> <small>(🔸 0)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/224517" style="font-variant: small-caps;">Brass: Birmingham</a> <small>(2018)</small></td>
+<td style="text-align:center">8.2 <small>(🔻 0.4)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#2</strong> <small>(🔺 7)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/187645" style="font-variant: small-caps;">Star Wars: Rebellion</a> <small>(2016)</small></td>
+<td style="text-align:center">8.2 <small>(🔻 0.2)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#3</strong> <small>(🔺 1)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/342942" style="font-variant: small-caps;">Ark Nova</a> <small>(2021)</small></td>
+<td style="text-align:center">8.1 <small>(🔻 0.4)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#4</strong> <small>(🔺 36)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/285774" style="font-variant: small-caps;">Marvel Champions: The Card Game</a> <small>(2019)</small></td>
+<td style="text-align:center">8.2 <small>(🔺 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#5</strong> <small>(🔺 43)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/295947" style="font-variant: small-caps;">Cascadia</a> <small>(2021)</small></td>
+<td style="text-align:center">8.1 <small>(🔺 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#6</strong> <small>(🔺 31)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/324856" style="font-variant: small-caps;">The Crew: Mission Deep Sea</a> <small>(2021)</small></td>
+<td style="text-align:center">8.2 <small>(🔺 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#7</strong> <small>(🔺 34)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/366013" style="font-variant: small-caps;">Heat: Pedal to the Metal</a> <small>(2022)</small></td>
+<td style="text-align:center">8.1 <small>(🔺 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#8</strong> <small>(🔻 2)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/316554" style="font-variant: small-caps;">Dune: Imperium</a> <small>(2020)</small></td>
+<td style="text-align:center">8.0 <small>(🔻 0.4)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#9</strong> <small>(🔻 2)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/167791" style="font-variant: small-caps;">Terraforming Mars</a> <small>(2016)</small></td>
+<td style="text-align:center">7.9 <small>(🔻 0.4)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#10</strong> <small>(🔺 11)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/167355" style="font-variant: small-caps;">Nemesis</a> <small>(2018)</small></td>
+<td style="text-align:center">8.0 <small>(🔻 0.2)</small></td>
+</tr>
+</tbody>
+</table>
+<p>At first glance, it might seem curious that some games from the current BGG top 10 stay (more or less) put whilst others fall off. The reason for this is that both <a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a> and <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> are considered to be both strategy and thematic games, two of the most popular categories, and so the model weighs them down twice. Instead, we see some of the top rated customisable, abstract and family games in this adjusted top 10. Download the full new ranking <a href="ranking_debiased_game_type.csv">here</a>.</p>
 <h1 id="removing-the-bias-towards-cooperative-games">Removing the bias towards cooperative games</h1>
 
 <img
 	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_cat_cooperative.png"
 	alt="Violin plot: competitive/cooperative games vs their ratings"
-	 />
-
-<h1 id="removing-the-game-type-bias">Removing the game type bias</h1>
-
-<img
-	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_cat_game_type.png"
-	alt="Violin plot: game types vs their ratings"
 	 />
 
 <h1 id="the-boring-details">The boring details</h1>
