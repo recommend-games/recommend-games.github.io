@@ -59,9 +59,9 @@
   "headline": "Debiasing the BoardGameGeek ranking",
   "description" : "Bias is a bit of an ugly word, isn\u0026rsquo;t it? It certainly has become one of those battle phrases in the culture war, where both sides of the argument accuse the other of forcing their biases onto society. Board game reviews frequently need to justify themselves for their biases affecting their views. Dan Thurot recently wrote a very eloquent piece on the matter, diving deeper into different kinds of biases.",
   "inLanguage" : "en",
-  "wordCount":  1856 ,
-  "datePublished" : "2024-09-05T12:00:00",
-  "dateModified" : "2024-09-05T12:00:00",
+  "wordCount":  2786 ,
+  "datePublished" : "2024-09-20T22:34:11",
+  "dateModified" : "2024-09-20T22:34:11",
   "image" : "https:\/\/recommend-games.github.io\/logo.png",
   "keywords" : [ "BoardGameGeek, Debiasing, ranking, rating, alternative rankings" ],
   "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/debiasing-boardgamegeek-ranking\/",
@@ -234,13 +234,13 @@
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on September 5, 2024
+  <i class="fas fa-calendar"></i>&nbsp;Posted on September 20, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;9&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;14&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1856&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2786&nbsp;words
   
   
     
@@ -277,7 +277,7 @@
 	alt="Scatter plot: a game&#39;s age vs its rating"
 	 />
 
-<p>The points on the very left are the oldest games in our dataset, those published in 1970, whilst the ones on the right are those published in 2024. I&rsquo;ve plotted games with few ratings more faintly in order to declutter the image. The bold red line is the line of best fit, i.e., the trend line that best describes the yearly increase in average ratings. This picture should look pretty familiar if you&rsquo;ve read the <a href="https://recommend-games.github.io/posts/highest-rated-year/">previous article</a>, though we didn&rsquo;t aggregate by year but plotted every single game as an individual dot.</p>
+<p>The points on the very left are the oldest games in our dataset, those published in 1970, whilst the ones on the right are those published in 2024. I&rsquo;ve plotted games with few ratings more faintly in order to declutter the image. The bold red line is the line of best fit, i.e., the trend line that best describes the yearly increase in average ratings. This picture should look pretty familiar if you&rsquo;ve read the <a href="https://recommend-games.github.io/posts/highest-rated-year/">previous article</a>, though here we plotted every single game as an individual dot instead of aggregating by year.</p>
 <p>That trend line has a slope of 0.03, which means that overall, a game&rsquo;s average rating decrease by 0.03 with every year that has passed since its release. Now, removing the age bias means reducing that slope to 0. It&rsquo;s as if we consider each year on its own and only care how much better or worse a game was compared to its peers released at the same time. I hope this little animation will make things much clearer:</p>
 
 <img
@@ -349,17 +349,16 @@
 </tr>
 </tbody>
 </table>
-<p>As designed, older games are the big winners of this adjustment, with former BGG #1s <a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a> and <a href="https://recommend.games/#/game/3076" style="font-variant: small-caps;">Puerto Rico</a> making a comeback. Classic murder mystery game <a href="https://recommend.games/#/game/2511" style="font-variant: small-caps;">Sherlock Holmes Consulting Detective</a> makes a huge leap into the top 10 as one of the few games from the 80s that stood the test of time. Download the full new ranking <a href="ranking_debiased_age.csv">here</a>.</p>
+<p>As designed, older games are the big winners of this adjustment, with former BGG #1s <a href="https://recommend.games/#/game/12333" style="font-variant: small-caps;">Twilight Struggle</a> and <a href="https://recommend.games/#/game/3076" style="font-variant: small-caps;">Puerto Rico</a> making a comeback. Classic murder mystery game <a href="https://recommend.games/#/game/2511" style="font-variant: small-caps;">Sherlock Holmes Consulting Detective</a> makes a huge leap into the top 10 as one of the few games from the 80s that stood the test of time. You can download the full new ranking <a href="ranking_debiased_age.csv">here</a>.</p>
 <h1 id="removing-the-complexity-bias">Removing the complexity bias</h1>
-<p>Obviously, we can apply the exact same idea to other features, e.g., a game&rsquo;s complexity (or weight) as Dinesh Vatvani did in his <a href="https://dvatvani.com/blog/bgg-analysis-part-2">original article</a>. Again, we start by looking at the spread of the data points:</p>
+<p>Obviously, we can apply the exact same idea to other features, e.g., a game&rsquo;s complexity (or weight) as Dinesh Vatvani did in his <a href="https://dvatvani.com/blog/bgg-analysis-part-2">original article</a>. Again, we start by looking at the spread of the data points, from the lightest games on the left to the heaviest on the right:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_reg_complexity.png"
 	alt="Scatter plot: a game&#39;s complexity vs its rating"
 	 />
 
-<!-- TODO: Do we need to explain the complexity score from BGG? -->
-<p>The trend line has a slope of 0.63, i.e., the heaviest games on BGG have on average a full 2.5 point higher average score than the lighest ones. Somehow it feels particularly pleasing to see the light but clever games being lifted when we remove this complexity bias:</p>
+<p>The trend line has a slope of 0.63, i.e., the heaviest games on BGG have on average a full 2.5 point higher average score than the lighest ones. Somehow it feels particularly pleasing to see the light but clever games being lifted up when we remove this complexity bias:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_reg_complexity_animated.gif"
@@ -428,7 +427,7 @@
 </tr>
 </tbody>
 </table>
-<p>I&rsquo;m not going to lie: As a lover of small and interactive games, this top 10 looks much more apealing to me than the actual BGG top 10. Download the full new ranking <a href="ranking_debiased_complexity.csv">here</a>.</p>
+<p>I&rsquo;m not going to lie: As a lover of small and interactive games, this top 10 looks much more apealing to me than the actual BGG top 10. One striking observation: six out of these ten games won <span style="color: #E30613; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Spiel</strong></em></span> or <span style="color: #193F4A; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Kennerspiel des Jahres</strong></em></span> (if we generously count the other <a href="https://recommend.games/#/game/284083" style="font-variant: small-caps;">Crew</a>&rsquo;s title), with two more nominated and the other two recommended. The grognards on the internet can complain all they want about how the awards have become too shallow, but the jury really knows how to pick out the games that put the maximum amount of game play into minimal rules. You can download the full new ranking <a href="ranking_debiased_complexity.csv">here</a>.</p>
 <h1 id="removing-the-playing-time-bias">Removing the playing time bias</h1>
 <p>Next, we&rsquo;ll take a look at how a game&rsquo;s playing time (as measured by the minimum playing time printed on the box) affects its rating:</p>
 
@@ -516,9 +515,9 @@
 </tr>
 </tbody>
 </table>
-<p>At first glance, it might seem curious that some games from the current BGG top 10 stay (more or less) put whilst others fall off. The reason for this is that both <a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a> and <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> are considered to be both strategy and thematic games, two of the most popular categories, and so the model weighs them down twice. Instead, we see some of the top rated customisable, abstract and family games in this adjusted top 10. Download the full new ranking <a href="ranking_debiased_game_type.csv">here</a>.</p>
+<p>At first glance, it might seem curious that some games from the current BGG top 10 stay (more or less) put whilst others fall off. The reason for this is that both <a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a> and <a href="https://recommend.games/#/game/174430" style="font-variant: small-caps;">Gloomhaven</a> are considered to be both strategy and thematic games, two of the most popular categories, and so the model weighs them down twice. Instead, we see some of the top rated customisable, abstract and family games in this adjusted top 10. Again, you can download the full new ranking <a href="ranking_debiased_game_type.csv">here</a>.</p>
 <h1 id="removing-the-bias-towards-cooperative-games">Removing the bias towards cooperative games</h1>
-<p>Let&rsquo;s take a look at one final categorical feature to debias: competitive vs cooperative games. Cooperative games have been on the rise for a number of years now, winning six out of ten <span style="color: #E30613; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Spiel</strong></em></span> and <span style="color: #193F4A; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Kennerspiel des Jahres</strong></em></span> awards since I started my predictions in <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-4/">2020</a>. While less than 9% of all games in our dataset are cooperative, on average they have a significanly higher (by almost 0.48 points) rating compared to competitive games:</p>
+<p>Let&rsquo;s take a look at one final categorical feature to debias: competitive vs cooperative games. Cooperative games have been on the rise for a number of years now, winning six out of ten <span style="color: #E30613; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Spiel</strong></em></span> and <span style="color: #193F4A; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"><em><strong>Kennerspiel des Jahres</strong></em></span> awards since I started my predictions in <a href="https://recommend-games.github.io/posts/and-the-spiel-des-jahres-2020-goes-to-part-4/">2020</a>. While less than 9% of all games in our dataset are cooperative, on average they have a significantly higher (by almost 0.48 points) rating compared to competitive games:</p>
 
 <img
 	src="https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/plot_cat_cooperative.png"
@@ -526,39 +525,185 @@
 	 />
 
 <p>We can go through the exercise of debiasing the ratings and calculating a new ranking here too, but the outcome would pretty much be just the standard BGG ranking with the cooperative games filter out (or rather weighed down). If you really want to take a look, you can download the new ranking <a href="ranking_debiased_cooperative.csv">here</a>.</p>
-<h1 id="removing-all-the-biases">Removing ALL the biases</h1>
-<p>OK, so you might be thinking by now why I went through all that trouble, in particular since complexity, playing time and game types are all so strongly correlated. You&rsquo;ve probably also been thinking <em>association isn&rsquo;t causation</em>. You&rsquo;d be right: viewing those different features <em>individually</em>, this approach yields nothing but correlations. But take them all <em>together</em> and we get a shot at a bit of <a href="https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html">causal inference</a>.</p>
-<p>How does it work? So far, I&rsquo;ve calculated those trend lines using simple linear regression (also known as the ordinary least squares method) in a single explanatory variable. But the maths works just the same in higher dimensions and we can throw in <em>all</em> the features discussed above into a single model, predicting again the game&rsquo;s rating, but now with much more information. The outcome is this:</p>
+<h1 id="removing-all-the-biases">Removing <em>all</em> the biases</h1>
+<p>OK, so you might be wondering by now why I went through all that trouble, in particular since complexity, playing time and game types are all so strongly correlated. You&rsquo;ve probably also been thinking <em>association isn&rsquo;t causation</em>. You&rsquo;d be right: viewing those different features <em>individually</em>, this approach yields nothing but correlations. But take them all <em>together</em> and we get a shot at a bit of <a href="https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html">causal inference</a>.</p>
+<p>How does it work? So far, I&rsquo;ve calculated those trend lines using simple linear regression (also known as the ordinary least squares method) in a single explanatory variable. But the maths works just the same in higher dimensions and we can throw <em>all</em> the features discussed above at once into a single model, predicting again the game&rsquo;s rating, but now with much more information. The outcome is this:</p>
 <blockquote>
 <p><strong>Estimated rating</strong> =<br>
 -0.031 * age in years<br>
 +0.567 * complexity score<br>
 -0.001 * minimum playing time in minutes<br>
-+0.199 * if cooperative<br>
-+0.167 * if an abstract game<br>
--0.029 * if a children&rsquo;s game<br>
--0.030 * if a customizable game<br>
-+0.225 * if a family game<br>
-+0.274 * if a party game<br>
-+0.125 * if a strategy game<br>
-+0.125 * if a thematic game<br>
-+0.485 * if a war game<br>
++0.167 if an abstract game<br>
+-0.029 if a children&rsquo;s game<br>
+-0.030 if a customizable game<br>
++0.225 if a family game<br>
++0.274 if a party game<br>
++0.125 if a strategy game<br>
++0.125 if a thematic game<br>
++0.485 if a war game<br>
++0.199 if cooperative<br>
 +5.700</p>
 </blockquote>
-<h1 id="the-boring-details">The boring details</h1>
-<p>In order to have good data and comparable values for all those corrections, I had to filter out games by certain criteria. We only only considered games which:</p>
+<p>It&rsquo;s worth taking a look at and comparing some of those coefficients. First of: Age and complexity have about the same influence in this combined model as they had individually. This means that age and complexity biases are real. Even when taking other factors into account, gamers clearly strongly prefer newer over older and heavier over lighter games.</p>
+<p>Interestingly, something different is happening with playing time: If you recall, the original model estimated that every minute of additional playing time <em>increased</em> the rating by around 0.005, but this model tells us that every minute extra actually <em>decreases</em> a game&rsquo;s rating by 0.001. This number is very small, but the direction is still statistically significant. This is a sign that the model correctly decoupled what we discussed before intuitively: the positive correlation between a game&rsquo;s length and rating can be explained by the game&rsquo;s complexity. Once we take that into account, any additional playing time actually harms the game&rsquo;s rating. In other words: Our model finds that – all other features being equal – players do prefer shorter over longer games.</p>
+<p>We observe some similar effects with the game types. In the single feature model, children&rsquo;s games were rated over 0.6 points lower. But in this multi feature model, the coefficient is very close to zero, in fact not statistically significantly different. This is evidence that the &lsquo;geeks don&rsquo;t actually have a systematic bias against children&rsquo;s games – they dislike all light games equally, no matter whether they are for children or adults.</p>
+<p>Finally, the bias in favour of cooperative games is still pretty clear, but at around 0.2 it&rsquo;s less than have what the single feature model predicted. They clearly are very fashionable, but much of their higher average ratings can be explained by other variables.</p>
+<p>Enough looking at coefficients, let&rsquo;s finally move on to the moment you didn&rsquo;t even know you were looking forward to: the ultimate debiased ranking. Just like with all the other models, we can use this multivariate model to debias the games&rsquo; ratings by simply setting all those coefficients to zero. We lose the ability to animate this process for easy visualisation, but we gain average ratings and a ranking freed of all the biases we&rsquo;ve been talking about:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Rank</th>
+<th style="text-align:left">Game</th>
+<th style="text-align:center">Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>#1</strong> <small>(🔺 323)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/2653" style="font-variant: small-caps;">Survive: Escape from Atlantis!</a> <small>(1982)</small></td>
+<td style="text-align:center">8.2 <small>(🔺 0.9)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#2</strong> <small>(🔺 772)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/41" style="font-variant: small-caps;">Can&rsquo;t Stop</a> <small>(1980)</small></td>
+<td style="text-align:center">8.2 <small>(🔺 1.3)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#3</strong> <small>(🔺 326)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/172" style="font-variant: small-caps;">For Sale</a> <small>(1997)</small></td>
+<td style="text-align:center">7.9 <small>(🔺 0.7)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#4</strong> <small>(🔺 15)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/173346" style="font-variant: small-caps;">7 Wonders Duel</a> <small>(2015)</small></td>
+<td style="text-align:center">7.8 <small>(🔻 0.3)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#5</strong> <small>(🔺 146)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/2511" style="font-variant: small-caps;">Sherlock Holmes Consulting Detective</a> <small>(1982)</small></td>
+<td style="text-align:center">7.9 <small>(🔺 0.3)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#6</strong> <small>(🔺 209)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/215" style="font-variant: small-caps;">Tichu</a> <small>(1991)</small></td>
+<td style="text-align:center">8.0 <small>(🔺 0.4)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#7</strong> <small>(🔺 205)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/118" style="font-variant: small-caps;">Modern Art</a> <small>(1992)</small></td>
+<td style="text-align:center">7.9 <small>(🔺 0.4)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#8</strong> <small>(🔺 637)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/432" style="font-variant: small-caps;">Take 5</a> <small>(1994)</small></td>
+<td style="text-align:center">7.8 <small>(🔺 0.8)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#9</strong> <small>(🔺 316)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/50" style="font-variant: small-caps;">Lost Cities</a> <small>(1999)</small></td>
+<td style="text-align:center">7.7 <small>(🔺 0.5)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#10</strong> <small>(🔺 204)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/822" style="font-variant: small-caps;">Carcassonne</a> <small>(2000)</small></td>
+<td style="text-align:center">7.6 <small>(🔺 0.2)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#11</strong> <small>(🔺 177)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/54043" style="font-variant: small-caps;">Jaipur</a> <small>(2009)</small></td>
+<td style="text-align:center">7.7 <small>(🔺 0.2)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#12</strong> <small>(🔺 117)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/178900" style="font-variant: small-caps;">Codenames</a> <small>(2015)</small></td>
+<td style="text-align:center">7.6 <small>(🔺 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#13</strong> <small>(🔺 125)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/12" style="font-variant: small-caps;">Ra</a> <small>(1999)</small></td>
+<td style="text-align:center">7.7 <small>(🔺 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#14</strong> <small>(🔺 141)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/14996" style="font-variant: small-caps;">Ticket to Ride: Europe</a> <small>(2005)</small></td>
+<td style="text-align:center">7.6 <small>(🔺 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#15</strong> <small>(🔺 76)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/93" style="font-variant: small-caps;">El Grande</a> <small>(1995)</small></td>
+<td style="text-align:center">7.7 <small>(🔻 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#16</strong> <small>(🔻 9)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/167791" style="font-variant: small-caps;">Terraforming Mars</a> <small>(2016)</small></td>
+<td style="text-align:center">7.6 <small>(🔻 0.8)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#17</strong> <small>(🔻 15)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/161936" style="font-variant: small-caps;">Pandemic Legacy: Season 1</a> <small>(2015)</small></td>
+<td style="text-align:center">7.6 <small>(🔻 0.9)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#18</strong> <small>(🔺 289)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/46213" style="font-variant: small-caps;">Telestrations</a> <small>(2009)</small></td>
+<td style="text-align:center">7.8 <small>(🔺 0.4)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#19</strong> <small>(🔺 211)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/9209" style="font-variant: small-caps;">Ticket to Ride</a> <small>(2004)</small></td>
+<td style="text-align:center">7.5 <small>(🔺 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#20</strong> <small>(🔺 85)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/291453" style="font-variant: small-caps;">SCOUT</a> <small>(2019)</small></td>
+<td style="text-align:center">7.8 <small>(🔻 0.1)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#21</strong> <small>(🔺 273)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/760" style="font-variant: small-caps;">Battle Line</a> <small>(2000)</small></td>
+<td style="text-align:center">7.8 <small>(🔺 0.3)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#22</strong> <small>(🔺 634)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/699" style="font-variant: small-caps;">HeroQuest</a> <small>(1989)</small></td>
+<td style="text-align:center">7.8 <small>(🔺 0.6)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#23</strong> <small>(🔺 368)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/39856" style="font-variant: small-caps;">Dixit</a> <small>(2008)</small></td>
+<td style="text-align:center">7.5 <small>(🔺 0.3)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#24</strong> <small>(🔻 8)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/84876" style="font-variant: small-caps;">The Castles of Burgundy</a> <small>(2011)</small></td>
+<td style="text-align:center">7.5 <small>(🔻 0.6)</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>#25</strong> <small>(🔻 19)</small></td>
+<td style="text-align:left"><a href="https://recommend.games/#/game/316554" style="font-variant: small-caps;">Dune: Imperium</a> <small>(2020)</small></td>
+<td style="text-align:center">7.5 <small>(🔻 0.9)</small></td>
+</tr>
+</tbody>
+</table>
+<p>I will say: <a href="https://recommend.games/#/game/2653" style="font-variant: small-caps;">Survive: Escape from Atlantis!</a> is not a game I would have expected on top of this list. In general, this top 25 is clearly much lighter and less recent than the regular BGG ranking. Personally, I&rsquo;m up for this: it&rsquo;s a wonderful list full of proven classics, devoid of any cult of the new or Kickstarter bloat.</p>
+<p>Some games made huge leaps into the top 100, including <a href="https://recommend.games/#/game/811" style="font-variant: small-caps;">Rummikub</a>, <a href="https://recommend.games/#/game/327" style="font-variant: small-caps;">Loopin&rsquo; Louie</a> and <a href="https://recommend.games/#/game/17329" style="font-variant: small-caps;">Animal Upon Animal</a> which all jumped up over 1000 positions. The biggest losers of this method – games dropping out of the top 100 – are <a href="https://recommend.games/#/game/184267" style="font-variant: small-caps;">On Mars</a>, <a href="https://recommend.games/#/game/237182" style="font-variant: small-caps;">Root</a> and <a href="https://recommend.games/#/game/96848" style="font-variant: small-caps;">Mage Knight</a>, all of which lost 1000 positions and more. You can download the full debiased ranking <a href="ranking_debiased_all.csv">here</a>.</p>
+<h1 id="some-boring-technical-details">Some boring technical details</h1>
+<p>In order to have good data and comparable values for all those corrections, I had to filter out games by certain criteria. We only considered games which:</p>
 <ul>
-<li>have a ranking (i.e., are rated by at least 30 users),</li>
+<li>are ranked (i.e., rated by at least 30 users),</li>
 <li>have a complexity score,</li>
 <li>have been released between 1970 and 2024 and</li>
 <li>have a minimum playing time of at most 3 hours.</li>
 </ul>
 <p>This includes 23,325 of the 26,266 currently ranked games (88.8%), but does exclude some notable games, such as:</p>
 <ul>
-<li><a href="https://recommend.games/#/game/233078" style="font-variant: small-caps;">Twilight Imperium (Fourth Edition)</a>, <a href="https://recommend.games/#/game/91" style="font-variant: small-caps;">Paths of Glory</a> and <a href="https://recommend.games/#/game/1" style="font-variant: small-caps;">Die Macher</a> (too long), as well as</li>
+<li><a href="https://recommend.games/#/game/233078" style="font-variant: small-caps;">Twilight Imperium</a>, <a href="https://recommend.games/#/game/91" style="font-variant: small-caps;">Paths of Glory</a> and <a href="https://recommend.games/#/game/1" style="font-variant: small-caps;">Die Macher</a> (too long), as well as</li>
 <li><a href="https://recommend.games/#/game/521" style="font-variant: small-caps;">Crokinole</a>, <a href="https://recommend.games/#/game/188" style="font-variant: small-caps;">Go</a> and <a href="https://recommend.games/#/game/5" style="font-variant: small-caps;">Acquire</a> (too old).</li>
 </ul>
 <p>Those are the highest ranked exclusions. While it&rsquo;s definitely sad to miss out on those and some other games, they make up only 2% of the top 1000 games on BGG, so I feel it&rsquo;s a reasonable tradeoff.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>So that&rsquo;s a wrap on our quest for debiased rankings. It&rsquo;s important to remember that <em>bias</em> isn&rsquo;t a negative term in this context – we&rsquo;re simply interested in the tendencies that pertain to the BGG user ratings and try to imagine counterfactual rankings if those tendencies didn&rsquo;t exist. By considering not just a single feature like age or complexity, but throwing those two as well as playing time, game type and cooperative into one model, we hope to explain the way those features influence ratings beyond mere correlations. If you&rsquo;re interested in the mathematical background to this method, I highly recommend the <a href="https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html">article</a> I&rsquo;ve already linked above.</p>
+<p><em>As always, you can find the full analysis code and notebooks on <a href="https://gitlab.com/recommend.games/blog/-/tree/master/experiments/debiased_rankings">GitLab</a>.</em></p>
 
 
         
@@ -667,6 +812,10 @@
               <a href="https://recommend-games.github.io/posts/highest-rated-year/" data-toggle="tooltip" data-placement="top" title="What was the best year for board games?">&larr; Previous Post</a>
             </li>
           
+          
+            <li class="next">
+              <a href="https://recommend-games.github.io/posts/visualising-riemann-hypothesis/" data-toggle="tooltip" data-placement="top" title="Beyond games: Visualising the Riemann Hypothesis">Next Post &rarr;</a>
+            </li>
           
         </ul>
       

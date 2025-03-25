@@ -8,40 +8,89 @@
     <language>en</language>
     <managingEditor>contact@recommend.games (Recommend.Games)</managingEditor>
     <webMaster>contact@recommend.games (Recommend.Games)</webMaster>
-    <lastBuildDate>Thu, 05 Sep 2024 12:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 23 Oct 2024 12:00:00 +0300</lastBuildDate>
     <atom:link href="https://recommend-games.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beyond games</title>
+      <link>https://recommend-games.github.io/tags/beyond-games/</link>
+      <pubDate>Wed, 23 Oct 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/beyond-games/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mathematics</title>
+      <link>https://recommend-games.github.io/tags/mathematics/</link>
+      <pubDate>Wed, 23 Oct 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/mathematics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Number theory</title>
+      <link>https://recommend-games.github.io/tags/number-theory/</link>
+      <pubDate>Wed, 23 Oct 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/number-theory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prime numbers</title>
+      <link>https://recommend-games.github.io/tags/prime-numbers/</link>
+      <pubDate>Wed, 23 Oct 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/prime-numbers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://recommend-games.github.io/tags/python/</link>
+      <pubDate>Wed, 23 Oct 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Riemann hypothesis</title>
+      <link>https://recommend-games.github.io/tags/riemann-hypothesis/</link>
+      <pubDate>Wed, 23 Oct 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/riemann-hypothesis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Riemann zeta function</title>
+      <link>https://recommend-games.github.io/tags/riemann-zeta-function/</link>
+      <pubDate>Wed, 23 Oct 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <guid>https://recommend-games.github.io/tags/riemann-zeta-function/</guid>
+      <description></description>
+    </item>
     <item>
       <title>alternative rankings</title>
       <link>https://recommend-games.github.io/tags/alternative-rankings/</link>
-      <pubDate>Thu, 05 Sep 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Fri, 20 Sep 2024 22:34:11 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/alternative-rankings/</guid>
       <description></description>
     </item>
     <item>
       <title>BoardGameGeek</title>
       <link>https://recommend-games.github.io/tags/boardgamegeek/</link>
-      <pubDate>Thu, 05 Sep 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Fri, 20 Sep 2024 22:34:11 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/boardgamegeek/</guid>
       <description></description>
     </item>
     <item>
       <title>Debiasing</title>
       <link>https://recommend-games.github.io/tags/debiasing/</link>
-      <pubDate>Thu, 05 Sep 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Fri, 20 Sep 2024 22:34:11 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/debiasing/</guid>
       <description></description>
     </item>
     <item>
       <title>ranking</title>
       <link>https://recommend-games.github.io/tags/ranking/</link>
-      <pubDate>Thu, 05 Sep 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Fri, 20 Sep 2024 22:34:11 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/ranking/</guid>
       <description></description>
     </item>
     <item>
       <title>rating</title>
       <link>https://recommend-games.github.io/tags/rating/</link>
-      <pubDate>Thu, 05 Sep 2024 12:00:00 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
+      <pubDate>Fri, 20 Sep 2024 22:34:11 +0300</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/rating/</guid>
       <description></description>
     </item>
@@ -533,13 +582,6 @@
       <link>https://recommend-games.github.io/tags/osprey-games/</link>
       <pubDate>Tue, 27 Feb 2024 22:37:01 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
       <guid>https://recommend-games.github.io/tags/osprey-games/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>https://recommend-games.github.io/tags/python/</link>
-      <pubDate>Tue, 27 Feb 2024 22:37:01 +0200</pubDate><author>contact@recommend.games (Recommend.Games)</author>
-      <guid>https://recommend-games.github.io/tags/python/</guid>
       <description></description>
     </item>
     <item>

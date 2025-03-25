@@ -2,40 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://recommend-games.github.io/tags/alternative-rankings/</loc>
-    <lastmod>2024-09-05T12:00:00+03:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
     <loc>https://recommend-games.github.io/</loc>
-    <lastmod>2024-09-05T12:00:00+03:00</lastmod>
+    <lastmod>2024-10-23T12:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://recommend-games.github.io/tags/boardgamegeek/</loc>
-    <lastmod>2024-09-05T12:00:00+03:00</lastmod>
+    <loc>https://recommend-games.github.io/tags/beyond-games/</loc>
+    <lastmod>2024-10-23T12:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://recommend-games.github.io/tags/debiasing/</loc>
-    <lastmod>2024-09-05T12:00:00+03:00</lastmod>
+    <loc>https://recommend-games.github.io/posts/visualising-riemann-hypothesis/</loc>
+    <lastmod>2024-10-23T12:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/</loc>
-    <lastmod>2024-09-05T12:00:00+03:00</lastmod>
+    <loc>https://recommend-games.github.io/tags/mathematics/</loc>
+    <lastmod>2024-10-23T12:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/tags/number-theory/</loc>
+    <lastmod>2024-10-23T12:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://recommend-games.github.io/posts/</loc>
-    <lastmod>2024-09-05T12:00:00+03:00</lastmod>
+    <lastmod>2024-10-23T12:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://recommend-games.github.io/tags/ranking/</loc>
-    <lastmod>2024-09-05T12:00:00+03:00</lastmod>
+    <loc>https://recommend-games.github.io/tags/prime-numbers/</loc>
+    <lastmod>2024-10-23T12:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://recommend-games.github.io/tags/rating/</loc>
-    <lastmod>2024-09-05T12:00:00+03:00</lastmod>
+    <loc>https://recommend-games.github.io/tags/python/</loc>
+    <lastmod>2024-10-23T12:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/tags/riemann-hypothesis/</loc>
+    <lastmod>2024-10-23T12:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/tags/riemann-zeta-function/</loc>
+    <lastmod>2024-10-23T12:00:00+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://recommend-games.github.io/tags/</loc>
-    <lastmod>2024-09-05T12:00:00+03:00</lastmod>
+    <lastmod>2024-10-23T12:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/tags/alternative-rankings/</loc>
+    <lastmod>2024-09-20T22:34:11+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/tags/boardgamegeek/</loc>
+    <lastmod>2024-09-20T22:34:11+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/tags/debiasing/</loc>
+    <lastmod>2024-09-20T22:34:11+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/posts/debiasing-boardgamegeek-ranking/</loc>
+    <lastmod>2024-09-20T22:34:11+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/tags/ranking/</loc>
+    <lastmod>2024-09-20T22:34:11+03:00</lastmod>
+    <changefreq>daily</changefreq>
+  </url><url>
+    <loc>https://recommend-games.github.io/tags/rating/</loc>
+    <lastmod>2024-09-20T22:34:11+03:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://recommend-games.github.io/tags/board-games-insider/</loc>
@@ -363,10 +395,6 @@
     <changefreq>daily</changefreq>
   </url><url>
     <loc>https://recommend-games.github.io/tags/osprey-games/</loc>
-    <lastmod>2024-02-27T22:37:01+02:00</lastmod>
-    <changefreq>daily</changefreq>
-  </url><url>
-    <loc>https://recommend-games.github.io/tags/python/</loc>
     <lastmod>2024-02-27T22:37:01+02:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
