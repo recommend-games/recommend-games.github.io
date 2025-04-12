@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Elo ratings explained - Analysis Paralysis</title>
+  <meta name="description" content="How to measure players&#39; skills in games">
+  <meta name="author" content="Recommend.Games"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Analysis Paralysis",
+    
+    "url": "https:\/\/recommend-games.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/recommend-games.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/recommend-games.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/recommend-games.github.io\/posts\/elo-ratings-explained\/",
+          "name": "Elo ratings explained"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Markus Shepherd"
+  },
+  "headline": "Elo ratings explained",
+  "description" : "Introduction Chance in games is like seasoning in food — it\u0026rsquo;s all about the right amount. Just imagine a life without chance, where everything could be planned out strategically. That would get boring over time. In a game, I want to have experiences — I want adventure. A good game is like a miniature life, one where I can make mistakes, enjoy a streak of bad or good luck, and still recover.",
+  "inLanguage" : "en",
+  "wordCount":  1900 ,
+  "datePublished" : "2025-04-13T12:00:00",
+  "dateModified" : "2025-04-13T12:00:00",
+  "image" : "https:\/\/recommend-games.github.io\/logo.png",
+  "keywords" : [ "Elo rating, Snooker" ],
+  "mainEntityOfPage" : "https:\/\/recommend-games.github.io\/posts\/elo-ratings-explained\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/recommend-games.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/recommend-games.github.io\/logo.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Elo ratings explained" />
+<meta property="og:description" content="How to measure players&#39; skills in games">
+<meta property="og:image" content="https://recommend-games.github.io/logo.png" />
+<meta property="og:url" content="https://recommend-games.github.io/posts/elo-ratings-explained/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Analysis Paralysis" />
+
+  <meta name="twitter:title" content="Elo ratings explained" />
+  <meta name="twitter:description" content="How to measure players&#39; skills in games">
+  <meta name="twitter:image" content="https://recommend-games.github.io/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@recommend_games" />
+  <meta name="twitter:creator" content="@recommend_games" />
+  <link href='https://recommend-games.github.io/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.122.0">
+  <link rel="alternate" href="https://recommend-games.github.io/index.xml" type="application/rss+xml" title="Analysis Paralysis"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://recommend-games.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://recommend-games.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://recommend-games.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://recommend-games.github.io/">Analysis Paralysis</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Recommend.Games" href="https://recommend.games/#/">Recommend.Games</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="https://recommend-games.github.io/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Donate" href="https://recommend-games.github.io/page/donations/">Donate</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Analysis Paralysis" href="https://recommend-games.github.io/">
+            <img class="avatar-img" src="https://recommend-games.github.io/logo.png" alt="Analysis Paralysis" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Elo ratings explained</h1>
+              
+              
+              
+                
+                  <h2 class="post-subheading">How to measure players&#39; skills in games</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on April 13, 2025
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;9&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1900&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Markus Shepherd
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h2 id="introduction">Introduction</h2>
+<blockquote>
+<p>Chance in games is like seasoning in food — it&rsquo;s all about the right amount. Just imagine a life without chance, where everything could be planned out strategically. That would get boring over time. In a game, I want to have experiences — I want adventure. A good game is like a miniature life, one where I can make mistakes, enjoy a streak of bad or good luck, and still recover. But you shouldn&rsquo;t be at the mercy of randomness. There should be ways to compensate — like a friend of mine in CATAN, who always complains about his bad luck, prompting others to treat him more kindly and rarely target him with the robber. In the end, he often wins — to everyone&rsquo;s surprise. <br>
+— <strong>Klaus Teuber</strong> on the importance of randomness in games in <a href="https://www.catan.de/sites/default/files/2021-11/dl_Catan-News-2000-1.pdf">CATAN-News 1/2000</a></p>
+</blockquote>
+<p>The balance between luck and skill in games can sometimes feel like a magic trick: the winner will attribute their victory to their great skills, whilst the losers can blame their misfortune on unlucky rolls of dice. Striking that balance right will have a major impact on the target audience of a game: if a game is totally random and offers no meaningful choices, it won&rsquo;t be interesting for anyone above a certain age (I&rsquo;m still waiting for my kids to outgrow that phase 😅); if its learning curve is too steep, the upfront investment of navigating the strategic depths might put off many people who have an overflowing shelf of shame waiting to be played.</p>
+<p>But how can we quantify luck and skills in games? It&rsquo;s a vast and deep topic – one about which I intend to write a small series. We&rsquo;ll start with a slightly simpler question: how can we measure <em>an individual player&rsquo;s skill</em> in a game? There&rsquo;s good reasons why one would want to do this (beyond writing articles about it):</p>
+<ul>
+<li>Tracking one&rsquo;s progress in learning the best strategies in a game: If I want to dive deep into a game, it&rsquo;s useful to understand how much I&rsquo;ve advanced and what the road ahead might look like.</li>
+<li>Finding opponents which match one&rsquo;s skill level: If I were to play chess against Magnus Carlsen, I&rsquo;d be crushed in no time and neither one of us would particularly enjoy the experience, nor would I learn anything from such a match. Many games are most fun if all players around the table are at a somewhat comparable level.</li>
+<li>Showing off one&rsquo;s skill level: People do love a good ranking – once we&rsquo;ve put a number on players&rsquo; skills, we can rank them and &ldquo;objectively&rdquo; determine who is the best. 🤓</li>
+</ul>
+<p>Perhaps the best known and most widely adopted way to measure skills in games is the <strong>Elo rating</strong>, developed by and named<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> after Arpad Elo, a Hungarian-American physics professor. As an avid chess player, Elo devised the system on behalf of the United States Chess Federation (USCF). The ideas behind it are very general though, and it has been adapted for other games, sports and online platforms such as <a href="https://boardgamearena.com/">Board Game Arena</a>. Reason enough for us to study and understand it.</p>
+<h2 id="key-idea">Key idea</h2>
+<p>First of all, the Elo rating system doesn&rsquo;t attempt to measure absolute, but relative skills. As such, it uses the difference in ratings between the two<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> players to try and predict the probability of one player winning or the other. So, the higher the rating difference between two players is, the more likely it is that the stronger player wins. As one might expect, players earn rating points through winning matches, but crucially, they earn more by winnining against stronger players and lose more by losing against weaker players. Elo ratings achieve this by compare the expected with the actual outcome. If you beat the odds and exceed expectations, your rating goes up; if you underperform, your rating goes down.</p>
+<p>Consider this metaphor: imagine both players placing an ante of &ldquo;skill chits&rdquo; into the pot before the game begins. The higher your rating advantage over your opponent is, the higher your stake in the game. Conversely, if you&rsquo;re much lower rated, you don&rsquo;t have much too lose. The winner will take the whole pot, so if you can land an unexpected upset win, you&rsquo;re increasing your rating by a lot. A draw means splitting the pot, so you will still increase your rating in this case if you were expected to lose and hence put much less than 50% into the pot.</p>
+<h2 id="formula">Formula</h2>
+<p>Let&rsquo;s make this more concrete with formulae. Assume we have players <em>A</em> and <em>B</em> with some ratings \(r_A\) and \(r_B\). (I know it&rsquo;s a bit confusing to explain how to use the ratings before we explained how to calculate them, but just roll with it for a minute.) Then we can calculate \(p_A\), the probability that <em>A</em> will win the game, like this:</p>
+<p>\[ p_A = \frac{1}{1 + 10^{-(r_A - r_B) / 400}}. \]</p>
+<p>If you&rsquo;ve never seen a formula like this, it&rsquo;s probably a lot to digest, so let&rsquo;s take a minute to understand what&rsquo;s going on here. Whenever I encounter a formula like this, I like to first check that it makes any sense at all by plugging in some values. Notice how the important part about the ratings is just their difference \(r_A-r_B\), as mentioned before, so let&rsquo;s consider some case.</p>
+<p>First: what if both players have the same skill level, i.e., that difference is 0? In this case, we&rsquo;d have \(p_A=\frac{1}{1+10^0}=\frac{1}{1+1}=0.5\), i.e., both players having equal chances of winning, which checks out. Next, what if player <em>A</em> is so much higher rated that the difference tends towards infinity? The exponent contains a minus sign, and the exponential function tends to 0 for negative infinity, so we&rsquo;d have \(p_A=\frac{1}{1+10^{-\infty}}=\frac{1}{1+0}=1\), i.e., player <em>A</em> would be all but guaranteed to win. Conversely, if the &ldquo;infinite advantage&rdquo; was on player <em>B</em>&rsquo;s side, we&rsquo;d have an exponential function that goes to infinity in the denominator, and hence the whole expression goint to 0, i.e., \(p_A=0\). (Note that we can get the probability of <em>B</em> winning simply by calculating \(p_B=1-p_A\), and all the formulae work analoguous, so we&rsquo;re not going to spend much attention to it.)</p>
+<p>I hope this convinces you that this expression produces sensible probability values, if nothing else. To recap, this calculation would happen pre-match and give you a predicted probability that player <em>A</em> will win the match. (If you&rsquo;re the gambling kind, this might be how you determine your bet on <em>A</em>.) Once the match is over, we need to compare this prediction with the actual outcome or score \(s_A\), where \(s_A = 1\) if <em>A</em> won the game, \(s_A = 0\) if they lost and \(s_A = 0.5\) in case of a draw. We then update <em>A</em>&rsquo;s rating by</p>
+<p>\[ r_A \leftarrow r_A + K \cdot (s_A - p_A), \]</p>
+<p>where \(K&gt;0\) is a factor we can freely choose. (More on this in a bit.)</p>
+<p>Again, let&rsquo;s check if this makes sense. If <em>A</em> won, we have \(s_A = 1\), and so \(s_A - p_A\) will be positive. If player <em>A</em> was highly rated and so the win was expected, that difference will be very small and <em>A</em> will have their rating increased by only very few points, if the win was unexpected, i.e., \(p_A\) was low, then difference between predicted and actual outcome will be large and <em>A</em>&rsquo;s rating will be increased by up to \(K\) points. If <em>A</em> lost, then \(s_A = 0\) and the difference will be negative, i.e., <em>A</em>&rsquo;s rating will be decreased in the same way (and now <em>B</em> would receive those points).</p>
+<p>Let&rsquo;s go back to our &ldquo;skill chits pot&rdquo; metaphor. In that view, player <em>A</em> would put \(K \cdot p_A\) chits into the ante, with player <em>B</em> contributing \(K \cdot p_B = K \cdot (1-p_A)\). The pot now holds \(K\) chits in total as reward for the winner. Because they paid \(K \cdot p\) chits as buy-in for the game, they&rsquo;ve now gained \(K \cdot (1 - p)\) chits in total, which is exactly our update rule (remember that \(s=1\) for the winner).</p>
+<p>This is really all there is to the Elo rating system. It&rsquo;s quite simple and interpretable, and players could easily keep track of their ratings with pen and paper back in the 1960s when the system was invented, well before computers and apps would rule the world.</p>
+<p>I still owe you the details on some of the hyperparameters you can choose. First off, you might have noticed that 400 in the denominator of the exponent. This really could be any positive number – 400 is just a common choice, so I&rsquo;m keeping with the convention here. I also didn&rsquo;t mention how to initialise the ratings, i.e., what rating to assign to new players before their first match. That&rsquo;s because it doesn&rsquo;t matter: the probability calculation only cares about the difference between the two ratings, so we could add any constant to both ratings, and they would just cancel out. The maths would work out easiest if we initialise new players with a rating of 0. This would have the charming side effect that it&rsquo;s immediately obvious if a player was an above or below average player depending if their rating was positive or negative. But I guess people don&rsquo;t like the feeling of having negative skills, so typically a value like 1300 or 1500 is added to the Elo ratings. Lastly, choosing that update factor \(K\) is very important if you want to have a meaningful ranking: Too low and ratings will take a very long time to converge and recent improvements in skills will take a long time to be reflected in the ratings. Too high and individual games will have too large an influence on the rating and the whole system will become too volatile. If you want to get a feeling of how to choose \(K\), I&rsquo;ll invite you to dive even deeper into the mathematics with me… 🤓</p>
+<h2 id="logistic-regression">Logistic regression</h2>
+<ul>
+<li>Interpret Elo rating as logistic regression</li>
+<li>Derive update from stochastic gradient descent</li>
+</ul>
+<h2 id="strengths--weaknesses">Strengths &amp; weaknesses</h2>
+<ul>
+<li>Positive:
+<ul>
+<li>It&rsquo;s pretty simple and fairly interpretable</li>
+<li>It has a descent performance at predicting outcomes of, e.g., chess matches</li>
+</ul>
+</li>
+<li>Caveats to using Elo:
+<ul>
+<li>Only meaningful in relative terms</li>
+<li>Group needs to be sufficiently connected</li>
+<li>Very sensitive to $$K$$ (tie back to logistic regression and the difficulty of picking a good learning rate)</li>
+</ul>
+</li>
+</ul>
+<h2 id="example--application-snooker">Example / application: Snooker</h2>
+<p><strong>Best factor this out into a separate article. Publish the general Elo article on 2025-04-13, and the Snooker article on 2025-04-19, in time for the opening of the World Snooker Championship.</strong></p>
+<ul>
+<li>World Championship opening today</li>
+<li>How does it apply to Snooker</li>
+<li>Sample calculations</li>
+<li>Winner prediction / simulation?
+<ul>
+<li>Use Elo ratings we just calculated to predict matches</li>
+<li>Simulate tournaments where each match is decided according to Elo probability predictions</li>
+<li>Who is going to be the next champion?</li>
+</ul>
+</li>
+</ul>
+<h2 id="conclusion--outlook">Conclusion / outlook</h2>
+<ul>
+<li>Summary</li>
+<li>What&rsquo;s next?</li>
+<li>Tease / outline the other articles</li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Please note that Elo is a proper name and not an acronym, so please never ever spell it in all caps – it&rsquo;s disrespectful to the person who invented the rating system.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Since the Elo system was developed for chess, it&rsquo;s been originally formulated for two player zero-sum games only. For simplicity, we stick with that case for this article. There are various ways to generalise to multi-player settings and we shall examine those in future articles.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://recommend-games.github.io//tags/elo-rating/">Elo rating</a>&nbsp;
+            
+              <a href="https://recommend-games.github.io//tags/snooker/">Snooker</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2frecommend-games.github.io%2fposts%2felo-ratings-explained%2f&amp;text=Elo%20ratings%20explained&amp;via=recommend_games" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2frecommend-games.github.io%2fposts%2felo-ratings-explained%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2felo-ratings-explained%2f&amp;title=Elo%20ratings%20explained" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2frecommend-games.github.io%2fposts%2felo-ratings-explained%2f&amp;title=Elo%20ratings%20explained" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2frecommend-games.github.io%2fposts%2felo-ratings-explained%2f&amp;title=Elo%20ratings%20explained" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2frecommend-games.github.io%2fposts%2felo-ratings-explained%2f&amp;description=Elo%20ratings%20explained" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://recommend-games.github.io/posts/visualising-riemann-hypothesis/" data-toggle="tooltip" data-placement="top" title="Beyond games: Visualising the Riemann Hypothesis">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:contact@recommend.games" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/recommend-games" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://gitlab.com/recommend.games" title="GitLab">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://twitter.com/recommend_games" title="Twitter">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://linkedin.com/in/markusschepke" title="LinkedIn">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://stackoverflow.com/users/2634131/markus-shepherd" title="StackOverflow">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.youtube.com/user/MarkusSchepke" title="Youtube">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://paypal.me/mschepke" title="PayPal">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-paypal fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.kaggle.com/mshepherd" title="kaggle">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a rel="me"href="https://tabletop.social/@markus" title="Mastodon">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://recommend.games/">Recommend.Games</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2025
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://recommend-games.github.io/">Analysis Paralysis</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.122.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://recommend-games.github.io/js/main.js"></script>
+<script src="https://recommend-games.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://recommend-games.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
